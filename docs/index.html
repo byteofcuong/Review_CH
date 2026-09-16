@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Biên Du Lịch</title>
+<meta name="description" content="Học thuộc từ vựng và địa danh tiếng Trung chuyên ngành du lịch.">
+<meta name="theme-color" content="#E9E6DD" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16181C" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Noto+Serif+SC:wght@400;600;900&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Bỏ qua, vào nội dung chính</a>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="#/" aria-label="Trang chủ Biên Du Lịch">
+      <span class="seal" aria-hidden="true">学</span>
+      <span class="brand__text">
+        <strong>Biên Du Lịch</strong>
+        <span class="brand__sub">旅游词汇</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a class="nav__link" href="#/" data-nav="home">Học</a>
+      <a class="nav__link" href="#/browse" data-nav="browse">Tra cứu</a>
+      <a class="nav__link" href="#/stats" data-nav="stats">Tiến độ</a>
+    </nav>
+
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Đổi giao diện sáng tối">
+      <span class="icon-btn__glyph" aria-hidden="true">◑</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ══════════════════════════════════ TRANG CHỦ ══════════════════════════ -->
+  <section class="view" id="view-home">
+    <div class="wrap">
+
+      <div class="hero">
+        <p class="eyebrow">Từ vựng du lịch Trung – Việt</p>
+        <h1 class="hero__title">Học thuộc <span class="zh-inline">旅游</span> từng thẻ một</h1>
+        <p class="hero__lead">
+          <span id="home-total">—</span> thẻ rút từ bảng từ vựng biên dịch du lịch.
+          Thẻ nào bạn quên sẽ quay lại sớm, thẻ nào thuộc rồi sẽ giãn dần ra.
+        </p>
+      </div>
+
+      <div class="today" id="today-card">
+        <div class="today__main">
+          <p class="today__label">Đến hạn ôn hôm nay</p>
+          <p class="today__count"><span id="due-count">0</span> <span class="today__unit">thẻ</span></p>
+          <p class="today__hint" id="due-hint">Chưa có thẻ nào tới hạn — bắt đầu một chủ đề mới bên dưới.</p>
+        </div>
+        <div class="today__actions">
+          <button class="btn btn--primary" id="btn-review" type="button">Ôn ngay</button>
+          <button class="btn btn--ghost" id="btn-custom" type="button">Tự chọn phiên</button>
+        </div>
+      </div>
+
+      <section class="block" aria-labelledby="h-topics">
+        <h2 class="block__title" id="h-topics">Chủ đề</h2>
+        <div class="topic-grid" id="topic-grid"></div>
+      </section>
+
+      <section class="block" aria-labelledby="h-quick">
+        <h2 class="block__title" id="h-quick">Ôn nhanh</h2>
+        <div class="quick-row">
+          <button class="quick" type="button" data-quick="starred">
+            <span class="quick__title">Thẻ đã đánh dấu</span>
+            <span class="quick__meta"><span id="starred-count">0</span> thẻ</span>
+          </button>
+          <button class="quick" type="button" data-quick="hard">
+            <span class="quick__title">Thẻ hay sai</span>
+            <span class="quick__meta"><span id="hard-count">0</span> thẻ</span>
+          </button>
+          <button class="quick" type="button" data-quick="new">
+            <span class="quick__title">Thẻ chưa học</span>
+            <span class="quick__meta"><span id="new-count">0</span> thẻ</span>
+          </button>
+        </div>
+      </section>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════ CẤU HÌNH PHIÊN ═════════════════════ -->
+  <section class="view" id="view-setup" hidden>
+    <div class="wrap wrap--narrow">
+      <h1 class="page-title">Tạo phiên học</h1>
+
+      <fieldset class="field">
+        <legend class="field__label">Chủ đề</legend>
+        <div class="chips" id="setup-topics"></div>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend class="field__label">Chiều học</legend>
+        <div class="segmented" id="setup-direction" role="radiogroup" aria-label="Chiều học">
+          <button type="button" role="radio" data-value="vi2zh" aria-checked="true">Việt → Trung</button>
+          <button type="button" role="radio" data-value="zh2vi" aria-checked="false">Trung → Việt</button>
+          <button type="button" role="radio" data-value="py2zh" aria-checked="false">Pinyin → Hán</button>
+          <button type="button" role="radio" data-value="mixed" aria-checked="false">Trộn</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend class="field__label">Cách kiểm tra</legend>
+        <div class="segmented" id="setup-mode" role="radiogroup" aria-label="Cách kiểm tra">
+          <button type="button" role="radio" data-value="flash" aria-checked="true">Lật thẻ</button>
+          <button type="button" role="radio" data-value="choice" aria-checked="false">Trắc nghiệm</button>
+          <button type="button" role="radio" data-value="type" aria-checked="false">Gõ đáp án</button>
+        </div>
+        <p class="field__note" id="mode-note">Tự chấm sau khi lật — nhanh nhất để quét lại nhiều thẻ.</p>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend class="field__label">Số thẻ</legend>
+        <div class="segmented" id="setup-size" role="radiogroup" aria-label="Số thẻ mỗi phiên">
+          <button type="button" role="radio" data-value="10" aria-checked="false">10</button>
+          <button type="button" role="radio" data-value="20" aria-checked="true">20</button>
+          <button type="button" role="radio" data-value="50" aria-checked="false">50</button>
+          <button type="button" role="radio" data-value="0" aria-checked="false">Tất cả</button>
+        </div>
+      </fieldset>
+
+      <div class="field__actions">
+        <button class="btn btn--primary btn--wide" id="btn-start" type="button">Bắt đầu</button>
+        <p class="field__note" id="setup-summary"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════ MÀN HÌNH HỌC ══════════════════════ -->
+  <section class="view view--study" id="view-study" hidden>
+    <div class="wrap wrap--narrow">
+
+      <div class="studybar">
+        <button class="linkish" id="btn-quit" type="button">Thoát</button>
+        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress">
+          <div class="progress__fill" id="progress-fill"></div>
+        </div>
+        <p class="studybar__count"><span id="study-pos">1</span>/<span id="study-total">1</span></p>
+      </div>
+
+      <article class="card" id="card">
+        <header class="card__head">
+          <span class="tag" id="card-topic">Chủ đề</span>
+          <button class="star" id="btn-star" type="button" aria-pressed="false" aria-label="Đánh dấu thẻ này">
+            <span aria-hidden="true">✦</span>
+          </button>
+        </header>
+
+        <div class="card__body">
+          <p class="card__prompt-label" id="prompt-label">Tiếng Việt</p>
+          <div class="card__prompt" id="prompt"></div>
+          <p class="card__context" id="prompt-context" hidden></p>
+        </div>
+
+        <!-- trả lời: gõ -->
+        <form class="answer-type" id="answer-type" hidden autocomplete="off">
+          <label class="sr-only" for="type-input">Nhập đáp án</label>
+          <input class="input" id="type-input" type="text" inputmode="text"
+                 placeholder="Gõ đáp án rồi Enter" autocapitalize="off" spellcheck="false">
+          <button class="btn btn--primary" type="submit" id="type-submit">Kiểm tra</button>
+        </form>
+
+        <!-- trả lời: trắc nghiệm -->
+        <div class="answer-choice" id="answer-choice" hidden role="group" aria-label="Chọn đáp án đúng"></div>
+
+        <!-- mặt sau -->
+        <div class="card__back" id="card-back" hidden>
+          <div class="verdict" id="verdict" hidden></div>
+          <div class="reveal">
+            <p class="reveal__zh zh" id="rev-zh"></p>
+            <p class="reveal__py" id="rev-py"></p>
+            <p class="reveal__vi" id="rev-vi"></p>
+            <p class="reveal__alt" id="rev-alt" hidden></p>
+            <p class="reveal__note" id="rev-note" hidden></p>
+          </div>
+          <button class="btn btn--quiet" id="btn-speak" type="button" hidden>
+            <span aria-hidden="true">♪</span> Nghe phát âm
+          </button>
+        </div>
+      </article>
+
+      <div class="controls" id="controls">
+        <button class="btn btn--primary btn--wide" id="btn-flip" type="button">Xem đáp án</button>
+        <div class="grade" id="grade" hidden>
+          <button class="grade__btn grade__btn--again" type="button" data-grade="0">Quên<small>lát nữa</small></button>
+          <button class="grade__btn grade__btn--hard"  type="button" data-grade="1">Khó<small id="g-hard">1 ngày</small></button>
+          <button class="grade__btn grade__btn--good"  type="button" data-grade="2">Được<small id="g-good">3 ngày</small></button>
+          <button class="grade__btn grade__btn--easy"  type="button" data-grade="3">Dễ<small id="g-easy">7 ngày</small></button>
+        </div>
+        <button class="btn btn--primary btn--wide" id="btn-next" type="button" hidden>Thẻ tiếp theo</button>
+      </div>
+
+      <p class="kbd-hint">Phím tắt: <kbd>Space</kbd> lật thẻ · <kbd>1</kbd>–<kbd>4</kbd> chấm điểm</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════ KẾT QUẢ ═══════════════════════════ -->
+  <section class="view" id="view-result" hidden>
+    <div class="wrap wrap--narrow">
+      <div class="seal-big" aria-hidden="true">成</div>
+      <h1 class="page-title">Xong phiên</h1>
+      <p class="result__line" id="result-line"></p>
+
+      <div class="result__stats">
+        <div class="stat">
+          <span class="stat__num" id="res-right">0</span>
+          <span class="stat__label">Nhớ được</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" id="res-wrong">0</span>
+          <span class="stat__label">Cần ôn lại</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" id="res-time">0′</span>
+          <span class="stat__label">Thời gian</span>
+        </div>
+      </div>
+
+      <section class="block" id="result-missed-block" hidden>
+        <h2 class="block__title">Thẻ cần ôn lại</h2>
+        <ul class="list" id="result-missed"></ul>
+      </section>
+
+      <div class="field__actions">
+        <button class="btn btn--primary btn--wide" id="btn-again" type="button">Học tiếp phiên nữa</button>
+        <button class="btn btn--ghost btn--wide" id="btn-home" type="button">Về trang chủ</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════ TRA CỨU ═══════════════════════════ -->
+  <section class="view" id="view-browse" hidden>
+    <div class="wrap">
+      <h1 class="page-title">Tra cứu</h1>
+
+      <div class="search">
+        <label class="sr-only" for="search-input">Tìm từ</label>
+        <input class="input" id="search-input" type="search"
+               placeholder="Tìm tiếng Việt, chữ Hán hoặc pinyin…" autocomplete="off">
+      </div>
+
+      <div class="chips" id="browse-topics"></div>
+      <p class="field__note" id="browse-count"></p>
+
+      <ul class="list list--browse" id="browse-list"></ul>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════ TIẾN ĐỘ ═══════════════════════════ -->
+  <section class="view" id="view-stats" hidden>
+    <div class="wrap">
+      <h1 class="page-title">Tiến độ</h1>
+
+      <div class="result__stats result__stats--4">
+        <div class="stat">
+          <span class="stat__num" id="st-learned">0</span>
+          <span class="stat__label">Đã thuộc</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" id="st-learning">0</span>
+          <span class="stat__label">Đang học</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" id="st-new">0</span>
+          <span class="stat__label">Chưa học</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" id="st-streak">0</span>
+          <span class="stat__label">Ngày liên tiếp</span>
+        </div>
+      </div>
+
+      <section class="block">
+        <h2 class="block__title">Theo chủ đề</h2>
+        <div class="bars" id="stat-bars"></div>
+      </section>
+
+      <section class="block">
+        <h2 class="block__title">Dữ liệu của bạn</h2>
+        <p class="prose">
+          Tiến độ lưu ngay trong trình duyệt này, không gửi đi đâu cả. Xoá dữ liệu
+          duyệt web hoặc đổi máy là mất — tải file sao lưu nếu bạn muốn giữ.
+        </p>
+        <div class="field__actions field__actions--row">
+          <button class="btn btn--ghost" id="btn-export" type="button">Tải file sao lưu</button>
+          <button class="btn btn--ghost" id="btn-import" type="button">Nạp file sao lưu</button>
+          <button class="btn btn--danger" id="btn-reset" type="button">Xoá tiến độ</button>
+        </div>
+        <input type="file" id="import-file" accept="application/json" hidden>
+        <p class="field__note" id="data-msg" role="status"></p>
+      </section>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>
+      Nguồn: bảng <em>Biên du lịch</em> · <span id="foot-count">—</span> thẻ ·
+      cập nhật <span id="foot-date">—</span>
+    </p>
+    <p class="foot__fine">Tiến độ chỉ lưu trên máy bạn.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="data/vocab.js"></script>
+<script src="js/text.js"></script>
+<script src="js/store.js"></script>
+<script src="js/srs.js"></script>
+<script src="js/session.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

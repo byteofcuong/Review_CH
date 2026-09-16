@@ -1,0 +1,49 @@
+{
+  "_comment": "Các sửa tay không suy ra được từ dữ liệu gốc. preMerge áp theo sheet+dòng TRƯỚC khi gộp trùng lặp; postMerge áp theo khoá tiếng Việt đã chuẩn hoá SAU khi gộp.",
+
+  "preMerge": [
+    {
+      "sheet": "Trang tính4",
+      "row": 11,
+      "set": {
+        "vi": "Trung Quốc mới (chỉ nước CHND Trung Hoa từ 1949)",
+        "pinyin": "Xīn Zhōngguó"
+      },
+      "reason": "Dòng gốc thiếu hoàn toàn nghĩa tiếng Việt cho 新中国."
+    },
+    {
+      "sheet": "Địa danh",
+      "row": 119,
+      "set": {
+        "vi": "Cù Lao Chàm",
+        "zh": "占婆岛",
+        "pinyin": "Zhànpó Dǎo"
+      },
+      "reason": "Gốc ghi sai chính tả 'Cù Lao Chamf' và thiếu chữ Hán. Lấy chữ Hán + pinyin từ dòng 70 cùng sheet; sau bước gộp hai dòng này nhập làm một."
+    }
+  ],
+
+  "postMerge": [
+    {
+      "key": "phong nha ke bang",
+      "set": { "zh": "峰牙—己榜" },
+      "addAltZh": ["风牙—者榜", "峰衍—己榜"],
+      "note": "Chữ Hán có 3 biến thể trong file gốc; chọn 峰牙—己榜 cho khớp với mục 'Vườn quốc gia Phong Nha – Kẻ Bàng'.",
+      "reason": "Ba biến thể chữ Hán mâu thuẫn nhau giữa các dòng 24, 65 và 112."
+    },
+    {
+      "key": "pac bo",
+      "set": { "zh": "巴克博" },
+      "addAltZh": ["北坡"],
+      "note": "Hai lối dịch song song: 巴克博 phiên âm tên Tày, 北坡 dịch nghĩa. Cả hai đều được chấp nhận khi kiểm tra.",
+      "reason": "Dòng 6 dùng 北坡, dòng 34 dùng 巴克博 — khác hẳn nhau về cách dịch chứ không phải lỗi gõ."
+    },
+    {
+      "key": "nghe an",
+      "set": { "zh": "义安" },
+      "addAltZh": ["乂安"],
+      "note": "Cả 义安 và 乂安 đều dùng cho Nghệ An; file thiên về 义安 (xem 'Tây Nghệ An', 'Cửa Lò').",
+      "reason": "Dòng 114 dùng 乂安 trong khi phần còn lại của file dùng 义安."
+    }
+  ]
+}

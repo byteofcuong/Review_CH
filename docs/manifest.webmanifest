@@ -1,0 +1,19 @@
+{
+  "name": "Biên Du Lịch — từ vựng du lịch Trung Việt",
+  "short_name": "Biên Du Lịch",
+  "description": "Học thuộc từ vựng và địa danh tiếng Trung chuyên ngành du lịch.",
+  "lang": "vi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#E9E6DD",
+  "theme_color": "#B23A2F",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

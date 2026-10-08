@@ -19,7 +19,7 @@
   /* mực nho, ấm chứ không đen thuần */
   --ink:        #1F1C18;
   --ink-2:      #4E483F;
-  --ink-3:      #7C756A;
+  --ink-3:      #6A6358;
 
   /* son ấn triện 朱砂 — điểm nhấn duy nhất */
   --cinnabar:   #B23A2F;
@@ -58,7 +58,7 @@
 
     --ink:        #E7E3D8;
     --ink-2:      #B3ADA1;
-    --ink-3:      #837D72;
+    --ink-3:      #9B9488;
 
     --cinnabar:   #DE5F51;
     --cinnabar-2: #F08578;
@@ -86,7 +86,7 @@
 
   --ink:        #E7E3D8;
   --ink-2:      #B3ADA1;
-  --ink-3:      #837D72;
+  --ink-3:      #9B9488;
 
   --cinnabar:   #DE5F51;
   --cinnabar-2: #F08578;
@@ -154,6 +154,15 @@ button, input { font: inherit; color: inherit; }
   font-weight: 600;
 }
 
+/* Chữ Hán không bao giờ được ngắt giữa chừng: 旅游 tách đôi qua hai dòng
+   đọc thành hai chữ rời, sai nghĩa. */
+.zh-inline { white-space: nowrap; }
+
+/* Bỏ độ trễ 300ms khi chạm trên di động */
+button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
+  touch-action: manipulation;
+}
+
 .wrap {
   width: 100%;
   max-width: 1120px;
@@ -186,6 +195,7 @@ button, input { font: inherit; color: inherit; }
 
 .brand {
   display: flex; align-items: center; gap: 10px;
+  min-height: 44px;
   text-decoration: none; color: inherit;
   margin-right: auto;
 }
@@ -219,7 +229,8 @@ button, input { font: inherit; color: inherit; }
 .switcher__select {
   appearance: none;
   -webkit-appearance: none;
-  padding: 7px 28px 7px 11px;
+  padding: 0 28px 0 11px;
+  min-height: 44px;
   max-width: 11rem;
   background-color: var(--surface);
   background-image: linear-gradient(45deg, transparent 50%, var(--ink-3) 50%),
@@ -240,7 +251,10 @@ button, input { font: inherit; color: inherit; }
 .nav { display: flex; gap: 2px; }
 
 .nav__link {
-  padding: 7px 13px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 13px;
   text-decoration: none;
   color: var(--ink-2);
   font-size: 14.5px;
@@ -255,7 +269,7 @@ button, input { font: inherit; color: inherit; }
 }
 
 .icon-btn {
-  width: 34px; height: 34px;
+  width: 44px; height: 44px;
   display: grid; place-items: center;
   background: transparent;
   border: 1px solid var(--rule);
@@ -330,6 +344,11 @@ button, input { font: inherit; color: inherit; }
 .today__hint { margin: 0; font-size: 14px; color: var(--ink-2); max-width: 44ch; }
 
 .today__actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* Không có thẻ đến hạn: bỏ con số, nhường chỗ cho lời mời học thẻ mới */
+.today--clear .today__count { display: none; }
+.today--clear .today__label { margin-bottom: 6px; }
+.today--clear { border-left-color: var(--rule); }
 
 /* ─────────────────────────────────────────────────────────── chọn môn ── */
 
@@ -517,8 +536,13 @@ button, input { font: inherit; color: inherit; }
 .btn--danger:hover { background: var(--cinnabar-wash); }
 
 .linkish {
-  background: none; border: 0; padding: 4px 2px;
+  background: none; border: 0;
+  padding: 0 10px;
+  min-height: 44px;
+  margin-left: -10px;
+  display: inline-flex; align-items: center;
   color: var(--ink-3); font-size: 14px; cursor: pointer;
+  flex: none;
 }
 .linkish:hover { color: var(--cinnabar); }
 
@@ -542,7 +566,11 @@ button, input { font: inherit; color: inherit; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 
 .chip {
-  padding: 7px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 16px;
   background: transparent;
   border: 1px solid var(--rule);
   border-radius: 100px;
@@ -570,6 +598,7 @@ button, input { font: inherit; color: inherit; }
 .segmented button {
   flex: 1 1 auto;
   min-width: 84px;
+  min-height: 44px;
   padding: 10px 12px;
   background: var(--surface);
   border: 0;
@@ -670,8 +699,11 @@ button, input { font: inherit; color: inherit; }
 
 .star {
   background: none; border: 0; cursor: pointer;
-  color: var(--ink-3); font-size: 17px; line-height: 1;
-  padding: 4px 6px;
+  color: var(--ink-3); font-size: 19px; line-height: 1;
+  width: 44px; height: 44px;
+  margin: -6px -10px -6px 0;      /* giữ nguyên vị trí quang học của dấu sao */
+  display: grid; place-items: center;
+  flex: none;
 }
 .star:hover { color: var(--ochre); }
 .star[aria-pressed="true"] { color: var(--ochre); }
@@ -683,7 +715,7 @@ button, input { font: inherit; color: inherit; }
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  min-height: 180px;
+  min-height: 150px;
   justify-content: center;
 }
 
@@ -802,8 +834,9 @@ button, input { font: inherit; color: inherit; }
 
 .reveal__zh {
   margin: 0;
-  font-size: clamp(32px, 8vw, 48px);
+  font-size: clamp(36px, 9vw, 54px);
   line-height: 1.15;
+  letter-spacing: .03em;
 }
 .reveal__py {
   margin: 0;
@@ -1037,13 +1070,24 @@ kbd {
 /* ──────────────────────────────────────────────────────────── responsive ── */
 
 @media (max-width: 560px) {
-  .topbar__inner { flex-wrap: wrap; row-gap: 8px; }
-  .nav { order: 3; width: 100%; overflow-x: auto; padding-bottom: 2px; }
-  .nav__link { padding-inline: 10px; }
+  /* Hàng trên gồm logo, bộ chọn môn và nút sáng tối; thanh điều hướng
+     xuống hàng dưới. Logo co được để nút sáng tối không bị đẩy xuống
+     một hàng riêng của nó. */
+  .topbar__inner { flex-wrap: wrap; row-gap: 6px; gap: 8px; }
+  .brand { min-width: 0; flex: 0 1 auto; }
+  .brand__text { min-width: 0; }
+  .brand__text strong {
+    font-size: 15px;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
   .brand__sub { display: none; }
-  .switcher__select { max-width: 8.5rem; font-size: 13.5px; }
-  .brand__text strong { font-size: 15px; }
-  .seal { width: 30px; height: 30px; font-size: 18px; }
+  .seal { width: 32px; height: 32px; font-size: 19px; }
+
+  .switcher { flex: 0 1 auto; min-width: 0; }
+  .switcher__select { max-width: 7.5rem; font-size: 13px; padding-right: 24px; }
+
+  .nav { order: 3; width: 100%; overflow-x: auto; padding-bottom: 2px; }
+  .nav__link { padding-inline: 11px; }
 
   .today { flex-direction: column; align-items: stretch; }
   .today__actions .btn { flex: 1; }

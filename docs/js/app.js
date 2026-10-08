@@ -264,9 +264,14 @@
 
     var due = countBy(function (p, c, now) { return LC.srs.isDue(p, now); });
     $('due-count').textContent = due;
+    // Số 0 to đùng không nói lên điều gì; khi rảnh thì mời học thẻ mới luôn.
+    $('today-card').classList.toggle('today--clear', due === 0);
+    $('today-label').textContent = due
+      ? 'Đến hạn ôn hôm nay'
+      : 'Hôm nay không có thẻ nào đến hạn';
     $('due-hint').textContent = due
       ? 'Ôn đúng hạn thì mỗi thẻ chỉ tốn vài giây.'
-      : 'Chưa thẻ nào tới hạn — chọn một chủ đề bên dưới để học thẻ mới.';
+      : 'Học thẻ mới để lấp dần ' + CARDS().length + ' thẻ của môn này.';
     $('btn-review').disabled = false;
     $('btn-review').textContent = due ? 'Ôn ngay' : 'Học thẻ mới';
 
@@ -527,7 +532,15 @@
     py.textContent = card.pinyin;
     if (card.pinyinAuto) py.setAttribute('data-auto', '1');
     else py.removeAttribute('data-auto');
-    $('rev-vi').textContent = card.vi + (card.context ? ' (' + card.context + ')' : '');
+    // Không lặp lại chính câu hỏi ở mặt sau: nếu vừa hỏi bằng tiếng Việt thì
+    // đáp án cần là chữ Hán và pinyin, hiện lại tiếng Việt chỉ tốn chỗ.
+    var revVi = $('rev-vi');
+    if (state.question && state.question.promptKind === 'vi') {
+      revVi.hidden = true;
+    } else {
+      revVi.hidden = false;
+      revVi.textContent = card.vi + (card.context ? ' (' + card.context + ')' : '');
+    }
 
     var alt = $('rev-alt');
     var variants = card.altZh.concat(card.altVi);

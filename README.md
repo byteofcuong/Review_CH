@@ -68,6 +68,20 @@ giữ nhóm con làm nhãn, và phân biệt hai nghĩa của dấu `/`:
   vì gộp lại sẽ chấm đúng cho đáp án của phần kia)
 - các trường hợp khác → cách nói đồng nghĩa, phần sau thành đáp án phụ
 
+## Kiểm tra giao diện
+
+```bash
+pip install playwright && python -m playwright install chromium
+python -m http.server 8787 --directory docs
+
+python tools/ui-check/screenshot.py http://localhost:8787 shots
+python tools/ui-check/contrast.py   http://localhost:8787
+```
+
+Chụp 6 màn hình × 3 kích cỡ × 2 giao diện sáng tối, đồng thời bắt vùng bấm nhỏ
+hơn 44px, cuộn ngang, lỗi JavaScript và chữ không đủ tương phản. Xem
+[tools/ui-check/README.md](tools/ui-check/README.md).
+
 ## Chạy thử tại máy
 
 ```bash

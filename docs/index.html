@@ -46,13 +46,15 @@
     <div class="wrap">
 
       <div class="hero">
-        <p class="eyebrow">Từ vựng du lịch Trung – Việt</p>
-        <h1 class="hero__title">Học thuộc <span class="zh-inline">旅游</span> từng thẻ một</h1>
+        <p class="eyebrow">Từ vựng tiếng Trung chuyên ngành</p>
+        <h1 class="hero__title">Học thuộc <span class="zh-inline" id="hero-zh">旅游</span> từng thẻ một</h1>
         <p class="hero__lead">
-          <span id="home-total">—</span> thẻ rút từ bảng từ vựng biên dịch du lịch.
+          <span id="home-total">—</span> thẻ rút từ bảng <span id="home-source">—</span>.
           Thẻ nào bạn quên sẽ quay lại sớm, thẻ nào thuộc rồi sẽ giãn dần ra.
         </p>
       </div>
+
+      <div class="subject-tabs" id="subject-tabs" role="tablist" aria-label="Chọn môn"></div>
 
       <div class="today" id="today-card">
         <div class="today__main">
@@ -65,6 +67,8 @@
           <button class="btn btn--ghost" id="btn-custom" type="button">Tự chọn phiên</button>
         </div>
       </div>
+
+      <p class="other-note" id="other-note" hidden></p>
 
       <section class="block" aria-labelledby="h-topics">
         <h2 class="block__title" id="h-topics">Chủ đề</h2>
@@ -98,8 +102,14 @@
       <h1 class="page-title">Tạo phiên học</h1>
 
       <fieldset class="field">
+        <legend class="field__label">Môn</legend>
+        <div class="segmented" id="setup-subject" role="radiogroup" aria-label="Môn"></div>
+      </fieldset>
+
+      <fieldset class="field">
         <legend class="field__label">Chủ đề</legend>
         <div class="chips" id="setup-topics"></div>
+        <p class="field__note">Không chọn chủ đề nào là học tất cả.</p>
       </fieldset>
 
       <fieldset class="field">
@@ -153,7 +163,10 @@
 
       <article class="card" id="card">
         <header class="card__head">
-          <span class="tag" id="card-topic">Chủ đề</span>
+          <span class="card__tags">
+            <span class="tag" id="card-topic">Chủ đề</span>
+            <span class="tag tag--group" id="card-group" hidden></span>
+          </span>
           <button class="star" id="btn-star" type="button" aria-pressed="false" aria-label="Đánh dấu thẻ này">
             <span aria-hidden="true">✦</span>
           </button>
@@ -252,6 +265,9 @@
                placeholder="Tìm tiếng Việt, chữ Hán hoặc pinyin…" autocomplete="off">
       </div>
 
+      <div class="subject-tabs subject-tabs--inline" id="browse-subjects"
+           role="tablist" aria-label="Chọn môn để tra cứu"></div>
+
       <div class="chips" id="browse-topics"></div>
       <p class="field__note" id="browse-count"></p>
 
@@ -284,7 +300,7 @@
       </div>
 
       <section class="block">
-        <h2 class="block__title">Theo chủ đề</h2>
+        <h2 class="block__title">Theo môn và chủ đề</h2>
         <div class="bars" id="stat-bars"></div>
       </section>
 

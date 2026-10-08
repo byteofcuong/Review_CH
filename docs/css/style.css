@@ -307,6 +307,77 @@ button, input { font: inherit; color: inherit; }
 
 .today__actions { display: flex; gap: 10px; flex-wrap: wrap; }
 
+/* ─────────────────────────────────────────────────────────── chọn môn ── */
+
+.subject-tabs {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+}
+
+.subject {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  text-align: left;
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--rule);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.subject:hover { border-color: var(--ink-3); background: var(--surface); }
+
+.subject__seal {
+  width: 36px; height: 36px;
+  flex: none;
+  display: grid; place-items: center;
+  font-family: var(--font-zh);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  color: var(--ink-3);
+}
+
+.subject__text { display: flex; flex-direction: column; line-height: 1.3; min-width: 0; }
+.subject__name { font-weight: 500; }
+.subject__meta { font-size: 13px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+
+/* môn đang chọn: đổ màu nhận diện riêng để phân biệt ngay */
+.subject[aria-selected="true"] { background: var(--surface); }
+.subject[aria-selected="true"][data-accent="cinnabar"] { border-left-color: var(--cinnabar); }
+.subject[aria-selected="true"][data-accent="cinnabar"] .subject__seal {
+  background: var(--cinnabar); border-color: var(--cinnabar); color: var(--seal-fg);
+}
+.subject[aria-selected="true"][data-accent="jade"] { border-left-color: var(--jade); }
+.subject[aria-selected="true"][data-accent="jade"] .subject__seal {
+  background: var(--jade); border-color: var(--jade); color: var(--seal-fg);
+}
+
+.subject-tabs--inline {
+  margin-top: 0;
+  margin-bottom: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+.subject-tabs--inline .subject { padding: 10px 12px; }
+.subject-tabs--inline .subject__seal { width: 28px; height: 28px; font-size: 13px; }
+
+.other-note {
+  margin: 14px 0 0;
+  font-size: 13.5px;
+  color: var(--ink-3);
+}
+.other-note button {
+  background: none; border: 0; padding: 0;
+  color: var(--cinnabar); cursor: pointer;
+  font: inherit; text-decoration: underline;
+}
+
 /* ───────────────────────────────────────────────────────────────── khối ── */
 
 .block { margin-top: clamp(32px, 5vw, 48px); }
@@ -547,11 +618,30 @@ button, input { font: inherit; color: inherit; }
   border-bottom: 1px solid var(--rule-soft);
 }
 
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  min-width: 0;
+}
+
 .tag {
   font-size: 11.5px;
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--ink-3);
+}
+
+/* nhóm con trong môn Phiên dịch — 48 nhóm, giúp định vị thẻ đang học */
+.tag--group {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 12px;
+  padding: 2px 8px;
+  border: 1px solid var(--rule);
+  border-radius: 100px;
+  color: var(--ink-2);
 }
 
 .star {
@@ -840,6 +930,17 @@ kbd {
 /* ──────────────────────────────────────────────────────── biểu đồ cột ── */
 
 .bars { display: flex; flex-direction: column; gap: 14px; }
+
+.bars__subject {
+  margin: 10px 0 2px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.bars__subject:first-child { margin-top: 0; }
 
 .bar__head {
   display: flex;

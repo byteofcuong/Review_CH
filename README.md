@@ -1,50 +1,72 @@
-# Biên Du Lịch — học từ vựng du lịch Trung – Việt
+# Học từ vựng tiếng Trung chuyên ngành
 
-Web học thuộc lòng 203 thẻ từ vựng và địa danh tiếng Trung chuyên ngành du lịch,
-rút từ bảng `Biên du lịch.xlsx`.
+Web học thuộc lòng **780 thẻ** từ vựng tiếng Trung của hai môn, rút từ hai bảng Excel.
 
 **Học tại đây: https://byteofcuong.github.io/Review_CH/**
 
 Mở link là học được ngay — không cài đặt, không đăng nhập, không clone repo.
 Tiến độ lưu trong trình duyệt của từng người.
 
+| Môn | Nội dung | Số thẻ |
+|---|---|---|
+| **Biên du lịch** 旅游 | Địa danh, di sản, từ vựng ngành du lịch, danh thắng Trung Quốc | 203 |
+| **Phiên dịch nâng cao** 经贸 | Tranh chấp thương mại quốc tế, WTO, trọng tài, thuế quan | 577 |
+
 ## Có gì
 
+- **Tab chọn môn** ở trang chủ; chủ đề, ôn tập và thống kê đi theo môn đang chọn.
+  Có dòng nhắc khi môn còn lại có thẻ đến hạn, và tuỳ chọn **trộn cả hai môn**
+  trong một phiên.
 - **Ba cách kiểm tra**: lật thẻ tự chấm · trắc nghiệm 4 đáp án · gõ đáp án trên trang
 - **Bốn chiều học**: Việt → Trung, Trung → Việt, Pinyin → Hán tự, hoặc trộn
-- **Lịch ôn giãn dần** (SM-2 rút gọn): thẻ quên quay lại ngay, thẻ thuộc giãn ra 1 → 3 → 7 ngày rồi xa hơn
+- **Lịch ôn giãn dần** (SM-2 rút gọn): thẻ quên quay lại ngay, thẻ thuộc giãn ra
+  1 → 3 → 7 ngày rồi xa hơn
 - **Chấm khoan dung**: bỏ qua hoa thường, dấu thanh pinyin và dấu tiếng Việt;
-  đáp án chữ Hán nhận cả pinyin, nên gõ được trên bàn phím thường
+  đáp án chữ Hán nhận cả pinyin, nên gõ được trên bàn phím thường; tên viết tắt
+  tổ chức (WTO, IMF, DSU…) cũng được chấp nhận
 - Tra cứu toàn bộ, đánh dấu thẻ khó, phát âm chữ Hán, chạy offline sau lần mở đầu
 
 ## Cấu trúc
 
 ```
-Biên du lịch.xlsx     nguồn dữ liệu — sửa từ vựng ở đây
+Biên du lịch.xlsx          nguồn môn 1 — sửa từ vựng ở đây
+Phiên dịch nâng cao.xlsx   nguồn môn 2
 tools/
-  build_data.py       Excel  →  docs/data/vocab.{json,js} + build_report.md
-  overrides.json      các sửa tay không suy ra được từ file gốc
-build_report.md       báo cáo mọi thay đổi script đã áp lên dữ liệu
-docs/                 trang web tĩnh, GitHub Pages phục vụ thẳng từ đây
+  build_data.py            Excel  →  docs/data/vocab.{json,js} + build_report.md
+  overrides.json           các sửa tay không suy ra được từ file gốc
+build_report.md            báo cáo mọi thay đổi script đã áp lên dữ liệu
+docs/                      trang web tĩnh, GitHub Pages phục vụ thẳng từ đây
 ```
 
 ## Cập nhật từ vựng
 
-Sửa trong `Biên du lịch.xlsx`, rồi:
+Sửa trong file Excel tương ứng, rồi chạy **một lệnh cho cả hai môn**:
 
 ```bash
 pip install -r tools/requirements.txt
 python tools/build_data.py
 ```
 
-Script không bao giờ ghi vào file Excel. Nó đọc 4 sheet, tách các dòng bị gộp
-tiếng Việt lẫn chữ Hán, gộp thẻ trùng, sinh pinyin còn thiếu bằng `pypinyin`,
-rồi ghi kết quả ra `docs/data/`. Mọi thay đổi được liệt kê trong
-`build_report.md` — đọc file đó để rà lại, nhất là mục *pinyin sinh tự động*.
+Script không bao giờ ghi vào file Excel. Mọi thay đổi nó áp lên dữ liệu đều được
+liệt kê trong `build_report.md` — đọc file đó để rà lại, nhất là mục *pinyin sinh
+tự động* và *dòng lệch số phần*.
 
 Muốn sửa một mục mà không đụng Excel thì thêm luật vào `tools/overrides.json`.
 
 Sau khi build, commit và push — GitHub Pages tự cập nhật.
+
+### Script xử lý gì
+
+**Môn Biên du lịch** (dữ liệu gốc nhiều lỗi): tách 11 dòng bị gộp chung tiếng Việt
+và chữ Hán trong một ô, gộp 20 nhóm thẻ trùng, sinh 75 pinyin còn thiếu.
+
+**Môn Phiên dịch nâng cao** (dữ liệu đã sàng lọc sẵn): đọc 11 sheet đã phân loại,
+giữ nhóm con làm nhãn, và phân biệt hai nghĩa của dấu `/`:
+
+- số phần chữ Hán **bằng** số phần tiếng Việt → liệt kê song song, **tách thành
+  nhiều thẻ** (`贸易顺差 / 贸易赤字` thành hai thẻ thặng dư và thâm hụt riêng biệt,
+  vì gộp lại sẽ chấm đúng cho đáp án của phần kia)
+- các trường hợp khác → cách nói đồng nghĩa, phần sau thành đáp án phụ
 
 ## Chạy thử tại máy
 

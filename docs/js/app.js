@@ -5,24 +5,42 @@
 
   var esc = LC.text.escapeHtml;
 
-  var DATA = window.VOCAB || { cards: [], topics: [], generatedAt: '' };
-  var CARDS = DATA.cards || [];
-  var TOPICS = DATA.topics || [];
+  var DATA = window.VOCAB || { subjects: [], generatedAt: '' };
+  var SUBJECTS = DATA.subjects || [];
+
+  var SUBJECT_ACCENT = { 'bien-du-lich': 'cinnabar', 'phien-dich': 'jade' };
+
   var TOPIC_ZH = {
     'dia-danh': '地名',
     'tu-vung': '词汇',
     'danh-thang-tq': '名胜',
-    'cum-tu': '短语'
+    'cum-tu': '短语',
+    'pd-to-chuc': '机构',
+    'pd-khai-niem': '原则',
+    'pd-xung-dot': '争端',
+    'pd-thue-quan': '关税',
+    'pd-phong-ve': '防卫',
+    'pd-dam-phan': '谈判',
+    'pd-wto': '世贸',
+    'pd-trong-tai': '仲裁',
+    'pd-hang-hoa': '货物',
+    'pd-ngoai-giao': '外交',
+    'pd-khac': '其他'
   };
 
   var state = {
     view: 'home',
-    prefs: { topics: [], direction: 'vi2zh', mode: 'flash', size: 20, only: null },
+    subject: SUBJECTS.length ? SUBJECTS[0].id : '',
+    prefs: {
+      subject: SUBJECTS.length ? SUBJECTS[0].id : '',
+      topics: [], direction: 'vi2zh', mode: 'flash', size: 20, only: null
+    },
     session: null,
     item: null,
     question: null,
     revealed: false,
     answered: null,
+    browseSubject: SUBJECTS.length ? SUBJECTS[0].id : '',
     browseTopics: [],
     voice: null
   };
@@ -30,9 +48,48 @@
   function $(id) { return document.getElementById(id); }
   function on(el, type, fn) { if (el) el.addEventListener(type, fn); }
 
+  /* ──────────────────────────────────────────────────── môn và chủ đề ── */
+
+  /** 'all' nghĩa là trộn cả hai môn trong một phiên. */
+  function subjectsFor(id) {
+    if (id === 'all') return SUBJECTS;
+    return SUBJECTS.filter(function (s) { return s.id === id; });
+  }
+
+  function subjectById(id) {
+    return subjectsFor(id)[0] || SUBJECTS[0] || { name: '', zh: '', topics: [], cards: [] };
+  }
+
+  /** Thẻ của môn đang chọn — mọi màn hình đều đi qua đây. */
+  function cardsOf(id) {
+    var out = [];
+    subjectsFor(id).forEach(function (s) { out = out.concat(s.cards); });
+    return out;
+  }
+
+  function topicsOf(id) {
+    var out = [];
+    subjectsFor(id).forEach(function (s) { out = out.concat(s.topics); });
+    return out;
+  }
+
+  function CARDS() { return cardsOf(state.subject); }
+  function TOPICS() { return topicsOf(state.subject); }
+
   function topicName(id) {
-    var found = TOPICS.filter(function (t) { return t.id === id; })[0];
+    var all = topicsOf('all');
+    var found = all.filter(function (t) { return t.id === id; })[0];
     return found ? found.name : id;
+  }
+
+  // Tra môn của một thẻ bằng bảng dựng một lần, tránh quét lại mảng thẻ.
+  var SUBJECT_OF_CARD = {};
+  SUBJECTS.forEach(function (subject) {
+    subject.cards.forEach(function (card) { SUBJECT_OF_CARD[card.id] = subject; });
+  });
+
+  function subjectOfCard(card) {
+    return SUBJECT_OF_CARD[card.id] || null;
   }
 
   function toast(message) {
@@ -78,17 +135,85 @@
 
   /* ─────────────────────────────────────────────────────────── trang chủ ── */
 
-  function countBy(filter) {
+  function countIn(cards, filter) {
     var now = Date.now();
-    return CARDS.filter(function (card) {
+    return cards.filter(function (card) {
       return filter(LC.store.get(card.id), card, now);
     }).length;
   }
 
+  function countBy(filter) {
+    return countIn(CARDS(), filter);
+  }
+
+  function dueIn(cards) {
+    return countIn(cards, function (p, c, now) { return LC.srs.isDue(p, now); });
+  }
+
+  /** Đổi môn: chủ đề đã chọn của môn cũ không còn nghĩa nên xoá đi. */
+  function setSubject(id) {
+    if (state.subject === id) return;
+    state.subject = id;
+    state.prefs.subject = id;
+    state.prefs.topics = [];
+    try { window.localStorage.setItem('lc.subject', id); } catch (err) { /* bỏ qua */ }
+  }
+
+  function renderSubjectTabs(container, selected, onPick) {
+    container.innerHTML = SUBJECTS.map(function (subject) {
+      var due = dueIn(subject.cards);
+      return '<button class="subject" type="button" role="tab"' +
+        ' aria-selected="' + (subject.id === selected) + '"' +
+        ' data-accent="' + esc(SUBJECT_ACCENT[subject.id] || 'cinnabar') + '"' +
+        ' data-subject="' + esc(subject.id) + '">' +
+        '<span class="subject__seal" aria-hidden="true">' + esc(subject.zh) + '</span>' +
+        '<span class="subject__text">' +
+        '<span class="subject__name">' + esc(subject.name) + '</span>' +
+        '<span class="subject__meta">' + subject.cards.length + ' thẻ' +
+        (due ? ' · ' + due + ' đến hạn' : '') + '</span>' +
+        '</span></button>';
+    }).join('');
+
+    container.querySelectorAll('[data-subject]').forEach(function (btn) {
+      on(btn, 'click', function () { onPick(btn.getAttribute('data-subject')); });
+    });
+  }
+
   function renderHome() {
-    $('home-total').textContent = CARDS.length;
-    $('foot-count').textContent = CARDS.length;
+    var subject = subjectById(state.subject);
+    var cards = CARDS();
+
+    $('home-total').textContent = cards.length;
+    $('home-source').textContent = subject.name;
+    $('hero-zh').textContent = subject.zh;
+    $('foot-count').textContent = cardsOf('all').length;
     $('foot-date').textContent = DATA.generatedAt || '—';
+
+    renderSubjectTabs($('subject-tabs'), state.subject, function (id) {
+      setSubject(id);
+      renderHome();
+    });
+
+    // Nhắc môn còn lại để không bỏ quên khi đang tập trung một môn.
+    var others = SUBJECTS.filter(function (s) { return s.id !== state.subject; });
+    var note = $('other-note');
+    var pending = others.filter(function (s) { return dueIn(s.cards) > 0; });
+    if (pending.length) {
+      note.innerHTML = pending.map(function (s) {
+        return 'Môn ' + esc(s.name) + ' còn <strong>' + dueIn(s.cards) +
+          '</strong> thẻ đến hạn — <button type="button" data-goto="' +
+          esc(s.id) + '">chuyển sang môn đó</button>';
+      }).join('<br>');
+      note.hidden = false;
+      note.querySelectorAll('[data-goto]').forEach(function (btn) {
+        on(btn, 'click', function () {
+          setSubject(btn.getAttribute('data-goto'));
+          renderHome();
+        });
+      });
+    } else {
+      note.hidden = true;
+    }
 
     var due = countBy(function (p, c, now) { return LC.srs.isDue(p, now); });
     $('due-count').textContent = due;
@@ -111,14 +236,14 @@
     });
 
     var grid = $('topic-grid');
-    grid.innerHTML = TOPICS.map(function (topic) {
-      var cards = CARDS.filter(function (c) { return c.topics.indexOf(topic.id) !== -1; });
-      var learned = cards.filter(function (c) { return LC.srs.isLearned(LC.store.get(c.id)); }).length;
-      var pct = cards.length ? Math.round(learned / cards.length * 100) : 0;
+    grid.innerHTML = TOPICS().map(function (topic) {
+      var inTopic = cards.filter(function (c) { return c.topics.indexOf(topic.id) !== -1; });
+      var learned = inTopic.filter(function (c) { return LC.srs.isLearned(LC.store.get(c.id)); }).length;
+      var pct = inTopic.length ? Math.round(learned / inTopic.length * 100) : 0;
       return '<button class="topic" type="button" data-topic="' + esc(topic.id) + '">' +
         '<span class="topic__zh">' + esc(TOPIC_ZH[topic.id] || '') + '</span>' +
         '<span class="topic__name">' + esc(topic.name) + '</span>' +
-        '<span class="topic__meta">' + learned + '/' + cards.length + ' thuộc · ' + pct + '%</span>' +
+        '<span class="topic__meta">' + learned + '/' + inTopic.length + ' thuộc · ' + pct + '%</span>' +
         '<span class="meter"><span class="meter__fill" style="width:' + pct + '%"></span></span>' +
         '</button>';
     }).join('');
@@ -136,13 +261,39 @@
 
   var MODE_NOTES = {
     flash: 'Tự chấm sau khi lật — nhanh nhất để quét lại nhiều thẻ.',
-    choice: 'Bốn lựa chọn lấy từ cùng chủ đề, không đoán được bằng loại trừ.',
+    choice: 'Bốn lựa chọn lấy từ cùng môn và cùng chủ đề, không đoán được bằng loại trừ.',
     type: 'Gõ vào ô trên trang. Chấm bỏ qua hoa thường và dấu thanh; đáp án chữ Hán nhận cả pinyin.'
   };
 
   function renderSetup() {
+    // Bộ chọn môn: hai môn cộng lựa chọn trộn cả hai.
+    var picker = $('setup-subject');
+    picker.innerHTML = SUBJECTS.map(function (subject) {
+      return '<button type="button" role="radio" data-value="' + esc(subject.id) + '"' +
+        ' aria-checked="' + (state.prefs.subject === subject.id) + '">' +
+        esc(subject.name) + '</button>';
+    }).join('') +
+      (SUBJECTS.length > 1
+        ? '<button type="button" role="radio" data-value="all" aria-checked="' +
+          (state.prefs.subject === 'all') + '">Trộn cả hai</button>'
+        : '');
+
+    if (!picker.dataset.ready) {
+      on(picker, 'click', function (event) {
+        var btn = event.target.closest('button[data-value]');
+        if (!btn) return;
+        var id = btn.getAttribute('data-value');
+        state.prefs.subject = id;
+        if (id !== 'all') state.subject = id;
+        state.prefs.topics = [];
+        renderSetup();
+      });
+      picker.dataset.ready = '1';
+    }
+    syncSegmented('setup-subject', state.prefs.subject);
+
     var box = $('setup-topics');
-    box.innerHTML = TOPICS.map(function (topic) {
+    box.innerHTML = topicsOf(state.prefs.subject).map(function (topic) {
       var active = state.prefs.topics.indexOf(topic.id) !== -1;
       return '<button class="chip" type="button" aria-pressed="' + active + '" ' +
         'data-topic="' + esc(topic.id) + '">' + esc(topic.name) +
@@ -186,11 +337,13 @@
   }
 
   function updateSummary() {
-    var available = LC.session.create(CARDS, Object.assign({}, state.prefs, { size: 0 })).total;
+    var pool = cardsOf(state.prefs.subject);
+    var available = LC.session.create(
+      pool, Object.assign({}, state.prefs, { size: 0 })).total;
     var picked = state.prefs.size > 0 ? Math.min(state.prefs.size, available) : available;
     var scope = state.prefs.topics.length
       ? state.prefs.topics.map(topicName).join(', ')
-      : 'tất cả chủ đề';
+      : (state.prefs.subject === 'all' ? 'cả hai môn' : 'tất cả chủ đề');
     $('setup-summary').textContent = available
       ? picked + ' thẻ từ ' + scope + '.'
       : 'Không còn thẻ nào khớp — bỏ bớt bộ lọc.';
@@ -203,10 +356,13 @@
     var prefs = Object.assign({}, state.prefs, extra || {});
     state.prefs = prefs;
     LC.store.prefs({ direction: prefs.direction, mode: prefs.mode, size: prefs.size });
-    var session = LC.session.create(CARDS, prefs);
+    var session = LC.session.create(cardsOf(prefs.subject || state.subject), prefs);
     if (!session.total) { toast('Không có thẻ nào khớp lựa chọn.'); return; }
     state.session = session;
+    // Hiện màn hình học ngay, không chờ hashchange (event đó bắn không đồng bộ
+    // nên nếu dựa vào nó thì thẻ đầu tiên có thể dựng xong trước khi màn hiện).
     go('#/study');
+    show('study');
     showCurrent();
   }
 
@@ -228,6 +384,13 @@
     $('progress').setAttribute('aria-valuenow', pct);
 
     $('card-topic').textContent = topicName(item.card.topics[0]);
+    var groupTag = $('card-group');
+    if (item.card.group) {
+      groupTag.textContent = item.card.group;
+      groupTag.hidden = false;
+    } else {
+      groupTag.hidden = true;
+    }
     var progress = LC.store.get(item.card.id);
     $('btn-star').setAttribute('aria-pressed', !!(progress && progress.starred));
 
@@ -270,8 +433,12 @@
   }
 
   function renderChoices(item, q) {
+    // Đáp án nhiễu phải lấy trong cùng môn: trộn thuật ngữ WTO vào thẻ địa
+    // danh du lịch thì đoán ra ngay mà không cần biết nghĩa.
+    var subject = subjectOfCard(item.card);
+    var pool = subject ? subject.cards : cardsOf('all');
     var options = LC.text.shuffle(
-      LC.session.distractors(item.card, item.direction, CARDS).concat([q.answer])
+      LC.session.distractors(item.card, item.direction, pool).concat([q.answer])
     );
     var box = $('answer-choice');
     box.innerHTML = options.map(function (value) {
@@ -408,32 +575,40 @@
 
   /* ───────────────────────────────────────────────────────────── tra cứu ── */
 
+  function browseCards() {
+    return cardsOf(state.browseSubject);
+  }
+
   function renderBrowse() {
+    renderSubjectTabs($('browse-subjects'), state.browseSubject, function (id) {
+      state.browseSubject = id;
+      state.browseTopics = [];
+      renderBrowse();
+    });
+
     var box = $('browse-topics');
-    if (!box.dataset.ready) {
-      box.innerHTML = TOPICS.map(function (topic) {
-        return '<button class="chip" type="button" aria-pressed="false" ' +
-          'data-topic="' + esc(topic.id) + '">' + esc(topic.name) +
-          ' <span class="chip__n">' + topic.count + '</span></button>';
-      }).join('');
-      box.querySelectorAll('[data-topic]').forEach(function (chip) {
-        on(chip, 'click', function () {
-          var id = chip.getAttribute('data-topic');
-          var at = state.browseTopics.indexOf(id);
-          if (at === -1) state.browseTopics.push(id);
-          else state.browseTopics.splice(at, 1);
-          chip.setAttribute('aria-pressed', at === -1);
-          renderBrowseList();
-        });
+    box.innerHTML = topicsOf(state.browseSubject).map(function (topic) {
+      var active = state.browseTopics.indexOf(topic.id) !== -1;
+      return '<button class="chip" type="button" aria-pressed="' + active + '" ' +
+        'data-topic="' + esc(topic.id) + '">' + esc(topic.name) +
+        ' <span class="chip__n">' + topic.count + '</span></button>';
+    }).join('');
+    box.querySelectorAll('[data-topic]').forEach(function (chip) {
+      on(chip, 'click', function () {
+        var id = chip.getAttribute('data-topic');
+        var at = state.browseTopics.indexOf(id);
+        if (at === -1) state.browseTopics.push(id);
+        else state.browseTopics.splice(at, 1);
+        chip.setAttribute('aria-pressed', at === -1);
+        renderBrowseList();
       });
-      box.dataset.ready = '1';
-    }
+    });
     renderBrowseList();
   }
 
   function renderBrowseList() {
     var query = LC.text.fold($('search-input').value);
-    var rows = CARDS.filter(function (card) {
+    var rows = browseCards().filter(function (card) {
       if (state.browseTopics.length &&
         !card.topics.some(function (t) { return state.browseTopics.indexOf(t) !== -1; })) {
         return false;
@@ -445,7 +620,7 @@
         LC.text.tidy(card.zh).indexOf(LC.text.tidy($('search-input').value)) !== -1;
     });
 
-    $('browse-count').textContent = rows.length + ' / ' + CARDS.length + ' thẻ';
+    $('browse-count').textContent = rows.length + ' / ' + browseCards().length + ' thẻ';
     var list = $('browse-list');
     if (!rows.length) {
       list.innerHTML = '<li class="empty">Không tìm thấy thẻ nào khớp.</li>';
@@ -457,46 +632,62 @@
         '<span class="list__vi">' + esc(card.vi) + '</span>' +
         '<span class="list__py">' + esc(card.pinyin) + '</span>' +
         (card.context ? '<span class="list__ctx">' + esc(card.context) + '</span>' : '') +
+        (card.group ? '<span class="list__ctx">' + esc(card.group) + '</span>' : '') +
         '</li>';
     }).join('');
   }
 
   /* ───────────────────────────────────────────────────────────── tiến độ ── */
 
-  function renderStats() {
-    var learned = 0, learning = 0, fresh = 0;
-    CARDS.forEach(function (card) {
+  function tally(cards) {
+    var out = { learned: 0, learning: 0, fresh: 0, total: cards.length };
+    cards.forEach(function (card) {
       var p = LC.store.get(card.id);
-      if (LC.srs.isLearned(p)) learned++;
-      else if (LC.srs.isNew(p)) fresh++;
-      else learning++;
+      if (LC.srs.isLearned(p)) out.learned++;
+      else if (LC.srs.isNew(p)) out.fresh++;
+      else out.learning++;
     });
-    $('st-learned').textContent = learned;
-    $('st-learning').textContent = learning;
-    $('st-new').textContent = fresh;
+    return out;
+  }
+
+  function bar(label, cards) {
+    var t = tally(cards);
+    var n = t.total || 1;
+    return '<div class="bar">' +
+      '<div class="bar__head"><span>' + esc(label) + '</span>' +
+      '<span class="bar__num">' + t.learned + '/' + t.total + '</span></div>' +
+      '<div class="bar__track">' +
+      '<span class="bar__seg bar__seg--learned" style="width:' +
+      (t.learned / n * 100) + '%"></span>' +
+      '<span class="bar__seg bar__seg--learning" style="width:' +
+      (t.learning / n * 100) + '%"></span>' +
+      '</div></div>';
+  }
+
+  function renderStats() {
+    // Con số trên cùng là tổng cả hai môn, biểu đồ bên dưới chia theo môn.
+    var all = tally(cardsOf('all'));
+    $('st-learned').textContent = all.learned;
+    $('st-learning').textContent = all.learning;
+    $('st-new').textContent = all.fresh;
     $('st-streak').textContent = LC.store.streak();
 
-    $('stat-bars').innerHTML = TOPICS.map(function (topic) {
-      var cards = CARDS.filter(function (c) { return c.topics.indexOf(topic.id) !== -1; });
-      var done = 0, doing = 0;
-      cards.forEach(function (c) {
-        var p = LC.store.get(c.id);
-        if (LC.srs.isLearned(p)) done++;
-        else if (!LC.srs.isNew(p)) doing++;
-      });
-      var n = cards.length || 1;
-      return '<div class="bar">' +
-        '<div class="bar__head"><span>' + esc(topic.name) + '</span>' +
-        '<span class="bar__num">' + done + '/' + cards.length + '</span></div>' +
-        '<div class="bar__track">' +
-        '<span class="bar__seg bar__seg--learned" style="width:' + (done / n * 100) + '%"></span>' +
-        '<span class="bar__seg bar__seg--learning" style="width:' + (doing / n * 100) + '%"></span>' +
-        '</div></div>';
-    }).join('') +
-      '<p class="bar__legend">' +
+    var html = '';
+    SUBJECTS.forEach(function (subject) {
+      var t = tally(subject.cards);
+      html += '<p class="bars__subject">' + esc(subject.name) +
+        ' — ' + t.learned + '/' + t.total + ' thẻ đã thuộc</p>';
+      html += subject.topics.map(function (topic) {
+        return bar(topic.name, subject.cards.filter(function (c) {
+          return c.topics.indexOf(topic.id) !== -1;
+        }));
+      }).join('');
+    });
+    html += '<p class="bar__legend">' +
       '<span><span class="dot dot--learned"></span>Đã thuộc</span>' +
       '<span><span class="dot dot--learning"></span>Đang học</span>' +
       '<span><span class="dot dot--new"></span>Chưa học</span></p>';
+    $('stat-bars').innerHTML = html;
 
     $('data-msg').textContent = LC.store.isAvailable()
       ? '' : 'Trình duyệt đang chặn bộ nhớ cục bộ — tiến độ sẽ mất khi đóng trang.';
@@ -565,13 +756,14 @@
   function bind() {
     on($('btn-review'), 'click', function () {
       var due = countBy(function (p, c, now) { return LC.srs.isDue(p, now); });
-      startSession({ topics: [], only: due ? 'due' : 'new', size: 20 });
+      startSession({ subject: state.subject, topics: [], only: due ? 'due' : 'new', size: 20 });
     });
     on($('btn-custom'), 'click', function () { state.prefs.only = null; go('#/setup'); });
 
     document.querySelectorAll('[data-quick]').forEach(function (btn) {
       on(btn, 'click', function () {
-        startSession({ topics: [], only: btn.getAttribute('data-quick'), size: 20 });
+        startSession({ subject: state.subject, topics: [],
+          only: btn.getAttribute('data-quick'), size: 20 });
       });
     });
 
@@ -658,12 +850,22 @@
   /* ──────────────────────────────────────────────────────────────── khởi động ── */
 
   function boot() {
-    if (!CARDS.length) {
+    if (!SUBJECTS.length || !cardsOf('all').length) {
       $('home-total').textContent = '0';
       toast('Không nạp được dữ liệu từ vựng.');
       return;
     }
     LC.store.load();
+
+    // Môn đã chọn lần trước, nếu vẫn còn tồn tại trong dữ liệu.
+    try {
+      var lastSubject = window.localStorage.getItem('lc.subject');
+      if (lastSubject && subjectsFor(lastSubject).length) {
+        state.subject = lastSubject;
+        state.prefs.subject = lastSubject;
+        state.browseSubject = lastSubject;
+      }
+    } catch (err) { /* bỏ qua */ }
 
     var saved = LC.store.prefs();
     if (saved) {

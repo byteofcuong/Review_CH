@@ -707,6 +707,7 @@ def build_travel(overrides):
     return {
         "id": "bien-du-lich",
         "name": "Biên du lịch",
+        "short": "Du lịch",
         "zh": "旅游",
         "source": XLSX_TRAVEL.name,
         "topicConf": TRAVEL_TOPICS,
@@ -731,6 +732,7 @@ def build_interpret():
     return {
         "id": "phien-dich",
         "name": "Phiên dịch nâng cao",
+        "short": "Phiên dịch",
         "zh": "经贸",
         "source": XLSX_INTERPRET.name,
         "topicConf": INTERPRET_SHEETS,
@@ -767,6 +769,7 @@ def main():
         subjects.append({
             "id": subject["id"],
             "name": subject["name"],
+            "short": subject["short"],
             "zh": subject["zh"],
             "source": subject["source"],
             "topics": [{"id": t["id"], "name": t["name"],

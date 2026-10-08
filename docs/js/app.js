@@ -157,6 +157,49 @@
     state.prefs.subject = id;
     state.prefs.topics = [];
     try { window.localStorage.setItem('lc.subject', id); } catch (err) { /* bỏ qua */ }
+    syncSwitcher();
+  }
+
+  /** Bộ đổi môn trên thanh trên — dùng được ở mọi màn hình. */
+  function renderSwitcher() {
+    var select = $('subject-switch');
+    select.innerHTML = SUBJECTS.map(function (subject) {
+      var due = dueIn(subject.cards);
+      return '<option value="' + esc(subject.id) + '">' +
+        esc(subject.zh) + ' · ' + esc(subject.short || subject.name) +
+        (due ? ' (' + due + ')' : '') + '</option>';
+    }).join('');
+    select.value = state.subject;
+    if (select.dataset.ready) return;        // chỉ gắn sự kiện một lần
+    select.dataset.ready = '1';
+
+    on(select, 'change', function () {
+      var id = select.value;
+      var from = state.view;
+      // Đang học dở thì thoát phiên. Mỗi thẻ đã chấm được lưu ngay lúc chấm
+      // nên không mất gì, chỉ là dừng phiên lại.
+      var quit = !!state.session;
+      state.session = null;
+      setSubject(id);
+
+      if (from === 'browse') {
+        // Đang tra cứu thì ở lại đó, chỉ đổi môn đang xem.
+        state.browseSubject = id;
+        state.browseTopics = [];
+        renderBrowse();
+      } else if (from === 'stats') {
+        renderStats();            // trang này vốn hiện cả hai môn
+      } else {
+        go('#/');
+        route();
+      }
+      if (quit) toast('Đã chuyển môn. Tiến độ các thẻ vừa học đã lưu.');
+    });
+  }
+
+  function syncSwitcher() {
+    var select = $('subject-switch');
+    if (select && select.value !== state.subject) select.value = state.subject;
   }
 
   function renderSubjectTabs(container, selected, onPick) {
@@ -187,8 +230,12 @@
     $('home-source').textContent = subject.name;
     $('hero-zh').textContent = subject.zh;
     $('foot-count').textContent = cardsOf('all').length;
+    $('foot-sources').textContent = SUBJECTS.map(function (s) {
+      return s.name;
+    }).join(' · ');
     $('foot-date').textContent = DATA.generatedAt || '—';
 
+    renderSwitcher();     // số thẻ đến hạn trong bộ chọn cũng cập nhật theo
     renderSubjectTabs($('subject-tabs'), state.subject, function (id) {
       setSubject(id);
       renderHome();
@@ -875,6 +922,7 @@
     }
 
     initTheme();
+    renderSwitcher();
     bind();
     bindKeys();
 

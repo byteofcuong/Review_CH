@@ -6,6 +6,7 @@ window.VOCAB = {
   {
    "id": "bien-du-lich",
    "name": "Biên du lịch",
+   "short": "Du lịch",
    "zh": "旅游",
    "source": "Biên du lịch.xlsx",
    "topics": [
@@ -3966,6 +3967,7 @@ window.VOCAB = {
   {
    "id": "phien-dich",
    "name": "Phiên dịch nâng cao",
+   "short": "Phiên dịch",
    "zh": "经贸",
    "source": "Phiên dịch nâng cao.xlsx",
    "topics": [

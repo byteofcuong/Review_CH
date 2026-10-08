@@ -1,7 +1,7 @@
 {
-  "name": "Biên Du Lịch — từ vựng du lịch Trung Việt",
-  "short_name": "Biên Du Lịch",
-  "description": "Học thuộc từ vựng và địa danh tiếng Trung chuyên ngành du lịch.",
+  "name": "Hán Ngữ Đường — từ vựng tiếng Trung chuyên ngành",
+  "short_name": "Hán Ngữ Đường",
+  "description": "Học thuộc từ vựng tiếng Trung chuyên ngành: biên du lịch và phiên dịch nâng cao.",
   "lang": "vi",
   "start_url": "./",
   "scope": "./",

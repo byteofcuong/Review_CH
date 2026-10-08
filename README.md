@@ -1,4 +1,4 @@
-# Học từ vựng tiếng Trung chuyên ngành
+# Hán Ngữ Đường 汉语堂
 
 Web học thuộc lòng **780 thẻ** từ vựng tiếng Trung của hai môn, rút từ hai bảng Excel.
 

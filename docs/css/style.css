@@ -213,6 +213,30 @@ button, input { font: inherit; color: inherit; }
   letter-spacing: .18em;
 }
 
+/* bộ đổi môn trên thanh trên: luôn trong tầm tay, kể cả giữa phiên học */
+.switcher { display: flex; align-items: center; flex: none; }
+
+.switcher__select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 7px 28px 7px 11px;
+  max-width: 11rem;
+  background-color: var(--surface);
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink-3) 50%),
+                    linear-gradient(135deg, var(--ink-3) 50%, transparent 50%);
+  background-position: right 12px center, right 7px center;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  color: var(--ink);
+  font-size: 14px;
+  cursor: pointer;
+  text-overflow: ellipsis;
+}
+.switcher__select:hover { border-color: var(--ink-3); }
+.switcher__select:focus-visible { border-color: var(--cinnabar); }
+
 .nav { display: flex; gap: 2px; }
 
 .nav__link {
@@ -1017,6 +1041,9 @@ kbd {
   .nav { order: 3; width: 100%; overflow-x: auto; padding-bottom: 2px; }
   .nav__link { padding-inline: 10px; }
   .brand__sub { display: none; }
+  .switcher__select { max-width: 8.5rem; font-size: 13.5px; }
+  .brand__text strong { font-size: 15px; }
+  .seal { width: 30px; height: 30px; font-size: 18px; }
 
   .today { flex-direction: column; align-items: stretch; }
   .today__actions .btn { flex: 1; }

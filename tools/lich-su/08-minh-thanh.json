@@ -1,0 +1,136 @@
+{
+  "id": "ls-minh-thanh",
+  "name": "Minh – Thanh",
+  "zh": "明清",
+  "slides": "125-136",
+  "questions": [
+    {
+      "q": "明朝在哪一年建立？开国皇帝是谁？",
+      "a": "1368年，朱元璋（明太祖）",
+      "qVi": "Nhà Minh lập năm nào, hoàng đế khai quốc là ai?",
+      "aVi": "Năm 1368, Chu Nguyên Chương (Minh Thái Tổ)",
+      "alt": ["1368年，朱元璋"]
+    },
+    {
+      "q": "明朝建立后中国恢复了哪个民族的统治？经历了多少年？",
+      "a": "恢复了汉人的统治，经历276年",
+      "qVi": "Sau khi nhà Minh lập, Trung Quốc khôi phục sự thống trị của dân tộc nào, kéo dài bao nhiêu năm?",
+      "aVi": "Khôi phục sự thống trị của người Hán, kéo dài 276 năm"
+    },
+    {
+      "q": "明太祖朱元璋的年号是什么？在位年份是多少？",
+      "a": "洪武，1368—1398年",
+      "qVi": "Niên hiệu của Minh Thái Tổ Chu Nguyên Chương là gì, trị vì những năm nào?",
+      "aVi": "Hồng Vũ, năm 1368–1398",
+      "alt": ["洪武"]
+    },
+    {
+      "q": "明成祖是谁？年号是什么？",
+      "a": "朱棣，年号永乐",
+      "qVi": "Minh Thành Tổ là ai, niên hiệu là gì?",
+      "aVi": "Chu Đệ, niên hiệu Vĩnh Lạc",
+      "alt": ["朱棣，永乐"]
+    },
+    {
+      "q": "明成祖朱棣是明朝第几位皇帝？",
+      "a": "第三位",
+      "qVi": "Minh Thành Tổ Chu Đệ là hoàng đế thứ mấy của nhà Minh?",
+      "aVi": "Thứ ba"
+    },
+    {
+      "q": "明朝的三大特务机构是什么？",
+      "a": "东厂、西厂、锦衣卫",
+      "qVi": "Ba cơ quan mật vụ của nhà Minh là gì?",
+      "aVi": "Đông Xưởng, Tây Xưởng, Cẩm Y Vệ"
+    },
+    {
+      "q": "明朝末期爆发了谁领导的农民大起义？",
+      "a": "李自成",
+      "qVi": "Cuối nhà Minh bùng nổ cuộc khởi nghĩa nông dân lớn do ai lãnh đạo?",
+      "aVi": "Lý Tự Thành"
+    },
+    {
+      "q": "明朝在哪一年灭亡？",
+      "a": "1644年",
+      "qVi": "Nhà Minh diệt vong năm nào?",
+      "aVi": "Năm 1644"
+    },
+    {
+      "q": "明朝时期出现了什么标志着中国资本主义的萌芽？",
+      "a": "开始实行雇佣劳动",
+      "qVi": "Thời Minh xuất hiện điều gì đánh dấu mầm mống chủ nghĩa tư bản Trung Quốc?",
+      "aVi": "Bắt đầu thực hiện lao động làm thuê"
+    },
+    {
+      "q": "清朝由哪个民族建立？是中国历史上的第几个封建王朝？",
+      "a": "满族；是中国历史上最后一个封建王朝",
+      "qVi": "Nhà Thanh do dân tộc nào lập, là vương triều phong kiến thứ mấy trong lịch sử Trung Quốc?",
+      "aVi": "Người Mãn; là vương triều phong kiến cuối cùng trong lịch sử Trung Quốc"
+    },
+    {
+      "q": "清军入关是在哪一年？",
+      "a": "1644年",
+      "qVi": "Quân Thanh nhập quan vào năm nào?",
+      "aVi": "Năm 1644"
+    },
+    {
+      "q": "“康雍乾盛世”是哪些年份？有什么特点？",
+      "a": "1661—1796年；国家稳定、经济富庶，领土达到最大化",
+      "qVi": "\"Khang Ung Càn thịnh thế\" vào những năm nào, có đặc điểm gì?",
+      "aVi": "Năm 1661–1796; quốc gia ổn định, kinh tế giàu có, lãnh thổ đạt mức lớn nhất",
+      "alt": ["1661-1796年"]
+    },
+    {
+      "q": "第一次鸦片战争发生在哪些年份？有什么意义？",
+      "a": "1840—1842年；开启了中国的“百年国耻”与不平等条约时代",
+      "qVi": "Chiến tranh Nha phiến lần thứ nhất xảy ra những năm nào, ý nghĩa gì?",
+      "aVi": "Năm 1840–1842; mở đầu \"bách niên quốc sỉ\" và thời đại các hiệp ước bất bình đẳng của Trung Quốc",
+      "alt": ["1840-1842年"]
+    },
+    {
+      "q": "太平天国运动发生在哪些年份？造成了什么后果？",
+      "a": "1851—1864年；严重耗尽了国库与清军实力",
+      "qVi": "Phong trào Thái Bình Thiên Quốc xảy ra những năm nào, gây hậu quả gì?",
+      "aVi": "Năm 1851–1864; làm cạn kiệt nghiêm trọng quốc khố và thực lực quân Thanh",
+      "alt": ["1851-1864年"]
+    },
+    {
+      "q": "甲午战争发生在哪些年份？揭示了什么？",
+      "a": "1894—1895年；揭示了洋务运动与维新运动的局限性",
+      "qVi": "Chiến tranh Giáp Ngọ xảy ra những năm nào, bộc lộ điều gì?",
+      "aVi": "Năm 1894–1895; bộc lộ hạn chế của phong trào Dương Vụ và phong trào Duy Tân",
+      "alt": ["1894-1895年"]
+    },
+    {
+      "q": "辛亥革命发生在哪些年份？有什么历史意义？",
+      "a": "1911—1912年；清廷覆灭，溥仪退位，结束了延续两千年的君主制",
+      "qVi": "Cách mạng Tân Hợi xảy ra những năm nào, ý nghĩa lịch sử là gì?",
+      "aVi": "Năm 1911–1912; triều Thanh sụp đổ, Phổ Nghi thoái vị, kết thúc chế độ quân chủ kéo dài hai nghìn năm",
+      "alt": ["1911-1912年", "1911年"]
+    },
+    {
+      "q": "清朝最后一位皇帝是谁？",
+      "a": "溥仪",
+      "qVi": "Hoàng đế cuối cùng của nhà Thanh là ai?",
+      "aVi": "Phổ Nghi"
+    },
+    {
+      "q": "为什么中国的资本主义萌芽没能强大起来？",
+      "a": "因为封建传统的影响太大",
+      "qVi": "Vì sao mầm mống chủ nghĩa tư bản Trung Quốc không lớn mạnh được?",
+      "aVi": "Vì ảnh hưởng của truyền thống phong kiến quá lớn"
+    },
+    {
+      "q": "中国从什么时候开始一步步沦为半殖民地半封建社会？",
+      "a": "清朝中期开始",
+      "qVi": "Trung Quốc từ khi nào dần trở thành xã hội nửa thuộc địa nửa phong kiến?",
+      "aVi": "Bắt đầu từ giữa thời Thanh"
+    },
+    {
+      "q": "从明代初期到清代中期约多少年，中国是什么样的国家？",
+      "a": "约470年，是统一的多民族国家",
+      "qVi": "Từ đầu Minh đến giữa Thanh khoảng bao nhiêu năm, Trung Quốc là quốc gia thế nào?",
+      "aVi": "Khoảng 470 năm, là quốc gia đa dân tộc thống nhất"
+    }
+  ]
+}

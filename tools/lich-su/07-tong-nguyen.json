@@ -1,0 +1,203 @@
+{
+  "id": "ls-tong-nguyen",
+  "name": "Ngũ Đại – Tống – Nguyên",
+  "zh": "宋元",
+  "slides": "115-123",
+  "questions": [
+    {
+      "q": "五代十国时期从哪一年到哪一年？",
+      "a": "907年到960年",
+      "qVi": "Thời Ngũ Đại Thập Quốc từ năm nào đến năm nào?",
+      "aVi": "Từ năm 907 đến năm 960"
+    },
+    {
+      "q": "“五代”指哪五个政权？",
+      "a": "后梁、后唐、后晋、后汉、后周",
+      "qVi": "\"Ngũ Đại\" chỉ năm chính quyền nào?",
+      "aVi": "Hậu Lương, Hậu Đường, Hậu Tấn, Hậu Hán, Hậu Chu"
+    },
+    {
+      "q": "五代十国的时代特征是什么？",
+      "a": "武人专政、战乱频繁、社会动荡、门阀世族基本消亡",
+      "qVi": "Đặc trưng thời đại Ngũ Đại Thập Quốc là gì?",
+      "aVi": "Võ nhân chuyên chính, chiến loạn liên miên, xã hội động loạn, môn phiệt thế tộc cơ bản tiêu vong"
+    },
+    {
+      "q": "北宋在哪一年建立？建立者是谁？",
+      "a": "960年，赵匡胤（宋太祖）通过陈桥兵变建立",
+      "qVi": "Bắc Tống lập năm nào, ai sáng lập?",
+      "aVi": "Năm 960, Triệu Khuông Dận (Tống Thái Tổ) lập qua binh biến Trần Kiều",
+      "alt": ["960年，赵匡胤"]
+    },
+    {
+      "q": "北宋的都城在哪里？",
+      "a": "开封",
+      "qVi": "Kinh đô Bắc Tống ở đâu?",
+      "aVi": "Khai Phong"
+    },
+    {
+      "q": "宋太祖用什么措施解除武将的兵权？",
+      "a": "杯酒释兵权",
+      "qVi": "Tống Thái Tổ dùng biện pháp gì để tước binh quyền của các võ tướng?",
+      "aVi": "Bôi tửu thích binh quyền (chén rượu giải binh quyền)"
+    },
+    {
+      "q": "北宋为防止武将专权采取了哪些措施？",
+      "a": "改派文臣统领军队，军队定期换防，将帅常调",
+      "qVi": "Bắc Tống làm gì để ngăn võ tướng chuyên quyền?",
+      "aVi": "Cử văn thần thống lĩnh quân đội, quân đội định kỳ đổi phòng, tướng soái thường xuyên điều chuyển"
+    },
+    {
+      "q": "1004年宋辽签订了什么和约？",
+      "a": "澶渊之盟",
+      "qVi": "Năm 1004 Tống và Liêu ký hòa ước gì?",
+      "aVi": "Thiền Uyên chi minh"
+    },
+    {
+      "q": "西夏在哪一年建立？建立者是谁？",
+      "a": "1038年，李元昊称帝",
+      "qVi": "Tây Hạ lập năm nào, ai sáng lập?",
+      "aVi": "Năm 1038, Lý Nguyên Hạo xưng đế",
+      "alt": ["1038年，李元昊"]
+    },
+    {
+      "q": "庆历新政由谁实施？结果如何？",
+      "a": "范仲淹，因保守派反对而失败",
+      "qVi": "Khánh Lịch tân chính do ai thi hành, kết quả ra sao?",
+      "aVi": "Phạm Trọng Yêm; thất bại vì phái bảo thủ phản đối",
+      "alt": ["范仲淹"]
+    },
+    {
+      "q": "北宋规模最大的改革是什么？在哪一年？",
+      "a": "王安石变法，1069年",
+      "qVi": "Cuộc cải cách quy mô lớn nhất Bắc Tống là gì, vào năm nào?",
+      "aVi": "Vương An Thạch biến pháp, năm 1069",
+      "alt": ["王安石变法"]
+    },
+    {
+      "q": "王安石变法的目的是什么？引发了什么后果？",
+      "a": "旨在富国强兵，但引发内部党争",
+      "qVi": "Mục đích Vương An Thạch biến pháp là gì, gây hậu quả gì?",
+      "aVi": "Nhằm làm nước giàu quân mạnh, nhưng gây ra đảng tranh nội bộ"
+    },
+    {
+      "q": "靖康之变发生在哪一年？结果是什么？",
+      "a": "1127年，金军攻破汴京，俘虏宋徽宗与宋钦宗，北宋灭亡",
+      "qVi": "Biến cố Tĩnh Khang xảy ra năm nào, kết quả thế nào?",
+      "aVi": "Năm 1127, quân Kim phá Biện Kinh, bắt Tống Huy Tông và Tống Khâm Tông, Bắc Tống diệt vong",
+      "alt": ["1127年"]
+    },
+    {
+      "q": "南宋在哪一年建立？建立者是谁？",
+      "a": "1127年，赵构登基",
+      "qVi": "Nam Tống lập năm nào, ai sáng lập?",
+      "aVi": "Năm 1127, Triệu Cấu lên ngôi",
+      "alt": ["1127年，赵构"]
+    },
+    {
+      "q": "绍兴和议在哪一年签订？同时发生了什么事？",
+      "a": "1141年，岳飞被杀",
+      "qVi": "Thiệu Hưng hòa nghị ký năm nào, đồng thời xảy ra việc gì?",
+      "aVi": "Năm 1141, Nhạc Phi bị giết"
+    },
+    {
+      "q": "崖山海战发生在哪一年？结果是什么？",
+      "a": "1279年，蒙古军击败南宋海军，陆秀夫背负幼帝投海自尽，宋朝灭亡",
+      "qVi": "Hải chiến Nhai Sơn xảy ra năm nào, kết quả thế nào?",
+      "aVi": "Năm 1279, quân Mông Cổ đánh bại thủy quân Nam Tống, Lục Tú Phu cõng ấu đế nhảy biển tự vẫn, nhà Tống diệt vong",
+      "alt": ["1279年"]
+    },
+    {
+      "q": "宋朝在科技上有哪三大成就？",
+      "a": "活字印刷、指南针、火药",
+      "qVi": "Nhà Tống có ba thành tựu khoa học kỹ thuật nào?",
+      "aVi": "In chữ rời, la bàn, thuốc súng"
+    },
+    {
+      "q": "宋朝在经济上有什么突出成就？",
+      "a": "纸币、海上贸易",
+      "qVi": "Thành tựu kinh tế nổi bật của nhà Tống là gì?",
+      "aVi": "Tiền giấy, mậu dịch đường biển"
+    },
+    {
+      "q": "宋朝在文化上有什么代表成就？",
+      "a": "宋词、理学",
+      "qVi": "Thành tựu văn hóa tiêu biểu của nhà Tống là gì?",
+      "aVi": "Tống từ, Lý học"
+    },
+    {
+      "q": "宋朝时期中国的经济重心发生了什么变化？",
+      "a": "从黄河流域转移到长江流域",
+      "qVi": "Trọng tâm kinh tế Trung Quốc thời Tống chuyển biến thế nào?",
+      "aVi": "Chuyển từ lưu vực Hoàng Hà sang lưu vực Trường Giang"
+    },
+    {
+      "q": "谁统一了蒙古各部落？",
+      "a": "成吉思汗",
+      "qVi": "Ai thống nhất các bộ lạc Mông Cổ?",
+      "aVi": "Thành Cát Tư Hãn"
+    },
+    {
+      "q": "元朝在哪一年建立？建立者是谁？都城在哪里？",
+      "a": "1271年，忽必烈称帝，定都大都（今北京）",
+      "qVi": "Nhà Nguyên lập năm nào, ai sáng lập, kinh đô ở đâu?",
+      "aVi": "Năm 1271, Hốt Tất Liệt xưng đế, đóng đô ở Đại Đô (Bắc Kinh ngày nay)",
+      "alt": ["1271年，忽必烈"]
+    },
+    {
+      "q": "忽必烈和成吉思汗是什么关系？",
+      "a": "忽必烈是成吉思汗的孙子",
+      "qVi": "Hốt Tất Liệt và Thành Cát Tư Hãn có quan hệ gì?",
+      "aVi": "Hốt Tất Liệt là cháu nội của Thành Cát Tư Hãn"
+    },
+    {
+      "q": "元朝在哪一年灭南宋完成统一？",
+      "a": "1279年",
+      "qVi": "Nhà Nguyên diệt Nam Tống hoàn thành thống nhất năm nào?",
+      "aVi": "Năm 1279"
+    },
+    {
+      "q": "元朝在中国历史上有什么特殊地位？",
+      "a": "是第一个由少数民族控制全中国的朝代",
+      "qVi": "Nhà Nguyên có vị trí đặc biệt gì trong lịch sử Trung Quốc?",
+      "aVi": "Là triều đại đầu tiên do dân tộc thiểu số khống chế toàn Trung Quốc"
+    },
+    {
+      "q": "元朝的政策从游牧传统转向了什么？",
+      "a": "“采用汉法”，重视农业以恢复经济",
+      "qVi": "Chính sách nhà Nguyên chuyển từ truyền thống du mục sang gì?",
+      "aVi": "\"Thái dụng Hán pháp\", coi trọng nông nghiệp để khôi phục kinh tế",
+      "alt": ["采用汉法"]
+    },
+    {
+      "q": "哪一位西方旅行家游历中国并描写了当时的繁荣？",
+      "a": "马可·波罗",
+      "qVi": "Nhà du hành phương Tây nào đã đi khắp Trung Quốc và mô tả sự phồn vinh đương thời?",
+      "aVi": "Marco Polo"
+    },
+    {
+      "q": "元朝的民族歧视政策是怎样的？",
+      "a": "划分等级，蒙古人为第一等，原南宋人为最下等",
+      "qVi": "Chính sách kỳ thị dân tộc của nhà Nguyên như thế nào?",
+      "aVi": "Phân chia đẳng cấp, người Mông Cổ hạng nhất, người Nam Tống cũ hạng thấp nhất"
+    },
+    {
+      "q": "元朝统治了多少年？",
+      "a": "98年",
+      "qVi": "Nhà Nguyên thống trị bao nhiêu năm?",
+      "aVi": "98 năm"
+    },
+    {
+      "q": "元朝灭亡的主要原因是什么？",
+      "a": "重武轻文、宫廷政变频繁、民族歧视政策、官员腐败、军队战斗力衰退",
+      "qVi": "Nguyên nhân chính khiến nhà Nguyên diệt vong là gì?",
+      "aVi": "Trọng võ khinh văn, chính biến cung đình liên tiếp, chính sách kỳ thị dân tộc, quan lại tham nhũng, sức chiến đấu quân đội suy giảm"
+    },
+    {
+      "q": "元朝在历史上有什么积极意义？",
+      "a": "统一全国，结束南北对峙，促进了民族融合",
+      "qVi": "Nhà Nguyên có ý nghĩa tích cực gì trong lịch sử?",
+      "aVi": "Thống nhất cả nước, kết thúc thế đối đầu Nam Bắc, thúc đẩy dung hợp dân tộc"
+    }
+  ]
+}

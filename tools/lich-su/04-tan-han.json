@@ -1,0 +1,281 @@
+{
+  "id": "ls-tan-han",
+  "name": "Tần – Hán",
+  "zh": "秦汉",
+  "slides": "69-81",
+  "questions": [
+    {
+      "q": "秦始皇在哪一年统一中国？",
+      "a": "公元前221年",
+      "qVi": "Tần Thủy Hoàng thống nhất Trung Quốc vào năm nào?",
+      "aVi": "Năm 221 TCN",
+      "alt": ["前221年"]
+    },
+    {
+      "q": "秦朝的都城在哪里？",
+      "a": "咸阳（今西安）",
+      "qVi": "Kinh đô nhà Tần ở đâu?",
+      "aVi": "Hàm Dương (Tây An ngày nay)",
+      "alt": ["咸阳"]
+    },
+    {
+      "q": "秦朝在中国历史上有什么地位？",
+      "a": "是第一个中央集权的统一的封建国家",
+      "qVi": "Nhà Tần có vị trí gì trong lịch sử Trung Quốc?",
+      "aVi": "Là nhà nước phong kiến thống nhất, trung ương tập quyền đầu tiên"
+    },
+    {
+      "q": "秦朝最重要的五项改变是什么？",
+      "a": "郡县制、书同文、车同轨、统一货币与度量衡、确立土地个人私有制度",
+      "qVi": "Năm thay đổi quan trọng nhất của nhà Tần là gì?",
+      "aVi": "Chế độ quận huyện, thống nhất chữ viết, thống nhất cỡ trục xe, thống nhất tiền tệ và đo lường, xác lập chế độ tư hữu ruộng đất"
+    },
+    {
+      "q": "秦朝建立后废除了什么制度，推行了什么制度？",
+      "a": "废分封，行郡县",
+      "qVi": "Sau khi lập quốc, nhà Tần bãi bỏ chế độ nào và thi hành chế độ nào?",
+      "aVi": "Bãi bỏ phân phong, thi hành quận huyện"
+    },
+    {
+      "q": "秦始皇在哪一年筑长城，目的是什么？",
+      "a": "公元前215年，为了抵御匈奴",
+      "qVi": "Tần Thủy Hoàng xây Trường Thành năm nào, nhằm mục đích gì?",
+      "aVi": "Năm 215 TCN, để phòng ngự Hung Nô"
+    },
+    {
+      "q": "“焚书坑儒”发生在哪一年，有什么意义？",
+      "a": "公元前213年，标志着思想高度专制",
+      "qVi": "\"Đốt sách chôn nho\" xảy ra năm nào, có ý nghĩa gì?",
+      "aVi": "Năm 213 TCN, đánh dấu sự chuyên chế tư tưởng cao độ",
+      "alt": ["前213年"]
+    },
+    {
+      "q": "秦始皇在哪一年驾崩，发生了什么事变？",
+      "a": "公元前210年，沙丘之变",
+      "qVi": "Tần Thủy Hoàng băng hà năm nào, xảy ra biến cố gì?",
+      "aVi": "Năm 210 TCN, biến cố Sa Khâu",
+      "alt": ["沙丘之变"]
+    },
+    {
+      "q": "秦朝建立多少年后被农民起义推翻？",
+      "a": "15年",
+      "qVi": "Nhà Tần bị khởi nghĩa nông dân lật đổ sau bao nhiêu năm?",
+      "aVi": "15 năm"
+    },
+    {
+      "q": "推翻秦朝的农民起义由谁领导？",
+      "a": "陈胜、吴广",
+      "qVi": "Khởi nghĩa nông dân lật đổ nhà Tần do ai lãnh đạo?",
+      "aVi": "Trần Thắng, Ngô Quảng"
+    },
+    {
+      "q": "陈胜吴广起义又叫什么？发生在哪一年？",
+      "a": "大泽乡起义，公元前209年",
+      "qVi": "Khởi nghĩa Trần Thắng Ngô Quảng còn gọi là gì, xảy ra năm nào?",
+      "aVi": "Khởi nghĩa Đại Trạch Hương, năm 209 TCN"
+    },
+    {
+      "q": "陈胜吴广起义的著名口号是什么？",
+      "a": "王侯将相宁有种乎",
+      "qVi": "Khẩu hiệu nổi tiếng của khởi nghĩa Trần Thắng Ngô Quảng là gì?",
+      "aVi": "Vương hầu tướng tướng, ninh hữu chủng hồ (Vương hầu tướng lĩnh, há phải do dòng giống sao?)"
+    },
+    {
+      "q": "陈胜吴广起义建立了什么政权？",
+      "a": "“张楚”政权",
+      "qVi": "Khởi nghĩa Trần Thắng Ngô Quảng lập ra chính quyền gì?",
+      "aVi": "Chính quyền \"Trương Sở\"",
+      "alt": ["张楚"]
+    },
+    {
+      "q": "陈胜吴广起义为什么爆发？",
+      "a": "九百名农民被征发戍守边境，途中遇大雨失期，按秦律失期当斩",
+      "qVi": "Vì sao khởi nghĩa Trần Thắng Ngô Quảng bùng nổ?",
+      "aVi": "Chín trăm nông dân bị điều đi thú biên, giữa đường gặp mưa lớn lỡ kỳ hạn, theo luật Tần lỡ hạn thì bị chém"
+    },
+    {
+      "q": "陈胜吴广起义持续多久后失败？",
+      "a": "六个月",
+      "qVi": "Khởi nghĩa Trần Thắng Ngô Quảng thất bại sau bao lâu?",
+      "aVi": "Sáu tháng"
+    },
+    {
+      "q": "楚汉争雄的双方是谁？",
+      "a": "项羽和刘邦",
+      "qVi": "Hai bên trong cuộc Hán Sở tranh hùng là ai?",
+      "aVi": "Hạng Vũ và Lưu Bang"
+    },
+    {
+      "q": "项羽和刘邦的出身有什么不同？",
+      "a": "项羽是名门贵族，刘邦是平民出身",
+      "qVi": "Xuất thân của Hạng Vũ và Lưu Bang khác nhau thế nào?",
+      "aVi": "Hạng Vũ là quý tộc danh gia, Lưu Bang xuất thân bình dân"
+    },
+    {
+      "q": "项羽和刘邦分别主张什么制度？",
+      "a": "项羽主张分封制，刘邦主张大一统",
+      "qVi": "Hạng Vũ và Lưu Bang chủ trương chế độ gì?",
+      "aVi": "Hạng Vũ chủ trương phân phong, Lưu Bang chủ trương đại nhất thống"
+    },
+    {
+      "q": "刘邦起用谁“暗度陈仓”突袭关中？",
+      "a": "韩信",
+      "qVi": "Lưu Bang dùng ai để \"ám độ Trần Thương\" tập kích Quan Trung?",
+      "aVi": "Hàn Tín"
+    },
+    {
+      "q": "楚汉双方约定以什么为界平分天下？",
+      "a": "鸿沟",
+      "qVi": "Hai bên Hán Sở ước định lấy gì làm ranh giới chia đôi thiên hạ?",
+      "aVi": "Hồng Câu"
+    },
+    {
+      "q": "刘邦在哪一场战役中通过“十面埋伏”和“四面楚歌”彻底击溃楚军？",
+      "a": "垓下之战",
+      "qVi": "Lưu Bang đánh tan quân Sở bằng \"thập diện mai phục\" và \"tứ diện Sở ca\" trong trận nào?",
+      "aVi": "Trận Cai Hạ"
+    },
+    {
+      "q": "汉朝在哪一年正式建立？",
+      "a": "公元前202年（刘邦称帝）",
+      "qVi": "Nhà Hán chính thức thành lập năm nào?",
+      "aVi": "Năm 202 TCN (Lưu Bang xưng đế)",
+      "alt": ["前202年"]
+    },
+    {
+      "q": "西汉和东汉的都城分别在哪里？",
+      "a": "西汉定都长安（今西安），东汉定都洛阳",
+      "qVi": "Kinh đô Tây Hán và Đông Hán lần lượt ở đâu?",
+      "aVi": "Tây Hán đóng đô ở Trường An (Tây An ngày nay), Đông Hán đóng đô ở Lạc Dương"
+    },
+    {
+      "q": "汉朝前期实行了什么政策？",
+      "a": "让老百姓休养生息的政策",
+      "qVi": "Thời kỳ đầu nhà Hán thi hành chính sách gì?",
+      "aVi": "Chính sách cho dân nghỉ ngơi dưỡng sức",
+      "alt": ["休养生息"]
+    },
+    {
+      "q": "汉朝全国人口达到多少？",
+      "a": "6000多万",
+      "qVi": "Dân số cả nước thời Hán đạt bao nhiêu?",
+      "aVi": "Hơn 60 triệu"
+    },
+    {
+      "q": "汉朝派谁出使西域，开辟了什么？",
+      "a": "派张骞出使西域，开辟了丝绸之路",
+      "qVi": "Nhà Hán cử ai đi sứ Tây Vực, khai thông con đường nào?",
+      "aVi": "Cử Trương Khiên đi sứ Tây Vực, khai thông Con đường Tơ lụa",
+      "alt": ["张骞，丝绸之路"]
+    },
+    {
+      "q": "汉朝采用了谁的什么建议使儒家成为正统思想？",
+      "a": "董仲舒的“罢黜百家，独尊儒术”",
+      "qVi": "Nhà Hán dùng kiến nghị nào của ai khiến Nho gia thành tư tưởng chính thống?",
+      "aVi": "\"Bãi truất bách gia, độc tôn Nho thuật\" của Đổng Trọng Thư",
+      "alt": ["董仲舒", "罢黜百家，独尊儒术"]
+    },
+    {
+      "q": "中国第一部纪传体通史是什么？作者是谁？",
+      "a": "《史记》，作者司马迁",
+      "qVi": "Bộ thông sử thể kỷ truyện đầu tiên của Trung Quốc là gì, tác giả là ai?",
+      "aVi": "\"Sử ký\", tác giả Tư Mã Thiên",
+      "alt": ["史记，司马迁"]
+    },
+    {
+      "q": "西汉的开国皇帝是谁？",
+      "a": "汉高祖刘邦",
+      "qVi": "Hoàng đế khai quốc Tây Hán là ai?",
+      "aVi": "Hán Cao Tổ Lưu Bang",
+      "alt": ["刘邦", "汉高祖"]
+    },
+    {
+      "q": "“文景之治”是哪两位皇帝开创的？",
+      "a": "汉文帝和汉景帝",
+      "qVi": "\"Văn Cảnh chi trị\" do hai vị hoàng đế nào mở ra?",
+      "aVi": "Hán Văn Đế và Hán Cảnh Đế"
+    },
+    {
+      "q": "西汉最辉煌的时期是哪一位皇帝在位时？",
+      "a": "汉武帝刘彻",
+      "qVi": "Thời kỳ huy hoàng nhất của Tây Hán là dưới triều hoàng đế nào?",
+      "aVi": "Hán Vũ Đế Lưu Triệt",
+      "alt": ["汉武帝"]
+    },
+    {
+      "q": "王莽在哪一年代汉称帝，国号是什么？",
+      "a": "公元8年，国号新",
+      "qVi": "Vương Mãng thay Hán xưng đế năm nào, quốc hiệu là gì?",
+      "aVi": "Năm 8 CN, quốc hiệu là Tân"
+    },
+    {
+      "q": "西汉末年爆发了哪些农民起义？",
+      "a": "绿林军、赤眉军起义",
+      "qVi": "Cuối Tây Hán bùng nổ những cuộc khởi nghĩa nông dân nào?",
+      "aVi": "Khởi nghĩa quân Lục Lâm và quân Xích Mi"
+    },
+    {
+      "q": "东汉的开国皇帝是谁，在哪一年称帝？",
+      "a": "汉光武帝刘秀，公元25年在洛阳称帝",
+      "qVi": "Hoàng đế khai quốc Đông Hán là ai, xưng đế năm nào?",
+      "aVi": "Hán Quang Vũ Đế Lưu Tú, xưng đế tại Lạc Dương năm 25",
+      "alt": ["刘秀", "汉光武帝"]
+    },
+    {
+      "q": "“光武中兴”是哪一位皇帝开启的？",
+      "a": "汉光武帝刘秀",
+      "qVi": "\"Quang Vũ trung hưng\" do hoàng đế nào mở ra?",
+      "aVi": "Hán Quang Vũ Đế Lưu Tú",
+      "alt": ["刘秀"]
+    },
+    {
+      "q": "佛教在哪一位皇帝期间传入中国？",
+      "a": "汉明帝",
+      "qVi": "Phật giáo truyền vào Trung Quốc dưới thời hoàng đế nào?",
+      "aVi": "Hán Minh Đế"
+    },
+    {
+      "q": "蔡伦改进造纸术是在哪一位皇帝时期？",
+      "a": "汉和帝",
+      "qVi": "Thái Luân cải tiến kỹ thuật làm giấy dưới thời hoàng đế nào?",
+      "aVi": "Hán Hòa Đế"
+    },
+    {
+      "q": "张衡发明地动仪是在哪一位皇帝时期？",
+      "a": "汉顺帝",
+      "qVi": "Trương Hành phát minh địa động nghi dưới thời hoàng đế nào?",
+      "aVi": "Hán Thuận Đế"
+    },
+    {
+      "q": "“党锢之祸”发生在哪一位皇帝时期？",
+      "a": "汉桓帝",
+      "qVi": "\"Đảng cố chi họa\" xảy ra dưới thời hoàng đế nào?",
+      "aVi": "Hán Hoàn Đế"
+    },
+    {
+      "q": "“黄巾起义”爆发在哪一位皇帝时期？",
+      "a": "汉灵帝",
+      "qVi": "\"Khởi nghĩa Khăn Vàng\" bùng nổ dưới thời hoàng đế nào?",
+      "aVi": "Hán Linh Đế"
+    },
+    {
+      "q": "东汉最后一位皇帝是谁？汉朝怎样灭亡？",
+      "a": "汉献帝刘协，禅让于曹丕，汉朝正式灭亡",
+      "qVi": "Hoàng đế cuối cùng của Đông Hán là ai, nhà Hán diệt vong thế nào?",
+      "aVi": "Hán Hiến Đế Lưu Hiệp, nhường ngôi cho Tào Phi, nhà Hán chính thức diệt vong",
+      "alt": ["汉献帝"]
+    },
+    {
+      "q": "汉代前后持续了多少年？",
+      "a": "400年",
+      "qVi": "Nhà Hán kéo dài bao nhiêu năm?",
+      "aVi": "400 năm"
+    },
+    {
+      "q": "汉族作为中国主体民族的名称来源于哪个朝代？",
+      "a": "汉朝",
+      "qVi": "Tên gọi dân tộc Hán với tư cách dân tộc chủ thể Trung Quốc bắt nguồn từ triều đại nào?",
+      "aVi": "Nhà Hán"
+    }
+  ]
+}

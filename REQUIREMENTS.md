@@ -1,6 +1,6 @@
 # Web học từ vựng tiếng Trung chuyên ngành — Requirements
 
-Hai môn, hai file Excel, một trang web: 780 thẻ.
+Ba môn, hai file Excel và một bộ slide, một trang web: 1052 thẻ.
 
 ## 1. Mục tiêu
 
@@ -30,6 +30,32 @@ Hai sheet bị **bỏ qua** có lý do: `Tổng quan` chỉ là bảng mục l�
 vào 11 sheet kia rồi, dùng lại sẽ ra dữ liệu cũ hơn.
 
 Dữ liệu môn này sạch: 0 ô thiếu, 0 trùng chữ Hán, pinyin có sẵn gần như đủ.
+
+### Môn Lịch sử phong kiến Trung Quốc — `中国的古代历史 - 更新.pptx` (272 thẻ)
+
+136 slide bài giảng bằng tiếng Trung, từ xã hội nguyên thủy đến nhà Thanh.
+Nội dung là kiến thức chứ không phải bảng từ vựng, nên **không trích máy móc
+thành thẻ được**: câu hỏi được soạn tay thành 8 file JSON trong `tools/lich-su/`,
+mỗi file một giai đoạn lịch sử. File pptx chỉ là tài liệu tham khảo.
+
+Thẻ môn này mang `kind: "qa"` và có bộ trường riêng:
+
+```json
+{
+  "id": "ls04-029",
+  "kind": "qa",
+  "q": "西汉的开国皇帝是谁？",
+  "a": "汉高祖刘邦",
+  "qVi": "Hoàng đế khai quốc Tây Hán là ai?",
+  "aVi": "Hán Cao Tổ Lưu Bang",
+  "altA": ["刘邦", "汉高祖"],
+  "topics": ["ls-tan-han"]
+}
+```
+
+Hỏi và đáp đều bằng tiếng Trung. `qVi`/`aVi` **ẩn mặc định** trên giao diện,
+chỉ hiện khi người học bấm nút — để bản dịch không phá việc tự nhớ bằng tiếng
+Trung. Thẻ hỏi đáp chỉ có một chiều học nên bộ chọn chiều bị ẩn với môn này.
 
 ### Schema chuẩn hoá (JSON)
 

@@ -761,6 +761,25 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   letter-spacing: .01em;
 }
 
+/* Câu hỏi lịch sử là cả một câu, không phải một từ — cỡ chữ vừa phải để
+   đọc trôi, căn trái cho mắt bám dòng. */
+.card__prompt.is-question {
+  font-family: var(--font-zh);
+  font-size: clamp(20px, 4.4vw, 27px);
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: .02em;
+  text-align: left;
+  max-width: 34em;
+}
+
+/* Đáp án hỏi đáp cũng có thể dài, không để nó to như một từ đơn */
+.reveal__zh--answer {
+  font-size: clamp(22px, 5vw, 32px) !important;
+  line-height: 1.45;
+  max-width: 30em;
+}
+
 .card__context {
   margin: 0;
   font-size: 14px;
@@ -862,6 +881,56 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   max-width: 46ch;
 }
 .reveal__note { border-top: 1px solid var(--rule-soft); padding-top: 8px; }
+
+/* ─────────────────────────────────── nghĩa tiếng Việt (ẩn mặc định) ── */
+
+/* Người học muốn tự nhớ bằng tiếng Trung trước; bản dịch chỉ bung ra khi
+   họ thật sự cần, nên mặc định nó không được đập vào mắt. */
+.gloss { margin-top: 18px; }
+
+.gloss__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 14px;
+  background: transparent;
+  border: 1px dashed var(--rule);
+  border-radius: var(--radius);
+  color: var(--ink-3);
+  font-size: 13.5px;
+  cursor: pointer;
+}
+.gloss__toggle:hover { border-style: solid; color: var(--ink-2); }
+.gloss__toggle[aria-expanded="true"] { color: var(--ink-2); border-style: solid; }
+
+.gloss__sign {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 15px;
+  line-height: 1;
+  width: 1em;
+  text-align: center;
+}
+
+.gloss__body {
+  margin-top: 12px;
+  padding: 14px 16px;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--rule-soft);
+  border-left: 2px solid var(--jade);
+  border-radius: var(--radius);
+}
+.gloss__q {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: var(--ink-3);
+}
+.gloss__a {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.5;
+}
 
 /* ──────────────────────────────────────────────────────────── chấm điểm ── */
 
@@ -975,6 +1044,21 @@ kbd {
 .list__ctx { font-size: 13px; color: var(--ink-3); }
 
 .list--browse li { padding-block: 15px; }
+
+/* Tra cứu thẻ hỏi đáp: câu hỏi trên, đáp án dưới */
+.list__qa { flex-direction: column; align-items: flex-start; gap: 5px; }
+.list__q {
+  font-family: var(--font-zh);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.list__a {
+  font-family: var(--font-zh);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.45;
+}
 
 .empty {
   padding: 40px 0;

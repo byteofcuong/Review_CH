@@ -1,0 +1,196 @@
+{
+  "id": "ls-ha-thuong-chu",
+  "name": "Hạ – Thương – Tây Chu",
+  "zh": "夏商周",
+  "slides": "21-42",
+  "questions": [
+    {
+      "q": "中国的奴隶社会经历了哪三个朝代？",
+      "a": "夏、商、西周",
+      "qVi": "Xã hội nô lệ Trung Quốc trải qua ba triều đại nào?",
+      "aVi": "Hạ, Thương, Tây Chu"
+    },
+    {
+      "q": "中国历史上最早的奴隶制国家是哪个朝代？",
+      "a": "夏朝",
+      "qVi": "Nhà nước chiếm hữu nô lệ sớm nhất trong lịch sử Trung Quốc là triều đại nào?",
+      "aVi": "Nhà Hạ"
+    },
+    {
+      "q": "夏朝从哪一位君主开始，到哪一位君主灭亡？",
+      "a": "从禹开始，到桀灭亡",
+      "qVi": "Nhà Hạ bắt đầu từ vị vua nào và diệt vong ở vị vua nào?",
+      "aVi": "Bắt đầu từ Vũ, diệt vong ở Kiệt"
+    },
+    {
+      "q": "夏朝历时多少年？",
+      "a": "470年",
+      "qVi": "Nhà Hạ kéo dài bao nhiêu năm?",
+      "aVi": "470 năm"
+    },
+    {
+      "q": "夏朝的中心大致在今天的什么地方？",
+      "a": "今天河南西部和山西西南部",
+      "qVi": "Trung tâm nhà Hạ đại khái ở đâu ngày nay?",
+      "aVi": "Phía tây Hà Nam và tây nam Sơn Tây ngày nay"
+    },
+    {
+      "q": "夏朝的制度是怎样转变的？",
+      "a": "从禅让制转变为世袭制，形成“家天下”",
+      "qVi": "Chế độ nhà Hạ chuyển biến như thế nào?",
+      "aVi": "Từ chế độ nhường ngôi chuyển sang chế độ cha truyền con nối, hình thành \"gia thiên hạ\"",
+      "alt": ["禅让制到世袭制", "禅让制->世袭制->家天下"]
+    },
+    {
+      "q": "哪一位君主开始了世袭制？",
+      "a": "启",
+      "qVi": "Vị vua nào bắt đầu chế độ cha truyền con nối?",
+      "aVi": "Khải"
+    },
+    {
+      "q": "“大禹治水”说的是哪一位君主？",
+      "a": "禹",
+      "qVi": "\"Đại Vũ trị thủy\" nói về vị vua nào?",
+      "aVi": "Vũ"
+    },
+    {
+      "q": "夏代中国从石器时代进入了什么时代？",
+      "a": "铜器时代",
+      "qVi": "Thời Hạ, Trung Quốc từ thời đại đồ đá bước vào thời đại nào?",
+      "aVi": "Thời đại đồ đồng"
+    },
+    {
+      "q": "古代传说中夏代铸造了什么重要礼器？",
+      "a": "九鼎",
+      "qVi": "Truyền thuyết cổ nói nhà Hạ đúc lễ khí quan trọng nào?",
+      "aVi": "Cửu đỉnh"
+    },
+    {
+      "q": "商朝大约在哪一年灭掉夏朝？",
+      "a": "约公元前1600年",
+      "qVi": "Nhà Thương diệt nhà Hạ vào khoảng năm nào?",
+      "aVi": "Khoảng năm 1600 TCN",
+      "alt": ["公元前1600年", "前1600年"]
+    },
+    {
+      "q": "商朝经历了多少年？",
+      "a": "554年",
+      "qVi": "Nhà Thương kéo dài bao nhiêu năm?",
+      "aVi": "554 năm"
+    },
+    {
+      "q": "商朝从哪一位君王开始，到哪一位君王结束？",
+      "a": "从成汤（商汤）开始，到纣王结束",
+      "qVi": "Nhà Thương bắt đầu từ vị vua nào và kết thúc ở vị vua nào?",
+      "aVi": "Bắt đầu từ Thành Thang, kết thúc ở Trụ Vương",
+      "alt": ["从商汤到纣王", "成汤到纣王"]
+    },
+    {
+      "q": "为什么说商朝是中国有文字可考的文明史的开端？",
+      "a": "因为发现了甲骨文",
+      "qVi": "Vì sao nói nhà Thương là khởi đầu của lịch sử văn minh có chữ viết khảo chứng được?",
+      "aVi": "Vì đã phát hiện ra giáp cốt văn"
+    },
+    {
+      "q": "商王决策国家大事之前用什么方法询问鬼神？",
+      "a": "占卜",
+      "qVi": "Vua Thương dùng phương pháp gì để hỏi quỷ thần trước khi quyết định việc nước?",
+      "aVi": "Bói toán"
+    },
+    {
+      "q": "《说文解字》的作者是谁？",
+      "a": "东汉许慎",
+      "qVi": "Tác giả của \"Thuyết văn giải tự\" là ai?",
+      "aVi": "Hứa Thận thời Đông Hán",
+      "alt": ["许慎"]
+    },
+    {
+      "q": "“六书”指哪六种造字和用字法？",
+      "a": "象形、指事、会意、形声、转注、假借",
+      "qVi": "\"Lục thư\" chỉ sáu phép tạo chữ và dùng chữ nào?",
+      "aVi": "Tượng hình, chỉ sự, hội ý, hình thanh, chuyển chú, giả tá"
+    },
+    {
+      "q": "商朝在哪一位国王时国力达到极盛？",
+      "a": "第十三代国王武丁",
+      "qVi": "Nhà Thương đạt cực thịnh dưới thời vị vua nào?",
+      "aVi": "Vũ Đinh, vị vua đời thứ mười ba",
+      "alt": ["武丁"]
+    },
+    {
+      "q": "商朝最后一个国王是谁？",
+      "a": "纣王",
+      "qVi": "Vị vua cuối cùng của nhà Thương là ai?",
+      "aVi": "Trụ Vương",
+      "alt": ["纣"]
+    },
+    {
+      "q": "商朝在哪一场战役中被周所取代？",
+      "a": "牧野之战",
+      "qVi": "Nhà Thương bị nhà Chu thay thế trong trận chiến nào?",
+      "aVi": "Trận Mục Dã"
+    },
+    {
+      "q": "周武王在哪一年灭商？",
+      "a": "公元前1046年",
+      "qVi": "Chu Vũ Vương diệt nhà Thương vào năm nào?",
+      "aVi": "Năm 1046 TCN",
+      "alt": ["前1046年"]
+    },
+    {
+      "q": "商朝四位重要君王的功绩分别是什么？",
+      "a": "成汤建立商朝，盘庚迁都安定，武丁发展强盛，纣王走向灭亡",
+      "qVi": "Công trạng của bốn vị vua quan trọng nhà Thương là gì?",
+      "aVi": "Thành Thang lập nhà Thương, Bàn Canh dời đô ổn định, Vũ Đinh phát triển hưng thịnh, Trụ Vương đi đến diệt vong"
+    },
+    {
+      "q": "周朝前后持续了多少年？",
+      "a": "800多年",
+      "qVi": "Nhà Chu kéo dài bao nhiêu năm?",
+      "aVi": "Hơn 800 năm"
+    },
+    {
+      "q": "西周和东周的都城分别在哪里？",
+      "a": "西周定都镐京（西安附近），东周定都洛邑（洛阳）",
+      "qVi": "Kinh đô của Tây Chu và Đông Chu lần lượt ở đâu?",
+      "aVi": "Tây Chu đóng đô ở Hạo Kinh (gần Tây An), Đông Chu đóng đô ở Lạc Ấp (Lạc Dương)"
+    },
+    {
+      "q": "西周为了巩固统治实行了什么制度？",
+      "a": "分封制",
+      "qVi": "Tây Chu thực hiện chế độ gì để củng cố thống trị?",
+      "aVi": "Chế độ phân phong"
+    },
+    {
+      "q": "西周建立了哪三套制度来巩固统治秩序？",
+      "a": "宗法、礼乐、刑罚制度",
+      "qVi": "Tây Chu lập ba hệ chế độ nào để củng cố trật tự thống trị?",
+      "aVi": "Chế độ tông pháp, lễ nhạc và hình phạt"
+    },
+    {
+      "q": "西周持续了多少年？",
+      "a": "275年",
+      "qVi": "Tây Chu kéo dài bao nhiêu năm?",
+      "aVi": "275 năm"
+    },
+    {
+      "q": "“成康之治”推行了周公的什么理念？",
+      "a": "明德慎罚",
+      "qVi": "\"Thành Khang chi trị\" thi hành lý niệm nào của Chu Công?",
+      "aVi": "Minh đức thận phạt (sáng đức, thận trọng hình phạt)"
+    },
+    {
+      "q": "公元前841年发生了什么事件？",
+      "a": "国人暴动，朝政由诸侯共管，史称“共和行政”",
+      "qVi": "Năm 841 TCN xảy ra sự kiện gì?",
+      "aVi": "Quốc nhân bạo động, triều chính do chư hầu cùng quản, sử gọi là \"Cộng hòa hành chính\"",
+      "alt": ["国人暴动", "共和行政"]
+    },
+    {
+      "q": "国人暴动发生在哪一位君王时期？",
+      "a": "周厉王",
+      "qVi": "Quốc nhân bạo động xảy ra dưới thời vị vua nào?",
+      "aVi": "Chu Lệ Vương"
+    }
+  ]
+}

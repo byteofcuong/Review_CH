@@ -1,24 +1,28 @@
 # Hán Ngữ Đường 汉语堂
 
-Web học thuộc lòng **780 thẻ** từ vựng tiếng Trung của hai môn, rút từ hai bảng Excel.
+Web học thuộc lòng **1052 thẻ** tiếng Trung của ba môn, rút từ hai bảng Excel và một bộ slide bài giảng.
 
 **Học tại đây: https://byteofcuong.github.io/Review_CH/**
 
 Mở link là học được ngay — không cài đặt, không đăng nhập, không clone repo.
 Tiến độ lưu trong trình duyệt của từng người.
 
-| Môn | Nội dung | Số thẻ |
-|---|---|---|
-| **Biên du lịch** 旅游 | Địa danh, di sản, từ vựng ngành du lịch, danh thắng Trung Quốc | 203 |
-| **Phiên dịch nâng cao** 经贸 | Tranh chấp thương mại quốc tế, WTO, trọng tài, thuế quan | 577 |
+| Môn | Nội dung | Số thẻ | Dạng thẻ |
+|---|---|---|---|
+| **Biên du lịch** 旅游 | Địa danh, di sản, từ vựng ngành du lịch, danh thắng Trung Quốc | 203 | từ vựng |
+| **Phiên dịch nâng cao** 经贸 | Tranh chấp thương mại quốc tế, WTO, trọng tài, thuế quan | 577 | từ vựng |
+| **Lịch sử phong kiến Trung Quốc** 历史 | Từ xã hội nguyên thủy đến nhà Thanh, 8 giai đoạn | 272 | hỏi đáp |
 
 ## Có gì
 
 - **Tab chọn môn** ở trang chủ; chủ đề, ôn tập và thống kê đi theo môn đang chọn.
   Có dòng nhắc khi môn còn lại có thẻ đến hạn, và tuỳ chọn **trộn cả hai môn**
   trong một phiên.
+- **Hai dạng thẻ**: thẻ từ vựng (Việt ↔ Hán ↔ pinyin) và thẻ hỏi đáp kiến thức.
+  Thẻ hỏi đáp hỏi và đáp hoàn toàn bằng tiếng Trung; **nghĩa tiếng Việt ẩn đi**,
+  chỉ bung ra khi bấm nút, để không phá việc tự nhớ bằng tiếng Trung.
 - **Ba cách kiểm tra**: lật thẻ tự chấm · trắc nghiệm 4 đáp án · gõ đáp án trên trang
-- **Bốn chiều học**: Việt → Trung, Trung → Việt, Pinyin → Hán tự, hoặc trộn
+- **Bốn chiều học** cho thẻ từ vựng: Việt → Trung, Trung → Việt, Pinyin → Hán tự, hoặc trộn
 - **Lịch ôn giãn dần** (SM-2 rút gọn): thẻ quên quay lại ngay, thẻ thuộc giãn ra
   1 → 3 → 7 ngày rồi xa hơn
 - **Chấm khoan dung**: bỏ qua hoa thường, dấu thanh pinyin và dấu tiếng Việt;
@@ -31,9 +35,11 @@ Tiến độ lưu trong trình duyệt của từng người.
 ```
 Biên du lịch.xlsx          nguồn môn 1 — sửa từ vựng ở đây
 Phiên dịch nâng cao.xlsx   nguồn môn 2
+中国的古代历史 - 更新.pptx     slide gốc môn 3 (chỉ để tham khảo, không build từ đây)
 tools/
-  build_data.py            Excel  →  docs/data/vocab.{json,js} + build_report.md
+  build_data.py            nguồn  →  docs/data/vocab.{json,js} + build_report.md
   overrides.json           các sửa tay không suy ra được từ file gốc
+  lich-su/*.json           bộ câu hỏi môn Lịch sử — sửa câu hỏi ở đây
 build_report.md            báo cáo mọi thay đổi script đã áp lên dữ liệu
 docs/                      trang web tĩnh, GitHub Pages phục vụ thẳng từ đây
 ```
@@ -59,6 +65,10 @@ Sau khi build, commit và push — GitHub Pages tự cập nhật.
 
 **Môn Biên du lịch** (dữ liệu gốc nhiều lỗi): tách 11 dòng bị gộp chung tiếng Việt
 và chữ Hán trong một ô, gộp 20 nhóm thẻ trùng, sinh 75 pinyin còn thiếu.
+
+**Môn Lịch sử**: câu hỏi không trích máy móc từ slide được nên được soạn tay thành
+8 file JSON trong `tools/lich-su/`, mỗi file một giai đoạn. Muốn thêm hay sửa câu
+hỏi thì sửa thẳng file JSON rồi chạy lại script — **không sửa file pptx**.
 
 **Môn Phiên dịch nâng cao** (dữ liệu đã sàng lọc sẵn): đọc 11 sheet đã phân loại,
 giữ nhóm con làm nhãn, và phân biệt hai nghĩa của dấu `/`:

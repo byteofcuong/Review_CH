@@ -22,6 +22,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 XLSX_TRAVEL = ROOT / "Biên du lịch.xlsx"
 XLSX_INTERPRET = ROOT / "Phiên dịch nâng cao.xlsx"
+HISTORY_DIR = HERE / "lich-su"
 OVERRIDES_PATH = HERE / "overrides.json"
 OUT_JSON = ROOT / "docs" / "data" / "vocab.json"
 OUT_JS = ROOT / "docs" / "data" / "vocab.js"
@@ -489,6 +490,12 @@ def finalise(cards):
     counters = {}
     out = []
     for card in cards:
+        if card.get("kind") == "qa":
+            prefix = card["prefix"]
+            counters[prefix] = counters.get(prefix, 0) + 1
+            card["id"] = f"{prefix}-{counters[prefix]:03d}"
+            out.append(card)
+            continue
         if not card["zh"] or not card["vi"]:
             report["skipped"].append(
                 {"vi": card["vi"], "zh": card["zh"], "sources": card["sources"],
@@ -522,8 +529,12 @@ def check(cards):
         if card["id"] in seen:
             problems.append(f"id trùng: {card['id']}")
         seen.add(card["id"])
-        for field in ("vi", "zh", "pinyin"):
-            if not card[field].strip():
+        if card.get("kind") == "qa":
+            fields = ("q", "a", "qVi", "aVi")
+        else:
+            fields = ("vi", "zh", "pinyin")
+        for field in fields:
+            if not card.get(field, "").strip():
                 problems.append(f"{card['id']} thiếu trường '{field}'")
         if not card["topics"]:
             problems.append(f"{card['id']} không thuộc chủ đề nào")
@@ -741,6 +752,63 @@ def build_interpret():
     }
 
 
+def build_history():
+    """Môn Lịch sử: thẻ hỏi đáp, soạn tay từ slide bài giảng.
+
+    Khác hai môn kia, nguồn không phải bảng từ vựng mà là các file JSON trong
+    tools/lich-su/ — câu hỏi được soạn từ nội dung slide chứ không trích máy
+    móc được, nên muốn sửa thì sửa thẳng vào file JSON.
+    """
+    files = sorted(HISTORY_DIR.glob("*.json"))
+    if not files:
+        report["warnings"].append(
+            f"Không tìm thấy file câu hỏi nào trong {HISTORY_DIR}.")
+
+    topics = []
+    cards = []
+    raw_count = 0
+    for index, path in enumerate(files, 1):
+        data = json.loads(path.read_text(encoding="utf-8"))
+        topics.append({"id": data["id"], "name": data["name"], "zh": data["zh"]})
+        prefix = f"ls{index:02d}"
+        seen = set()
+        for item in data["questions"]:
+            raw_count += 1
+            question = cell(item.get("q"))
+            answer = cell(item.get("a"))
+            key = norm_key(question)
+            if key in seen:
+                report["warnings"].append(
+                    f"{path.name}: câu hỏi lặp lại — {question[:40]}")
+            seen.add(key)
+            cards.append({
+                "kind": "qa",
+                "q": question,
+                "a": answer,
+                "qVi": cell(item.get("qVi")),
+                "aVi": cell(item.get("aVi")),
+                "altA": [cell(x) for x in item.get("alt", []) if cell(x)],
+                "topics": [data["id"]],
+                "group": cell(item.get("group", "")),
+                "note": cell(item.get("note", "")),
+                "prefix": prefix,
+                "sources": [f"{path.name}"],
+            })
+
+    cards = finalise(cards)
+    return {
+        "id": "lich-su",
+        "name": "Lịch sử phong kiến Trung Quốc",
+        "short": "Lịch sử",
+        "zh": "历史",
+        "kind": "qa",
+        "source": "中国的古代历史 - 更新.pptx",
+        "topicConf": topics,
+        "cards": cards,
+        "rawCount": raw_count,
+    }
+
+
 def main():
     global report
 
@@ -760,13 +828,17 @@ def main():
     interpret = build_interpret()
     reports[interpret["id"]] = report
 
-    for subject in (travel, interpret):
+    report = new_report()
+    history = build_history()
+    reports[history["id"]] = report
+
+    for subject in (travel, interpret, history):
         counts = {}
         for card in subject["cards"]:
             for topic_id in card["topics"]:
                 counts[topic_id] = counts.get(topic_id, 0) + 1
         subject["topicCounts"] = counts
-        subjects.append({
+        entry = {
             "id": subject["id"],
             "name": subject["name"],
             "short": subject["short"],
@@ -776,7 +848,10 @@ def main():
                         "count": counts.get(t["id"], 0)}
                        for t in subject["topicConf"]],
             "cards": subject["cards"],
-        })
+        }
+        if subject.get("kind"):
+            entry["kind"] = subject["kind"]
+        subjects.append(entry)
 
     # id phải duy nhất trên toàn bộ hai môn: tiến độ học lưu theo id thẻ.
     check([card for subject in subjects for card in subject["cards"]])
@@ -795,11 +870,11 @@ def main():
         "window.VOCAB = " + serialised + ";\n",
         encoding="utf-8")
 
-    write_report([travel, interpret], reports)
+    write_report([travel, interpret, history], reports)
 
     total = 0
     warnings = 0
-    for subject in (travel, interpret):
+    for subject in (travel, interpret, history):
         rep = reports[subject["id"]]
         total += len(subject["cards"])
         warnings += len(rep["warnings"])

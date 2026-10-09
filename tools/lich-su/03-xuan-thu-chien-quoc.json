@@ -1,0 +1,337 @@
+{
+  "id": "ls-xuan-thu-chien-quoc",
+  "name": "Xuân Thu – Chiến Quốc",
+  "zh": "春秋战国",
+  "slides": "41-68",
+  "questions": [
+    {
+      "q": "东周分为哪两个时期？",
+      "a": "春秋（前770—前476）和战国（前475—前221）",
+      "qVi": "Đông Chu chia làm hai thời kỳ nào?",
+      "aVi": "Xuân Thu (770–476 TCN) và Chiến Quốc (475–221 TCN)",
+      "alt": ["春秋和战国", "春秋、战国"]
+    },
+    {
+      "q": "东周在哪一年开始，都城迁到哪里？",
+      "a": "公元前770年开始，东迁洛邑（今河南洛阳）",
+      "qVi": "Đông Chu bắt đầu năm nào, dời đô về đâu?",
+      "aVi": "Bắt đầu năm 770 TCN, dời về phía đông đến Lạc Ấp (Lạc Dương, Hà Nam ngày nay)"
+    },
+    {
+      "q": "春秋战国是从什么社会向什么社会过渡的时期？",
+      "a": "由奴隶社会向封建社会过渡",
+      "qVi": "Xuân Thu Chiến Quốc là thời kỳ quá độ từ xã hội nào sang xã hội nào?",
+      "aVi": "Từ xã hội nô lệ quá độ sang xã hội phong kiến"
+    },
+    {
+      "q": "东周时期哪一项技术的发展使耕地面积扩大？",
+      "a": "炼铁技术",
+      "qVi": "Kỹ thuật nào phát triển thời Đông Chu khiến diện tích canh tác mở rộng?",
+      "aVi": "Kỹ thuật luyện sắt"
+    },
+    {
+      "q": "东周时期哪一个阶级逐步取代了奴隶主阶级？",
+      "a": "地主阶级",
+      "qVi": "Giai cấp nào dần thay thế giai cấp chủ nô thời Đông Chu?",
+      "aVi": "Giai cấp địa chủ"
+    },
+    {
+      "q": "春秋五霸中的第一位霸主是谁？",
+      "a": "齐桓公",
+      "qVi": "Vị bá chủ đầu tiên trong Ngũ bá thời Xuân Thu là ai?",
+      "aVi": "Tề Hoàn Công"
+    },
+    {
+      "q": "齐桓公任用谁为相整顿内政？",
+      "a": "管仲",
+      "qVi": "Tề Hoàn Công dùng ai làm tướng quốc để chỉnh đốn nội chính?",
+      "aVi": "Quản Trọng"
+    },
+    {
+      "q": "齐桓公以什么为旗号称霸？",
+      "a": "尊王攘夷",
+      "qVi": "Tề Hoàn Công lấy khẩu hiệu gì để xưng bá?",
+      "aVi": "Tôn vương nhương di (tôn phò vua Chu, đánh đuổi rợ ngoài)"
+    },
+    {
+      "q": "“九合诸侯，一匡天下”说的是哪一位霸主？",
+      "a": "齐桓公",
+      "qVi": "\"Cửu hợp chư hầu, nhất khuông thiên hạ\" nói về vị bá chủ nào?",
+      "aVi": "Tề Hoàn Công"
+    },
+    {
+      "q": "春秋时代的第二位霸主是谁？",
+      "a": "晋文公",
+      "qVi": "Vị bá chủ thứ hai thời Xuân Thu là ai?",
+      "aVi": "Tấn Văn Công"
+    },
+    {
+      "q": "晋文公在外流亡了多少年？",
+      "a": "十九年",
+      "qVi": "Tấn Văn Công lưu vong bên ngoài bao nhiêu năm?",
+      "aVi": "Mười chín năm"
+    },
+    {
+      "q": "晋文公在哪一场战役中以少胜多大败楚军？",
+      "a": "城濮之战",
+      "qVi": "Tấn Văn Công đánh bại quân Sở trong trận nào với quân ít thắng quân nhiều?",
+      "aVi": "Trận Thành Bộc"
+    },
+    {
+      "q": "“三年不飞，一飞冲天；三年不鸣，一鸣惊人”说的是谁？",
+      "a": "楚庄王",
+      "qVi": "\"Ba năm không bay, bay thì vút trời; ba năm không kêu, kêu thì kinh người\" nói về ai?",
+      "aVi": "Sở Trang Vương"
+    },
+    {
+      "q": "“问鼎中原”说的是哪一位国君？",
+      "a": "楚庄王",
+      "qVi": "\"Vấn đỉnh Trung Nguyên\" nói về vị vua nào?",
+      "aVi": "Sở Trang Vương"
+    },
+    {
+      "q": "楚庄王在哪一场战役中大败晋国？",
+      "a": "邲之战",
+      "qVi": "Sở Trang Vương đại thắng nước Tấn trong trận nào?",
+      "aVi": "Trận Bật"
+    },
+    {
+      "q": "“卧薪尝胆”说的是哪一位君主？",
+      "a": "越王勾践",
+      "qVi": "\"Nằm gai nếm mật\" nói về vị vua nào?",
+      "aVi": "Việt Vương Câu Tiễn"
+    },
+    {
+      "q": "越王勾践在哪一年灭掉吴国？",
+      "a": "公元前473年",
+      "qVi": "Việt Vương Câu Tiễn diệt nước Ngô vào năm nào?",
+      "aVi": "Năm 473 TCN",
+      "alt": ["前473年"]
+    },
+    {
+      "q": "春秋时期最后一位霸主是谁？",
+      "a": "越王勾践",
+      "qVi": "Vị bá chủ cuối cùng thời Xuân Thu là ai?",
+      "aVi": "Việt Vương Câu Tiễn"
+    },
+    {
+      "q": "吴王夫差为了报父仇败给了谁，后来又被谁所灭？",
+      "a": "击败越王勾践，后来又被勾践所灭",
+      "qVi": "Ngô Vương Phù Sai báo thù cha đã đánh bại ai, về sau lại bị ai diệt?",
+      "aVi": "Đánh bại Việt Vương Câu Tiễn, về sau lại bị chính Câu Tiễn diệt"
+    },
+    {
+      "q": "“蜚鸟尽，良弓藏；狡兔死，走狗烹”出自哪一个历史时期的故事？",
+      "a": "春秋末年越国（范蠡离开勾践时所说）",
+      "qVi": "\"Chim hết thì cung tốt cất, thỏ khôn chết thì chó săn bị nấu\" xuất từ câu chuyện thời nào?",
+      "aVi": "Cuối Xuân Thu, nước Việt (lời Phạm Lãi khi rời Câu Tiễn)",
+      "alt": ["春秋末年越国", "越国"]
+    },
+    {
+      "q": "“三家分晋”指哪三家瓜分了晋国？",
+      "a": "韩、赵、魏",
+      "qVi": "\"Tam gia phân Tấn\" chỉ ba họ nào chia nước Tấn?",
+      "aVi": "Hàn, Triệu, Ngụy"
+    },
+    {
+      "q": "“三家分晋”发生在哪一年？",
+      "a": "公元前453年",
+      "qVi": "\"Tam gia phân Tấn\" xảy ra năm nào?",
+      "aVi": "Năm 453 TCN",
+      "alt": ["前453年"]
+    },
+    {
+      "q": "“战国七雄”指哪七个国家？",
+      "a": "秦、齐、楚、燕、韩、赵、魏",
+      "qVi": "\"Chiến Quốc thất hùng\" chỉ bảy nước nào?",
+      "aVi": "Tần, Tề, Sở, Yên, Hàn, Triệu, Ngụy"
+    },
+    {
+      "q": "“战国四公子”是哪四个人？",
+      "a": "魏国信陵君魏无忌、赵国平原君赵胜、楚国春申君黄歇、齐国孟尝君田文",
+      "qVi": "\"Chiến Quốc tứ công tử\" là bốn người nào?",
+      "aVi": "Tín Lăng Quân Ngụy Vô Kỵ nước Ngụy, Bình Nguyên Quân Triệu Thắng nước Triệu, Xuân Thân Quân Hoàng Yết nước Sở, Mạnh Thường Quân Điền Văn nước Tề",
+      "alt": ["信陵君、平原君、春申君、孟尝君"]
+    },
+    {
+      "q": "被誉为“谋圣”的战国隐士是谁？",
+      "a": "鬼谷子",
+      "qVi": "Ẩn sĩ thời Chiến Quốc được tôn là \"Mưu thánh\" là ai?",
+      "aVi": "Quỷ Cốc Tử"
+    },
+    {
+      "q": "鬼谷子开创了什么学派？",
+      "a": "纵横学",
+      "qVi": "Quỷ Cốc Tử sáng lập học phái nào?",
+      "aVi": "Tung hoành học"
+    },
+    {
+      "q": "鬼谷子的著名弟子有哪些？",
+      "a": "苏秦、张仪、孙膑、庞涓",
+      "qVi": "Những học trò nổi tiếng của Quỷ Cốc Tử là ai?",
+      "aVi": "Tô Tần, Trương Nghi, Tôn Tẫn, Bàng Quyên"
+    },
+    {
+      "q": "战国时期形成了什么思想局面？",
+      "a": "百家争鸣",
+      "qVi": "Thời Chiến Quốc hình thành cục diện tư tưởng nào?",
+      "aVi": "Bách gia tranh minh"
+    },
+    {
+      "q": "儒家的代表人物是谁？",
+      "a": "孔子、孟子",
+      "qVi": "Nhân vật tiêu biểu của Nho gia là ai?",
+      "aVi": "Khổng Tử, Mạnh Tử"
+    },
+    {
+      "q": "道家的代表人物是谁？",
+      "a": "老子、庄子",
+      "qVi": "Nhân vật tiêu biểu của Đạo gia là ai?",
+      "aVi": "Lão Tử, Trang Tử"
+    },
+    {
+      "q": "法家的代表人物是谁？",
+      "a": "商鞅、韩非子",
+      "qVi": "Nhân vật tiêu biểu của Pháp gia là ai?",
+      "aVi": "Thương Ưởng, Hàn Phi Tử"
+    },
+    {
+      "q": "墨家的代表人物是谁？",
+      "a": "墨子",
+      "qVi": "Nhân vật tiêu biểu của Mặc gia là ai?",
+      "aVi": "Mặc Tử"
+    },
+    {
+      "q": "儒家的核心思想是什么？",
+      "a": "仁、义",
+      "qVi": "Tư tưởng cốt lõi của Nho gia là gì?",
+      "aVi": "Nhân, nghĩa"
+    },
+    {
+      "q": "道家的核心思想是什么？",
+      "a": "自然、无为",
+      "qVi": "Tư tưởng cốt lõi của Đạo gia là gì?",
+      "aVi": "Tự nhiên, vô vi"
+    },
+    {
+      "q": "墨家的核心思想是什么？",
+      "a": "兼爱、非攻",
+      "qVi": "Tư tưởng cốt lõi của Mặc gia là gì?",
+      "aVi": "Kiêm ái, phi công (yêu thương bình đẳng, phản đối chiến tranh)"
+    },
+    {
+      "q": "法家衡量价值的标准是什么？",
+      "a": "赏罚、国力",
+      "qVi": "Tiêu chuẩn đánh giá giá trị của Pháp gia là gì?",
+      "aVi": "Thưởng phạt và quốc lực"
+    },
+    {
+      "q": "墨家提出的十大主张有哪些？",
+      "a": "兼爱、非攻、尚贤、尚同、天志、鬼明、非乐、非命、节用、节葬",
+      "qVi": "Mười chủ trương lớn của Mặc gia là gì?",
+      "aVi": "Kiêm ái, phi công, thượng hiền, thượng đồng, thiên chí, quỷ minh, phi nhạc, phi mệnh, tiết dụng, tiết táng"
+    },
+    {
+      "q": "墨家为什么在秦汉之后几乎绝迹？",
+      "a": "因为墨家要求地位平等，不符合统治阶级的愿望",
+      "qVi": "Vì sao Mặc gia gần như tuyệt tích sau thời Tần Hán?",
+      "aVi": "Vì Mặc gia đòi hỏi địa vị bình đẳng, không hợp với mong muốn của giai cấp thống trị"
+    },
+    {
+      "q": "商鞅变法发生在哪一年？",
+      "a": "公元前356年",
+      "qVi": "Thương Ưởng biến pháp diễn ra vào năm nào?",
+      "aVi": "Năm 356 TCN",
+      "alt": ["前356年"]
+    },
+    {
+      "q": "商鞅变法在军事上用什么制度取代了世卿世禄制？",
+      "a": "军功爵制",
+      "qVi": "Thương Ưởng biến pháp dùng chế độ nào thay thế chế độ thế khanh thế lộc về mặt quân sự?",
+      "aVi": "Chế độ tước vị theo quân công"
+    },
+    {
+      "q": "商鞅变法后秦军被称为什么？",
+      "a": "虎狼之师",
+      "qVi": "Sau Thương Ưởng biến pháp, quân Tần được gọi là gì?",
+      "aVi": "Hổ lang chi sư (đội quân hổ sói)"
+    },
+    {
+      "q": "商鞅变法在经济上废除了什么制度？",
+      "a": "井田制，废井田、开阡陌，承认土地私有",
+      "qVi": "Thương Ưởng biến pháp bãi bỏ chế độ kinh tế nào?",
+      "aVi": "Chế độ tỉnh điền; phế tỉnh điền, khai thiên mạch, thừa nhận tư hữu ruộng đất",
+      "alt": ["井田制"]
+    },
+    {
+      "q": "商鞅变法在政治上用什么制度取代了分封制？",
+      "a": "县制",
+      "qVi": "Thương Ưởng biến pháp dùng chế độ nào thay thế chế độ phân phong về mặt chính trị?",
+      "aVi": "Chế độ huyện"
+    },
+    {
+      "q": "商鞅变法在社会上推行了什么制度加强基层控制？",
+      "a": "什五连坐法和户籍制度",
+      "qVi": "Thương Ưởng biến pháp thi hành chế độ nào để tăng kiểm soát cơ sở xã hội?",
+      "aVi": "Phép thập ngũ liên tọa và chế độ hộ tịch"
+    },
+    {
+      "q": "商鞅和韩非的关键词分别是什么？",
+      "a": "商鞅是“法”，韩非是“法、势、术”",
+      "qVi": "Từ khóa của Thương Ưởng và Hàn Phi lần lượt là gì?",
+      "aVi": "Thương Ưởng là \"pháp\", Hàn Phi là \"pháp, thế, thuật\""
+    },
+    {
+      "q": "秦国在哪一年灭掉西周公国？",
+      "a": "公元前256年",
+      "qVi": "Nước Tần diệt Tây Chu công quốc vào năm nào?",
+      "aVi": "Năm 256 TCN",
+      "alt": ["前256年"]
+    },
+    {
+      "q": "嬴政在哪一年即位，当时多少岁？",
+      "a": "公元前247年即位，年仅十三岁",
+      "qVi": "Doanh Chính lên ngôi năm nào, khi đó bao nhiêu tuổi?",
+      "aVi": "Lên ngôi năm 247 TCN, khi đó mới mười ba tuổi"
+    },
+    {
+      "q": "秦国横扫六国的开端是灭掉哪个国家？",
+      "a": "韩国（公元前230年）",
+      "qVi": "Mở đầu việc Tần quét sạch sáu nước là diệt nước nào?",
+      "aVi": "Nước Hàn (năm 230 TCN)",
+      "alt": ["韩", "韩国"]
+    },
+    {
+      "q": "秦国灭赵时采用了什么计策除掉名将李牧？",
+      "a": "反间计",
+      "qVi": "Khi diệt Triệu, Tần dùng kế gì để trừ danh tướng Lý Mục?",
+      "aVi": "Kế phản gián"
+    },
+    {
+      "q": "秦国灭魏采用了什么方法？",
+      "a": "引黄河水灌大梁城",
+      "qVi": "Tần diệt Ngụy bằng cách nào?",
+      "aVi": "Dẫn nước Hoàng Hà nhấn chìm thành Đại Lương"
+    },
+    {
+      "q": "秦国灭楚动用了多少大军？",
+      "a": "六十万大军",
+      "qVi": "Tần diệt Sở huy động bao nhiêu quân?",
+      "aVi": "Sáu mươi vạn đại quân"
+    },
+    {
+      "q": "荆轲刺秦王失败后秦国灭掉了哪个国家？",
+      "a": "燕国（公元前222年）",
+      "qVi": "Sau khi Kinh Kha ám sát Tần Vương thất bại, Tần đã diệt nước nào?",
+      "aVi": "Nước Yên (năm 222 TCN)",
+      "alt": ["燕", "燕国"]
+    },
+    {
+      "q": "秦国在哪一年灭齐完成统一？",
+      "a": "公元前221年",
+      "qVi": "Tần diệt Tề hoàn thành thống nhất vào năm nào?",
+      "aVi": "Năm 221 TCN",
+      "alt": ["前221年"]
+    }
+  ]
+}

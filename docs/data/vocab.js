@@ -1,7 +1,7 @@
 /* Tự sinh bởi tools/build_data.py — đừng sửa tay. */
 window.VOCAB = {
  "version": 2,
- "generatedAt": "2026-10-08",
+ "generatedAt": "2026-10-09",
  "subjects": [
   {
    "id": "bien-du-lich",
@@ -15220,6 +15220,5120 @@ window.VOCAB = {
      ]
     }
    ]
+  },
+  {
+   "id": "lich-su",
+   "name": "Lịch sử phong kiến Trung Quốc",
+   "short": "Lịch sử",
+   "zh": "历史",
+   "source": "中国的古代历史 - 更新.pptx",
+   "topics": [
+    {
+     "id": "ls-nguyen-thuy",
+     "name": "Xã hội nguyên thủy",
+     "count": 17
+    },
+    {
+     "id": "ls-ha-thuong-chu",
+     "name": "Hạ – Thương – Tây Chu",
+     "count": 30
+    },
+    {
+     "id": "ls-xuan-thu-chien-quoc",
+     "name": "Xuân Thu – Chiến Quốc",
+     "count": 53
+    },
+    {
+     "id": "ls-tan-han",
+     "name": "Tần – Hán",
+     "count": 43
+    },
+    {
+     "id": "ls-tam-quoc",
+     "name": "Tam Quốc – Lưỡng Tấn – Nam Bắc triều",
+     "count": 38
+    },
+    {
+     "id": "ls-tuy-duong",
+     "name": "Tùy – Đường",
+     "count": 40
+    },
+    {
+     "id": "ls-tong-nguyen",
+     "name": "Ngũ Đại – Tống – Nguyên",
+     "count": 31
+    },
+    {
+     "id": "ls-minh-thanh",
+     "name": "Minh – Thanh",
+     "count": 20
+    }
+   ],
+   "cards": [
+    {
+     "kind": "qa",
+     "q": "中国历史经过了哪五个社会阶段？",
+     "a": "原始社会、奴隶社会、封建社会、半殖民地半封建社会、社会主义社会",
+     "qVi": "Lịch sử Trung Quốc trải qua năm giai đoạn xã hội nào?",
+     "aVi": "Xã hội nguyên thủy, xã hội nô lệ, xã hội phong kiến, xã hội nửa thuộc địa nửa phong kiến, xã hội chủ nghĩa xã hội",
+     "altA": [],
+     "topics": [
+      "ls-nguyen-thuy"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls01",
+     "sources": [
+      "01-nguyen-thuy.json"
+     ],
+     "id": "ls01-001"
+    },
+    {
+     "kind": "qa",
+     "q": "为什么说中国文明是唯一延续至今的古代文明？",
+     "a": "因为历史的连续性、文字的延续和文化传统的传承",
+     "qVi": "Vì sao nói văn minh Trung Hoa là nền văn minh cổ đại duy nhất kéo dài đến ngày nay?",
+     "aVi": "Vì tính liên tục của lịch sử, sự kế thừa của chữ viết và sự truyền thừa của truyền thống văn hóa",
+     "altA": [],
+     "topics": [
+      "ls-nguyen-thuy"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls01",
+     "sources": [
+      "01-nguyen-thuy.json"
+     ],
+     "id": "ls01-002"
+    },
+    {
+     "kind": "qa",
+     "q": "汉字从什么文字发展到今天的现代汉字？",
+     "a": "甲骨文",
+     "qVi": "Chữ Hán phát triển từ loại chữ nào đến chữ Hán hiện đại ngày nay?",
+     "aVi": "Giáp cốt văn",
+     "altA": [],
+     "topics": [
+      "ls-nguyen-thuy"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls01",
+     "sources": [
+      "01-nguyen-thuy.json"
+     ],
+     "id": "ls01-003"
+    },
+    {
+     "kind": "qa",
+     "q": "中国的封建社会从什么时候到什么时候？",
+     "a": "公元前475年到公元1840年",
+     "qVi": "Xã hội phong kiến Trung Quốc kéo dài từ khi nào đến khi nào?",
+     "aVi": "Từ năm 475 TCN đến năm 1840",
+     "altA": [],
+     "topics": [
+      "ls-nguyen-thuy"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls01",
+     "sources": [
+      "01-nguyen-thuy.json"
+     ],
+     "id": "ls01-004"
+    },
+    {
+     "kind": "qa",
+     "q": "中国的奴隶社会大约从什么时候开始？",
+     "a": "约公元前2070年",
+     "qVi": "Xã hội nô lệ Trung Quốc bắt đầu khoảng khi nào?",
+     "aVi": "Khoảng năm 2070 TCN",
+     "altA": [
+      "公元前2070年",
+      "前2070年"
+     ],
+     "topics": [
+      "ls-nguyen-thuy"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls01",
+     "sources": [
+      "01-nguyen-thuy.json"
+     ],
+     "id": "ls01-005"
+    },
+    {
+     "kind": "qa",
+     "q": "中国什么时候进入社会主义社会？",
+     "a": "1956年",
+     "qVi": "Trung Quốc bước vào xã hội chủ nghĩa xã hội khi nào?",
+     "aVi": "Năm 1956",
+     "altA": [],
+     "topics": [
+      "ls-nguyen-thuy"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls01",
+     "sources": [
+      "01-nguyen-thuy.json"
+     ],
+     "id": "ls01-006"
+    },
+    {
+     "kind": "qa",
+     "q": "中国的原始人类大约出现于什么时候？",
+     "a": "大约一百万年前",
+     "qVi": "Người nguyên thủy Trung Quốc xuất hiện khoảng khi nào?",
+     "aVi": "Khoảng một triệu năm trước",
+     "altA": [],
+     "topics": [
+      "ls-nguyen-thuy"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls01",
+     "sources": [
+      "01-nguyen-thuy.json"
+     ],
+     "id": "ls01-007"
+    },
+    {
+     "kind": "qa",
+     "q": "云南和陕西的两种早期原始人类叫什么？",
+     "a": "元谋人和蓝田人",
+     "qVi": "Hai loại người nguyên thủy sớm ở Vân Nam và Thiểm Tây tên là gì?",
+     "aVi": "Người Nguyên Mưu và người Lam Điền",
+     "altA": [
+      "元谋人、蓝田人"
+     ],
+     "topics": [
+      "ls-nguyen-thuy"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls01",
+     "sources": [
+      "01-nguyen-thuy.json"
+     ],
+     "id": "ls01-008"
+    },
+    {
+     "kind": "qa",
+     "q": "北京猿人出现在什么地方？",
+     "a": "北京周口店",
+     "qVi": "Người vượn Bắc Kinh xuất hiện ở đâu?",
+     "aVi": "Chu Khẩu Điếm, Bắc Kinh",
+     "altA": [],
+     "topics": [
+      "ls-nguyen-thuy"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls01",
+     "sources": [
+      "01-nguyen-thuy.json"
+     ],
+     "id": "ls01-009"
+    },
+    {
+     "kind": "qa",
+     "q": "北京猿人大约出现在多少年以前？",
+     "a": "大约四五十万年以前",
+     "qVi": "Người vượn Bắc Kinh xuất hiện khoảng bao nhiêu năm trước?",
+     "aVi": "Khoảng bốn năm mươi vạn năm trước",
+     "altA": [],
+     "topics": [
+      "ls-nguyen-thuy"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls01",
+     "sources": [
+      "01-nguyen-thuy.json"
+     ],
+     "id": "ls01-010"
+    },
+    {
+     "kind": "qa",
+     "q": "原始人的基本特征是什么？",
+     "a": "能站着走路，能制造并使用简单工具，利用火",
+     "qVi": "Đặc trưng cơ bản của người nguyên thủy là gì?",
+     "aVi": "Đứng thẳng đi được, biết chế tạo và sử dụng công cụ đơn giản, biết dùng lửa",
+     "altA": [],
+     "topics": [
+      "ls-nguyen-thuy"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls01",
+     "sources": [
+      "01-nguyen-thuy.json"
+     ],
+     "id": "ls01-011"
+    },
+    {
+     "kind": "qa",
+     "q": "母系氏族社会以什么文化为代表？",
+     "a": "仰韶文化",
+     "qVi": "Xã hội thị tộc mẫu hệ lấy nền văn hóa nào làm đại diện?",
+     "aVi": "Văn hóa Ngưỡng Thiều",
+     "altA": [],
+     "topics": [
+      "ls-nguyen-thuy"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls01",
+     "sources": [
+      "01-nguyen-thuy.json"
+     ],
+     "id": "ls01-012"
+    },
+    {
+     "kind": "qa",
+     "q": "父系氏族社会以什么文化为代表？",
+     "a": "龙山文化",
+     "qVi": "Xã hội thị tộc phụ hệ lấy nền văn hóa nào làm đại diện?",
+     "aVi": "Văn hóa Long Sơn",
+     "altA": [],
+     "topics": [
+      "ls-nguyen-thuy"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls01",
+     "sources": [
+      "01-nguyen-thuy.json"
+     ],
+     "id": "ls01-013"
+    },
+    {
+     "kind": "qa",
+     "q": "原始社会为什么会解体？",
+     "a": "因为出现了私有财产、阶级分化和阶级对立",
+     "qVi": "Vì sao xã hội nguyên thủy tan rã?",
+     "aVi": "Vì xuất hiện tài sản tư hữu, phân hóa giai cấp và đối lập giai cấp",
+     "altA": [],
+     "topics": [
+      "ls-nguyen-thuy"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls01",
+     "sources": [
+      "01-nguyen-thuy.json"
+     ],
+     "id": "ls01-014"
+    },
+    {
+     "kind": "qa",
+     "q": "司马迁记载的五帝是谁？",
+     "a": "黄帝、颛顼、帝喾、帝尧、帝舜",
+     "qVi": "Ngũ Đế theo ghi chép của Tư Mã Thiên là những ai?",
+     "aVi": "Hoàng Đế, Chuyên Húc, Đế Khốc, Đế Nghiêu, Đế Thuấn",
+     "altA": [],
+     "topics": [
+      "ls-nguyen-thuy"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls01",
+     "sources": [
+      "01-nguyen-thuy.json"
+     ],
+     "id": "ls01-015"
+    },
+    {
+     "kind": "qa",
+     "q": "“炎黄子孙”这个说法跟哪一场战争有关？",
+     "a": "涿鹿之战",
+     "qVi": "Cách gọi \"con cháu Viêm Hoàng\" liên quan đến trận chiến nào?",
+     "aVi": "Trận Trác Lộc",
+     "altA": [],
+     "topics": [
+      "ls-nguyen-thuy"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls01",
+     "sources": [
+      "01-nguyen-thuy.json"
+     ],
+     "id": "ls01-016"
+    },
+    {
+     "kind": "qa",
+     "q": "大陆漂移学说是谁在哪一年提出的？",
+     "a": "1912年阿尔弗雷德·魏格纳提出",
+     "qVi": "Thuyết trôi dạt lục địa do ai đề xuất vào năm nào?",
+     "aVi": "Alfred Wegener đề xuất năm 1912",
+     "altA": [
+      "魏格纳，1912年",
+      "1912年，魏格纳"
+     ],
+     "topics": [
+      "ls-nguyen-thuy"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls01",
+     "sources": [
+      "01-nguyen-thuy.json"
+     ],
+     "id": "ls01-017"
+    },
+    {
+     "kind": "qa",
+     "q": "中国的奴隶社会经历了哪三个朝代？",
+     "a": "夏、商、西周",
+     "qVi": "Xã hội nô lệ Trung Quốc trải qua ba triều đại nào?",
+     "aVi": "Hạ, Thương, Tây Chu",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-001"
+    },
+    {
+     "kind": "qa",
+     "q": "中国历史上最早的奴隶制国家是哪个朝代？",
+     "a": "夏朝",
+     "qVi": "Nhà nước chiếm hữu nô lệ sớm nhất trong lịch sử Trung Quốc là triều đại nào?",
+     "aVi": "Nhà Hạ",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-002"
+    },
+    {
+     "kind": "qa",
+     "q": "夏朝从哪一位君主开始，到哪一位君主灭亡？",
+     "a": "从禹开始，到桀灭亡",
+     "qVi": "Nhà Hạ bắt đầu từ vị vua nào và diệt vong ở vị vua nào?",
+     "aVi": "Bắt đầu từ Vũ, diệt vong ở Kiệt",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-003"
+    },
+    {
+     "kind": "qa",
+     "q": "夏朝历时多少年？",
+     "a": "470年",
+     "qVi": "Nhà Hạ kéo dài bao nhiêu năm?",
+     "aVi": "470 năm",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-004"
+    },
+    {
+     "kind": "qa",
+     "q": "夏朝的中心大致在今天的什么地方？",
+     "a": "今天河南西部和山西西南部",
+     "qVi": "Trung tâm nhà Hạ đại khái ở đâu ngày nay?",
+     "aVi": "Phía tây Hà Nam và tây nam Sơn Tây ngày nay",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-005"
+    },
+    {
+     "kind": "qa",
+     "q": "夏朝的制度是怎样转变的？",
+     "a": "从禅让制转变为世袭制，形成“家天下”",
+     "qVi": "Chế độ nhà Hạ chuyển biến như thế nào?",
+     "aVi": "Từ chế độ nhường ngôi chuyển sang chế độ cha truyền con nối, hình thành \"gia thiên hạ\"",
+     "altA": [
+      "禅让制到世袭制",
+      "禅让制->世袭制->家天下"
+     ],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-006"
+    },
+    {
+     "kind": "qa",
+     "q": "哪一位君主开始了世袭制？",
+     "a": "启",
+     "qVi": "Vị vua nào bắt đầu chế độ cha truyền con nối?",
+     "aVi": "Khải",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-007"
+    },
+    {
+     "kind": "qa",
+     "q": "“大禹治水”说的是哪一位君主？",
+     "a": "禹",
+     "qVi": "\"Đại Vũ trị thủy\" nói về vị vua nào?",
+     "aVi": "Vũ",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-008"
+    },
+    {
+     "kind": "qa",
+     "q": "夏代中国从石器时代进入了什么时代？",
+     "a": "铜器时代",
+     "qVi": "Thời Hạ, Trung Quốc từ thời đại đồ đá bước vào thời đại nào?",
+     "aVi": "Thời đại đồ đồng",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-009"
+    },
+    {
+     "kind": "qa",
+     "q": "古代传说中夏代铸造了什么重要礼器？",
+     "a": "九鼎",
+     "qVi": "Truyền thuyết cổ nói nhà Hạ đúc lễ khí quan trọng nào?",
+     "aVi": "Cửu đỉnh",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-010"
+    },
+    {
+     "kind": "qa",
+     "q": "商朝大约在哪一年灭掉夏朝？",
+     "a": "约公元前1600年",
+     "qVi": "Nhà Thương diệt nhà Hạ vào khoảng năm nào?",
+     "aVi": "Khoảng năm 1600 TCN",
+     "altA": [
+      "公元前1600年",
+      "前1600年"
+     ],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-011"
+    },
+    {
+     "kind": "qa",
+     "q": "商朝经历了多少年？",
+     "a": "554年",
+     "qVi": "Nhà Thương kéo dài bao nhiêu năm?",
+     "aVi": "554 năm",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-012"
+    },
+    {
+     "kind": "qa",
+     "q": "商朝从哪一位君王开始，到哪一位君王结束？",
+     "a": "从成汤（商汤）开始，到纣王结束",
+     "qVi": "Nhà Thương bắt đầu từ vị vua nào và kết thúc ở vị vua nào?",
+     "aVi": "Bắt đầu từ Thành Thang, kết thúc ở Trụ Vương",
+     "altA": [
+      "从商汤到纣王",
+      "成汤到纣王"
+     ],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-013"
+    },
+    {
+     "kind": "qa",
+     "q": "为什么说商朝是中国有文字可考的文明史的开端？",
+     "a": "因为发现了甲骨文",
+     "qVi": "Vì sao nói nhà Thương là khởi đầu của lịch sử văn minh có chữ viết khảo chứng được?",
+     "aVi": "Vì đã phát hiện ra giáp cốt văn",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-014"
+    },
+    {
+     "kind": "qa",
+     "q": "商王决策国家大事之前用什么方法询问鬼神？",
+     "a": "占卜",
+     "qVi": "Vua Thương dùng phương pháp gì để hỏi quỷ thần trước khi quyết định việc nước?",
+     "aVi": "Bói toán",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-015"
+    },
+    {
+     "kind": "qa",
+     "q": "《说文解字》的作者是谁？",
+     "a": "东汉许慎",
+     "qVi": "Tác giả của \"Thuyết văn giải tự\" là ai?",
+     "aVi": "Hứa Thận thời Đông Hán",
+     "altA": [
+      "许慎"
+     ],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-016"
+    },
+    {
+     "kind": "qa",
+     "q": "“六书”指哪六种造字和用字法？",
+     "a": "象形、指事、会意、形声、转注、假借",
+     "qVi": "\"Lục thư\" chỉ sáu phép tạo chữ và dùng chữ nào?",
+     "aVi": "Tượng hình, chỉ sự, hội ý, hình thanh, chuyển chú, giả tá",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-017"
+    },
+    {
+     "kind": "qa",
+     "q": "商朝在哪一位国王时国力达到极盛？",
+     "a": "第十三代国王武丁",
+     "qVi": "Nhà Thương đạt cực thịnh dưới thời vị vua nào?",
+     "aVi": "Vũ Đinh, vị vua đời thứ mười ba",
+     "altA": [
+      "武丁"
+     ],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-018"
+    },
+    {
+     "kind": "qa",
+     "q": "商朝最后一个国王是谁？",
+     "a": "纣王",
+     "qVi": "Vị vua cuối cùng của nhà Thương là ai?",
+     "aVi": "Trụ Vương",
+     "altA": [
+      "纣"
+     ],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-019"
+    },
+    {
+     "kind": "qa",
+     "q": "商朝在哪一场战役中被周所取代？",
+     "a": "牧野之战",
+     "qVi": "Nhà Thương bị nhà Chu thay thế trong trận chiến nào?",
+     "aVi": "Trận Mục Dã",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-020"
+    },
+    {
+     "kind": "qa",
+     "q": "周武王在哪一年灭商？",
+     "a": "公元前1046年",
+     "qVi": "Chu Vũ Vương diệt nhà Thương vào năm nào?",
+     "aVi": "Năm 1046 TCN",
+     "altA": [
+      "前1046年"
+     ],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-021"
+    },
+    {
+     "kind": "qa",
+     "q": "商朝四位重要君王的功绩分别是什么？",
+     "a": "成汤建立商朝，盘庚迁都安定，武丁发展强盛，纣王走向灭亡",
+     "qVi": "Công trạng của bốn vị vua quan trọng nhà Thương là gì?",
+     "aVi": "Thành Thang lập nhà Thương, Bàn Canh dời đô ổn định, Vũ Đinh phát triển hưng thịnh, Trụ Vương đi đến diệt vong",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-022"
+    },
+    {
+     "kind": "qa",
+     "q": "周朝前后持续了多少年？",
+     "a": "800多年",
+     "qVi": "Nhà Chu kéo dài bao nhiêu năm?",
+     "aVi": "Hơn 800 năm",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-023"
+    },
+    {
+     "kind": "qa",
+     "q": "西周和东周的都城分别在哪里？",
+     "a": "西周定都镐京（西安附近），东周定都洛邑（洛阳）",
+     "qVi": "Kinh đô của Tây Chu và Đông Chu lần lượt ở đâu?",
+     "aVi": "Tây Chu đóng đô ở Hạo Kinh (gần Tây An), Đông Chu đóng đô ở Lạc Ấp (Lạc Dương)",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-024"
+    },
+    {
+     "kind": "qa",
+     "q": "西周为了巩固统治实行了什么制度？",
+     "a": "分封制",
+     "qVi": "Tây Chu thực hiện chế độ gì để củng cố thống trị?",
+     "aVi": "Chế độ phân phong",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-025"
+    },
+    {
+     "kind": "qa",
+     "q": "西周建立了哪三套制度来巩固统治秩序？",
+     "a": "宗法、礼乐、刑罚制度",
+     "qVi": "Tây Chu lập ba hệ chế độ nào để củng cố trật tự thống trị?",
+     "aVi": "Chế độ tông pháp, lễ nhạc và hình phạt",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-026"
+    },
+    {
+     "kind": "qa",
+     "q": "西周持续了多少年？",
+     "a": "275年",
+     "qVi": "Tây Chu kéo dài bao nhiêu năm?",
+     "aVi": "275 năm",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-027"
+    },
+    {
+     "kind": "qa",
+     "q": "“成康之治”推行了周公的什么理念？",
+     "a": "明德慎罚",
+     "qVi": "\"Thành Khang chi trị\" thi hành lý niệm nào của Chu Công?",
+     "aVi": "Minh đức thận phạt (sáng đức, thận trọng hình phạt)",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-028"
+    },
+    {
+     "kind": "qa",
+     "q": "公元前841年发生了什么事件？",
+     "a": "国人暴动，朝政由诸侯共管，史称“共和行政”",
+     "qVi": "Năm 841 TCN xảy ra sự kiện gì?",
+     "aVi": "Quốc nhân bạo động, triều chính do chư hầu cùng quản, sử gọi là \"Cộng hòa hành chính\"",
+     "altA": [
+      "国人暴动",
+      "共和行政"
+     ],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-029"
+    },
+    {
+     "kind": "qa",
+     "q": "国人暴动发生在哪一位君王时期？",
+     "a": "周厉王",
+     "qVi": "Quốc nhân bạo động xảy ra dưới thời vị vua nào?",
+     "aVi": "Chu Lệ Vương",
+     "altA": [],
+     "topics": [
+      "ls-ha-thuong-chu"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls02",
+     "sources": [
+      "02-ha-thuong-chu.json"
+     ],
+     "id": "ls02-030"
+    },
+    {
+     "kind": "qa",
+     "q": "东周分为哪两个时期？",
+     "a": "春秋（前770—前476）和战国（前475—前221）",
+     "qVi": "Đông Chu chia làm hai thời kỳ nào?",
+     "aVi": "Xuân Thu (770–476 TCN) và Chiến Quốc (475–221 TCN)",
+     "altA": [
+      "春秋和战国",
+      "春秋、战国"
+     ],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-001"
+    },
+    {
+     "kind": "qa",
+     "q": "东周在哪一年开始，都城迁到哪里？",
+     "a": "公元前770年开始，东迁洛邑（今河南洛阳）",
+     "qVi": "Đông Chu bắt đầu năm nào, dời đô về đâu?",
+     "aVi": "Bắt đầu năm 770 TCN, dời về phía đông đến Lạc Ấp (Lạc Dương, Hà Nam ngày nay)",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-002"
+    },
+    {
+     "kind": "qa",
+     "q": "春秋战国是从什么社会向什么社会过渡的时期？",
+     "a": "由奴隶社会向封建社会过渡",
+     "qVi": "Xuân Thu Chiến Quốc là thời kỳ quá độ từ xã hội nào sang xã hội nào?",
+     "aVi": "Từ xã hội nô lệ quá độ sang xã hội phong kiến",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-003"
+    },
+    {
+     "kind": "qa",
+     "q": "东周时期哪一项技术的发展使耕地面积扩大？",
+     "a": "炼铁技术",
+     "qVi": "Kỹ thuật nào phát triển thời Đông Chu khiến diện tích canh tác mở rộng?",
+     "aVi": "Kỹ thuật luyện sắt",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-004"
+    },
+    {
+     "kind": "qa",
+     "q": "东周时期哪一个阶级逐步取代了奴隶主阶级？",
+     "a": "地主阶级",
+     "qVi": "Giai cấp nào dần thay thế giai cấp chủ nô thời Đông Chu?",
+     "aVi": "Giai cấp địa chủ",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-005"
+    },
+    {
+     "kind": "qa",
+     "q": "春秋五霸中的第一位霸主是谁？",
+     "a": "齐桓公",
+     "qVi": "Vị bá chủ đầu tiên trong Ngũ bá thời Xuân Thu là ai?",
+     "aVi": "Tề Hoàn Công",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-006"
+    },
+    {
+     "kind": "qa",
+     "q": "齐桓公任用谁为相整顿内政？",
+     "a": "管仲",
+     "qVi": "Tề Hoàn Công dùng ai làm tướng quốc để chỉnh đốn nội chính?",
+     "aVi": "Quản Trọng",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-007"
+    },
+    {
+     "kind": "qa",
+     "q": "齐桓公以什么为旗号称霸？",
+     "a": "尊王攘夷",
+     "qVi": "Tề Hoàn Công lấy khẩu hiệu gì để xưng bá?",
+     "aVi": "Tôn vương nhương di (tôn phò vua Chu, đánh đuổi rợ ngoài)",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-008"
+    },
+    {
+     "kind": "qa",
+     "q": "“九合诸侯，一匡天下”说的是哪一位霸主？",
+     "a": "齐桓公",
+     "qVi": "\"Cửu hợp chư hầu, nhất khuông thiên hạ\" nói về vị bá chủ nào?",
+     "aVi": "Tề Hoàn Công",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-009"
+    },
+    {
+     "kind": "qa",
+     "q": "春秋时代的第二位霸主是谁？",
+     "a": "晋文公",
+     "qVi": "Vị bá chủ thứ hai thời Xuân Thu là ai?",
+     "aVi": "Tấn Văn Công",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-010"
+    },
+    {
+     "kind": "qa",
+     "q": "晋文公在外流亡了多少年？",
+     "a": "十九年",
+     "qVi": "Tấn Văn Công lưu vong bên ngoài bao nhiêu năm?",
+     "aVi": "Mười chín năm",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-011"
+    },
+    {
+     "kind": "qa",
+     "q": "晋文公在哪一场战役中以少胜多大败楚军？",
+     "a": "城濮之战",
+     "qVi": "Tấn Văn Công đánh bại quân Sở trong trận nào với quân ít thắng quân nhiều?",
+     "aVi": "Trận Thành Bộc",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-012"
+    },
+    {
+     "kind": "qa",
+     "q": "“三年不飞，一飞冲天；三年不鸣，一鸣惊人”说的是谁？",
+     "a": "楚庄王",
+     "qVi": "\"Ba năm không bay, bay thì vút trời; ba năm không kêu, kêu thì kinh người\" nói về ai?",
+     "aVi": "Sở Trang Vương",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-013"
+    },
+    {
+     "kind": "qa",
+     "q": "“问鼎中原”说的是哪一位国君？",
+     "a": "楚庄王",
+     "qVi": "\"Vấn đỉnh Trung Nguyên\" nói về vị vua nào?",
+     "aVi": "Sở Trang Vương",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-014"
+    },
+    {
+     "kind": "qa",
+     "q": "楚庄王在哪一场战役中大败晋国？",
+     "a": "邲之战",
+     "qVi": "Sở Trang Vương đại thắng nước Tấn trong trận nào?",
+     "aVi": "Trận Bật",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-015"
+    },
+    {
+     "kind": "qa",
+     "q": "“卧薪尝胆”说的是哪一位君主？",
+     "a": "越王勾践",
+     "qVi": "\"Nằm gai nếm mật\" nói về vị vua nào?",
+     "aVi": "Việt Vương Câu Tiễn",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-016"
+    },
+    {
+     "kind": "qa",
+     "q": "越王勾践在哪一年灭掉吴国？",
+     "a": "公元前473年",
+     "qVi": "Việt Vương Câu Tiễn diệt nước Ngô vào năm nào?",
+     "aVi": "Năm 473 TCN",
+     "altA": [
+      "前473年"
+     ],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-017"
+    },
+    {
+     "kind": "qa",
+     "q": "春秋时期最后一位霸主是谁？",
+     "a": "越王勾践",
+     "qVi": "Vị bá chủ cuối cùng thời Xuân Thu là ai?",
+     "aVi": "Việt Vương Câu Tiễn",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-018"
+    },
+    {
+     "kind": "qa",
+     "q": "吴王夫差为了报父仇败给了谁，后来又被谁所灭？",
+     "a": "击败越王勾践，后来又被勾践所灭",
+     "qVi": "Ngô Vương Phù Sai báo thù cha đã đánh bại ai, về sau lại bị ai diệt?",
+     "aVi": "Đánh bại Việt Vương Câu Tiễn, về sau lại bị chính Câu Tiễn diệt",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-019"
+    },
+    {
+     "kind": "qa",
+     "q": "“蜚鸟尽，良弓藏；狡兔死，走狗烹”出自哪一个历史时期的故事？",
+     "a": "春秋末年越国（范蠡离开勾践时所说）",
+     "qVi": "\"Chim hết thì cung tốt cất, thỏ khôn chết thì chó săn bị nấu\" xuất từ câu chuyện thời nào?",
+     "aVi": "Cuối Xuân Thu, nước Việt (lời Phạm Lãi khi rời Câu Tiễn)",
+     "altA": [
+      "春秋末年越国",
+      "越国"
+     ],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-020"
+    },
+    {
+     "kind": "qa",
+     "q": "“三家分晋”指哪三家瓜分了晋国？",
+     "a": "韩、赵、魏",
+     "qVi": "\"Tam gia phân Tấn\" chỉ ba họ nào chia nước Tấn?",
+     "aVi": "Hàn, Triệu, Ngụy",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-021"
+    },
+    {
+     "kind": "qa",
+     "q": "“三家分晋”发生在哪一年？",
+     "a": "公元前453年",
+     "qVi": "\"Tam gia phân Tấn\" xảy ra năm nào?",
+     "aVi": "Năm 453 TCN",
+     "altA": [
+      "前453年"
+     ],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-022"
+    },
+    {
+     "kind": "qa",
+     "q": "“战国七雄”指哪七个国家？",
+     "a": "秦、齐、楚、燕、韩、赵、魏",
+     "qVi": "\"Chiến Quốc thất hùng\" chỉ bảy nước nào?",
+     "aVi": "Tần, Tề, Sở, Yên, Hàn, Triệu, Ngụy",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-023"
+    },
+    {
+     "kind": "qa",
+     "q": "“战国四公子”是哪四个人？",
+     "a": "魏国信陵君魏无忌、赵国平原君赵胜、楚国春申君黄歇、齐国孟尝君田文",
+     "qVi": "\"Chiến Quốc tứ công tử\" là bốn người nào?",
+     "aVi": "Tín Lăng Quân Ngụy Vô Kỵ nước Ngụy, Bình Nguyên Quân Triệu Thắng nước Triệu, Xuân Thân Quân Hoàng Yết nước Sở, Mạnh Thường Quân Điền Văn nước Tề",
+     "altA": [
+      "信陵君、平原君、春申君、孟尝君"
+     ],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-024"
+    },
+    {
+     "kind": "qa",
+     "q": "被誉为“谋圣”的战国隐士是谁？",
+     "a": "鬼谷子",
+     "qVi": "Ẩn sĩ thời Chiến Quốc được tôn là \"Mưu thánh\" là ai?",
+     "aVi": "Quỷ Cốc Tử",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-025"
+    },
+    {
+     "kind": "qa",
+     "q": "鬼谷子开创了什么学派？",
+     "a": "纵横学",
+     "qVi": "Quỷ Cốc Tử sáng lập học phái nào?",
+     "aVi": "Tung hoành học",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-026"
+    },
+    {
+     "kind": "qa",
+     "q": "鬼谷子的著名弟子有哪些？",
+     "a": "苏秦、张仪、孙膑、庞涓",
+     "qVi": "Những học trò nổi tiếng của Quỷ Cốc Tử là ai?",
+     "aVi": "Tô Tần, Trương Nghi, Tôn Tẫn, Bàng Quyên",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-027"
+    },
+    {
+     "kind": "qa",
+     "q": "战国时期形成了什么思想局面？",
+     "a": "百家争鸣",
+     "qVi": "Thời Chiến Quốc hình thành cục diện tư tưởng nào?",
+     "aVi": "Bách gia tranh minh",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-028"
+    },
+    {
+     "kind": "qa",
+     "q": "儒家的代表人物是谁？",
+     "a": "孔子、孟子",
+     "qVi": "Nhân vật tiêu biểu của Nho gia là ai?",
+     "aVi": "Khổng Tử, Mạnh Tử",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-029"
+    },
+    {
+     "kind": "qa",
+     "q": "道家的代表人物是谁？",
+     "a": "老子、庄子",
+     "qVi": "Nhân vật tiêu biểu của Đạo gia là ai?",
+     "aVi": "Lão Tử, Trang Tử",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-030"
+    },
+    {
+     "kind": "qa",
+     "q": "法家的代表人物是谁？",
+     "a": "商鞅、韩非子",
+     "qVi": "Nhân vật tiêu biểu của Pháp gia là ai?",
+     "aVi": "Thương Ưởng, Hàn Phi Tử",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-031"
+    },
+    {
+     "kind": "qa",
+     "q": "墨家的代表人物是谁？",
+     "a": "墨子",
+     "qVi": "Nhân vật tiêu biểu của Mặc gia là ai?",
+     "aVi": "Mặc Tử",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-032"
+    },
+    {
+     "kind": "qa",
+     "q": "儒家的核心思想是什么？",
+     "a": "仁、义",
+     "qVi": "Tư tưởng cốt lõi của Nho gia là gì?",
+     "aVi": "Nhân, nghĩa",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-033"
+    },
+    {
+     "kind": "qa",
+     "q": "道家的核心思想是什么？",
+     "a": "自然、无为",
+     "qVi": "Tư tưởng cốt lõi của Đạo gia là gì?",
+     "aVi": "Tự nhiên, vô vi",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-034"
+    },
+    {
+     "kind": "qa",
+     "q": "墨家的核心思想是什么？",
+     "a": "兼爱、非攻",
+     "qVi": "Tư tưởng cốt lõi của Mặc gia là gì?",
+     "aVi": "Kiêm ái, phi công (yêu thương bình đẳng, phản đối chiến tranh)",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-035"
+    },
+    {
+     "kind": "qa",
+     "q": "法家衡量价值的标准是什么？",
+     "a": "赏罚、国力",
+     "qVi": "Tiêu chuẩn đánh giá giá trị của Pháp gia là gì?",
+     "aVi": "Thưởng phạt và quốc lực",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-036"
+    },
+    {
+     "kind": "qa",
+     "q": "墨家提出的十大主张有哪些？",
+     "a": "兼爱、非攻、尚贤、尚同、天志、鬼明、非乐、非命、节用、节葬",
+     "qVi": "Mười chủ trương lớn của Mặc gia là gì?",
+     "aVi": "Kiêm ái, phi công, thượng hiền, thượng đồng, thiên chí, quỷ minh, phi nhạc, phi mệnh, tiết dụng, tiết táng",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-037"
+    },
+    {
+     "kind": "qa",
+     "q": "墨家为什么在秦汉之后几乎绝迹？",
+     "a": "因为墨家要求地位平等，不符合统治阶级的愿望",
+     "qVi": "Vì sao Mặc gia gần như tuyệt tích sau thời Tần Hán?",
+     "aVi": "Vì Mặc gia đòi hỏi địa vị bình đẳng, không hợp với mong muốn của giai cấp thống trị",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-038"
+    },
+    {
+     "kind": "qa",
+     "q": "商鞅变法发生在哪一年？",
+     "a": "公元前356年",
+     "qVi": "Thương Ưởng biến pháp diễn ra vào năm nào?",
+     "aVi": "Năm 356 TCN",
+     "altA": [
+      "前356年"
+     ],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-039"
+    },
+    {
+     "kind": "qa",
+     "q": "商鞅变法在军事上用什么制度取代了世卿世禄制？",
+     "a": "军功爵制",
+     "qVi": "Thương Ưởng biến pháp dùng chế độ nào thay thế chế độ thế khanh thế lộc về mặt quân sự?",
+     "aVi": "Chế độ tước vị theo quân công",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-040"
+    },
+    {
+     "kind": "qa",
+     "q": "商鞅变法后秦军被称为什么？",
+     "a": "虎狼之师",
+     "qVi": "Sau Thương Ưởng biến pháp, quân Tần được gọi là gì?",
+     "aVi": "Hổ lang chi sư (đội quân hổ sói)",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-041"
+    },
+    {
+     "kind": "qa",
+     "q": "商鞅变法在经济上废除了什么制度？",
+     "a": "井田制，废井田、开阡陌，承认土地私有",
+     "qVi": "Thương Ưởng biến pháp bãi bỏ chế độ kinh tế nào?",
+     "aVi": "Chế độ tỉnh điền; phế tỉnh điền, khai thiên mạch, thừa nhận tư hữu ruộng đất",
+     "altA": [
+      "井田制"
+     ],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-042"
+    },
+    {
+     "kind": "qa",
+     "q": "商鞅变法在政治上用什么制度取代了分封制？",
+     "a": "县制",
+     "qVi": "Thương Ưởng biến pháp dùng chế độ nào thay thế chế độ phân phong về mặt chính trị?",
+     "aVi": "Chế độ huyện",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-043"
+    },
+    {
+     "kind": "qa",
+     "q": "商鞅变法在社会上推行了什么制度加强基层控制？",
+     "a": "什五连坐法和户籍制度",
+     "qVi": "Thương Ưởng biến pháp thi hành chế độ nào để tăng kiểm soát cơ sở xã hội?",
+     "aVi": "Phép thập ngũ liên tọa và chế độ hộ tịch",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-044"
+    },
+    {
+     "kind": "qa",
+     "q": "商鞅和韩非的关键词分别是什么？",
+     "a": "商鞅是“法”，韩非是“法、势、术”",
+     "qVi": "Từ khóa của Thương Ưởng và Hàn Phi lần lượt là gì?",
+     "aVi": "Thương Ưởng là \"pháp\", Hàn Phi là \"pháp, thế, thuật\"",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-045"
+    },
+    {
+     "kind": "qa",
+     "q": "秦国在哪一年灭掉西周公国？",
+     "a": "公元前256年",
+     "qVi": "Nước Tần diệt Tây Chu công quốc vào năm nào?",
+     "aVi": "Năm 256 TCN",
+     "altA": [
+      "前256年"
+     ],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-046"
+    },
+    {
+     "kind": "qa",
+     "q": "嬴政在哪一年即位，当时多少岁？",
+     "a": "公元前247年即位，年仅十三岁",
+     "qVi": "Doanh Chính lên ngôi năm nào, khi đó bao nhiêu tuổi?",
+     "aVi": "Lên ngôi năm 247 TCN, khi đó mới mười ba tuổi",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-047"
+    },
+    {
+     "kind": "qa",
+     "q": "秦国横扫六国的开端是灭掉哪个国家？",
+     "a": "韩国（公元前230年）",
+     "qVi": "Mở đầu việc Tần quét sạch sáu nước là diệt nước nào?",
+     "aVi": "Nước Hàn (năm 230 TCN)",
+     "altA": [
+      "韩",
+      "韩国"
+     ],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-048"
+    },
+    {
+     "kind": "qa",
+     "q": "秦国灭赵时采用了什么计策除掉名将李牧？",
+     "a": "反间计",
+     "qVi": "Khi diệt Triệu, Tần dùng kế gì để trừ danh tướng Lý Mục?",
+     "aVi": "Kế phản gián",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-049"
+    },
+    {
+     "kind": "qa",
+     "q": "秦国灭魏采用了什么方法？",
+     "a": "引黄河水灌大梁城",
+     "qVi": "Tần diệt Ngụy bằng cách nào?",
+     "aVi": "Dẫn nước Hoàng Hà nhấn chìm thành Đại Lương",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-050"
+    },
+    {
+     "kind": "qa",
+     "q": "秦国灭楚动用了多少大军？",
+     "a": "六十万大军",
+     "qVi": "Tần diệt Sở huy động bao nhiêu quân?",
+     "aVi": "Sáu mươi vạn đại quân",
+     "altA": [],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-051"
+    },
+    {
+     "kind": "qa",
+     "q": "荆轲刺秦王失败后秦国灭掉了哪个国家？",
+     "a": "燕国（公元前222年）",
+     "qVi": "Sau khi Kinh Kha ám sát Tần Vương thất bại, Tần đã diệt nước nào?",
+     "aVi": "Nước Yên (năm 222 TCN)",
+     "altA": [
+      "燕",
+      "燕国"
+     ],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-052"
+    },
+    {
+     "kind": "qa",
+     "q": "秦国在哪一年灭齐完成统一？",
+     "a": "公元前221年",
+     "qVi": "Tần diệt Tề hoàn thành thống nhất vào năm nào?",
+     "aVi": "Năm 221 TCN",
+     "altA": [
+      "前221年"
+     ],
+     "topics": [
+      "ls-xuan-thu-chien-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls03",
+     "sources": [
+      "03-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ls03-053"
+    },
+    {
+     "kind": "qa",
+     "q": "秦始皇在哪一年统一中国？",
+     "a": "公元前221年",
+     "qVi": "Tần Thủy Hoàng thống nhất Trung Quốc vào năm nào?",
+     "aVi": "Năm 221 TCN",
+     "altA": [
+      "前221年"
+     ],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-001"
+    },
+    {
+     "kind": "qa",
+     "q": "秦朝的都城在哪里？",
+     "a": "咸阳（今西安）",
+     "qVi": "Kinh đô nhà Tần ở đâu?",
+     "aVi": "Hàm Dương (Tây An ngày nay)",
+     "altA": [
+      "咸阳"
+     ],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-002"
+    },
+    {
+     "kind": "qa",
+     "q": "秦朝在中国历史上有什么地位？",
+     "a": "是第一个中央集权的统一的封建国家",
+     "qVi": "Nhà Tần có vị trí gì trong lịch sử Trung Quốc?",
+     "aVi": "Là nhà nước phong kiến thống nhất, trung ương tập quyền đầu tiên",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-003"
+    },
+    {
+     "kind": "qa",
+     "q": "秦朝最重要的五项改变是什么？",
+     "a": "郡县制、书同文、车同轨、统一货币与度量衡、确立土地个人私有制度",
+     "qVi": "Năm thay đổi quan trọng nhất của nhà Tần là gì?",
+     "aVi": "Chế độ quận huyện, thống nhất chữ viết, thống nhất cỡ trục xe, thống nhất tiền tệ và đo lường, xác lập chế độ tư hữu ruộng đất",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-004"
+    },
+    {
+     "kind": "qa",
+     "q": "秦朝建立后废除了什么制度，推行了什么制度？",
+     "a": "废分封，行郡县",
+     "qVi": "Sau khi lập quốc, nhà Tần bãi bỏ chế độ nào và thi hành chế độ nào?",
+     "aVi": "Bãi bỏ phân phong, thi hành quận huyện",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-005"
+    },
+    {
+     "kind": "qa",
+     "q": "秦始皇在哪一年筑长城，目的是什么？",
+     "a": "公元前215年，为了抵御匈奴",
+     "qVi": "Tần Thủy Hoàng xây Trường Thành năm nào, nhằm mục đích gì?",
+     "aVi": "Năm 215 TCN, để phòng ngự Hung Nô",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-006"
+    },
+    {
+     "kind": "qa",
+     "q": "“焚书坑儒”发生在哪一年，有什么意义？",
+     "a": "公元前213年，标志着思想高度专制",
+     "qVi": "\"Đốt sách chôn nho\" xảy ra năm nào, có ý nghĩa gì?",
+     "aVi": "Năm 213 TCN, đánh dấu sự chuyên chế tư tưởng cao độ",
+     "altA": [
+      "前213年"
+     ],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-007"
+    },
+    {
+     "kind": "qa",
+     "q": "秦始皇在哪一年驾崩，发生了什么事变？",
+     "a": "公元前210年，沙丘之变",
+     "qVi": "Tần Thủy Hoàng băng hà năm nào, xảy ra biến cố gì?",
+     "aVi": "Năm 210 TCN, biến cố Sa Khâu",
+     "altA": [
+      "沙丘之变"
+     ],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-008"
+    },
+    {
+     "kind": "qa",
+     "q": "秦朝建立多少年后被农民起义推翻？",
+     "a": "15年",
+     "qVi": "Nhà Tần bị khởi nghĩa nông dân lật đổ sau bao nhiêu năm?",
+     "aVi": "15 năm",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-009"
+    },
+    {
+     "kind": "qa",
+     "q": "推翻秦朝的农民起义由谁领导？",
+     "a": "陈胜、吴广",
+     "qVi": "Khởi nghĩa nông dân lật đổ nhà Tần do ai lãnh đạo?",
+     "aVi": "Trần Thắng, Ngô Quảng",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-010"
+    },
+    {
+     "kind": "qa",
+     "q": "陈胜吴广起义又叫什么？发生在哪一年？",
+     "a": "大泽乡起义，公元前209年",
+     "qVi": "Khởi nghĩa Trần Thắng Ngô Quảng còn gọi là gì, xảy ra năm nào?",
+     "aVi": "Khởi nghĩa Đại Trạch Hương, năm 209 TCN",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-011"
+    },
+    {
+     "kind": "qa",
+     "q": "陈胜吴广起义的著名口号是什么？",
+     "a": "王侯将相宁有种乎",
+     "qVi": "Khẩu hiệu nổi tiếng của khởi nghĩa Trần Thắng Ngô Quảng là gì?",
+     "aVi": "Vương hầu tướng tướng, ninh hữu chủng hồ (Vương hầu tướng lĩnh, há phải do dòng giống sao?)",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-012"
+    },
+    {
+     "kind": "qa",
+     "q": "陈胜吴广起义建立了什么政权？",
+     "a": "“张楚”政权",
+     "qVi": "Khởi nghĩa Trần Thắng Ngô Quảng lập ra chính quyền gì?",
+     "aVi": "Chính quyền \"Trương Sở\"",
+     "altA": [
+      "张楚"
+     ],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-013"
+    },
+    {
+     "kind": "qa",
+     "q": "陈胜吴广起义为什么爆发？",
+     "a": "九百名农民被征发戍守边境，途中遇大雨失期，按秦律失期当斩",
+     "qVi": "Vì sao khởi nghĩa Trần Thắng Ngô Quảng bùng nổ?",
+     "aVi": "Chín trăm nông dân bị điều đi thú biên, giữa đường gặp mưa lớn lỡ kỳ hạn, theo luật Tần lỡ hạn thì bị chém",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-014"
+    },
+    {
+     "kind": "qa",
+     "q": "陈胜吴广起义持续多久后失败？",
+     "a": "六个月",
+     "qVi": "Khởi nghĩa Trần Thắng Ngô Quảng thất bại sau bao lâu?",
+     "aVi": "Sáu tháng",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-015"
+    },
+    {
+     "kind": "qa",
+     "q": "楚汉争雄的双方是谁？",
+     "a": "项羽和刘邦",
+     "qVi": "Hai bên trong cuộc Hán Sở tranh hùng là ai?",
+     "aVi": "Hạng Vũ và Lưu Bang",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-016"
+    },
+    {
+     "kind": "qa",
+     "q": "项羽和刘邦的出身有什么不同？",
+     "a": "项羽是名门贵族，刘邦是平民出身",
+     "qVi": "Xuất thân của Hạng Vũ và Lưu Bang khác nhau thế nào?",
+     "aVi": "Hạng Vũ là quý tộc danh gia, Lưu Bang xuất thân bình dân",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-017"
+    },
+    {
+     "kind": "qa",
+     "q": "项羽和刘邦分别主张什么制度？",
+     "a": "项羽主张分封制，刘邦主张大一统",
+     "qVi": "Hạng Vũ và Lưu Bang chủ trương chế độ gì?",
+     "aVi": "Hạng Vũ chủ trương phân phong, Lưu Bang chủ trương đại nhất thống",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-018"
+    },
+    {
+     "kind": "qa",
+     "q": "刘邦起用谁“暗度陈仓”突袭关中？",
+     "a": "韩信",
+     "qVi": "Lưu Bang dùng ai để \"ám độ Trần Thương\" tập kích Quan Trung?",
+     "aVi": "Hàn Tín",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-019"
+    },
+    {
+     "kind": "qa",
+     "q": "楚汉双方约定以什么为界平分天下？",
+     "a": "鸿沟",
+     "qVi": "Hai bên Hán Sở ước định lấy gì làm ranh giới chia đôi thiên hạ?",
+     "aVi": "Hồng Câu",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-020"
+    },
+    {
+     "kind": "qa",
+     "q": "刘邦在哪一场战役中通过“十面埋伏”和“四面楚歌”彻底击溃楚军？",
+     "a": "垓下之战",
+     "qVi": "Lưu Bang đánh tan quân Sở bằng \"thập diện mai phục\" và \"tứ diện Sở ca\" trong trận nào?",
+     "aVi": "Trận Cai Hạ",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-021"
+    },
+    {
+     "kind": "qa",
+     "q": "汉朝在哪一年正式建立？",
+     "a": "公元前202年（刘邦称帝）",
+     "qVi": "Nhà Hán chính thức thành lập năm nào?",
+     "aVi": "Năm 202 TCN (Lưu Bang xưng đế)",
+     "altA": [
+      "前202年"
+     ],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-022"
+    },
+    {
+     "kind": "qa",
+     "q": "西汉和东汉的都城分别在哪里？",
+     "a": "西汉定都长安（今西安），东汉定都洛阳",
+     "qVi": "Kinh đô Tây Hán và Đông Hán lần lượt ở đâu?",
+     "aVi": "Tây Hán đóng đô ở Trường An (Tây An ngày nay), Đông Hán đóng đô ở Lạc Dương",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-023"
+    },
+    {
+     "kind": "qa",
+     "q": "汉朝前期实行了什么政策？",
+     "a": "让老百姓休养生息的政策",
+     "qVi": "Thời kỳ đầu nhà Hán thi hành chính sách gì?",
+     "aVi": "Chính sách cho dân nghỉ ngơi dưỡng sức",
+     "altA": [
+      "休养生息"
+     ],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-024"
+    },
+    {
+     "kind": "qa",
+     "q": "汉朝全国人口达到多少？",
+     "a": "6000多万",
+     "qVi": "Dân số cả nước thời Hán đạt bao nhiêu?",
+     "aVi": "Hơn 60 triệu",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-025"
+    },
+    {
+     "kind": "qa",
+     "q": "汉朝派谁出使西域，开辟了什么？",
+     "a": "派张骞出使西域，开辟了丝绸之路",
+     "qVi": "Nhà Hán cử ai đi sứ Tây Vực, khai thông con đường nào?",
+     "aVi": "Cử Trương Khiên đi sứ Tây Vực, khai thông Con đường Tơ lụa",
+     "altA": [
+      "张骞，丝绸之路"
+     ],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-026"
+    },
+    {
+     "kind": "qa",
+     "q": "汉朝采用了谁的什么建议使儒家成为正统思想？",
+     "a": "董仲舒的“罢黜百家，独尊儒术”",
+     "qVi": "Nhà Hán dùng kiến nghị nào của ai khiến Nho gia thành tư tưởng chính thống?",
+     "aVi": "\"Bãi truất bách gia, độc tôn Nho thuật\" của Đổng Trọng Thư",
+     "altA": [
+      "董仲舒",
+      "罢黜百家，独尊儒术"
+     ],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-027"
+    },
+    {
+     "kind": "qa",
+     "q": "中国第一部纪传体通史是什么？作者是谁？",
+     "a": "《史记》，作者司马迁",
+     "qVi": "Bộ thông sử thể kỷ truyện đầu tiên của Trung Quốc là gì, tác giả là ai?",
+     "aVi": "\"Sử ký\", tác giả Tư Mã Thiên",
+     "altA": [
+      "史记，司马迁"
+     ],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-028"
+    },
+    {
+     "kind": "qa",
+     "q": "西汉的开国皇帝是谁？",
+     "a": "汉高祖刘邦",
+     "qVi": "Hoàng đế khai quốc Tây Hán là ai?",
+     "aVi": "Hán Cao Tổ Lưu Bang",
+     "altA": [
+      "刘邦",
+      "汉高祖"
+     ],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-029"
+    },
+    {
+     "kind": "qa",
+     "q": "“文景之治”是哪两位皇帝开创的？",
+     "a": "汉文帝和汉景帝",
+     "qVi": "\"Văn Cảnh chi trị\" do hai vị hoàng đế nào mở ra?",
+     "aVi": "Hán Văn Đế và Hán Cảnh Đế",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-030"
+    },
+    {
+     "kind": "qa",
+     "q": "西汉最辉煌的时期是哪一位皇帝在位时？",
+     "a": "汉武帝刘彻",
+     "qVi": "Thời kỳ huy hoàng nhất của Tây Hán là dưới triều hoàng đế nào?",
+     "aVi": "Hán Vũ Đế Lưu Triệt",
+     "altA": [
+      "汉武帝"
+     ],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-031"
+    },
+    {
+     "kind": "qa",
+     "q": "王莽在哪一年代汉称帝，国号是什么？",
+     "a": "公元8年，国号新",
+     "qVi": "Vương Mãng thay Hán xưng đế năm nào, quốc hiệu là gì?",
+     "aVi": "Năm 8 CN, quốc hiệu là Tân",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-032"
+    },
+    {
+     "kind": "qa",
+     "q": "西汉末年爆发了哪些农民起义？",
+     "a": "绿林军、赤眉军起义",
+     "qVi": "Cuối Tây Hán bùng nổ những cuộc khởi nghĩa nông dân nào?",
+     "aVi": "Khởi nghĩa quân Lục Lâm và quân Xích Mi",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-033"
+    },
+    {
+     "kind": "qa",
+     "q": "东汉的开国皇帝是谁，在哪一年称帝？",
+     "a": "汉光武帝刘秀，公元25年在洛阳称帝",
+     "qVi": "Hoàng đế khai quốc Đông Hán là ai, xưng đế năm nào?",
+     "aVi": "Hán Quang Vũ Đế Lưu Tú, xưng đế tại Lạc Dương năm 25",
+     "altA": [
+      "刘秀",
+      "汉光武帝"
+     ],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-034"
+    },
+    {
+     "kind": "qa",
+     "q": "“光武中兴”是哪一位皇帝开启的？",
+     "a": "汉光武帝刘秀",
+     "qVi": "\"Quang Vũ trung hưng\" do hoàng đế nào mở ra?",
+     "aVi": "Hán Quang Vũ Đế Lưu Tú",
+     "altA": [
+      "刘秀"
+     ],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-035"
+    },
+    {
+     "kind": "qa",
+     "q": "佛教在哪一位皇帝期间传入中国？",
+     "a": "汉明帝",
+     "qVi": "Phật giáo truyền vào Trung Quốc dưới thời hoàng đế nào?",
+     "aVi": "Hán Minh Đế",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-036"
+    },
+    {
+     "kind": "qa",
+     "q": "蔡伦改进造纸术是在哪一位皇帝时期？",
+     "a": "汉和帝",
+     "qVi": "Thái Luân cải tiến kỹ thuật làm giấy dưới thời hoàng đế nào?",
+     "aVi": "Hán Hòa Đế",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-037"
+    },
+    {
+     "kind": "qa",
+     "q": "张衡发明地动仪是在哪一位皇帝时期？",
+     "a": "汉顺帝",
+     "qVi": "Trương Hành phát minh địa động nghi dưới thời hoàng đế nào?",
+     "aVi": "Hán Thuận Đế",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-038"
+    },
+    {
+     "kind": "qa",
+     "q": "“党锢之祸”发生在哪一位皇帝时期？",
+     "a": "汉桓帝",
+     "qVi": "\"Đảng cố chi họa\" xảy ra dưới thời hoàng đế nào?",
+     "aVi": "Hán Hoàn Đế",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-039"
+    },
+    {
+     "kind": "qa",
+     "q": "“黄巾起义”爆发在哪一位皇帝时期？",
+     "a": "汉灵帝",
+     "qVi": "\"Khởi nghĩa Khăn Vàng\" bùng nổ dưới thời hoàng đế nào?",
+     "aVi": "Hán Linh Đế",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-040"
+    },
+    {
+     "kind": "qa",
+     "q": "东汉最后一位皇帝是谁？汉朝怎样灭亡？",
+     "a": "汉献帝刘协，禅让于曹丕，汉朝正式灭亡",
+     "qVi": "Hoàng đế cuối cùng của Đông Hán là ai, nhà Hán diệt vong thế nào?",
+     "aVi": "Hán Hiến Đế Lưu Hiệp, nhường ngôi cho Tào Phi, nhà Hán chính thức diệt vong",
+     "altA": [
+      "汉献帝"
+     ],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-041"
+    },
+    {
+     "kind": "qa",
+     "q": "汉代前后持续了多少年？",
+     "a": "400年",
+     "qVi": "Nhà Hán kéo dài bao nhiêu năm?",
+     "aVi": "400 năm",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-042"
+    },
+    {
+     "kind": "qa",
+     "q": "汉族作为中国主体民族的名称来源于哪个朝代？",
+     "a": "汉朝",
+     "qVi": "Tên gọi dân tộc Hán với tư cách dân tộc chủ thể Trung Quốc bắt nguồn từ triều đại nào?",
+     "aVi": "Nhà Hán",
+     "altA": [],
+     "topics": [
+      "ls-tan-han"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls04",
+     "sources": [
+      "04-tan-han.json"
+     ],
+     "id": "ls04-043"
+    },
+    {
+     "kind": "qa",
+     "q": "三国两晋南北朝时期中国分裂了多长时间？",
+     "a": "近400年",
+     "qVi": "Thời Tam Quốc – Lưỡng Tấn – Nam Bắc triều Trung Quốc chia cắt bao lâu?",
+     "aVi": "Gần 400 năm",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-001"
+    },
+    {
+     "kind": "qa",
+     "q": "三国鼎立是哪三个政权？建立者分别是谁？",
+     "a": "曹魏（曹丕）、蜀汉（刘备）、东吴（孙权）",
+     "qVi": "Tam Quốc đỉnh lập là ba chính quyền nào, người sáng lập là ai?",
+     "aVi": "Tào Ngụy (Tào Phi), Thục Hán (Lưu Bị), Đông Ngô (Tôn Quyền)",
+     "altA": [
+      "曹魏、蜀汉、东吴"
+     ],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-002"
+    },
+    {
+     "kind": "qa",
+     "q": "黄巾起义发生在哪一年？领导者是谁？",
+     "a": "184年，领导者是张角",
+     "qVi": "Khởi nghĩa Khăn Vàng xảy ra năm nào, ai lãnh đạo?",
+     "aVi": "Năm 184, do Trương Giác lãnh đạo",
+     "altA": [
+      "184年，张角"
+     ],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-003"
+    },
+    {
+     "kind": "qa",
+     "q": "黄巾起义的口号是什么？",
+     "a": "苍天已死，黄天当立，岁在甲子，天下大吉",
+     "qVi": "Khẩu hiệu của khởi nghĩa Khăn Vàng là gì?",
+     "aVi": "Thương thiên dĩ tử, Hoàng thiên đương lập, tuế tại Giáp Tý, thiên hạ đại cát",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-004"
+    },
+    {
+     "kind": "qa",
+     "q": "张角是哪个教派的创始人？",
+     "a": "太平道",
+     "qVi": "Trương Giác là người sáng lập giáo phái nào?",
+     "aVi": "Thái Bình Đạo",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-005"
+    },
+    {
+     "kind": "qa",
+     "q": "黄巾起义对东汉有什么影响？",
+     "a": "动摇了东汉统治根基，导致地方将领拥兵自重，开启军阀割据与三国时代",
+     "qVi": "Khởi nghĩa Khăn Vàng ảnh hưởng gì tới Đông Hán?",
+     "aVi": "Lung lay nền tảng thống trị Đông Hán, khiến tướng lĩnh địa phương cát cứ binh quyền, mở ra thời quân phiệt cát cứ và Tam Quốc",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-006"
+    },
+    {
+     "kind": "qa",
+     "q": "哪一场战役阻断了曹操统一天下的进程？",
+     "a": "赤壁之战（208年）",
+     "qVi": "Trận nào chặn đứng tiến trình thống nhất thiên hạ của Tào Tháo?",
+     "aVi": "Trận Xích Bích (năm 208)",
+     "altA": [
+      "赤壁之战"
+     ],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-007"
+    },
+    {
+     "kind": "qa",
+     "q": "曹操的核心优势是什么？",
+     "a": "天时：挟天子以令诸侯",
+     "qVi": "Ưu thế cốt lõi của Tào Tháo là gì?",
+     "aVi": "Thiên thời: hiệp thiên tử dĩ lệnh chư hầu (ép thiên tử để sai khiến chư hầu)",
+     "altA": [
+      "挟天子以令诸侯"
+     ],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-008"
+    },
+    {
+     "kind": "qa",
+     "q": "孙权的核心优势是什么？",
+     "a": "地利：凭长江天险，据江东",
+     "qVi": "Ưu thế cốt lõi của Tôn Quyền là gì?",
+     "aVi": "Địa lợi: dựa vào thiên hiểm Trường Giang, chiếm cứ Giang Đông",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-009"
+    },
+    {
+     "kind": "qa",
+     "q": "对曹操的历史评价是什么？",
+     "a": "乱世奸雄，治世能臣",
+     "qVi": "Đánh giá lịch sử về Tào Tháo là gì?",
+     "aVi": "Loạn thế gian hùng, trị thế năng thần",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-010"
+    },
+    {
+     "kind": "qa",
+     "q": "袁绍在哪一场战役中败给曹操？",
+     "a": "官渡之战",
+     "qVi": "Viên Thiệu thua Tào Tháo trong trận nào?",
+     "aVi": "Trận Quan Độ",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-011"
+    },
+    {
+     "kind": "qa",
+     "q": "蜀汉“五虎上将”是哪五位？",
+     "a": "关羽、张飞、赵云、马超、黄忠",
+     "qVi": "\"Ngũ hổ thượng tướng\" của Thục Hán là năm vị nào?",
+     "aVi": "Quan Vũ, Trương Phi, Triệu Vân, Mã Siêu, Hoàng Trung",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-012"
+    },
+    {
+     "kind": "qa",
+     "q": "诸葛亮为刘备规划的战略叫什么？",
+     "a": "《隆中对》",
+     "qVi": "Chiến lược Gia Cát Lượng hoạch định cho Lưu Bị tên là gì?",
+     "aVi": "\"Long Trung đối\"",
+     "altA": [
+      "隆中对"
+     ],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-013"
+    },
+    {
+     "kind": "qa",
+     "q": "赤壁之战东吴的总指挥是谁？",
+     "a": "周瑜",
+     "qVi": "Tổng chỉ huy quân Đông Ngô trận Xích Bích là ai?",
+     "aVi": "Chu Du",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-014"
+    },
+    {
+     "kind": "qa",
+     "q": "谁用计从关羽手中夺取了荆州？",
+     "a": "吕蒙",
+     "qVi": "Ai dùng mưu đoạt Kinh Châu từ tay Quan Vũ?",
+     "aVi": "Lữ Mông",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-015"
+    },
+    {
+     "kind": "qa",
+     "q": "陆逊在哪一场战役中打败了刘备？",
+     "a": "夷陵之战",
+     "qVi": "Lục Tốn đánh bại Lưu Bị trong trận nào?",
+     "aVi": "Trận Di Lăng",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-016"
+    },
+    {
+     "kind": "qa",
+     "q": "三国中哪一国最先灭亡？在哪一年？",
+     "a": "蜀汉，263年",
+     "qVi": "Nước nào trong Tam Quốc diệt vong sớm nhất, vào năm nào?",
+     "aVi": "Thục Hán, năm 263",
+     "altA": [
+      "蜀汉"
+     ],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-017"
+    },
+    {
+     "kind": "qa",
+     "q": "三国最终由哪个家族统一？",
+     "a": "司马家族",
+     "qVi": "Tam Quốc cuối cùng do gia tộc nào thống nhất?",
+     "aVi": "Gia tộc Tư Mã",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-018"
+    },
+    {
+     "kind": "qa",
+     "q": "司马炎在哪一年建立西晋？",
+     "a": "265年",
+     "qVi": "Tư Mã Viêm lập Tây Tấn vào năm nào?",
+     "aVi": "Năm 265",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-019"
+    },
+    {
+     "kind": "qa",
+     "q": "西晋在哪一年灭吴统一全国？",
+     "a": "280年",
+     "qVi": "Tây Tấn diệt Ngô thống nhất cả nước vào năm nào?",
+     "aVi": "Năm 280",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-020"
+    },
+    {
+     "kind": "qa",
+     "q": "司马懿、司马师、司马昭、司马炎的历史贡献分别是什么？",
+     "a": "司马懿夺取曹魏实权，司马师肃清内乱，司马昭灭亡蜀汉，司马炎建立西晋并灭吴统一",
+     "qVi": "Công trạng lịch sử của Tư Mã Ý, Tư Mã Sư, Tư Mã Chiêu, Tư Mã Viêm lần lượt là gì?",
+     "aVi": "Tư Mã Ý đoạt thực quyền Tào Ngụy, Tư Mã Sư dẹp nội loạn, Tư Mã Chiêu diệt Thục Hán, Tư Mã Viêm lập Tây Tấn và diệt Ngô thống nhất",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-021"
+    },
+    {
+     "kind": "qa",
+     "q": "西晋在哪一年灭亡？",
+     "a": "316年，匈奴兵攻入长安，西晋皇帝被俘",
+     "qVi": "Tây Tấn diệt vong năm nào?",
+     "aVi": "Năm 316, quân Hung Nô đánh vào Trường An, hoàng đế Tây Tấn bị bắt",
+     "altA": [
+      "316年"
+     ],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-022"
+    },
+    {
+     "kind": "qa",
+     "q": "“五胡”指哪五个民族？",
+     "a": "匈奴、鲜卑、羯、羌、氐",
+     "qVi": "\"Ngũ Hồ\" chỉ năm dân tộc nào?",
+     "aVi": "Hung Nô, Tiên Ti, Yết, Khương, Đê",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-023"
+    },
+    {
+     "kind": "qa",
+     "q": "五胡十六国时期从哪一年到哪一年？",
+     "a": "304年到439年",
+     "qVi": "Thời Ngũ Hồ thập lục quốc từ năm nào đến năm nào?",
+     "aVi": "Từ năm 304 đến năm 439",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-024"
+    },
+    {
+     "kind": "qa",
+     "q": "东晋在哪一年建立？建立者是谁？",
+     "a": "317年，司马睿在建康称帝",
+     "qVi": "Đông Tấn lập năm nào, ai sáng lập?",
+     "aVi": "Năm 317, Tư Mã Duệ xưng đế tại Kiến Khang",
+     "altA": [
+      "317年，司马睿"
+     ],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-025"
+    },
+    {
+     "kind": "qa",
+     "q": "“王与马，共天下”说的是什么现象？",
+     "a": "东晋门阀士族（王、谢家）权力很大",
+     "qVi": "\"Vương dữ Mã, cộng thiên hạ\" nói về hiện tượng gì?",
+     "aVi": "Thế lực môn phiệt sĩ tộc (họ Vương, họ Tạ) thời Đông Tấn rất lớn",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-026"
+    },
+    {
+     "kind": "qa",
+     "q": "东晋唯一的重大军事胜利是哪一场战役？",
+     "a": "淝水之战",
+     "qVi": "Thắng lợi quân sự lớn duy nhất của Đông Tấn là trận nào?",
+     "aVi": "Trận Phì Thủy",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-027"
+    },
+    {
+     "kind": "qa",
+     "q": "淝水之战东晋打败了哪个政权？",
+     "a": "前秦",
+     "qVi": "Trận Phì Thủy, Đông Tấn đánh bại chính quyền nào?",
+     "aVi": "Tiền Tần",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-028"
+    },
+    {
+     "kind": "qa",
+     "q": "被称为“书圣”的是谁？代表作是什么？",
+     "a": "王羲之，代表作《兰亭集序》",
+     "qVi": "Ai được gọi là \"Thư thánh\", tác phẩm tiêu biểu là gì?",
+     "aVi": "Vương Hy Chi, tác phẩm tiêu biểu \"Lan Đình tập tự\"",
+     "altA": [
+      "王羲之"
+     ],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-029"
+    },
+    {
+     "kind": "qa",
+     "q": "顾恺之的绘画主张是什么？代表作是什么？",
+     "a": "“以形写神”，代表作《洛神赋图》",
+     "qVi": "Chủ trương hội họa của Cố Khải Chi là gì, tác phẩm tiêu biểu?",
+     "aVi": "\"Dĩ hình tả thần\", tác phẩm tiêu biểu \"Lạc thần phú đồ\"",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-030"
+    },
+    {
+     "kind": "qa",
+     "q": "陶渊明以什么诗闻名？",
+     "a": "田园诗，代表作有桃花源",
+     "qVi": "Đào Uyên Minh nổi tiếng với loại thơ nào?",
+     "aVi": "Thơ điền viên, tiêu biểu có Đào hoa nguyên",
+     "altA": [
+      "田园诗"
+     ],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-031"
+    },
+    {
+     "kind": "qa",
+     "q": "南北朝时期南朝有哪四个朝代？",
+     "a": "宋、齐、梁、陈",
+     "qVi": "Nam triều thời Nam Bắc triều có bốn triều đại nào?",
+     "aVi": "Tống, Tề, Lương, Trần",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-032"
+    },
+    {
+     "kind": "qa",
+     "q": "北魏孝文帝改革的主要内容是什么？",
+     "a": "要求鲜卑贵族讲汉语、穿汉服、改汉姓，并迁都洛阳",
+     "qVi": "Nội dung chính cải cách của Bắc Ngụy Hiếu Văn Đế là gì?",
+     "aVi": "Buộc quý tộc Tiên Ti nói tiếng Hán, mặc Hán phục, đổi sang họ Hán và dời đô về Lạc Dương",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-033"
+    },
+    {
+     "kind": "qa",
+     "q": "北魏孝文帝改革有什么意义？",
+     "a": "有助于消除民族隔阂，为日后的统一奠定基础",
+     "qVi": "Cải cách của Bắc Ngụy Hiếu Văn Đế có ý nghĩa gì?",
+     "aVi": "Giúp xóa bỏ ngăn cách dân tộc, đặt nền móng cho sự thống nhất về sau",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-034"
+    },
+    {
+     "kind": "qa",
+     "q": "南北朝时期北方开凿了哪些著名石窟？",
+     "a": "云冈石窟、龙门石窟",
+     "qVi": "Thời Nam Bắc triều, phương Bắc khai tạc những hang đá nổi tiếng nào?",
+     "aVi": "Hang đá Vân Cương, hang đá Long Môn",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-035"
+    },
+    {
+     "kind": "qa",
+     "q": "南北朝时期什么宗教取代了儒教成为主导思想？",
+     "a": "佛教",
+     "qVi": "Thời Nam Bắc triều, tôn giáo nào thay Nho giáo thành tư tưởng chủ đạo?",
+     "aVi": "Phật giáo",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-036"
+    },
+    {
+     "kind": "qa",
+     "q": "门阀制度选拔官员主要依据什么？",
+     "a": "家族背景（出身），而非个人才能",
+     "qVi": "Chế độ môn phiệt tuyển chọn quan lại chủ yếu dựa vào gì?",
+     "aVi": "Xuất thân gia tộc, không phải tài năng cá nhân",
+     "altA": [],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-037"
+    },
+    {
+     "kind": "qa",
+     "q": "南北朝在哪一年结束？谁统一了中国？",
+     "a": "589年，隋文帝杨坚灭陈统一中国",
+     "qVi": "Nam Bắc triều kết thúc năm nào, ai thống nhất Trung Quốc?",
+     "aVi": "Năm 589, Tùy Văn Đế Dương Kiên diệt Trần thống nhất Trung Quốc",
+     "altA": [
+      "589年，隋文帝杨坚"
+     ],
+     "topics": [
+      "ls-tam-quoc"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls05",
+     "sources": [
+      "05-tam-quoc-nam-bac.json"
+     ],
+     "id": "ls05-038"
+    },
+    {
+     "kind": "qa",
+     "q": "隋朝在哪一年建立？建立者是谁？",
+     "a": "581年，隋文帝杨坚建立",
+     "qVi": "Nhà Tùy lập năm nào, ai sáng lập?",
+     "aVi": "Năm 581, Tùy Văn Đế Dương Kiên lập",
+     "altA": [
+      "581年，杨坚"
+     ],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-001"
+    },
+    {
+     "kind": "qa",
+     "q": "隋朝在哪一年灭陈统一全国？",
+     "a": "589年",
+     "qVi": "Nhà Tùy diệt Trần thống nhất cả nước năm nào?",
+     "aVi": "Năm 589",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-002"
+    },
+    {
+     "kind": "qa",
+     "q": "大运河是哪一位皇帝下令开凿的？",
+     "a": "隋炀帝",
+     "qVi": "Đại Vận Hà do hoàng đế nào ra lệnh đào?",
+     "aVi": "Tùy Dạng Đế",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-003"
+    },
+    {
+     "kind": "qa",
+     "q": "大运河沟通了哪两大流域？",
+     "a": "黄河流域和长江流域",
+     "qVi": "Đại Vận Hà nối thông hai lưu vực nào?",
+     "aVi": "Lưu vực Hoàng Hà và lưu vực Trường Giang",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-004"
+    },
+    {
+     "kind": "qa",
+     "q": "科举制度是哪个朝代开创的？有什么意义？",
+     "a": "隋朝，打破了门阀世族垄断官场的局面，让平民可以通过考试进入仕途",
+     "qVi": "Chế độ khoa cử do triều đại nào mở ra, có ý nghĩa gì?",
+     "aVi": "Nhà Tùy; phá vỡ cục diện môn phiệt thế tộc độc chiếm quan trường, cho phép dân thường thi cử làm quan",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-005"
+    },
+    {
+     "kind": "qa",
+     "q": "隋朝建立了什么制度加强中央集权？",
+     "a": "三省六部制",
+     "qVi": "Nhà Tùy lập chế độ gì để tăng cường trung ương tập quyền?",
+     "aVi": "Chế độ Tam tỉnh lục bộ",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-006"
+    },
+    {
+     "kind": "qa",
+     "q": "三省指哪三省？",
+     "a": "中书省、门下省、尚书省",
+     "qVi": "Tam tỉnh chỉ ba tỉnh nào?",
+     "aVi": "Trung Thư tỉnh, Môn Hạ tỉnh, Thượng Thư tỉnh",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-007"
+    },
+    {
+     "kind": "qa",
+     "q": "中书省的主要职能是什么？",
+     "a": "负责草拟诏书，向皇帝提出主张和政策",
+     "qVi": "Chức năng chính của Trung Thư tỉnh là gì?",
+     "aVi": "Soạn thảo chiếu thư, đề xuất chủ trương chính sách lên hoàng đế",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-008"
+    },
+    {
+     "kind": "qa",
+     "q": "门下省的主要职能是什么？",
+     "a": "审核、审议中书省草拟的诏书，有权驳回或要求修改",
+     "qVi": "Chức năng chính của Môn Hạ tỉnh là gì?",
+     "aVi": "Thẩm hạch, nghị duyệt chiếu thư do Trung Thư tỉnh soạn, có quyền bác bỏ hoặc yêu cầu sửa",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-009"
+    },
+    {
+     "kind": "qa",
+     "q": "尚书省的主要职能是什么？",
+     "a": "最高行政机构，通过六部执行各项政策",
+     "qVi": "Chức năng chính của Thượng Thư tỉnh là gì?",
+     "aVi": "Cơ quan hành chính tối cao, thông qua lục bộ thi hành các chính sách",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-010"
+    },
+    {
+     "kind": "qa",
+     "q": "六部指哪六部？",
+     "a": "吏部、户部、礼部、兵部、刑部、工部",
+     "qVi": "Lục bộ chỉ sáu bộ nào?",
+     "aVi": "Lại bộ, Hộ bộ, Lễ bộ, Binh bộ, Hình bộ, Công bộ",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-011"
+    },
+    {
+     "kind": "qa",
+     "q": "吏部负责什么？",
+     "a": "官员的任免、升降、考核",
+     "qVi": "Lại bộ phụ trách việc gì?",
+     "aVi": "Bổ nhiệm, bãi miễn, thăng giáng và khảo hạch quan lại",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-012"
+    },
+    {
+     "kind": "qa",
+     "q": "户部负责什么？",
+     "a": "财政、土地、税收、户籍和粮食",
+     "qVi": "Hộ bộ phụ trách việc gì?",
+     "aVi": "Tài chính, ruộng đất, thuế khóa, hộ tịch và lương thực",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-013"
+    },
+    {
+     "kind": "qa",
+     "q": "礼部负责什么？",
+     "a": "礼仪、祭祀、教育、科举考试及外交事务",
+     "qVi": "Lễ bộ phụ trách việc gì?",
+     "aVi": "Lễ nghi, tế tự, giáo dục, thi khoa cử và việc ngoại giao",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-014"
+    },
+    {
+     "kind": "qa",
+     "q": "刑部负责什么？",
+     "a": "法律、司法、审判及刑罚监狱",
+     "qVi": "Hình bộ phụ trách việc gì?",
+     "aVi": "Pháp luật, tư pháp, xét xử, hình phạt và nhà tù",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-015"
+    },
+    {
+     "kind": "qa",
+     "q": "工部负责什么？",
+     "a": "公共工程建设，如桥梁、运河、宫殿等",
+     "qVi": "Công bộ phụ trách việc gì?",
+     "aVi": "Xây dựng công trình công cộng như cầu cống, kênh đào, cung điện",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-016"
+    },
+    {
+     "kind": "qa",
+     "q": "科举制之前的选官制度叫什么？选拔标准是什么？",
+     "a": "九品中正制，标准是出身、门第、家世",
+     "qVi": "Chế độ tuyển quan trước khoa cử tên là gì, tiêu chuẩn tuyển chọn là gì?",
+     "aVi": "Chế độ Cửu phẩm trung chính, tiêu chuẩn là xuất thân, môn đệ, gia thế",
+     "altA": [
+      "九品中正制"
+     ],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-017"
+    },
+    {
+     "kind": "qa",
+     "q": "科举制的选拔标准是什么？",
+     "a": "才能、知识、文化水平",
+     "qVi": "Tiêu chuẩn tuyển chọn của chế độ khoa cử là gì?",
+     "aVi": "Tài năng, tri thức, trình độ văn hóa",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-018"
+    },
+    {
+     "kind": "qa",
+     "q": "进士科是哪一年由谁正式创立的？",
+     "a": "605年，隋炀帝创立",
+     "qVi": "Khoa Tiến sĩ do ai chính thức lập ra vào năm nào?",
+     "aVi": "Năm 605, do Tùy Dạng Đế lập",
+     "altA": [
+      "605年，隋炀帝"
+     ],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-019"
+    },
+    {
+     "kind": "qa",
+     "q": "隋朝存在了多少年？为什么灭亡？",
+     "a": "37年；隋炀帝滥用民力、大兴土木、多次发动对高句丽的战争，导致农民起义",
+     "qVi": "Nhà Tùy tồn tại bao nhiêu năm, vì sao diệt vong?",
+     "aVi": "37 năm; Tùy Dạng Đế lạm dụng sức dân, xây dựng tràn lan, nhiều lần đánh Cao Câu Ly, dẫn tới khởi nghĩa nông dân",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-020"
+    },
+    {
+     "kind": "qa",
+     "q": "唐朝在哪一年建立？建立者是谁？都城在哪里？",
+     "a": "618年，李渊（唐高祖）建立，定都长安",
+     "qVi": "Nhà Đường lập năm nào, ai sáng lập, kinh đô ở đâu?",
+     "aVi": "Năm 618, Lý Uyên (Đường Cao Tổ) lập, đóng đô ở Trường An",
+     "altA": [
+      "618年，李渊"
+     ],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-021"
+    },
+    {
+     "kind": "qa",
+     "q": "唐朝历经多少年？",
+     "a": "289年（618—907）",
+     "qVi": "Nhà Đường kéo dài bao nhiêu năm?",
+     "aVi": "289 năm (618–907)",
+     "altA": [
+      "289年"
+     ],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-022"
+    },
+    {
+     "kind": "qa",
+     "q": "“贞观之治”是哪一位皇帝的年号时期？",
+     "a": "唐太宗李世民",
+     "qVi": "\"Trinh Quán chi trị\" là thời niên hiệu của hoàng đế nào?",
+     "aVi": "Đường Thái Tông Lý Thế Dân",
+     "altA": [
+      "唐太宗",
+      "李世民"
+     ],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-023"
+    },
+    {
+     "kind": "qa",
+     "q": "唐太宗在哪一年即位？",
+     "a": "626年",
+     "qVi": "Đường Thái Tông lên ngôi năm nào?",
+     "aVi": "Năm 626",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-024"
+    },
+    {
+     "kind": "qa",
+     "q": "武则天改国号为什么？",
+     "a": "周",
+     "qVi": "Võ Tắc Thiên đổi quốc hiệu thành gì?",
+     "aVi": "Chu",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-025"
+    },
+    {
+     "kind": "qa",
+     "q": "“开元盛世”是哪一位皇帝在位时期？年份是多少？",
+     "a": "唐玄宗李隆基，713—741年",
+     "qVi": "\"Khai Nguyên thịnh thế\" là thời hoàng đế nào trị vì, vào những năm nào?",
+     "aVi": "Đường Huyền Tông Lý Long Cơ, năm 713–741",
+     "altA": [
+      "唐玄宗",
+      "唐玄宗，713-741年"
+     ],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-026"
+    },
+    {
+     "kind": "qa",
+     "q": "开元盛世时期任用了哪些贤相？",
+     "a": "姚崇、宋璟",
+     "qVi": "Thời Khai Nguyên thịnh thế dùng những hiền tướng nào?",
+     "aVi": "Diêu Sùng, Tống Cảnh",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-027"
+    },
+    {
+     "kind": "qa",
+     "q": "形容开元盛世社会安定的两句话是什么？",
+     "a": "路不拾遗，夜不闭户",
+     "qVi": "Hai câu hình dung xã hội yên ổn thời Khai Nguyên thịnh thế là gì?",
+     "aVi": "Lộ bất thập di, dạ bất bế hộ (của rơi ngoài đường không ai nhặt, đêm không phải đóng cửa)",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-028"
+    },
+    {
+     "kind": "qa",
+     "q": "开元盛世时期诗歌繁荣，代表诗人有谁？",
+     "a": "李白、杜甫、王维",
+     "qVi": "Thời Khai Nguyên thịnh thế thơ ca hưng thịnh, nhà thơ tiêu biểu là ai?",
+     "aVi": "Lý Bạch, Đỗ Phủ, Vương Duy",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-029"
+    },
+    {
+     "kind": "qa",
+     "q": "唐玄宗晚年重用了哪些奸臣？",
+     "a": "李林甫、杨国忠",
+     "qVi": "Cuối đời Đường Huyền Tông trọng dụng những gian thần nào?",
+     "aVi": "Lý Lâm Phủ, Dương Quốc Trung",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-030"
+    },
+    {
+     "kind": "qa",
+     "q": "安史之乱发生在哪些年份？历时多久？",
+     "a": "755年—763年，历时8年",
+     "qVi": "Loạn An Sử xảy ra vào những năm nào, kéo dài bao lâu?",
+     "aVi": "Năm 755–763, kéo dài 8 năm",
+     "altA": [
+      "755-763年"
+     ],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-031"
+    },
+    {
+     "kind": "qa",
+     "q": "安史之乱的叛军首领是谁？",
+     "a": "安禄山、史思明",
+     "qVi": "Thủ lĩnh quân phản loạn trong loạn An Sử là ai?",
+     "aVi": "An Lộc Sơn, Sử Tư Minh",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-032"
+    },
+    {
+     "kind": "qa",
+     "q": "安史之乱的起因是什么？",
+     "a": "节度使权力过大、朝政腐败、玄宗后期怠政",
+     "qVi": "Nguyên nhân loạn An Sử là gì?",
+     "aVi": "Tiết độ sứ quyền lực quá lớn, triều chính hủ bại, Huyền Tông cuối đời lười chính sự",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-033"
+    },
+    {
+     "kind": "qa",
+     "q": "安史之乱的严重后果是什么？",
+     "a": "人口锐减、藩镇割据、唐朝由盛转衰",
+     "qVi": "Hậu quả nghiêm trọng của loạn An Sử là gì?",
+     "aVi": "Dân số giảm mạnh, phiên trấn cát cứ, nhà Đường từ thịnh chuyển suy",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-034"
+    },
+    {
+     "kind": "qa",
+     "q": "“元和中兴”是哪一位皇帝实现的？",
+     "a": "唐宪宗",
+     "qVi": "\"Nguyên Hòa trung hưng\" do hoàng đế nào thực hiện?",
+     "aVi": "Đường Hiến Tông",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-035"
+    },
+    {
+     "kind": "qa",
+     "q": "唐朝后期哪一场起义摧毁了关中经济，使帝国名存实亡？",
+     "a": "黄巢起义（874—884）",
+     "qVi": "Cuộc khởi nghĩa nào cuối Đường phá hủy kinh tế Quan Trung, khiến đế quốc chỉ còn hư danh?",
+     "aVi": "Khởi nghĩa Hoàng Sào (874–884)",
+     "altA": [
+      "黄巢起义"
+     ],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-036"
+    },
+    {
+     "kind": "qa",
+     "q": "唐朝在哪一年灭亡？谁篡唐建立了什么朝代？",
+     "a": "907年，朱温篡唐建立后梁",
+     "qVi": "Nhà Đường diệt vong năm nào, ai soán ngôi lập triều đại gì?",
+     "aVi": "Năm 907, Chu Ôn soán Đường lập Hậu Lương",
+     "altA": [
+      "907年，朱温"
+     ],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-037"
+    },
+    {
+     "kind": "qa",
+     "q": "唐朝在科技制造上有什么突出成就？",
+     "a": "发明雕版印刷术，唐三彩陶瓷工艺达到极高水平",
+     "qVi": "Thành tựu nổi bật của nhà Đường về khoa học kỹ thuật là gì?",
+     "aVi": "Phát minh kỹ thuật in khắc bản, gốm Đường tam thái đạt trình độ rất cao",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-038"
+    },
+    {
+     "kind": "qa",
+     "q": "唐朝哪一位高僧西行取经？",
+     "a": "玄奘",
+     "qVi": "Vị cao tăng nào thời Đường sang Tây Trúc thỉnh kinh?",
+     "aVi": "Huyền Trang",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-039"
+    },
+    {
+     "kind": "qa",
+     "q": "唐朝在文学上的巅峰是什么？代表诗人有谁？",
+     "a": "唐诗，代表诗人有李白、杜甫、白居易",
+     "qVi": "Đỉnh cao văn học của nhà Đường là gì, nhà thơ tiêu biểu là ai?",
+     "aVi": "Thơ Đường; nhà thơ tiêu biểu có Lý Bạch, Đỗ Phủ, Bạch Cư Dị",
+     "altA": [],
+     "topics": [
+      "ls-tuy-duong"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls06",
+     "sources": [
+      "06-tuy-duong.json"
+     ],
+     "id": "ls06-040"
+    },
+    {
+     "kind": "qa",
+     "q": "五代十国时期从哪一年到哪一年？",
+     "a": "907年到960年",
+     "qVi": "Thời Ngũ Đại Thập Quốc từ năm nào đến năm nào?",
+     "aVi": "Từ năm 907 đến năm 960",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-001"
+    },
+    {
+     "kind": "qa",
+     "q": "“五代”指哪五个政权？",
+     "a": "后梁、后唐、后晋、后汉、后周",
+     "qVi": "\"Ngũ Đại\" chỉ năm chính quyền nào?",
+     "aVi": "Hậu Lương, Hậu Đường, Hậu Tấn, Hậu Hán, Hậu Chu",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-002"
+    },
+    {
+     "kind": "qa",
+     "q": "五代十国的时代特征是什么？",
+     "a": "武人专政、战乱频繁、社会动荡、门阀世族基本消亡",
+     "qVi": "Đặc trưng thời đại Ngũ Đại Thập Quốc là gì?",
+     "aVi": "Võ nhân chuyên chính, chiến loạn liên miên, xã hội động loạn, môn phiệt thế tộc cơ bản tiêu vong",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-003"
+    },
+    {
+     "kind": "qa",
+     "q": "北宋在哪一年建立？建立者是谁？",
+     "a": "960年，赵匡胤（宋太祖）通过陈桥兵变建立",
+     "qVi": "Bắc Tống lập năm nào, ai sáng lập?",
+     "aVi": "Năm 960, Triệu Khuông Dận (Tống Thái Tổ) lập qua binh biến Trần Kiều",
+     "altA": [
+      "960年，赵匡胤"
+     ],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-004"
+    },
+    {
+     "kind": "qa",
+     "q": "北宋的都城在哪里？",
+     "a": "开封",
+     "qVi": "Kinh đô Bắc Tống ở đâu?",
+     "aVi": "Khai Phong",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-005"
+    },
+    {
+     "kind": "qa",
+     "q": "宋太祖用什么措施解除武将的兵权？",
+     "a": "杯酒释兵权",
+     "qVi": "Tống Thái Tổ dùng biện pháp gì để tước binh quyền của các võ tướng?",
+     "aVi": "Bôi tửu thích binh quyền (chén rượu giải binh quyền)",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-006"
+    },
+    {
+     "kind": "qa",
+     "q": "北宋为防止武将专权采取了哪些措施？",
+     "a": "改派文臣统领军队，军队定期换防，将帅常调",
+     "qVi": "Bắc Tống làm gì để ngăn võ tướng chuyên quyền?",
+     "aVi": "Cử văn thần thống lĩnh quân đội, quân đội định kỳ đổi phòng, tướng soái thường xuyên điều chuyển",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-007"
+    },
+    {
+     "kind": "qa",
+     "q": "1004年宋辽签订了什么和约？",
+     "a": "澶渊之盟",
+     "qVi": "Năm 1004 Tống và Liêu ký hòa ước gì?",
+     "aVi": "Thiền Uyên chi minh",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-008"
+    },
+    {
+     "kind": "qa",
+     "q": "西夏在哪一年建立？建立者是谁？",
+     "a": "1038年，李元昊称帝",
+     "qVi": "Tây Hạ lập năm nào, ai sáng lập?",
+     "aVi": "Năm 1038, Lý Nguyên Hạo xưng đế",
+     "altA": [
+      "1038年，李元昊"
+     ],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-009"
+    },
+    {
+     "kind": "qa",
+     "q": "庆历新政由谁实施？结果如何？",
+     "a": "范仲淹，因保守派反对而失败",
+     "qVi": "Khánh Lịch tân chính do ai thi hành, kết quả ra sao?",
+     "aVi": "Phạm Trọng Yêm; thất bại vì phái bảo thủ phản đối",
+     "altA": [
+      "范仲淹"
+     ],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-010"
+    },
+    {
+     "kind": "qa",
+     "q": "北宋规模最大的改革是什么？在哪一年？",
+     "a": "王安石变法，1069年",
+     "qVi": "Cuộc cải cách quy mô lớn nhất Bắc Tống là gì, vào năm nào?",
+     "aVi": "Vương An Thạch biến pháp, năm 1069",
+     "altA": [
+      "王安石变法"
+     ],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-011"
+    },
+    {
+     "kind": "qa",
+     "q": "王安石变法的目的是什么？引发了什么后果？",
+     "a": "旨在富国强兵，但引发内部党争",
+     "qVi": "Mục đích Vương An Thạch biến pháp là gì, gây hậu quả gì?",
+     "aVi": "Nhằm làm nước giàu quân mạnh, nhưng gây ra đảng tranh nội bộ",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-012"
+    },
+    {
+     "kind": "qa",
+     "q": "靖康之变发生在哪一年？结果是什么？",
+     "a": "1127年，金军攻破汴京，俘虏宋徽宗与宋钦宗，北宋灭亡",
+     "qVi": "Biến cố Tĩnh Khang xảy ra năm nào, kết quả thế nào?",
+     "aVi": "Năm 1127, quân Kim phá Biện Kinh, bắt Tống Huy Tông và Tống Khâm Tông, Bắc Tống diệt vong",
+     "altA": [
+      "1127年"
+     ],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-013"
+    },
+    {
+     "kind": "qa",
+     "q": "南宋在哪一年建立？建立者是谁？",
+     "a": "1127年，赵构登基",
+     "qVi": "Nam Tống lập năm nào, ai sáng lập?",
+     "aVi": "Năm 1127, Triệu Cấu lên ngôi",
+     "altA": [
+      "1127年，赵构"
+     ],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-014"
+    },
+    {
+     "kind": "qa",
+     "q": "绍兴和议在哪一年签订？同时发生了什么事？",
+     "a": "1141年，岳飞被杀",
+     "qVi": "Thiệu Hưng hòa nghị ký năm nào, đồng thời xảy ra việc gì?",
+     "aVi": "Năm 1141, Nhạc Phi bị giết",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-015"
+    },
+    {
+     "kind": "qa",
+     "q": "崖山海战发生在哪一年？结果是什么？",
+     "a": "1279年，蒙古军击败南宋海军，陆秀夫背负幼帝投海自尽，宋朝灭亡",
+     "qVi": "Hải chiến Nhai Sơn xảy ra năm nào, kết quả thế nào?",
+     "aVi": "Năm 1279, quân Mông Cổ đánh bại thủy quân Nam Tống, Lục Tú Phu cõng ấu đế nhảy biển tự vẫn, nhà Tống diệt vong",
+     "altA": [
+      "1279年"
+     ],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-016"
+    },
+    {
+     "kind": "qa",
+     "q": "宋朝在科技上有哪三大成就？",
+     "a": "活字印刷、指南针、火药",
+     "qVi": "Nhà Tống có ba thành tựu khoa học kỹ thuật nào?",
+     "aVi": "In chữ rời, la bàn, thuốc súng",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-017"
+    },
+    {
+     "kind": "qa",
+     "q": "宋朝在经济上有什么突出成就？",
+     "a": "纸币、海上贸易",
+     "qVi": "Thành tựu kinh tế nổi bật của nhà Tống là gì?",
+     "aVi": "Tiền giấy, mậu dịch đường biển",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-018"
+    },
+    {
+     "kind": "qa",
+     "q": "宋朝在文化上有什么代表成就？",
+     "a": "宋词、理学",
+     "qVi": "Thành tựu văn hóa tiêu biểu của nhà Tống là gì?",
+     "aVi": "Tống từ, Lý học",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-019"
+    },
+    {
+     "kind": "qa",
+     "q": "宋朝时期中国的经济重心发生了什么变化？",
+     "a": "从黄河流域转移到长江流域",
+     "qVi": "Trọng tâm kinh tế Trung Quốc thời Tống chuyển biến thế nào?",
+     "aVi": "Chuyển từ lưu vực Hoàng Hà sang lưu vực Trường Giang",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-020"
+    },
+    {
+     "kind": "qa",
+     "q": "谁统一了蒙古各部落？",
+     "a": "成吉思汗",
+     "qVi": "Ai thống nhất các bộ lạc Mông Cổ?",
+     "aVi": "Thành Cát Tư Hãn",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-021"
+    },
+    {
+     "kind": "qa",
+     "q": "元朝在哪一年建立？建立者是谁？都城在哪里？",
+     "a": "1271年，忽必烈称帝，定都大都（今北京）",
+     "qVi": "Nhà Nguyên lập năm nào, ai sáng lập, kinh đô ở đâu?",
+     "aVi": "Năm 1271, Hốt Tất Liệt xưng đế, đóng đô ở Đại Đô (Bắc Kinh ngày nay)",
+     "altA": [
+      "1271年，忽必烈"
+     ],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-022"
+    },
+    {
+     "kind": "qa",
+     "q": "忽必烈和成吉思汗是什么关系？",
+     "a": "忽必烈是成吉思汗的孙子",
+     "qVi": "Hốt Tất Liệt và Thành Cát Tư Hãn có quan hệ gì?",
+     "aVi": "Hốt Tất Liệt là cháu nội của Thành Cát Tư Hãn",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-023"
+    },
+    {
+     "kind": "qa",
+     "q": "元朝在哪一年灭南宋完成统一？",
+     "a": "1279年",
+     "qVi": "Nhà Nguyên diệt Nam Tống hoàn thành thống nhất năm nào?",
+     "aVi": "Năm 1279",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-024"
+    },
+    {
+     "kind": "qa",
+     "q": "元朝在中国历史上有什么特殊地位？",
+     "a": "是第一个由少数民族控制全中国的朝代",
+     "qVi": "Nhà Nguyên có vị trí đặc biệt gì trong lịch sử Trung Quốc?",
+     "aVi": "Là triều đại đầu tiên do dân tộc thiểu số khống chế toàn Trung Quốc",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-025"
+    },
+    {
+     "kind": "qa",
+     "q": "元朝的政策从游牧传统转向了什么？",
+     "a": "“采用汉法”，重视农业以恢复经济",
+     "qVi": "Chính sách nhà Nguyên chuyển từ truyền thống du mục sang gì?",
+     "aVi": "\"Thái dụng Hán pháp\", coi trọng nông nghiệp để khôi phục kinh tế",
+     "altA": [
+      "采用汉法"
+     ],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-026"
+    },
+    {
+     "kind": "qa",
+     "q": "哪一位西方旅行家游历中国并描写了当时的繁荣？",
+     "a": "马可·波罗",
+     "qVi": "Nhà du hành phương Tây nào đã đi khắp Trung Quốc và mô tả sự phồn vinh đương thời?",
+     "aVi": "Marco Polo",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-027"
+    },
+    {
+     "kind": "qa",
+     "q": "元朝的民族歧视政策是怎样的？",
+     "a": "划分等级，蒙古人为第一等，原南宋人为最下等",
+     "qVi": "Chính sách kỳ thị dân tộc của nhà Nguyên như thế nào?",
+     "aVi": "Phân chia đẳng cấp, người Mông Cổ hạng nhất, người Nam Tống cũ hạng thấp nhất",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-028"
+    },
+    {
+     "kind": "qa",
+     "q": "元朝统治了多少年？",
+     "a": "98年",
+     "qVi": "Nhà Nguyên thống trị bao nhiêu năm?",
+     "aVi": "98 năm",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-029"
+    },
+    {
+     "kind": "qa",
+     "q": "元朝灭亡的主要原因是什么？",
+     "a": "重武轻文、宫廷政变频繁、民族歧视政策、官员腐败、军队战斗力衰退",
+     "qVi": "Nguyên nhân chính khiến nhà Nguyên diệt vong là gì?",
+     "aVi": "Trọng võ khinh văn, chính biến cung đình liên tiếp, chính sách kỳ thị dân tộc, quan lại tham nhũng, sức chiến đấu quân đội suy giảm",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-030"
+    },
+    {
+     "kind": "qa",
+     "q": "元朝在历史上有什么积极意义？",
+     "a": "统一全国，结束南北对峙，促进了民族融合",
+     "qVi": "Nhà Nguyên có ý nghĩa tích cực gì trong lịch sử?",
+     "aVi": "Thống nhất cả nước, kết thúc thế đối đầu Nam Bắc, thúc đẩy dung hợp dân tộc",
+     "altA": [],
+     "topics": [
+      "ls-tong-nguyen"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls07",
+     "sources": [
+      "07-tong-nguyen.json"
+     ],
+     "id": "ls07-031"
+    },
+    {
+     "kind": "qa",
+     "q": "明朝在哪一年建立？开国皇帝是谁？",
+     "a": "1368年，朱元璋（明太祖）",
+     "qVi": "Nhà Minh lập năm nào, hoàng đế khai quốc là ai?",
+     "aVi": "Năm 1368, Chu Nguyên Chương (Minh Thái Tổ)",
+     "altA": [
+      "1368年，朱元璋"
+     ],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-001"
+    },
+    {
+     "kind": "qa",
+     "q": "明朝建立后中国恢复了哪个民族的统治？经历了多少年？",
+     "a": "恢复了汉人的统治，经历276年",
+     "qVi": "Sau khi nhà Minh lập, Trung Quốc khôi phục sự thống trị của dân tộc nào, kéo dài bao nhiêu năm?",
+     "aVi": "Khôi phục sự thống trị của người Hán, kéo dài 276 năm",
+     "altA": [],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-002"
+    },
+    {
+     "kind": "qa",
+     "q": "明太祖朱元璋的年号是什么？在位年份是多少？",
+     "a": "洪武，1368—1398年",
+     "qVi": "Niên hiệu của Minh Thái Tổ Chu Nguyên Chương là gì, trị vì những năm nào?",
+     "aVi": "Hồng Vũ, năm 1368–1398",
+     "altA": [
+      "洪武"
+     ],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-003"
+    },
+    {
+     "kind": "qa",
+     "q": "明成祖是谁？年号是什么？",
+     "a": "朱棣，年号永乐",
+     "qVi": "Minh Thành Tổ là ai, niên hiệu là gì?",
+     "aVi": "Chu Đệ, niên hiệu Vĩnh Lạc",
+     "altA": [
+      "朱棣，永乐"
+     ],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-004"
+    },
+    {
+     "kind": "qa",
+     "q": "明成祖朱棣是明朝第几位皇帝？",
+     "a": "第三位",
+     "qVi": "Minh Thành Tổ Chu Đệ là hoàng đế thứ mấy của nhà Minh?",
+     "aVi": "Thứ ba",
+     "altA": [],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-005"
+    },
+    {
+     "kind": "qa",
+     "q": "明朝的三大特务机构是什么？",
+     "a": "东厂、西厂、锦衣卫",
+     "qVi": "Ba cơ quan mật vụ của nhà Minh là gì?",
+     "aVi": "Đông Xưởng, Tây Xưởng, Cẩm Y Vệ",
+     "altA": [],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-006"
+    },
+    {
+     "kind": "qa",
+     "q": "明朝末期爆发了谁领导的农民大起义？",
+     "a": "李自成",
+     "qVi": "Cuối nhà Minh bùng nổ cuộc khởi nghĩa nông dân lớn do ai lãnh đạo?",
+     "aVi": "Lý Tự Thành",
+     "altA": [],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-007"
+    },
+    {
+     "kind": "qa",
+     "q": "明朝在哪一年灭亡？",
+     "a": "1644年",
+     "qVi": "Nhà Minh diệt vong năm nào?",
+     "aVi": "Năm 1644",
+     "altA": [],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-008"
+    },
+    {
+     "kind": "qa",
+     "q": "明朝时期出现了什么标志着中国资本主义的萌芽？",
+     "a": "开始实行雇佣劳动",
+     "qVi": "Thời Minh xuất hiện điều gì đánh dấu mầm mống chủ nghĩa tư bản Trung Quốc?",
+     "aVi": "Bắt đầu thực hiện lao động làm thuê",
+     "altA": [],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-009"
+    },
+    {
+     "kind": "qa",
+     "q": "清朝由哪个民族建立？是中国历史上的第几个封建王朝？",
+     "a": "满族；是中国历史上最后一个封建王朝",
+     "qVi": "Nhà Thanh do dân tộc nào lập, là vương triều phong kiến thứ mấy trong lịch sử Trung Quốc?",
+     "aVi": "Người Mãn; là vương triều phong kiến cuối cùng trong lịch sử Trung Quốc",
+     "altA": [],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-010"
+    },
+    {
+     "kind": "qa",
+     "q": "清军入关是在哪一年？",
+     "a": "1644年",
+     "qVi": "Quân Thanh nhập quan vào năm nào?",
+     "aVi": "Năm 1644",
+     "altA": [],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-011"
+    },
+    {
+     "kind": "qa",
+     "q": "“康雍乾盛世”是哪些年份？有什么特点？",
+     "a": "1661—1796年；国家稳定、经济富庶，领土达到最大化",
+     "qVi": "\"Khang Ung Càn thịnh thế\" vào những năm nào, có đặc điểm gì?",
+     "aVi": "Năm 1661–1796; quốc gia ổn định, kinh tế giàu có, lãnh thổ đạt mức lớn nhất",
+     "altA": [
+      "1661-1796年"
+     ],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-012"
+    },
+    {
+     "kind": "qa",
+     "q": "第一次鸦片战争发生在哪些年份？有什么意义？",
+     "a": "1840—1842年；开启了中国的“百年国耻”与不平等条约时代",
+     "qVi": "Chiến tranh Nha phiến lần thứ nhất xảy ra những năm nào, ý nghĩa gì?",
+     "aVi": "Năm 1840–1842; mở đầu \"bách niên quốc sỉ\" và thời đại các hiệp ước bất bình đẳng của Trung Quốc",
+     "altA": [
+      "1840-1842年"
+     ],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-013"
+    },
+    {
+     "kind": "qa",
+     "q": "太平天国运动发生在哪些年份？造成了什么后果？",
+     "a": "1851—1864年；严重耗尽了国库与清军实力",
+     "qVi": "Phong trào Thái Bình Thiên Quốc xảy ra những năm nào, gây hậu quả gì?",
+     "aVi": "Năm 1851–1864; làm cạn kiệt nghiêm trọng quốc khố và thực lực quân Thanh",
+     "altA": [
+      "1851-1864年"
+     ],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-014"
+    },
+    {
+     "kind": "qa",
+     "q": "甲午战争发生在哪些年份？揭示了什么？",
+     "a": "1894—1895年；揭示了洋务运动与维新运动的局限性",
+     "qVi": "Chiến tranh Giáp Ngọ xảy ra những năm nào, bộc lộ điều gì?",
+     "aVi": "Năm 1894–1895; bộc lộ hạn chế của phong trào Dương Vụ và phong trào Duy Tân",
+     "altA": [
+      "1894-1895年"
+     ],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-015"
+    },
+    {
+     "kind": "qa",
+     "q": "辛亥革命发生在哪些年份？有什么历史意义？",
+     "a": "1911—1912年；清廷覆灭，溥仪退位，结束了延续两千年的君主制",
+     "qVi": "Cách mạng Tân Hợi xảy ra những năm nào, ý nghĩa lịch sử là gì?",
+     "aVi": "Năm 1911–1912; triều Thanh sụp đổ, Phổ Nghi thoái vị, kết thúc chế độ quân chủ kéo dài hai nghìn năm",
+     "altA": [
+      "1911-1912年",
+      "1911年"
+     ],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-016"
+    },
+    {
+     "kind": "qa",
+     "q": "清朝最后一位皇帝是谁？",
+     "a": "溥仪",
+     "qVi": "Hoàng đế cuối cùng của nhà Thanh là ai?",
+     "aVi": "Phổ Nghi",
+     "altA": [],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-017"
+    },
+    {
+     "kind": "qa",
+     "q": "为什么中国的资本主义萌芽没能强大起来？",
+     "a": "因为封建传统的影响太大",
+     "qVi": "Vì sao mầm mống chủ nghĩa tư bản Trung Quốc không lớn mạnh được?",
+     "aVi": "Vì ảnh hưởng của truyền thống phong kiến quá lớn",
+     "altA": [],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-018"
+    },
+    {
+     "kind": "qa",
+     "q": "中国从什么时候开始一步步沦为半殖民地半封建社会？",
+     "a": "清朝中期开始",
+     "qVi": "Trung Quốc từ khi nào dần trở thành xã hội nửa thuộc địa nửa phong kiến?",
+     "aVi": "Bắt đầu từ giữa thời Thanh",
+     "altA": [],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-019"
+    },
+    {
+     "kind": "qa",
+     "q": "从明代初期到清代中期约多少年，中国是什么样的国家？",
+     "a": "约470年，是统一的多民族国家",
+     "qVi": "Từ đầu Minh đến giữa Thanh khoảng bao nhiêu năm, Trung Quốc là quốc gia thế nào?",
+     "aVi": "Khoảng 470 năm, là quốc gia đa dân tộc thống nhất",
+     "altA": [],
+     "topics": [
+      "ls-minh-thanh"
+     ],
+     "group": "",
+     "note": "",
+     "prefix": "ls08",
+     "sources": [
+      "08-minh-thanh.json"
+     ],
+     "id": "ls08-020"
+    }
+   ],
+   "kind": "qa"
   }
  ]
 };

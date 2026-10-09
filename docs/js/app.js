@@ -8,7 +8,9 @@
   var DATA = window.VOCAB || { subjects: [], generatedAt: '' };
   var SUBJECTS = DATA.subjects || [];
 
-  var SUBJECT_ACCENT = { 'bien-du-lich': 'cinnabar', 'phien-dich': 'jade' };
+  var SUBJECT_ACCENT = {
+    'bien-du-lich': 'cinnabar', 'phien-dich': 'jade', 'lich-su': 'ochre'
+  };
 
   var TOPIC_ZH = {
     'dia-danh': '地名',
@@ -25,7 +27,15 @@
     'pd-trong-tai': '仲裁',
     'pd-hang-hoa': '货物',
     'pd-ngoai-giao': '外交',
-    'pd-khac': '其他'
+    'pd-khac': '其他',
+    'ls-nguyen-thuy': '原始',
+    'ls-ha-thuong-chu': '夏商周',
+    'ls-xuan-thu-chien-quoc': '春秋',
+    'ls-tan-han': '秦汉',
+    'ls-tam-quoc': '三国',
+    'ls-tuy-duong': '隋唐',
+    'ls-tong-nguyen': '宋元',
+    'ls-minh-thanh': '明清'
   };
 
   var state = {
@@ -363,6 +373,13 @@
       });
     });
 
+    // Thẻ hỏi đáp chỉ có một chiều (câu hỏi -> đáp án) nên bộ chọn chiều
+    // không có nghĩa gì; ẩn đi thay vì bày ra rồi không dùng được.
+    var qaOnly = subjectsFor(state.prefs.subject).every(function (sub) {
+      return sub.kind === 'qa';
+    });
+    $('setup-direction').closest('.field').hidden = qaOnly;
+
     syncSegmented('setup-direction', state.prefs.direction);
     syncSegmented('setup-mode', state.prefs.mode);
     syncSegmented('setup-size', String(state.prefs.size));
@@ -450,7 +467,9 @@
     var prompt = $('prompt');
     prompt.textContent = q.prompt;
     prompt.className = 'card__prompt' +
-      (q.promptKind === 'zh' ? ' is-zh' : q.promptKind === 'pinyin' ? ' is-pinyin' : '');
+      (q.promptKind === 'zh' ? ' is-zh' :
+       q.promptKind === 'pinyin' ? ' is-pinyin' :
+       q.promptKind === 'qa' ? ' is-question' : '');
 
     var context = $('prompt-context');
     if (item.card.context && q.promptKind !== 'zh') {
@@ -461,6 +480,8 @@
     }
 
     $('card-back').hidden = true;
+    $('gloss').hidden = true;
+    closeGloss();                 // thẻ mới luôn bắt đầu ở trạng thái đóng
     $('verdict').hidden = true;
     $('grade').hidden = true;
     $('btn-next').hidden = true;
@@ -523,19 +544,41 @@
     grade(correct ? 2 : 0, true);
   }
 
+  /** Nghĩa tiếng Việt luôn đóng lại khi sang thẻ mới. */
+  function closeGloss() {
+    $('gloss-body').hidden = true;
+    $('btn-gloss').setAttribute('aria-expanded', 'false');
+    $('gloss-label').textContent = 'Xem nghĩa tiếng Việt';
+    $('btn-gloss').querySelector('.gloss__sign').textContent = '+';
+  }
+
+  function toggleGloss() {
+    var body = $('gloss-body');
+    var open = body.hidden;
+    body.hidden = !open;
+    $('btn-gloss').setAttribute('aria-expanded', String(open));
+    $('gloss-label').textContent = open ? 'Ẩn nghĩa tiếng Việt' : 'Xem nghĩa tiếng Việt';
+    $('btn-gloss').querySelector('.gloss__sign').textContent = open ? '−' : '+';
+  }
+
   function reveal() {
     var card = state.item.card;
+    var isQa = card.kind === 'qa';
     state.revealed = true;
 
-    $('rev-zh').textContent = card.zh;
+    $('rev-zh').textContent = isQa ? card.a : card.zh;
     var py = $('rev-py');
-    py.textContent = card.pinyin;
-    if (card.pinyinAuto) py.setAttribute('data-auto', '1');
-    else py.removeAttribute('data-auto');
+    py.hidden = isQa;                       // câu trả lời dài, pinyin vô dụng
+    if (!isQa) {
+      py.textContent = card.pinyin;
+      if (card.pinyinAuto) py.setAttribute('data-auto', '1');
+      else py.removeAttribute('data-auto');
+    }
+
     // Không lặp lại chính câu hỏi ở mặt sau: nếu vừa hỏi bằng tiếng Việt thì
     // đáp án cần là chữ Hán và pinyin, hiện lại tiếng Việt chỉ tốn chỗ.
     var revVi = $('rev-vi');
-    if (state.question && state.question.promptKind === 'vi') {
+    if (isQa || (state.question && state.question.promptKind === 'vi')) {
       revVi.hidden = true;
     } else {
       revVi.hidden = false;
@@ -543,12 +586,24 @@
     }
 
     var alt = $('rev-alt');
-    var variants = card.altZh.concat(card.altVi);
+    var variants = isQa ? (card.altA || []) : card.altZh.concat(card.altVi);
     if (variants.length) {
-      alt.textContent = 'Cách nói khác: ' + variants.join(' · ');
+      alt.textContent = (isQa ? 'Cách trả lời khác: ' : 'Cách nói khác: ') +
+        variants.join(' · ');
       alt.hidden = false;
     } else {
       alt.hidden = true;
+    }
+
+    // Bản dịch tiếng Việt: dựng sẵn nhưng để đóng, người học tự bấm mới mở.
+    var gloss = $('gloss');
+    if (isQa && (card.qVi || card.aVi)) {
+      $('gloss-q').textContent = card.qVi;
+      $('gloss-a').textContent = card.aVi;
+      closeGloss();
+      gloss.hidden = false;
+    } else {
+      gloss.hidden = true;
     }
 
     var note = $('rev-note');
@@ -558,6 +613,13 @@
     $('card-back').hidden = false;
     $('btn-flip').hidden = true;
     $('btn-speak').hidden = !state.voice;
+
+    if (isQa) {
+      // Thẻ hỏi đáp không có pinyin nên mốc ôn vẫn tính như thường.
+      $('rev-zh').classList.add('reveal__zh--answer');
+    } else {
+      $('rev-zh').classList.remove('reveal__zh--answer');
+    }
 
     if (state.prefs.mode === 'flash') {
       var progress = LC.store.get(card.id);
@@ -674,6 +736,13 @@
         return false;
       }
       if (!query) return true;
+      if (card.kind === 'qa') {
+        var hay = LC.text.fold(card.qVi + card.aVi) +
+          LC.text.tidy(card.q + card.a + (card.altA || []).join(''));
+        return hay.indexOf(query) !== -1 ||
+          LC.text.tidy(card.q + card.a).indexOf(
+            LC.text.tidy($('search-input').value)) !== -1;
+      }
       var haystack = LC.text.fold(card.vi + card.pinyin + card.altVi.join('') +
         card.altPinyin.join('')) + LC.text.tidy(card.zh + card.altZh.join(''));
       return haystack.indexOf(query) !== -1 ||
@@ -687,6 +756,12 @@
       return;
     }
     list.innerHTML = rows.map(function (card) {
+      if (card.kind === 'qa') {
+        return '<li class="list__qa">' +
+          '<span class="list__q">' + esc(card.q) + '</span>' +
+          '<span class="list__a">' + esc(card.a) + '</span>' +
+          '</li>';
+      }
       return '<li>' +
         '<span class="list__zh">' + esc(card.zh) + '</span>' +
         '<span class="list__vi">' + esc(card.vi) + '</span>' +
@@ -859,7 +934,11 @@
       toast(starred ? 'Đã đánh dấu thẻ này.' : 'Đã bỏ đánh dấu.');
     });
 
-    on($('btn-speak'), 'click', function () { speak(state.item.card.zh); });
+    on($('btn-gloss'), 'click', toggleGloss);
+    on($('btn-speak'), 'click', function () {
+      var card = state.item.card;
+      speak(card.kind === 'qa' ? card.a : card.zh);
+    });
 
     on($('btn-again'), 'click', function () { startSession({}); });
     on($('btn-home'), 'click', function () { go('#/'); });

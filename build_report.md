@@ -1,11 +1,12 @@
 # Báo cáo build dữ liệu
 
-Ngày build: 2026-10-08
+Ngày build: 2026-10-09
 
 | Môn | Nguồn | Dòng đọc | Thẻ | Gộp | Tách cặp | Pinyin tự sinh |
 |---|---|---|---|---|---|---|
 | Biên du lịch | `Biên du lịch.xlsx` | 224 | 203 | 20 | 0 | 75 |
 | Phiên dịch nâng cao | `Phiên dịch nâng cao.xlsx` | 577 | 577 | 0 | 36 | 2 |
+| Lịch sử phong kiến Trung Quốc | `中国的古代历史 - 更新.pptx` | 272 | 272 | 0 | 0 | 0 |
 
 Hai file Excel gốc không bị ghi vào. Chạy lại bất cứ lúc nào bằng
 `python tools/build_data.py`.
@@ -289,3 +290,25 @@ Hiển thị ở mặt sau thẻ khi học:
 | 反补贴措施 | A针对原产于B的产品实施的反倾销反补贴措施; 针对……出口产品采取反倾销措施 |
 | 共识性否决 | 反向协商一致 (đồng thuận nghịch/ Nguyên tắc đồng thuận ngược) |
 | 随即 | VD: 中国随即以“以牙还牙”的方式反击 – TQ lập tức đáp trả kiểu “ăn miếng trả miếng” |
+
+---
+
+# Lịch sử phong kiến Trung Quốc
+
+Nguồn: `中国的古代历史 - 更新.pptx` · 272 thẻ
+
+- Xã hội nguyên thủy: 17 thẻ
+- Hạ – Thương – Tây Chu: 30 thẻ
+- Xuân Thu – Chiến Quốc: 53 thẻ
+- Tần – Hán: 43 thẻ
+- Tam Quốc – Lưỡng Tấn – Nam Bắc triều: 38 thẻ
+- Tùy – Đường: 40 thẻ
+- Ngũ Đại – Tống – Nguyên: 31 thẻ
+- Minh – Thanh: 20 thẻ
+
+## 1. Pinyin sinh tự động — cần rà lại
+
+Pinyin dưới đây do `pypinyin` sinh, chưa qua kiểm chứng. Trên web chúng
+hiển thị kèm dấu nhắc. Muốn sửa: bổ sung pinyin vào Excel rồi chạy lại script.
+
+_Không có — file gốc đã đủ pinyin._

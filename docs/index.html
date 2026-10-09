@@ -205,6 +205,20 @@
             <p class="reveal__alt" id="rev-alt" hidden></p>
             <p class="reveal__note" id="rev-note" hidden></p>
           </div>
+
+          <!-- Nghĩa tiếng Việt giấu đi, chỉ bung khi người học thật sự cần -->
+          <div class="gloss" id="gloss" hidden>
+            <button class="gloss__toggle" id="btn-gloss" type="button"
+                    aria-expanded="false" aria-controls="gloss-body">
+              <span class="gloss__sign" aria-hidden="true">+</span>
+              <span id="gloss-label">Xem nghĩa tiếng Việt</span>
+            </button>
+            <div class="gloss__body" id="gloss-body" hidden>
+              <p class="gloss__q" id="gloss-q"></p>
+              <p class="gloss__a" id="gloss-a"></p>
+            </div>
+          </div>
+
           <button class="btn btn--quiet" id="btn-speak" type="button" hidden>
             <span aria-hidden="true">♪</span> Nghe phát âm
           </button>

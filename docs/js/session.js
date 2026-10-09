@@ -49,6 +49,19 @@ LC.session = (function () {
 
   /** Nội dung câu hỏi và tập đáp án được chấp nhận cho một thẻ. */
   function question(card, direction) {
+    // Thẻ hỏi đáp (môn Lịch sử): câu hỏi đã viết sẵn, chỉ có một chiều.
+    if (card.kind === 'qa') {
+      return {
+        promptLabel: 'Câu hỏi',
+        prompt: card.q,
+        promptKind: 'qa',
+        answerLabel: 'Đáp án',
+        answer: card.a,
+        answerKind: 'zh',
+        accepted: [card.a].concat(card.altA || []),
+        hint: 'Gõ đáp án bằng chữ Hán'
+      };
+    }
     if (direction === 'zh2vi') {
       return {
         promptLabel: 'Chữ Hán',
@@ -88,7 +101,7 @@ LC.session = (function () {
   /** Ba đáp án nhiễu, ưu tiên cùng chủ đề để không đoán được bằng loại trừ. */
   function distractors(card, direction, allCards) {
     var q = question(card, direction);
-    var field = q.answerKind === 'vi' ? 'vi' : 'zh';
+    var field = card.kind === 'qa' ? 'a' : (q.answerKind === 'vi' ? 'vi' : 'zh');
     var correct = LC.text.tidy(q.answer);
 
     var sameTopic = allCards.filter(function (other) {

@@ -1,0 +1,113 @@
+{
+  "id": "ls-nguyen-thuy",
+  "name": "Xã hội nguyên thủy",
+  "zh": "原始",
+  "slides": "4-19",
+  "questions": [
+    {
+      "q": "中国历史经过了哪五个社会阶段？",
+      "a": "原始社会、奴隶社会、封建社会、半殖民地半封建社会、社会主义社会",
+      "qVi": "Lịch sử Trung Quốc trải qua năm giai đoạn xã hội nào?",
+      "aVi": "Xã hội nguyên thủy, xã hội nô lệ, xã hội phong kiến, xã hội nửa thuộc địa nửa phong kiến, xã hội chủ nghĩa xã hội"
+    },
+    {
+      "q": "为什么说中国文明是唯一延续至今的古代文明？",
+      "a": "因为历史的连续性、文字的延续和文化传统的传承",
+      "qVi": "Vì sao nói văn minh Trung Hoa là nền văn minh cổ đại duy nhất kéo dài đến ngày nay?",
+      "aVi": "Vì tính liên tục của lịch sử, sự kế thừa của chữ viết và sự truyền thừa của truyền thống văn hóa"
+    },
+    {
+      "q": "汉字从什么文字发展到今天的现代汉字？",
+      "a": "甲骨文",
+      "qVi": "Chữ Hán phát triển từ loại chữ nào đến chữ Hán hiện đại ngày nay?",
+      "aVi": "Giáp cốt văn"
+    },
+    {
+      "q": "中国的封建社会从什么时候到什么时候？",
+      "a": "公元前475年到公元1840年",
+      "qVi": "Xã hội phong kiến Trung Quốc kéo dài từ khi nào đến khi nào?",
+      "aVi": "Từ năm 475 TCN đến năm 1840"
+    },
+    {
+      "q": "中国的奴隶社会大约从什么时候开始？",
+      "a": "约公元前2070年",
+      "qVi": "Xã hội nô lệ Trung Quốc bắt đầu khoảng khi nào?",
+      "aVi": "Khoảng năm 2070 TCN",
+      "alt": ["公元前2070年", "前2070年"]
+    },
+    {
+      "q": "中国什么时候进入社会主义社会？",
+      "a": "1956年",
+      "qVi": "Trung Quốc bước vào xã hội chủ nghĩa xã hội khi nào?",
+      "aVi": "Năm 1956"
+    },
+    {
+      "q": "中国的原始人类大约出现于什么时候？",
+      "a": "大约一百万年前",
+      "qVi": "Người nguyên thủy Trung Quốc xuất hiện khoảng khi nào?",
+      "aVi": "Khoảng một triệu năm trước"
+    },
+    {
+      "q": "云南和陕西的两种早期原始人类叫什么？",
+      "a": "元谋人和蓝田人",
+      "qVi": "Hai loại người nguyên thủy sớm ở Vân Nam và Thiểm Tây tên là gì?",
+      "aVi": "Người Nguyên Mưu và người Lam Điền",
+      "alt": ["元谋人、蓝田人"]
+    },
+    {
+      "q": "北京猿人出现在什么地方？",
+      "a": "北京周口店",
+      "qVi": "Người vượn Bắc Kinh xuất hiện ở đâu?",
+      "aVi": "Chu Khẩu Điếm, Bắc Kinh"
+    },
+    {
+      "q": "北京猿人大约出现在多少年以前？",
+      "a": "大约四五十万年以前",
+      "qVi": "Người vượn Bắc Kinh xuất hiện khoảng bao nhiêu năm trước?",
+      "aVi": "Khoảng bốn năm mươi vạn năm trước"
+    },
+    {
+      "q": "原始人的基本特征是什么？",
+      "a": "能站着走路，能制造并使用简单工具，利用火",
+      "qVi": "Đặc trưng cơ bản của người nguyên thủy là gì?",
+      "aVi": "Đứng thẳng đi được, biết chế tạo và sử dụng công cụ đơn giản, biết dùng lửa"
+    },
+    {
+      "q": "母系氏族社会以什么文化为代表？",
+      "a": "仰韶文化",
+      "qVi": "Xã hội thị tộc mẫu hệ lấy nền văn hóa nào làm đại diện?",
+      "aVi": "Văn hóa Ngưỡng Thiều"
+    },
+    {
+      "q": "父系氏族社会以什么文化为代表？",
+      "a": "龙山文化",
+      "qVi": "Xã hội thị tộc phụ hệ lấy nền văn hóa nào làm đại diện?",
+      "aVi": "Văn hóa Long Sơn"
+    },
+    {
+      "q": "原始社会为什么会解体？",
+      "a": "因为出现了私有财产、阶级分化和阶级对立",
+      "qVi": "Vì sao xã hội nguyên thủy tan rã?",
+      "aVi": "Vì xuất hiện tài sản tư hữu, phân hóa giai cấp và đối lập giai cấp"
+    },
+    {
+      "q": "司马迁记载的五帝是谁？",
+      "a": "黄帝、颛顼、帝喾、帝尧、帝舜",
+      "qVi": "Ngũ Đế theo ghi chép của Tư Mã Thiên là những ai?",
+      "aVi": "Hoàng Đế, Chuyên Húc, Đế Khốc, Đế Nghiêu, Đế Thuấn"
+    },
+    {
+      "q": "“炎黄子孙”这个说法跟哪一场战争有关？",
+      "a": "涿鹿之战",
+      "qVi": "Cách gọi \"con cháu Viêm Hoàng\" liên quan đến trận chiến nào?",
+      "aVi": "Trận Trác Lộc"
+    },
+    {
+      "q": "大陆漂移学说是谁在哪一年提出的？",
+      "a": "1912年阿尔弗雷德·魏格纳提出",
+      "qVi": "Thuyết trôi dạt lục địa do ai đề xuất vào năm nào?",
+      "aVi": "Alfred Wegener đề xuất năm 1912",
+      "alt": ["魏格纳，1912年", "1912年，魏格纳"]
+    }
+  ]
+}

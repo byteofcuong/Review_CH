@@ -1,0 +1,247 @@
+{
+  "id": "ls-tam-quoc",
+  "name": "Tam Quốc – Lưỡng Tấn – Nam Bắc triều",
+  "zh": "三国",
+  "slides": "82-99",
+  "questions": [
+    {
+      "q": "三国两晋南北朝时期中国分裂了多长时间？",
+      "a": "近400年",
+      "qVi": "Thời Tam Quốc – Lưỡng Tấn – Nam Bắc triều Trung Quốc chia cắt bao lâu?",
+      "aVi": "Gần 400 năm"
+    },
+    {
+      "q": "三国鼎立是哪三个政权？建立者分别是谁？",
+      "a": "曹魏（曹丕）、蜀汉（刘备）、东吴（孙权）",
+      "qVi": "Tam Quốc đỉnh lập là ba chính quyền nào, người sáng lập là ai?",
+      "aVi": "Tào Ngụy (Tào Phi), Thục Hán (Lưu Bị), Đông Ngô (Tôn Quyền)",
+      "alt": ["曹魏、蜀汉、东吴"]
+    },
+    {
+      "q": "黄巾起义发生在哪一年？领导者是谁？",
+      "a": "184年，领导者是张角",
+      "qVi": "Khởi nghĩa Khăn Vàng xảy ra năm nào, ai lãnh đạo?",
+      "aVi": "Năm 184, do Trương Giác lãnh đạo",
+      "alt": ["184年，张角"]
+    },
+    {
+      "q": "黄巾起义的口号是什么？",
+      "a": "苍天已死，黄天当立，岁在甲子，天下大吉",
+      "qVi": "Khẩu hiệu của khởi nghĩa Khăn Vàng là gì?",
+      "aVi": "Thương thiên dĩ tử, Hoàng thiên đương lập, tuế tại Giáp Tý, thiên hạ đại cát"
+    },
+    {
+      "q": "张角是哪个教派的创始人？",
+      "a": "太平道",
+      "qVi": "Trương Giác là người sáng lập giáo phái nào?",
+      "aVi": "Thái Bình Đạo"
+    },
+    {
+      "q": "黄巾起义对东汉有什么影响？",
+      "a": "动摇了东汉统治根基，导致地方将领拥兵自重，开启军阀割据与三国时代",
+      "qVi": "Khởi nghĩa Khăn Vàng ảnh hưởng gì tới Đông Hán?",
+      "aVi": "Lung lay nền tảng thống trị Đông Hán, khiến tướng lĩnh địa phương cát cứ binh quyền, mở ra thời quân phiệt cát cứ và Tam Quốc"
+    },
+    {
+      "q": "哪一场战役阻断了曹操统一天下的进程？",
+      "a": "赤壁之战（208年）",
+      "qVi": "Trận nào chặn đứng tiến trình thống nhất thiên hạ của Tào Tháo?",
+      "aVi": "Trận Xích Bích (năm 208)",
+      "alt": ["赤壁之战"]
+    },
+    {
+      "q": "曹操的核心优势是什么？",
+      "a": "天时：挟天子以令诸侯",
+      "qVi": "Ưu thế cốt lõi của Tào Tháo là gì?",
+      "aVi": "Thiên thời: hiệp thiên tử dĩ lệnh chư hầu (ép thiên tử để sai khiến chư hầu)",
+      "alt": ["挟天子以令诸侯"]
+    },
+    {
+      "q": "孙权的核心优势是什么？",
+      "a": "地利：凭长江天险，据江东",
+      "qVi": "Ưu thế cốt lõi của Tôn Quyền là gì?",
+      "aVi": "Địa lợi: dựa vào thiên hiểm Trường Giang, chiếm cứ Giang Đông"
+    },
+    {
+      "q": "对曹操的历史评价是什么？",
+      "a": "乱世奸雄，治世能臣",
+      "qVi": "Đánh giá lịch sử về Tào Tháo là gì?",
+      "aVi": "Loạn thế gian hùng, trị thế năng thần"
+    },
+    {
+      "q": "袁绍在哪一场战役中败给曹操？",
+      "a": "官渡之战",
+      "qVi": "Viên Thiệu thua Tào Tháo trong trận nào?",
+      "aVi": "Trận Quan Độ"
+    },
+    {
+      "q": "蜀汉“五虎上将”是哪五位？",
+      "a": "关羽、张飞、赵云、马超、黄忠",
+      "qVi": "\"Ngũ hổ thượng tướng\" của Thục Hán là năm vị nào?",
+      "aVi": "Quan Vũ, Trương Phi, Triệu Vân, Mã Siêu, Hoàng Trung"
+    },
+    {
+      "q": "诸葛亮为刘备规划的战略叫什么？",
+      "a": "《隆中对》",
+      "qVi": "Chiến lược Gia Cát Lượng hoạch định cho Lưu Bị tên là gì?",
+      "aVi": "\"Long Trung đối\"",
+      "alt": ["隆中对"]
+    },
+    {
+      "q": "赤壁之战东吴的总指挥是谁？",
+      "a": "周瑜",
+      "qVi": "Tổng chỉ huy quân Đông Ngô trận Xích Bích là ai?",
+      "aVi": "Chu Du"
+    },
+    {
+      "q": "谁用计从关羽手中夺取了荆州？",
+      "a": "吕蒙",
+      "qVi": "Ai dùng mưu đoạt Kinh Châu từ tay Quan Vũ?",
+      "aVi": "Lữ Mông"
+    },
+    {
+      "q": "陆逊在哪一场战役中打败了刘备？",
+      "a": "夷陵之战",
+      "qVi": "Lục Tốn đánh bại Lưu Bị trong trận nào?",
+      "aVi": "Trận Di Lăng"
+    },
+    {
+      "q": "三国中哪一国最先灭亡？在哪一年？",
+      "a": "蜀汉，263年",
+      "qVi": "Nước nào trong Tam Quốc diệt vong sớm nhất, vào năm nào?",
+      "aVi": "Thục Hán, năm 263",
+      "alt": ["蜀汉"]
+    },
+    {
+      "q": "三国最终由哪个家族统一？",
+      "a": "司马家族",
+      "qVi": "Tam Quốc cuối cùng do gia tộc nào thống nhất?",
+      "aVi": "Gia tộc Tư Mã"
+    },
+    {
+      "q": "司马炎在哪一年建立西晋？",
+      "a": "265年",
+      "qVi": "Tư Mã Viêm lập Tây Tấn vào năm nào?",
+      "aVi": "Năm 265"
+    },
+    {
+      "q": "西晋在哪一年灭吴统一全国？",
+      "a": "280年",
+      "qVi": "Tây Tấn diệt Ngô thống nhất cả nước vào năm nào?",
+      "aVi": "Năm 280"
+    },
+    {
+      "q": "司马懿、司马师、司马昭、司马炎的历史贡献分别是什么？",
+      "a": "司马懿夺取曹魏实权，司马师肃清内乱，司马昭灭亡蜀汉，司马炎建立西晋并灭吴统一",
+      "qVi": "Công trạng lịch sử của Tư Mã Ý, Tư Mã Sư, Tư Mã Chiêu, Tư Mã Viêm lần lượt là gì?",
+      "aVi": "Tư Mã Ý đoạt thực quyền Tào Ngụy, Tư Mã Sư dẹp nội loạn, Tư Mã Chiêu diệt Thục Hán, Tư Mã Viêm lập Tây Tấn và diệt Ngô thống nhất"
+    },
+    {
+      "q": "西晋在哪一年灭亡？",
+      "a": "316年，匈奴兵攻入长安，西晋皇帝被俘",
+      "qVi": "Tây Tấn diệt vong năm nào?",
+      "aVi": "Năm 316, quân Hung Nô đánh vào Trường An, hoàng đế Tây Tấn bị bắt",
+      "alt": ["316年"]
+    },
+    {
+      "q": "“五胡”指哪五个民族？",
+      "a": "匈奴、鲜卑、羯、羌、氐",
+      "qVi": "\"Ngũ Hồ\" chỉ năm dân tộc nào?",
+      "aVi": "Hung Nô, Tiên Ti, Yết, Khương, Đê"
+    },
+    {
+      "q": "五胡十六国时期从哪一年到哪一年？",
+      "a": "304年到439年",
+      "qVi": "Thời Ngũ Hồ thập lục quốc từ năm nào đến năm nào?",
+      "aVi": "Từ năm 304 đến năm 439"
+    },
+    {
+      "q": "东晋在哪一年建立？建立者是谁？",
+      "a": "317年，司马睿在建康称帝",
+      "qVi": "Đông Tấn lập năm nào, ai sáng lập?",
+      "aVi": "Năm 317, Tư Mã Duệ xưng đế tại Kiến Khang",
+      "alt": ["317年，司马睿"]
+    },
+    {
+      "q": "“王与马，共天下”说的是什么现象？",
+      "a": "东晋门阀士族（王、谢家）权力很大",
+      "qVi": "\"Vương dữ Mã, cộng thiên hạ\" nói về hiện tượng gì?",
+      "aVi": "Thế lực môn phiệt sĩ tộc (họ Vương, họ Tạ) thời Đông Tấn rất lớn"
+    },
+    {
+      "q": "东晋唯一的重大军事胜利是哪一场战役？",
+      "a": "淝水之战",
+      "qVi": "Thắng lợi quân sự lớn duy nhất của Đông Tấn là trận nào?",
+      "aVi": "Trận Phì Thủy"
+    },
+    {
+      "q": "淝水之战东晋打败了哪个政权？",
+      "a": "前秦",
+      "qVi": "Trận Phì Thủy, Đông Tấn đánh bại chính quyền nào?",
+      "aVi": "Tiền Tần"
+    },
+    {
+      "q": "被称为“书圣”的是谁？代表作是什么？",
+      "a": "王羲之，代表作《兰亭集序》",
+      "qVi": "Ai được gọi là \"Thư thánh\", tác phẩm tiêu biểu là gì?",
+      "aVi": "Vương Hy Chi, tác phẩm tiêu biểu \"Lan Đình tập tự\"",
+      "alt": ["王羲之"]
+    },
+    {
+      "q": "顾恺之的绘画主张是什么？代表作是什么？",
+      "a": "“以形写神”，代表作《洛神赋图》",
+      "qVi": "Chủ trương hội họa của Cố Khải Chi là gì, tác phẩm tiêu biểu?",
+      "aVi": "\"Dĩ hình tả thần\", tác phẩm tiêu biểu \"Lạc thần phú đồ\""
+    },
+    {
+      "q": "陶渊明以什么诗闻名？",
+      "a": "田园诗，代表作有桃花源",
+      "qVi": "Đào Uyên Minh nổi tiếng với loại thơ nào?",
+      "aVi": "Thơ điền viên, tiêu biểu có Đào hoa nguyên",
+      "alt": ["田园诗"]
+    },
+    {
+      "q": "南北朝时期南朝有哪四个朝代？",
+      "a": "宋、齐、梁、陈",
+      "qVi": "Nam triều thời Nam Bắc triều có bốn triều đại nào?",
+      "aVi": "Tống, Tề, Lương, Trần"
+    },
+    {
+      "q": "北魏孝文帝改革的主要内容是什么？",
+      "a": "要求鲜卑贵族讲汉语、穿汉服、改汉姓，并迁都洛阳",
+      "qVi": "Nội dung chính cải cách của Bắc Ngụy Hiếu Văn Đế là gì?",
+      "aVi": "Buộc quý tộc Tiên Ti nói tiếng Hán, mặc Hán phục, đổi sang họ Hán và dời đô về Lạc Dương"
+    },
+    {
+      "q": "北魏孝文帝改革有什么意义？",
+      "a": "有助于消除民族隔阂，为日后的统一奠定基础",
+      "qVi": "Cải cách của Bắc Ngụy Hiếu Văn Đế có ý nghĩa gì?",
+      "aVi": "Giúp xóa bỏ ngăn cách dân tộc, đặt nền móng cho sự thống nhất về sau"
+    },
+    {
+      "q": "南北朝时期北方开凿了哪些著名石窟？",
+      "a": "云冈石窟、龙门石窟",
+      "qVi": "Thời Nam Bắc triều, phương Bắc khai tạc những hang đá nổi tiếng nào?",
+      "aVi": "Hang đá Vân Cương, hang đá Long Môn"
+    },
+    {
+      "q": "南北朝时期什么宗教取代了儒教成为主导思想？",
+      "a": "佛教",
+      "qVi": "Thời Nam Bắc triều, tôn giáo nào thay Nho giáo thành tư tưởng chủ đạo?",
+      "aVi": "Phật giáo"
+    },
+    {
+      "q": "门阀制度选拔官员主要依据什么？",
+      "a": "家族背景（出身），而非个人才能",
+      "qVi": "Chế độ môn phiệt tuyển chọn quan lại chủ yếu dựa vào gì?",
+      "aVi": "Xuất thân gia tộc, không phải tài năng cá nhân"
+    },
+    {
+      "q": "南北朝在哪一年结束？谁统一了中国？",
+      "a": "589年，隋文帝杨坚灭陈统一中国",
+      "qVi": "Nam Bắc triều kết thúc năm nào, ai thống nhất Trung Quốc?",
+      "aVi": "Năm 589, Tùy Văn Đế Dương Kiên diệt Trần thống nhất Trung Quốc",
+      "alt": ["589年，隋文帝杨坚"]
+    }
+  ]
+}

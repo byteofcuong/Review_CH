@@ -6,3 +6,8 @@ venv/
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Slide gốc môn Lịch sử: 77MB, chỉ là tài liệu tham khảo.
+# Câu hỏi đã được soạn thành tools/lich-su/*.json nên web không cần file này.
+# Muốn đưa lên GitHub để sao lưu thì xoá dòng dưới đây.
+*.pptx

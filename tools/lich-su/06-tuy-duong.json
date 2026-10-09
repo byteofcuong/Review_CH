@@ -1,0 +1,258 @@
+{
+  "id": "ls-tuy-duong",
+  "name": "Tùy – Đường",
+  "zh": "隋唐",
+  "slides": "100-114",
+  "questions": [
+    {
+      "q": "隋朝在哪一年建立？建立者是谁？",
+      "a": "581年，隋文帝杨坚建立",
+      "qVi": "Nhà Tùy lập năm nào, ai sáng lập?",
+      "aVi": "Năm 581, Tùy Văn Đế Dương Kiên lập",
+      "alt": ["581年，杨坚"]
+    },
+    {
+      "q": "隋朝在哪一年灭陈统一全国？",
+      "a": "589年",
+      "qVi": "Nhà Tùy diệt Trần thống nhất cả nước năm nào?",
+      "aVi": "Năm 589"
+    },
+    {
+      "q": "大运河是哪一位皇帝下令开凿的？",
+      "a": "隋炀帝",
+      "qVi": "Đại Vận Hà do hoàng đế nào ra lệnh đào?",
+      "aVi": "Tùy Dạng Đế"
+    },
+    {
+      "q": "大运河沟通了哪两大流域？",
+      "a": "黄河流域和长江流域",
+      "qVi": "Đại Vận Hà nối thông hai lưu vực nào?",
+      "aVi": "Lưu vực Hoàng Hà và lưu vực Trường Giang"
+    },
+    {
+      "q": "科举制度是哪个朝代开创的？有什么意义？",
+      "a": "隋朝，打破了门阀世族垄断官场的局面，让平民可以通过考试进入仕途",
+      "qVi": "Chế độ khoa cử do triều đại nào mở ra, có ý nghĩa gì?",
+      "aVi": "Nhà Tùy; phá vỡ cục diện môn phiệt thế tộc độc chiếm quan trường, cho phép dân thường thi cử làm quan"
+    },
+    {
+      "q": "隋朝建立了什么制度加强中央集权？",
+      "a": "三省六部制",
+      "qVi": "Nhà Tùy lập chế độ gì để tăng cường trung ương tập quyền?",
+      "aVi": "Chế độ Tam tỉnh lục bộ"
+    },
+    {
+      "q": "三省指哪三省？",
+      "a": "中书省、门下省、尚书省",
+      "qVi": "Tam tỉnh chỉ ba tỉnh nào?",
+      "aVi": "Trung Thư tỉnh, Môn Hạ tỉnh, Thượng Thư tỉnh"
+    },
+    {
+      "q": "中书省的主要职能是什么？",
+      "a": "负责草拟诏书，向皇帝提出主张和政策",
+      "qVi": "Chức năng chính của Trung Thư tỉnh là gì?",
+      "aVi": "Soạn thảo chiếu thư, đề xuất chủ trương chính sách lên hoàng đế"
+    },
+    {
+      "q": "门下省的主要职能是什么？",
+      "a": "审核、审议中书省草拟的诏书，有权驳回或要求修改",
+      "qVi": "Chức năng chính của Môn Hạ tỉnh là gì?",
+      "aVi": "Thẩm hạch, nghị duyệt chiếu thư do Trung Thư tỉnh soạn, có quyền bác bỏ hoặc yêu cầu sửa"
+    },
+    {
+      "q": "尚书省的主要职能是什么？",
+      "a": "最高行政机构，通过六部执行各项政策",
+      "qVi": "Chức năng chính của Thượng Thư tỉnh là gì?",
+      "aVi": "Cơ quan hành chính tối cao, thông qua lục bộ thi hành các chính sách"
+    },
+    {
+      "q": "六部指哪六部？",
+      "a": "吏部、户部、礼部、兵部、刑部、工部",
+      "qVi": "Lục bộ chỉ sáu bộ nào?",
+      "aVi": "Lại bộ, Hộ bộ, Lễ bộ, Binh bộ, Hình bộ, Công bộ"
+    },
+    {
+      "q": "吏部负责什么？",
+      "a": "官员的任免、升降、考核",
+      "qVi": "Lại bộ phụ trách việc gì?",
+      "aVi": "Bổ nhiệm, bãi miễn, thăng giáng và khảo hạch quan lại"
+    },
+    {
+      "q": "户部负责什么？",
+      "a": "财政、土地、税收、户籍和粮食",
+      "qVi": "Hộ bộ phụ trách việc gì?",
+      "aVi": "Tài chính, ruộng đất, thuế khóa, hộ tịch và lương thực"
+    },
+    {
+      "q": "礼部负责什么？",
+      "a": "礼仪、祭祀、教育、科举考试及外交事务",
+      "qVi": "Lễ bộ phụ trách việc gì?",
+      "aVi": "Lễ nghi, tế tự, giáo dục, thi khoa cử và việc ngoại giao"
+    },
+    {
+      "q": "刑部负责什么？",
+      "a": "法律、司法、审判及刑罚监狱",
+      "qVi": "Hình bộ phụ trách việc gì?",
+      "aVi": "Pháp luật, tư pháp, xét xử, hình phạt và nhà tù"
+    },
+    {
+      "q": "工部负责什么？",
+      "a": "公共工程建设，如桥梁、运河、宫殿等",
+      "qVi": "Công bộ phụ trách việc gì?",
+      "aVi": "Xây dựng công trình công cộng như cầu cống, kênh đào, cung điện"
+    },
+    {
+      "q": "科举制之前的选官制度叫什么？选拔标准是什么？",
+      "a": "九品中正制，标准是出身、门第、家世",
+      "qVi": "Chế độ tuyển quan trước khoa cử tên là gì, tiêu chuẩn tuyển chọn là gì?",
+      "aVi": "Chế độ Cửu phẩm trung chính, tiêu chuẩn là xuất thân, môn đệ, gia thế",
+      "alt": ["九品中正制"]
+    },
+    {
+      "q": "科举制的选拔标准是什么？",
+      "a": "才能、知识、文化水平",
+      "qVi": "Tiêu chuẩn tuyển chọn của chế độ khoa cử là gì?",
+      "aVi": "Tài năng, tri thức, trình độ văn hóa"
+    },
+    {
+      "q": "进士科是哪一年由谁正式创立的？",
+      "a": "605年，隋炀帝创立",
+      "qVi": "Khoa Tiến sĩ do ai chính thức lập ra vào năm nào?",
+      "aVi": "Năm 605, do Tùy Dạng Đế lập",
+      "alt": ["605年，隋炀帝"]
+    },
+    {
+      "q": "隋朝存在了多少年？为什么灭亡？",
+      "a": "37年；隋炀帝滥用民力、大兴土木、多次发动对高句丽的战争，导致农民起义",
+      "qVi": "Nhà Tùy tồn tại bao nhiêu năm, vì sao diệt vong?",
+      "aVi": "37 năm; Tùy Dạng Đế lạm dụng sức dân, xây dựng tràn lan, nhiều lần đánh Cao Câu Ly, dẫn tới khởi nghĩa nông dân"
+    },
+    {
+      "q": "唐朝在哪一年建立？建立者是谁？都城在哪里？",
+      "a": "618年，李渊（唐高祖）建立，定都长安",
+      "qVi": "Nhà Đường lập năm nào, ai sáng lập, kinh đô ở đâu?",
+      "aVi": "Năm 618, Lý Uyên (Đường Cao Tổ) lập, đóng đô ở Trường An",
+      "alt": ["618年，李渊"]
+    },
+    {
+      "q": "唐朝历经多少年？",
+      "a": "289年（618—907）",
+      "qVi": "Nhà Đường kéo dài bao nhiêu năm?",
+      "aVi": "289 năm (618–907)",
+      "alt": ["289年"]
+    },
+    {
+      "q": "“贞观之治”是哪一位皇帝的年号时期？",
+      "a": "唐太宗李世民",
+      "qVi": "\"Trinh Quán chi trị\" là thời niên hiệu của hoàng đế nào?",
+      "aVi": "Đường Thái Tông Lý Thế Dân",
+      "alt": ["唐太宗", "李世民"]
+    },
+    {
+      "q": "唐太宗在哪一年即位？",
+      "a": "626年",
+      "qVi": "Đường Thái Tông lên ngôi năm nào?",
+      "aVi": "Năm 626"
+    },
+    {
+      "q": "武则天改国号为什么？",
+      "a": "周",
+      "qVi": "Võ Tắc Thiên đổi quốc hiệu thành gì?",
+      "aVi": "Chu"
+    },
+    {
+      "q": "“开元盛世”是哪一位皇帝在位时期？年份是多少？",
+      "a": "唐玄宗李隆基，713—741年",
+      "qVi": "\"Khai Nguyên thịnh thế\" là thời hoàng đế nào trị vì, vào những năm nào?",
+      "aVi": "Đường Huyền Tông Lý Long Cơ, năm 713–741",
+      "alt": ["唐玄宗", "唐玄宗，713-741年"]
+    },
+    {
+      "q": "开元盛世时期任用了哪些贤相？",
+      "a": "姚崇、宋璟",
+      "qVi": "Thời Khai Nguyên thịnh thế dùng những hiền tướng nào?",
+      "aVi": "Diêu Sùng, Tống Cảnh"
+    },
+    {
+      "q": "形容开元盛世社会安定的两句话是什么？",
+      "a": "路不拾遗，夜不闭户",
+      "qVi": "Hai câu hình dung xã hội yên ổn thời Khai Nguyên thịnh thế là gì?",
+      "aVi": "Lộ bất thập di, dạ bất bế hộ (của rơi ngoài đường không ai nhặt, đêm không phải đóng cửa)"
+    },
+    {
+      "q": "开元盛世时期诗歌繁荣，代表诗人有谁？",
+      "a": "李白、杜甫、王维",
+      "qVi": "Thời Khai Nguyên thịnh thế thơ ca hưng thịnh, nhà thơ tiêu biểu là ai?",
+      "aVi": "Lý Bạch, Đỗ Phủ, Vương Duy"
+    },
+    {
+      "q": "唐玄宗晚年重用了哪些奸臣？",
+      "a": "李林甫、杨国忠",
+      "qVi": "Cuối đời Đường Huyền Tông trọng dụng những gian thần nào?",
+      "aVi": "Lý Lâm Phủ, Dương Quốc Trung"
+    },
+    {
+      "q": "安史之乱发生在哪些年份？历时多久？",
+      "a": "755年—763年，历时8年",
+      "qVi": "Loạn An Sử xảy ra vào những năm nào, kéo dài bao lâu?",
+      "aVi": "Năm 755–763, kéo dài 8 năm",
+      "alt": ["755-763年"]
+    },
+    {
+      "q": "安史之乱的叛军首领是谁？",
+      "a": "安禄山、史思明",
+      "qVi": "Thủ lĩnh quân phản loạn trong loạn An Sử là ai?",
+      "aVi": "An Lộc Sơn, Sử Tư Minh"
+    },
+    {
+      "q": "安史之乱的起因是什么？",
+      "a": "节度使权力过大、朝政腐败、玄宗后期怠政",
+      "qVi": "Nguyên nhân loạn An Sử là gì?",
+      "aVi": "Tiết độ sứ quyền lực quá lớn, triều chính hủ bại, Huyền Tông cuối đời lười chính sự"
+    },
+    {
+      "q": "安史之乱的严重后果是什么？",
+      "a": "人口锐减、藩镇割据、唐朝由盛转衰",
+      "qVi": "Hậu quả nghiêm trọng của loạn An Sử là gì?",
+      "aVi": "Dân số giảm mạnh, phiên trấn cát cứ, nhà Đường từ thịnh chuyển suy"
+    },
+    {
+      "q": "“元和中兴”是哪一位皇帝实现的？",
+      "a": "唐宪宗",
+      "qVi": "\"Nguyên Hòa trung hưng\" do hoàng đế nào thực hiện?",
+      "aVi": "Đường Hiến Tông"
+    },
+    {
+      "q": "唐朝后期哪一场起义摧毁了关中经济，使帝国名存实亡？",
+      "a": "黄巢起义（874—884）",
+      "qVi": "Cuộc khởi nghĩa nào cuối Đường phá hủy kinh tế Quan Trung, khiến đế quốc chỉ còn hư danh?",
+      "aVi": "Khởi nghĩa Hoàng Sào (874–884)",
+      "alt": ["黄巢起义"]
+    },
+    {
+      "q": "唐朝在哪一年灭亡？谁篡唐建立了什么朝代？",
+      "a": "907年，朱温篡唐建立后梁",
+      "qVi": "Nhà Đường diệt vong năm nào, ai soán ngôi lập triều đại gì?",
+      "aVi": "Năm 907, Chu Ôn soán Đường lập Hậu Lương",
+      "alt": ["907年，朱温"]
+    },
+    {
+      "q": "唐朝在科技制造上有什么突出成就？",
+      "a": "发明雕版印刷术，唐三彩陶瓷工艺达到极高水平",
+      "qVi": "Thành tựu nổi bật của nhà Đường về khoa học kỹ thuật là gì?",
+      "aVi": "Phát minh kỹ thuật in khắc bản, gốm Đường tam thái đạt trình độ rất cao"
+    },
+    {
+      "q": "唐朝哪一位高僧西行取经？",
+      "a": "玄奘",
+      "qVi": "Vị cao tăng nào thời Đường sang Tây Trúc thỉnh kinh?",
+      "aVi": "Huyền Trang"
+    },
+    {
+      "q": "唐朝在文学上的巅峰是什么？代表诗人有谁？",
+      "a": "唐诗，代表诗人有李白、杜甫、白居易",
+      "qVi": "Đỉnh cao văn học của nhà Đường là gì, nhà thơ tiêu biểu là ai?",
+      "aVi": "Thơ Đường; nhà thơ tiêu biểu có Lý Bạch, Đỗ Phủ, Bạch Cư Dị"
+    }
+  ]
+}

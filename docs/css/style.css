@@ -38,6 +38,10 @@
 
   --font-body: "Be Vietnam Pro", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
   --font-display: "Newsreader", "Be Vietnam Pro", Georgia, serif;
+  /* Pinyin cần font vẽ đúng dấu thanh. Newsreader thiếu: chữ ī giữ nguyên
+     dấu chấm rồi chồng thêm macron, còn caron (ǎ ě ǐ ǒ ǔ ǚ) mảnh tới mức
+     biến mất ở cỡ nhỏ. Noto Serif vẽ đủ và đúng cả caron lẫn macron. */
+  --font-pinyin: "Noto Serif", "Be Vietnam Pro", Georgia, serif;
   --font-zh: "Noto Serif SC", "Songti SC", "SimSun", "Noto Serif", serif;
 
   --gutter: clamp(16px, 4vw, 40px);
@@ -756,7 +760,7 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 }
 
 .card__prompt.is-pinyin {
-  font-family: var(--font-display);
+  font-family: var(--font-pinyin);
   font-style: italic;
   letter-spacing: .01em;
 }
@@ -859,7 +863,7 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 }
 .reveal__py {
   margin: 0;
-  font-family: var(--font-display);
+  font-family: var(--font-pinyin);
   font-style: italic;
   font-size: 18px;
   color: var(--cinnabar);
@@ -1036,7 +1040,7 @@ kbd {
 }
 .list__vi { flex: 1 1 180px; }
 .list__py {
-  font-family: var(--font-display);
+  font-family: var(--font-pinyin);
   font-style: italic;
   color: var(--cinnabar);
   font-size: 14.5px;

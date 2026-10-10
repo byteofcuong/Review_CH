@@ -9,44 +9,63 @@
 :root {
   color-scheme: light;
 
-  /* giấy tuyên: ngả olive, không phải cream */
-  --paper:      #E9E6DD;
-  --surface:    #F3F1EA;
-  --surface-2:  #DEDACE;
-  --rule:       #CBC5B6;
-  --rule-soft:  #DBD6C8;
+  /* Mặt bàn sơn, tối hơn tờ giấy đặt lên trên. Có mặt bàn thì tờ giấy mới
+     nổi lên được; nền phẳng một màu là thứ làm bản trước trông rẻ. */
+  --desk:       #DED6C4;
+  --desk-2:     #D2C9B4;
 
-  /* mực nho, ấm chứ không đen thuần */
-  --ink:        #1F1C18;
-  --ink-2:      #4E483F;
-  --ink-3:      #6A6358;
+  /* Tờ giấy 绢: ấm và đậm hơn trước, không còn trắng ngà nhạt thếch */
+  --paper:      #EFEADE;
+  --surface:    #F7F3E9;
+  --surface-2:  #E3DCCA;
+  --rule:       #C6BCA4;
+  --rule-soft:  #DAD2BE;
 
-  /* son ấn triện 朱砂 — điểm nhấn duy nhất */
-  --cinnabar:   #B23A2F;
-  --cinnabar-2: #8E2C23;
-  --cinnabar-wash: rgba(178, 58, 47, .09);
+  /* Mực nho, ấm chứ không đen thuần */
+  --ink:        #191511;
+  --ink-2:      #4A4237;
+  --ink-3:      #6A6052;
 
-  /* ngữ nghĩa: thanh lục 青 cho đúng, thổ hoàng 赭 cho lưng chừng */
-  --jade:       #3F6B5A;
-  --jade-wash:  rgba(63, 107, 90, .10);
-  --ochre:      #8A6A3B;
-  --ochre-wash: rgba(138, 106, 59, .12);
+  /* Son ấn triện 朱砂, đẩy sâu về phía sơn mài thay vì đỏ tươi */
+  --cinnabar:   #A32E23;
+  --cinnabar-2: #85241B;
+  --cinnabar-wash: rgba(163, 46, 35, .09);
 
-  --seal-fg:    #F3F1EA;
+  /* 描金: nét kim loại duy nhất. Trên nền sáng phải đủ sẫm để đọc được. */
+  --gold:       #8A6A20;
+  --gold-line:  rgba(138, 106, 32, .42);
 
-  /* Vân giấy tuyên: nhiễu fractal nhúng thẳng vào CSS, không tải thêm
-     file nào. Nhạt tới mức chỉ thấy chất giấy, không thấy hạt nhiễu. */
-  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='170' height='170' filter='url(%23n)' opacity='0.085'/%3E%3C/svg%3E");
-  --watermark-o: .04;
-  --lift:       0 1px 2px rgba(31, 28, 24, .07), 0 6px 18px rgba(31, 28, 24, .05);
-  --lift-sm:    0 1px 2px rgba(31, 28, 24, .08);
-  /* Tấm thẻ là tờ giấy đặt trên mặt bàn: bóng gần thì sắc, bóng xa thì tản. */
-  --lift-paper: 0 1px 1px rgba(31, 28, 24, .05),
-                0 3px 8px rgba(31, 28, 24, .05),
-                0 20px 44px -14px rgba(31, 28, 24, .20);
+  --jade:       #2F5B49;
+  --jade-wash:  rgba(47, 91, 73, .10);
+  --ochre:      #7E6230;
+  --ochre-wash: rgba(126, 98, 48, .12);
+
+  --seal-fg:    #F7F3E9;
+
+  /* Vân giấy: nhiễu fractal nhúng thẳng vào CSS, không tải thêm file nào. */
+  --grain: --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='170' height='170' filter='url(%23n)' opacity='0.085'/%3E%3C/svg%3E");
+  --watermark-o: .055;
+
+  --lift:       0 1px 2px rgba(25, 21, 17, .07), 0 6px 18px rgba(25, 21, 17, .05);
+  --lift-sm:    0 1px 2px rgba(25, 21, 17, .08);
+  --lift-paper: 0 1px 1px rgba(25, 21, 17, .05),
+                0 3px 8px rgba(25, 21, 17, .06),
+                0 20px 44px -14px rgba(25, 21, 17, .20);
+  /* Tờ giấy đặt trên bàn: bóng tiếp giáp sắc, bóng xa tản rộng, ăn theo
+     màu nền chứ không phải đen thuần (taste-skill 4.4). */
+  --lift-sheet: 0 1px 1px rgba(25, 21, 17, .06),
+                0 8px 20px -6px rgba(25, 21, 17, .10),
+                0 40px 80px -30px rgba(25, 21, 17, .26);
+  /* Ánh sáng rọi xuống mặt bàn, giữ cho nền không phẳng như tấm bìa. */
+  --vignette: radial-gradient(120% 80% at 50% -10%,
+                rgba(255, 252, 244, .75) 0%, rgba(255, 252, 244, 0) 60%);
 
   --font-body: "Be Vietnam Pro", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
-  --font-display: "Newsreader", "Be Vietnam Pro", Georgia, serif;
+  /* Playfair Display: tra ui-ux-pro-max domain typography, cả hai cặp
+     "Classic Elegant" và "Minimalist Monochrome Editorial" đều lấy nó,
+     mood "elegant, luxury, premium". Nó cũng là chữ Latin gần 宋体 nhất,
+     cùng lối nét ngang mảnh nét dọc đậm, nên đứng cạnh chữ Hán không lệch. */
+  --font-display: "Playfair Display", "Be Vietnam Pro", Georgia, serif;
   /* Pinyin cần font vẽ đúng dấu thanh. Newsreader thiếu: chữ ī giữ nguyên
      dấu chấm rồi chồng thêm macron, còn caron (ǎ ě ǐ ǒ ǔ ǚ) mảnh tới mức
      biến mất ở cỡ nhỏ. Noto Serif vẽ đủ và đúng cả caron lẫn macron. */
@@ -64,70 +83,96 @@
   :root:not([data-theme="light"]) {
     color-scheme: dark;
 
-    --paper:      #16181C;
-    --surface:    #1E2126;
-    --surface-2:  #272B31;
-    --rule:       #343941;
-    --rule-soft:  #2A2E35;
+    /* Sơn mài đêm: đen ấm, không phải xám xanh kiểu dark mode công nghệ. */
+    --desk:       #0C0A08;
+    --desk-2:     #080706;
+    --paper:      #171310;
+    --surface:    #201A15;
+    --surface-2:  #2B241C;
+    --rule:       #3E3428;
+    --rule-soft:  #2C251D;
 
-    --ink:        #E7E3D8;
-    --ink-2:      #B3ADA1;
-    --ink-3:      #9B9488;
+    --ink:        #F0E8D7;
+    --ink-2:      #BFB29B;
+    --ink-3:      #9B8F79;
 
-    --cinnabar:   #DE5F51;
-    --cinnabar-2: #F08578;
-    --cinnabar-wash: rgba(222, 95, 81, .14);
+    --cinnabar:   #E2604A;
+    --cinnabar-2: #F18974;
+    --cinnabar-wash: rgba(226, 96, 74, .14);
+
+    /* Trên nền sơn tối thì vàng kim mới thật sự là vàng kim */
+    --gold:       #D4AF55;
+    --gold-line:  rgba(212, 175, 85, .40);
 
     --jade:       #74B096;
     --jade-wash:  rgba(116, 176, 150, .14);
     --ochre:      #C9A063;
     --ochre-wash: rgba(201, 160, 99, .14);
 
-    --seal-fg:    #16181C;
+    --seal-fg:    #171310;
 
-  /* Tối là bản rập bia đá: vân thô hơn, đậm hơn giấy. */
-  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.62' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
-  --watermark-o: .065;
-    --lift:       0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .3);
-    --lift-sm:    0 1px 2px rgba(0, 0, 0, .4);
-  --lift-paper: 0 1px 1px rgba(0, 0, 0, .35),
-                0 3px 10px rgba(0, 0, 0, .3),
-                0 22px 48px -14px rgba(0, 0, 0, .55);
-  }
+    /* Tối là mặt sơn mài có vân đá, thô hơn mặt giấy */
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.62' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
+    --watermark-o: .075;
+
+    --lift:       0 1px 2px rgba(0, 0, 0, .5), 0 8px 24px rgba(0, 0, 0, .4);
+    --lift-sm:    0 1px 2px rgba(0, 0, 0, .5);
+    --lift-paper: 0 1px 1px rgba(0, 0, 0, .4),
+                  0 3px 10px rgba(0, 0, 0, .35),
+                  0 22px 48px -14px rgba(0, 0, 0, .6);
+    --lift-sheet: 0 1px 1px rgba(0, 0, 0, .5),
+                  0 10px 28px -8px rgba(0, 0, 0, .55),
+                  0 50px 90px -34px rgba(0, 0, 0, .8);
+    --vignette: radial-gradient(120% 80% at 50% -10%,
+                  rgba(118, 96, 64, .20) 0%, rgba(118, 96, 64, 0) 62%);
+}
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
 
-  --paper:      #16181C;
-  --surface:    #1E2126;
-  --surface-2:  #272B31;
-  --rule:       #343941;
-  --rule-soft:  #2A2E35;
+  /* Sơn mài đêm: đen ấm, không phải xám xanh kiểu dark mode công nghệ. */
+  --desk:       #0C0A08;
+  --desk-2:     #080706;
+  --paper:      #171310;
+  --surface:    #201A15;
+  --surface-2:  #2B241C;
+  --rule:       #3E3428;
+  --rule-soft:  #2C251D;
 
-  --ink:        #E7E3D8;
-  --ink-2:      #B3ADA1;
-  --ink-3:      #9B9488;
+  --ink:        #F0E8D7;
+  --ink-2:      #BFB29B;
+  --ink-3:      #9B8F79;
 
-  --cinnabar:   #DE5F51;
-  --cinnabar-2: #F08578;
-  --cinnabar-wash: rgba(222, 95, 81, .14);
+  --cinnabar:   #E2604A;
+  --cinnabar-2: #F18974;
+  --cinnabar-wash: rgba(226, 96, 74, .14);
+
+  /* Trên nền sơn tối thì vàng kim mới thật sự là vàng kim */
+  --gold:       #D4AF55;
+  --gold-line:  rgba(212, 175, 85, .40);
 
   --jade:       #74B096;
   --jade-wash:  rgba(116, 176, 150, .14);
   --ochre:      #C9A063;
   --ochre-wash: rgba(201, 160, 99, .14);
 
-  --seal-fg:    #16181C;
+  --seal-fg:    #171310;
 
-  /* Tối là bản rập bia đá: vân thô hơn, đậm hơn giấy. */
+  /* Tối là mặt sơn mài có vân đá, thô hơn mặt giấy */
   --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.62' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
-  --watermark-o: .065;
-  --lift:       0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .3);
-  --lift-sm:    0 1px 2px rgba(0, 0, 0, .4);
-  --lift-paper: 0 1px 1px rgba(0, 0, 0, .35),
-                0 3px 10px rgba(0, 0, 0, .3),
-                0 22px 48px -14px rgba(0, 0, 0, .55);
+  --watermark-o: .075;
+
+  --lift:       0 1px 2px rgba(0, 0, 0, .5), 0 8px 24px rgba(0, 0, 0, .4);
+  --lift-sm:    0 1px 2px rgba(0, 0, 0, .5);
+  --lift-paper: 0 1px 1px rgba(0, 0, 0, .4),
+                0 3px 10px rgba(0, 0, 0, .35),
+                0 22px 48px -14px rgba(0, 0, 0, .6);
+  --lift-sheet: 0 1px 1px rgba(0, 0, 0, .5),
+                0 10px 28px -8px rgba(0, 0, 0, .55),
+                0 50px 90px -34px rgba(0, 0, 0, .8);
+  --vignette: radial-gradient(120% 80% at 50% -10%,
+                rgba(118, 96, 64, .20) 0%, rgba(118, 96, 64, 0) 62%);
 }
 
 /* ───────────────────────────────────────────────────────────── nền tảng ── */
@@ -141,8 +186,10 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--paper);
-  background-image: var(--grain);
+  background-color: var(--desk);
+  background-image: var(--vignette), var(--grain),
+                    linear-gradient(var(--desk), var(--desk-2));
+  background-attachment: fixed, scroll, fixed;
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 16px;
@@ -191,12 +238,30 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   touch-action: manipulation;
 }
 
+#main { padding-block: clamp(12px, 1.8vw, 22px) clamp(20px, 3vw, 40px); }
+
+/* Mỗi màn hình là một tờ giấy đặt trên mặt bàn sơn. Một mặt phẳng lớn
+   thay cho mười cái hộp nhỏ: đó mới là chỗ chiều sâu nên nằm. */
 .wrap {
+  position: relative;
   width: 100%;
   max-width: 1120px;
   margin-inline: auto;
   padding-inline: var(--gutter);
-  padding-block: clamp(24px, 5vw, 48px);
+  padding-block: clamp(30px, 5vw, 56px);
+  background-color: var(--paper);
+  background-image: var(--grain);
+  box-shadow: var(--lift-sheet);
+}
+
+/* Mép giấy: một nét mảnh sẫm rồi một nét kim loại, như bìa sách bọc gấm. */
+.wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px var(--rule-soft),
+              inset 0 3px 0 -1px var(--gold-line);
 }
 .wrap--narrow { max-width: 680px; }
 
@@ -206,7 +271,7 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   position: sticky;
   top: env(safe-area-inset-top, 0px);
   z-index: 20;
-  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  background: color-mix(in srgb, var(--desk) 90%, transparent);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--rule-soft);
 }
@@ -241,7 +306,7 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   font-size: 18px;
   line-height: 1;
   border: 2px solid var(--cinnabar);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--seal-fg) 60%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--gold) 72%, transparent);
   flex: none;
 }
 
@@ -329,19 +394,19 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 /* Chữ của môn đang học, khổ rất lớn, mờ như vết khắc trên bia đã rập.
    Chỉ ở trang chủ: đặt ở màn hình học thì chữ nền đè lên chữ cần đọc. */
-#view-home { position: relative; overflow: hidden; overflow: clip; }
-#view-home > .wrap { position: relative; z-index: 1; }
+#view-home > .wrap { overflow: hidden; overflow: clip; }
+#view-home > .wrap > *:not(.watermark) { position: relative; z-index: 1; }
 
 .watermark {
   position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 0;
+  top: -.06em;
+  right: -.1em;
+  z-index: 0 !important;
   font-family: var(--font-zh);
   font-weight: 900;
-  font-size: clamp(200px, 36vw, 440px);
+  font-size: clamp(180px, 26vw, 330px);
   /* line-height 1 là mức thấp nhất mà nét trên cùng của chữ Hán còn nằm
-     trong khung; thấp hơn nữa là đỉnh chữ bị thanh trên cắt mất. */
+     trong khung; thấp hơn nữa là đỉnh chữ bị cắt mất. */
   line-height: 1;
   letter-spacing: -.05em;
   color: var(--ink);
@@ -377,9 +442,10 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
    một nét dày bên trên, một nét mảnh bên dưới, đúng lối 文武边框 của sách
    khắc. Bó trong bề ngang đọc được để không còn khoảng trống chết ở giữa. */
 .today {
+  position: relative;
   max-width: var(--measure);
   margin-top: 34px;
-  padding: 20px 0 22px;
+  padding: 22px 0;
   border-top: 3px solid var(--ink);
   border-bottom: 1px solid var(--rule);
   display: flex;
@@ -412,6 +478,15 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 .today--clear .today__count { display: none; }
 .today--clear .today__label { margin-bottom: 6px; }
 .today--clear { border-top-color: var(--ink-3); }
+
+/* Nét vàng chạy ngay dưới nét mực: 文武线 có 描金. */
+.today::before {
+  content: "";
+  position: absolute;
+  top: 3px; left: 0; right: 0;
+  height: 1px;
+  background: var(--gold-line);
+}
 
 /* ─────────────────────────────────────────────────────────── chọn môn ── */
 
@@ -502,7 +577,7 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   left: 0; right: 0; bottom: 0;
   height: 3px;
   background: linear-gradient(90deg,
-    var(--ink-3) 0%, var(--rule) 32%, var(--rule-soft) 70%, transparent 100%);
+    var(--gold) 0%, var(--rule) 34%, var(--rule-soft) 70%, transparent 100%);
   clip-path: polygon(0 0, 100% 58%, 100% 100%, 0 100%);
 }
 
@@ -723,7 +798,7 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 /* Đang học thì thanh trên co lại, chừa đất cho tấm thẻ. Vẫn giữ đủ điều
    hướng và vùng bấm 44px — thu gọn chứ không cắt bỏ. */
-body.is-studying .topbar { background: color-mix(in srgb, var(--paper) 94%, transparent); }
+body.is-studying .topbar { background: color-mix(in srgb, var(--desk) 95%, transparent); }
 body.is-studying .topbar__inner { padding-block: 4px; }
 body.is-studying .brand__sub { display: none; }
 body.is-studying .brand__text strong { font-size: 15px; }
@@ -790,9 +865,9 @@ body.is-studying #view-study > .wrap {
 
 .tag {
   font-size: 11.5px;
-  letter-spacing: .12em;
+  letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--ink-3);
+  color: var(--gold);
 }
 
 /* nhóm con trong môn Phiên dịch — 48 nhóm, giúp định vị thẻ đang học */
@@ -837,9 +912,9 @@ body.is-studying #view-study > .wrap {
 .card__prompt-label {
   margin: 0;
   font-size: 11.5px;
-  letter-spacing: .14em;
+  letter-spacing: .16em;
   text-transform: uppercase;
-  color: var(--ink-3);
+  color: var(--gold);
 }
 
 .card__prompt {
@@ -1110,7 +1185,7 @@ kbd {
   font-weight: 900;
   line-height: 1;
   border: 3px solid var(--cinnabar);
-  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--seal-fg) 60%, transparent);
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--gold) 72%, transparent);
   margin-bottom: 18px;
 }
 
@@ -1285,11 +1360,16 @@ kbd {
 
 .foot {
   margin-top: auto;
-  border-top: 1px solid var(--rule-soft);
-  color: var(--ink-3);
+  border-top: 0;
+  color: var(--ink-2);
   font-size: 13px;
 }
-.foot .wrap { padding-block: 22px; }
+.foot .wrap {
+  padding-block: 22px;
+  background: transparent;
+  box-shadow: none;
+}
+.foot .wrap::before { display: none; }
 .foot p { margin: 0; }
 .foot__fine { margin-top: 4px; opacity: .8; }
 

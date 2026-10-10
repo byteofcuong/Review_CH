@@ -1,6 +1,6 @@
 {
  "version": 2,
- "generatedAt": "2026-10-09",
+ "generatedAt": "2026-10-10",
  "subjects": [
   {
    "id": "bien-du-lich",
@@ -15234,37 +15234,37 @@
     },
     {
      "id": "ls-ha-thuong-chu",
-     "name": "Hạ – Thương – Tây Chu",
+     "name": "Hạ, Thương, Tây Chu",
      "count": 30
     },
     {
      "id": "ls-xuan-thu-chien-quoc",
-     "name": "Xuân Thu – Chiến Quốc",
+     "name": "Xuân Thu, Chiến Quốc",
      "count": 53
     },
     {
      "id": "ls-tan-han",
-     "name": "Tần – Hán",
+     "name": "Tần, Hán",
      "count": 43
     },
     {
      "id": "ls-tam-quoc",
-     "name": "Tam Quốc – Lưỡng Tấn – Nam Bắc triều",
+     "name": "Tam Quốc, Lưỡng Tấn, Nam Bắc triều",
      "count": 38
     },
     {
      "id": "ls-tuy-duong",
-     "name": "Tùy – Đường",
+     "name": "Tùy, Đường",
      "count": 40
     },
     {
      "id": "ls-tong-nguyen",
-     "name": "Ngũ Đại – Tống – Nguyên",
+     "name": "Ngũ Đại, Tống, Nguyên",
      "count": 31
     },
     {
      "id": "ls-minh-thanh",
-     "name": "Minh – Thanh",
+     "name": "Minh, Thanh",
      "count": 20
     }
    ],

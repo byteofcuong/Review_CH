@@ -1,6 +1,6 @@
 # Báo cáo build dữ liệu
 
-Ngày build: 2026-10-09
+Ngày build: 2026-10-10
 
 | Môn | Nguồn | Dòng đọc | Thẻ | Gộp | Tách cặp | Pinyin tự sinh |
 |---|---|---|---|---|---|---|
@@ -298,13 +298,13 @@ Hiển thị ở mặt sau thẻ khi học:
 Nguồn: `中国的古代历史 - 更新.pptx` · 272 thẻ
 
 - Xã hội nguyên thủy: 17 thẻ
-- Hạ – Thương – Tây Chu: 30 thẻ
-- Xuân Thu – Chiến Quốc: 53 thẻ
-- Tần – Hán: 43 thẻ
-- Tam Quốc – Lưỡng Tấn – Nam Bắc triều: 38 thẻ
-- Tùy – Đường: 40 thẻ
-- Ngũ Đại – Tống – Nguyên: 31 thẻ
-- Minh – Thanh: 20 thẻ
+- Hạ, Thương, Tây Chu: 30 thẻ
+- Xuân Thu, Chiến Quốc: 53 thẻ
+- Tần, Hán: 43 thẻ
+- Tam Quốc, Lưỡng Tấn, Nam Bắc triều: 38 thẻ
+- Tùy, Đường: 40 thẻ
+- Ngũ Đại, Tống, Nguyên: 31 thẻ
+- Minh, Thanh: 20 thẻ
 
 ## 1. Pinyin sinh tự động — cần rà lại
 

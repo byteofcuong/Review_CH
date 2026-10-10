@@ -223,15 +223,21 @@
         ' data-subject="' + esc(subject.id) + '">' +
         '<span class="subject__seal" aria-hidden="true">' + esc(subject.zh) + '</span>' +
         '<span class="subject__text">' +
-        '<span class="subject__name">' + esc(subject.name) + '</span>' +
-        '<span class="subject__meta">' + subject.cards.length + ' thẻ' +
-        (due ? ' · ' + due + ' đến hạn' : '') + '</span>' +
+        '<span class="subject__name">' + esc(subject.short || subject.name) + '</span>' +
+        '<span class="subject__meta">' +
+        (due ? due + ' đến hạn' : subject.cards.length + ' thẻ') + '</span>' +
         '</span></button>';
     }).join('');
 
     container.querySelectorAll('[data-subject]').forEach(function (btn) {
       on(btn, 'click', function () { onPick(btn.getAttribute('data-subject')); });
     });
+  }
+
+  /** Nối danh sách tên theo lối tiếng Việt: A, B và C. */
+  function listNames(names) {
+    if (names.length < 2) return names[0] || '';
+    return names.slice(0, -1).join(', ') + ' và ' + names[names.length - 1];
   }
 
   function renderHome() {
@@ -242,11 +248,17 @@
     $('home-source').textContent = subject.name;
     $('hero-zh').textContent = subject.zh;
     $('home-watermark').textContent = subject.zh;
+
+    // Dòng trạng thái: nói tình hình thật, không giải thích cách app hoạt động.
+    var learned = countBy(function (p) { return LC.srs.isLearned(p); });
+    $('home-learned').textContent = learned
+      ? ', đã thuộc ' + learned
+      : ', chưa thuộc thẻ nào';
+
     $('foot-count').textContent = cardsOf('all').length;
-    $('foot-sources').textContent = SUBJECTS.map(function (s) {
+    $('foot-sources').textContent = listNames(SUBJECTS.map(function (s) {
       return s.name;
-    }).join(' · ');
-    $('foot-date').textContent = DATA.generatedAt || '—';
+    }));
 
     renderSwitcher();     // số thẻ đến hạn trong bộ chọn cũng cập nhật theo
     renderSubjectTabs($('subject-tabs'), state.subject, function (id) {
@@ -261,8 +273,8 @@
     if (pending.length) {
       note.innerHTML = pending.map(function (s) {
         return 'Môn ' + esc(s.name) + ' còn <strong>' + dueIn(s.cards) +
-          '</strong> thẻ đến hạn — <button type="button" data-goto="' +
-          esc(s.id) + '">chuyển sang môn đó</button>';
+          '</strong> thẻ đến hạn. <button type="button" data-goto="' +
+          esc(s.id) + '">Chuyển sang môn đó</button>';
       }).join('<br>');
       note.hidden = false;
       note.querySelectorAll('[data-goto]').forEach(function (btn) {
@@ -282,9 +294,7 @@
     $('today-label').textContent = due
       ? 'Đến hạn ôn hôm nay'
       : 'Hôm nay không có thẻ nào đến hạn';
-    $('due-hint').textContent = due
-      ? 'Ôn đúng hạn thì mỗi thẻ chỉ tốn vài giây.'
-      : 'Học thẻ mới để lấp dần ' + CARDS().length + ' thẻ của môn này.';
+    $('due-hint').hidden = true;      // dòng trạng thái ở tiêu đề đã nói rồi
     $('btn-review').disabled = false;
     $('btn-review').textContent = due ? 'Ôn ngay' : 'Học thẻ mới';
 
@@ -308,8 +318,9 @@
       return '<button class="topic" type="button" data-topic="' + esc(topic.id) + '">' +
         '<span class="topic__zh">' + esc(TOPIC_ZH[topic.id] || '') + '</span>' +
         '<span class="topic__name">' + esc(topic.name) + '</span>' +
-        '<span class="topic__meta">' + learned + '/' + inTopic.length + ' thuộc · ' + pct + '%</span>' +
-        '<span class="meter"><span class="meter__fill" style="width:' + pct + '%"></span></span>' +
+        '<span class="topic__meta">' + learned + '/' + inTopic.length + ' thuộc</span>' +
+        (pct ? '<span class="meter"><span class="meter__fill" style="width:' +
+          pct + '%"></span></span>' : '') +
         '</button>';
     }).join('');
 
@@ -325,7 +336,7 @@
   /* ──────────────────────────────────────────────────────── cấu hình phiên ── */
 
   var MODE_NOTES = {
-    flash: 'Tự chấm sau khi lật — nhanh nhất để quét lại nhiều thẻ.',
+    flash: 'Tự chấm sau khi lật. Nhanh nhất khi cần quét lại nhiều thẻ.',
     choice: 'Bốn lựa chọn lấy từ cùng môn và cùng chủ đề, không đoán được bằng loại trừ.',
     type: 'Gõ vào ô trên trang. Chấm bỏ qua hoa thường và dấu thanh; đáp án chữ Hán nhận cả pinyin.'
   };
@@ -340,7 +351,7 @@
     }).join('') +
       (SUBJECTS.length > 1
         ? '<button type="button" role="radio" data-value="all" aria-checked="' +
-          (state.prefs.subject === 'all') + '">Trộn cả hai</button>'
+          (state.prefs.subject === 'all') + '">Tất cả các môn</button>'
         : '');
 
     if (!picker.dataset.ready) {
@@ -415,10 +426,10 @@
     var picked = state.prefs.size > 0 ? Math.min(state.prefs.size, available) : available;
     var scope = state.prefs.topics.length
       ? state.prefs.topics.map(topicName).join(', ')
-      : (state.prefs.subject === 'all' ? 'cả hai môn' : 'tất cả chủ đề');
+      : (state.prefs.subject === 'all' ? 'tất cả các môn' : 'tất cả chủ đề');
     $('setup-summary').textContent = available
       ? picked + ' thẻ từ ' + scope + '.'
-      : 'Không còn thẻ nào khớp — bỏ bớt bộ lọc.';
+      : 'Không còn thẻ nào khớp. Bỏ bớt bộ lọc.';
     $('btn-start').disabled = !available;
   }
 
@@ -461,6 +472,7 @@
       groupTag.textContent = item.card.group;
       groupTag.hidden = false;
     } else {
+      groupTag.textContent = '';     // không giữ lại nhãn của thẻ trước
       groupTag.hidden = true;
     }
     var progress = LC.store.get(item.card.id);
@@ -543,7 +555,7 @@
     var verdict = $('verdict');
     verdict.hidden = false;
     verdict.className = 'verdict ' + (correct ? 'verdict--right' : 'verdict--wrong');
-    verdict.textContent = correct ? 'Chính xác' : 'Chưa đúng — xem lại thẻ này';
+    verdict.textContent = correct ? 'Chính xác' : 'Chưa đúng';
     grade(correct ? 2 : 0, true);
   }
 
@@ -552,7 +564,6 @@
     $('gloss-body').hidden = true;
     $('btn-gloss').setAttribute('aria-expanded', 'false');
     $('gloss-label').textContent = 'Xem nghĩa tiếng Việt';
-    $('btn-gloss').querySelector('.gloss__sign').textContent = '+';
   }
 
   function toggleGloss() {
@@ -561,7 +572,6 @@
     body.hidden = !open;
     $('btn-gloss').setAttribute('aria-expanded', String(open));
     $('gloss-label').textContent = open ? 'Ẩn nghĩa tiếng Việt' : 'Xem nghĩa tiếng Việt';
-    $('btn-gloss').querySelector('.gloss__sign').textContent = open ? '−' : '+';
   }
 
   function reveal() {
@@ -590,7 +600,7 @@
     var variants = isQa ? (card.altA || []) : card.altZh.concat(card.altVi);
     if (variants.length) {
       alt.textContent = (isQa ? 'Cách trả lời khác: ' : 'Cách nói khác: ') +
-        variants.join(' · ');
+        variants.join(', ');
       alt.hidden = false;
     } else {
       alt.hidden = true;
@@ -791,47 +801,63 @@
     return out;
   }
 
-  function bar(label, cards) {
-    var t = tally(cards);
+  /** Một thanh tổng cho cả môn. Chưa có tiến độ thì không vẽ gì. */
+  function subjectBar(t) {
+    if (!t.learned && !t.learning) return '';
     var n = t.total || 1;
-    return '<div class="bar">' +
-      '<div class="bar__head"><span>' + esc(label) + '</span>' +
-      '<span class="bar__num">' + t.learned + '/' + t.total + '</span></div>' +
-      '<div class="bar__track">' +
+    return '<div class="bar__track">' +
       '<span class="bar__seg bar__seg--learned" style="width:' +
       (t.learned / n * 100) + '%"></span>' +
       '<span class="bar__seg bar__seg--learning" style="width:' +
       (t.learning / n * 100) + '%"></span>' +
-      '</div></div>';
+      '</div>';
   }
 
   function renderStats() {
-    // Con số trên cùng là tổng cả hai môn, biểu đồ bên dưới chia theo môn.
+    // Con số trên cùng là tổng cả ba môn, biểu đồ bên dưới chia theo môn.
     var all = tally(cardsOf('all'));
     $('st-learned').textContent = all.learned;
     $('st-learning').textContent = all.learning;
     $('st-new').textContent = all.fresh;
     $('st-streak').textContent = LC.store.streak();
 
-    var html = '';
+    var touched = all.learned + all.learning;
+    var html = touched ? ''
+      : '<p class="empty">Chưa học thẻ nào. Xong một phiên là các môn bên dưới ' +
+        'bắt đầu có vạch.</p>';
+
     SUBJECTS.forEach(function (subject) {
       var t = tally(subject.cards);
-      html += '<p class="bars__subject">' + esc(subject.name) +
-        ' — ' + t.learned + '/' + t.total + ' thẻ đã thuộc</p>';
-      html += subject.topics.map(function (topic) {
-        return bar(topic.name, subject.cards.filter(function (c) {
-          return c.topics.indexOf(topic.id) !== -1;
-        }));
-      }).join('');
+      html += '<section class="subj">' +
+        '<h3 class="bars__subject">' + esc(subject.name) + '</h3>' +
+        '<p class="subj__sum">' + t.learned + '/' + t.total + ' thẻ đã thuộc</p>' +
+        subjectBar(t) +
+        '<ul class="trows">' +
+        subject.topics.map(function (topic) {
+          var inTopic = subject.cards.filter(function (c) {
+            return c.topics.indexOf(topic.id) !== -1;
+          });
+          var tt = tally(inTopic);
+          var pct = tt.total ? tt.learned / tt.total * 100 : 0;
+          return '<li class="trow">' +
+            '<span class="trow__name">' + esc(topic.name) + '</span>' +
+            '<span class="trow__num">' + tt.learned + '/' + tt.total + '</span>' +
+            (pct ? '<span class="trow__fill" style="width:' + pct + '%"></span>' : '') +
+            '</li>';
+        }).join('') +
+        '</ul></section>';
     });
-    html += '<p class="bar__legend">' +
-      '<span><span class="dot dot--learned"></span>Đã thuộc</span>' +
-      '<span><span class="dot dot--learning"></span>Đang học</span>' +
-      '<span><span class="dot dot--new"></span>Chưa học</span></p>';
+
+    if (touched) {
+      html += '<p class="bar__legend">' +
+        '<span><span class="dot dot--learned"></span>Đã thuộc</span>' +
+        '<span><span class="dot dot--learning"></span>Đang học</span></p>';
+    }
     $('stat-bars').innerHTML = html;
 
+    $('foot-date').textContent = DATA.generatedAt || '';
     $('data-msg').textContent = LC.store.isAvailable()
-      ? '' : 'Trình duyệt đang chặn bộ nhớ cục bộ — tiến độ sẽ mất khi đóng trang.';
+      ? '' : 'Trình duyệt đang chặn bộ nhớ cục bộ. Tiến độ sẽ mất khi đóng trang.';
   }
 
   /* ────────────────────────────────────────────────────────── phát âm ── */

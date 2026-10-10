@@ -311,7 +311,20 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   flex: none;
 }
 .icon-btn:hover { border-color: var(--ink-3); color: var(--ink); }
-.icon-btn__glyph { font-size: 15px; line-height: 1; }
+
+/* ────────────────────────────────────────────────────────────── icon ── */
+
+/* Sprite nằm ngoài luồng, không chiếm chỗ. */
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  flex: none;
+  vertical-align: -.14em;
+}
+.icon-btn .icon { width: 20px; height: 20px; }
 
 /* ──────────────────────────────────── vết khắc chữ Hán sau trang chủ ── */
 
@@ -343,25 +356,6 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 .hero { max-width: var(--measure); }
 
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 0 0 14px;
-  font-size: 12px;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-}
-/* vạch son mở đầu, như dấu nhấn đầu một dòng đề từ */
-.eyebrow::before {
-  content: "";
-  flex: none;
-  width: 24px;
-  height: 2px;
-  background: var(--cinnabar);
-}
-
 .hero__title {
   margin: 0 0 14px;
   font-size: clamp(34px, 7.4vw, 58px);
@@ -391,17 +385,16 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   box-shadow: var(--lift-sm);
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
 
 .today__label {
   margin: 0;
-  font-size: 12px;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--ink-3);
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--ink-2);
 }
 
 .today__count {
@@ -423,63 +416,53 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 /* ─────────────────────────────────────────────────────────── chọn môn ── */
 
+/* Tên môn đang học đã nằm ở tiêu đề trang, nên đây chỉ còn là dải chuyển
+   môn: chữ Hán, tên ngắn, số thẻ đến hạn. Không lặp lại cả tấm thẻ. */
 .subject-tabs {
-  margin-top: 26px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 10px;
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .subject {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 14px 16px;
+  gap: 9px;
+  min-height: 44px;
+  padding: 8px 14px;
   text-align: left;
   background: transparent;
   border: 1px solid var(--rule);
-  border-left: 3px solid var(--rule);
-  border-radius: var(--radius-lg);
+  border-radius: 100px;
   cursor: pointer;
-  transition: border-color .15s, background .15s;
+  transition: border-color .15s, background .15s, color .15s;
 }
 .subject:hover { border-color: var(--ink-3); background: var(--surface); }
 
 .subject__seal {
-  width: 36px; height: 36px;
   flex: none;
-  display: grid; place-items: center;
   font-family: var(--font-zh);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1;
-  border: 1px solid var(--rule);
-  border-radius: 2px;
   color: var(--ink-3);
 }
 
-.subject__text { display: flex; flex-direction: column; line-height: 1.3; min-width: 0; }
-.subject__name { font-weight: 500; }
+.subject__text { display: flex; align-items: baseline; gap: 7px; min-width: 0; }
+.subject__name { font-size: 14.5px; }
 .subject__meta { font-size: 13px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
 
-/* môn đang chọn: đổ màu nhận diện riêng để phân biệt ngay */
-.subject[aria-selected="true"] { background: var(--surface); }
-.subject[aria-selected="true"][data-accent="cinnabar"] { border-left-color: var(--cinnabar); }
-.subject[aria-selected="true"][data-accent="cinnabar"] .subject__seal {
-  background: var(--cinnabar); border-color: var(--cinnabar); color: var(--seal-fg);
+/* môn đang chọn: nền son nhạt, viền son, không cần tô đặc */
+.subject[aria-selected="true"] {
+  background: var(--cinnabar-wash);
+  border-color: var(--cinnabar);
 }
-.subject[aria-selected="true"][data-accent="jade"] { border-left-color: var(--jade); }
-.subject[aria-selected="true"][data-accent="jade"] .subject__seal {
-  background: var(--jade); border-color: var(--jade); color: var(--seal-fg);
-}
+.subject[aria-selected="true"] .subject__seal,
+.subject[aria-selected="true"] .subject__name { color: var(--cinnabar); }
+.subject[aria-selected="true"] .subject__name { font-weight: 500; }
 
-.subject-tabs--inline {
-  margin-top: 0;
-  margin-bottom: 14px;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-}
-.subject-tabs--inline .subject { padding: 10px 12px; }
-.subject-tabs--inline .subject__seal { width: 28px; height: 28px; font-size: 13px; }
+.subject-tabs--inline { margin-top: 0; margin-bottom: 14px; }
 
 .other-note {
   margin: 14px 0 0;
@@ -499,12 +482,11 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 .block__title {
   position: relative;
   margin: 0 0 16px;
-  font-size: 13px;
-  font-family: var(--font-body);
+  font-family: var(--font-display);
+  font-size: 20px;
   font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--ink-3);
+  letter-spacing: -.005em;
+  color: var(--ink);
   padding-bottom: 10px;
 }
 
@@ -570,27 +552,29 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 /* ─────────────────────────────────────────────────────────────── ôn nhanh ── */
 
-.quick-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 10px;
-}
+/* Trước đây là ba thẻ gạch đứt giống hệt nhau xếp ngang, đúng khuôn mẫu
+   "ba thẻ tính năng" của trang quảng cáo. Giờ là một dải mục gọn, nhẹ hơn
+   hẳn lưới chủ đề bên trên. */
+.quick-row { display: flex; flex-direction: column; }
 
 .quick {
   display: flex;
-  flex-direction: column;
-  gap: 3px;
-  padding: 14px 16px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 52px;
+  padding: 12px 4px;
   text-align: left;
   background: transparent;
-  border: 1px dashed var(--rule);
-  border-radius: var(--radius);
+  border: 0;
+  border-bottom: 1px solid var(--rule-soft);
   cursor: pointer;
 }
-.quick:hover { border-style: solid; border-color: var(--ink-3); background: var(--surface); }
-.quick:disabled { opacity: .45; cursor: not-allowed; }
-.quick__title { font-size: 14.5px; font-weight: 500; }
-.quick__meta { font-size: 13px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.quick:last-child { border-bottom: 0; }
+.quick:hover:not(:disabled) { background: var(--surface); }
+.quick:disabled { color: var(--ink-3); cursor: not-allowed; }
+.quick__title { font-size: 15px; font-weight: 500; }
+.quick__meta { font-size: 14px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
 
 /* ─────────────────────────────────────────────────────────────────── nút ── */
 
@@ -609,6 +593,12 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   transition: background .15s, border-color .15s;
 }
 .btn--wide { width: 100%; }
+
+/* Một thanh son dài hết khung là nút của trang quảng cáo. Trên màn rộng thu
+   lại cho vừa chữ; màn hẹp vẫn full để dễ chạm. */
+@media (min-width: 561px) {
+  #btn-start { width: auto; align-self: flex-start; padding-inline: 44px; }
+}
 
 .btn--primary { background: var(--cinnabar); color: var(--seal-fg); }
 .btn--primary:hover { background: var(--cinnabar-2); }
@@ -639,13 +629,13 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 .field__label {
   padding: 0 0 10px;
-  font-size: 12px;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--ink-3);
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--ink-2);
 }
 
 .field__note { margin: 10px 0 0; font-size: 13.5px; color: var(--ink-3); }
+.field__note--lead { margin: 0 0 12px; font-size: 15px; color: var(--ink-2); }
 
 .field__actions { margin-top: 30px; display: flex; flex-direction: column; gap: 10px; }
 .field__actions--row { flex-direction: row; flex-wrap: wrap; }
@@ -667,38 +657,46 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 }
 .chip:hover { border-color: var(--ink-3); color: var(--ink); }
 .chip[aria-pressed="true"] {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--paper);
+  background: var(--cinnabar-wash);
+  border-color: var(--cinnabar);
+  color: var(--cinnabar);
+  font-weight: 500;
 }
 .chip__n { color: inherit; opacity: .55; font-variant-numeric: tabular-nums; }
 
+/* Rãnh chìm, ô đang chọn nổi lên trên. Trước đây ô đang chọn tô đen gần
+   tuyệt đối: nặng và lạc hẳn khỏi bảng màu mực son. */
 .segmented {
   display: flex;
   flex-wrap: wrap;
-  gap: 1px;
-  background: var(--rule);
+  gap: 3px;
+  padding: 3px;
+  background: var(--paper);
   border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  overflow: hidden;
+  border-radius: var(--radius-lg);
 }
 .segmented button {
   flex: 1 1 auto;
   min-width: 84px;
   min-height: 44px;
   padding: 10px 12px;
-  background: var(--surface);
+  background: transparent;
   border: 0;
+  border-radius: var(--radius);
   font-size: 14px;
   color: var(--ink-2);
   cursor: pointer;
 }
 .segmented button:hover { color: var(--ink); }
 .segmented button[aria-checked="true"] {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--surface);
+  color: var(--cinnabar);
   font-weight: 500;
+  box-shadow: var(--lift-sm);
 }
+
+/* Tên môn dài, xếp thành lưới đều thay vì tràn lệch 3 cộng 1. */
+#setup-subject { display: grid; grid-template-columns: repeat(2, 1fr); }
 
 .input {
   width: 100%;
@@ -800,14 +798,21 @@ body.is-studying #view-study > .wrap {
 
 .star {
   background: none; border: 0; cursor: pointer;
-  color: var(--ink-3); font-size: 19px; line-height: 1;
+  color: var(--ink-3); line-height: 1;
   width: 44px; height: 44px;
   margin: -6px -10px -6px 0;      /* giữ nguyên vị trí quang học của dấu sao */
   display: grid; place-items: center;
   flex: none;
 }
+.star .icon { width: 20px; height: 20px; grid-area: 1 / 1; }
 .star:hover { color: var(--ochre); }
 .star[aria-pressed="true"] { color: var(--ochre); }
+
+/* Sao rỗng khi chưa đánh dấu, sao đặc khi đã đánh dấu. Đổi bằng CSS để
+   JS chỉ phải lật aria-pressed như cũ. */
+.star .icon--star-f { display: none; }
+.star[aria-pressed="true"] .icon--star-o { display: none; }
+.star[aria-pressed="true"] .icon--star-f { display: block; }
 
 .card__body {
   padding: clamp(34px, 7vw, 58px) clamp(20px, 5vw, 40px);
@@ -1012,12 +1017,16 @@ body.is-studying #view-study > .wrap {
 .gloss__toggle[aria-expanded="true"] { color: var(--ink-2); border-style: solid; }
 
 .gloss__sign {
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  font-size: 15px;
-  line-height: 1;
-  width: 1em;
-  text-align: center;
+  display: grid;
+  place-items: center;
+  width: 15px;
+  height: 15px;
+  flex: none;
 }
+.gloss__sign .icon { width: 15px; height: 15px; grid-area: 1 / 1; }
+.gloss__toggle .icon--minus { display: none; }
+.gloss__toggle[aria-expanded="true"] .icon--plus { display: none; }
+.gloss__toggle[aria-expanded="true"] .icon--minus { display: block; }
 
 .gloss__body {
   margin-top: 12px;
@@ -1103,21 +1112,19 @@ kbd {
 .result__stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--rule);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
 }
 .result__stats--4 { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
 
 .stat {
-  background: var(--surface);
-  padding: 18px 14px;
+  padding: 18px 20px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
+  border-left: 1px solid var(--rule-soft);
 }
+.stat:first-child { padding-left: 0; border-left: 0; }
 .stat__num {
   font-family: var(--font-display);
   font-size: 30px;
@@ -1172,25 +1179,61 @@ kbd {
 }
 
 .empty {
-  padding: 40px 0;
-  text-align: center;
+  padding: 28px 0;
   color: var(--ink-3);
 }
+/* Trong danh sách tra cứu thì căn giữa mới đúng, còn ở trang tiến độ nó là
+   một câu mở đầu, phải căn trái như mọi dòng khác. */
+.list + .empty, .empty--center { text-align: center; }
+#stat-bars .empty { padding: 0 0 22px; }
 
 .search { margin-bottom: 14px; }
 
 /* ──────────────────────────────────────────────────────── biểu đồ cột ── */
 
-.bars { display: flex; flex-direction: column; gap: 14px; }
+.bars { display: flex; flex-direction: column; }
+
+/* Mỗi môn một khối, đường kẻ chỉ nằm giữa các môn. Trước đây mỗi hàng chủ đề
+   kéo theo một thanh tiến độ nền xám riêng: 23 vạch chết khi chưa học gì. */
+.subj + .subj {
+  margin-top: 26px;
+  padding-top: 26px;
+  border-top: 1px solid var(--rule-soft);
+}
+.subj__sum {
+  margin: 2px 0 10px;
+  font-size: 14px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.trows { list-style: none; margin: 14px 0 0; padding: 0; }
+
+.trow {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 9px 0;
+  font-size: 14.5px;
+}
+.trow__num { color: var(--ink-3); font-variant-numeric: tabular-nums; flex: none; }
+
+/* Vạch đã thuộc: không có nền track, và chỉ vẽ khi thật sự có tiến độ. */
+.trow__fill {
+  position: absolute;
+  left: 0; bottom: 0;
+  height: 2px;
+  background: var(--jade);
+}
 
 .bars__subject {
   margin: 10px 0 2px;
-  font-family: var(--font-body);
-  font-size: 12px;
+  font-family: var(--font-display);
+  font-size: 17px;
   font-weight: 600;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--ink-2);
+  color: var(--ink);
 }
 .bars__subject:first-child { margin-top: 0; }
 

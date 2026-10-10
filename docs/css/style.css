@@ -33,8 +33,17 @@
   --ochre-wash: rgba(138, 106, 59, .12);
 
   --seal-fg:    #F3F1EA;
+
+  /* Vân giấy tuyên: nhiễu fractal nhúng thẳng vào CSS, không tải thêm
+     file nào. Nhạt tới mức chỉ thấy chất giấy, không thấy hạt nhiễu. */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='170' height='170' filter='url(%23n)' opacity='0.085'/%3E%3C/svg%3E");
+  --watermark-o: .04;
   --lift:       0 1px 2px rgba(31, 28, 24, .07), 0 6px 18px rgba(31, 28, 24, .05);
   --lift-sm:    0 1px 2px rgba(31, 28, 24, .08);
+  /* Tấm thẻ là tờ giấy đặt trên mặt bàn: bóng gần thì sắc, bóng xa thì tản. */
+  --lift-paper: 0 1px 1px rgba(31, 28, 24, .05),
+                0 3px 8px rgba(31, 28, 24, .05),
+                0 20px 44px -14px rgba(31, 28, 24, .20);
 
   --font-body: "Be Vietnam Pro", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
   --font-display: "Newsreader", "Be Vietnam Pro", Georgia, serif;
@@ -74,8 +83,15 @@
     --ochre-wash: rgba(201, 160, 99, .14);
 
     --seal-fg:    #16181C;
+
+  /* Tối là bản rập bia đá: vân thô hơn, đậm hơn giấy. */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.62' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
+  --watermark-o: .065;
     --lift:       0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .3);
     --lift-sm:    0 1px 2px rgba(0, 0, 0, .4);
+  --lift-paper: 0 1px 1px rgba(0, 0, 0, .35),
+                0 3px 10px rgba(0, 0, 0, .3),
+                0 22px 48px -14px rgba(0, 0, 0, .55);
   }
 }
 
@@ -102,8 +118,15 @@
   --ochre-wash: rgba(201, 160, 99, .14);
 
   --seal-fg:    #16181C;
+
+  /* Tối là bản rập bia đá: vân thô hơn, đậm hơn giấy. */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.62' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
+  --watermark-o: .065;
   --lift:       0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .3);
   --lift-sm:    0 1px 2px rgba(0, 0, 0, .4);
+  --lift-paper: 0 1px 1px rgba(0, 0, 0, .35),
+                0 3px 10px rgba(0, 0, 0, .3),
+                0 22px 48px -14px rgba(0, 0, 0, .55);
 }
 
 /* ───────────────────────────────────────────────────────────── nền tảng ── */
@@ -117,7 +140,8 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background: var(--paper);
+  background-color: var(--paper);
+  background-image: var(--grain);
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 16px;
@@ -204,17 +228,21 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   margin-right: auto;
 }
 
-/* ấn triện vuông — dấu đóng cuối bức thư pháp */
+/* Ấn triện 朱文: nền son, gờ son dày, một đường giấy mảnh chạy bên trong —
+   đúng lối khắc dấu. Vân giấy phủ lên cho ra vẻ mực đóng đã lâu. */
 .seal {
   width: 34px; height: 34px;
   display: grid; place-items: center;
-  background: var(--cinnabar);
+  background-color: var(--cinnabar);
+  background-image: var(--grain);
   color: var(--seal-fg);
   font-family: var(--font-zh);
   font-weight: 900;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1;
+  border: 2px solid var(--cinnabar);
   border-radius: 2px;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--seal-fg) 60%, transparent);
   flex: none;
 }
 
@@ -285,27 +313,62 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 .icon-btn:hover { border-color: var(--ink-3); color: var(--ink); }
 .icon-btn__glyph { font-size: 15px; line-height: 1; }
 
+/* ──────────────────────────────────── vết khắc chữ Hán sau trang chủ ── */
+
+/* Chữ của môn đang học, khổ rất lớn, mờ như vết khắc trên bia đã rập.
+   Chỉ ở trang chủ: đặt ở màn hình học thì chữ nền đè lên chữ cần đọc. */
+#view-home { position: relative; overflow: hidden; overflow: clip; }
+#view-home > .wrap { position: relative; z-index: 1; }
+
+.watermark {
+  position: absolute;
+  top: -.1em;
+  right: -.06em;
+  z-index: 0;
+  font-family: var(--font-zh);
+  font-weight: 900;
+  font-size: clamp(200px, 36vw, 440px);
+  line-height: .74;
+  letter-spacing: -.05em;
+  color: var(--ink);
+  opacity: var(--watermark-o);
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
 /* ────────────────────────────────────────────────────────────────── hero ── */
 
 .hero { max-width: var(--measure); }
 
 .eyebrow {
-  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 14px;
   font-size: 12px;
   letter-spacing: .16em;
   text-transform: uppercase;
   color: var(--ink-3);
 }
+/* vạch son mở đầu, như dấu nhấn đầu một dòng đề từ */
+.eyebrow::before {
+  content: "";
+  flex: none;
+  width: 24px;
+  height: 2px;
+  background: var(--cinnabar);
+}
 
 .hero__title {
-  margin: 0 0 12px;
-  font-size: clamp(30px, 6vw, 46px);
-  line-height: 1.12;
-  letter-spacing: -.01em;
+  margin: 0 0 14px;
+  font-size: clamp(34px, 7.4vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -.015em;
 }
 .hero__title .zh-inline { color: var(--cinnabar); }
 
-.hero__lead { margin: 0; color: var(--ink-2); max-width: 52ch; }
+.hero__lead { margin: 0; color: var(--ink-2); max-width: 52ch; font-size: 17px; }
 
 .page-title {
   margin: 0 0 20px;
@@ -316,12 +379,14 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 /* ─────────────────────────────────────────────────────── thẻ hôm nay ── */
 
 .today {
-  margin-top: 28px;
-  padding: clamp(20px, 3.5vw, 28px);
-  background: var(--surface);
+  margin-top: 30px;
+  padding: clamp(22px, 3.8vw, 30px);
+  background-color: var(--surface);
+  background-image: var(--grain);
   border: 1px solid var(--rule);
-  border-left: 3px solid var(--cinnabar);
+  border-left: 4px solid var(--cinnabar);
   border-radius: var(--radius-lg);
+  box-shadow: var(--lift-sm);
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -430,15 +495,27 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 .block { margin-top: clamp(32px, 5vw, 48px); }
 
 .block__title {
-  margin: 0 0 14px;
+  position: relative;
+  margin: 0 0 16px;
   font-size: 13px;
   font-family: var(--font-body);
   font-weight: 600;
   letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--ink-3);
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--rule-soft);
+  padding-bottom: 10px;
+}
+
+/* Nét bút lông nhấc tay: dày và đậm ở đầu nét, mỏng rồi tan về cuối.
+   Một border-bottom đều tăm tắp không có chuyện đó. */
+.block__title::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    var(--ink-3) 0%, var(--rule) 32%, var(--rule-soft) 70%, transparent 100%);
+  clip-path: polygon(0 0, 100% 58%, 100% 100%, 0 100%);
 }
 
 /* ─────────────────────────────────────────────────────────── lưới chủ đề ── */
@@ -455,13 +532,17 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   gap: 10px;
   padding: 18px;
   text-align: left;
-  background: var(--surface);
+  background: transparent;
   border: 1px solid var(--rule);
   border-radius: var(--radius-lg);
   cursor: pointer;
-  transition: border-color .15s, transform .15s;
+  transition: border-color .15s, background .15s, transform .15s;
 }
-.topic:hover { border-color: var(--ink-3); transform: translateY(-1px); }
+.topic:hover {
+  border-color: var(--ink-3);
+  background: var(--surface);
+  transform: translateY(-1px);
+}
 
 .topic__zh {
   font-family: var(--font-zh);
@@ -630,6 +711,18 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 /* ────────────────────────────────────────────────────────── màn hình học ── */
 
+/* Đang học thì thanh trên co lại, chừa đất cho tấm thẻ. Vẫn giữ đủ điều
+   hướng và vùng bấm 44px — thu gọn chứ không cắt bỏ. */
+body.is-studying .topbar { background: color-mix(in srgb, var(--paper) 94%, transparent); }
+body.is-studying .topbar__inner { padding-block: 4px; }
+body.is-studying .brand__sub { display: none; }
+body.is-studying .brand__text strong { font-size: 15px; }
+body.is-studying .seal { width: 28px; height: 28px; font-size: 15px; border-width: 1.5px; }
+body.is-studying .nav__link { font-size: 13.5px; padding-inline: 10px; }
+body.is-studying #view-study > .wrap {
+  padding-block: clamp(14px, 2.4vw, 24px) clamp(30px, 5vw, 52px);
+}
+
 .studybar {
   display: flex;
   align-items: center;
@@ -659,10 +752,12 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 }
 
 .card {
-  background: var(--surface);
+  position: relative;
+  background-color: var(--surface);
+  background-image: var(--grain);
   border: 1px solid var(--rule);
   border-radius: var(--radius-lg);
-  box-shadow: var(--lift);
+  box-shadow: var(--lift-paper);
   overflow: hidden;
 }
 
@@ -713,13 +808,13 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 .star[aria-pressed="true"] { color: var(--ochre); }
 
 .card__body {
-  padding: clamp(28px, 6vw, 48px) clamp(20px, 5vw, 40px);
+  padding: clamp(34px, 7vw, 58px) clamp(20px, 5vw, 40px);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  min-height: 150px;
+  gap: 10px;
+  min-height: 190px;
   justify-content: center;
 }
 
@@ -746,7 +841,7 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 }
 
 .card__prompt.is-zh {
-  font-size: clamp(40px, 11vw, 68px);
+  font-size: clamp(44px, 12vw, 78px);
   line-height: 1.1;
   padding: 18px 26px;
   position: relative;
@@ -842,6 +937,9 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 }
 
 .verdict {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   margin-bottom: 14px;
   font-size: 13px;
   font-weight: 500;
@@ -853,11 +951,23 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 .verdict--right { color: var(--jade); background: var(--jade-wash); }
 .verdict--wrong { color: var(--cinnabar); background: var(--cinnabar-wash); }
 
+/* Vệt mực loang: chấm đúng thì lục, chấm sai thì son — một giọt rơi rồi tan.
+   Nằm sau chữ nên không bao giờ làm chữ khó đọc. */
+.verdict::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: radial-gradient(circle at 12% 50%, currentColor 0 55%, transparent 72%);
+  transform-origin: 12% 50%;
+  opacity: 0;
+}
+
 .reveal { display: flex; flex-direction: column; gap: 6px; align-items: center; }
 
 .reveal__zh {
   margin: 0;
-  font-size: clamp(36px, 9vw, 54px);
+  font-size: clamp(40px, 10vw, 62px);
   line-height: 1.15;
   letter-spacing: .03em;
 }
@@ -980,14 +1090,18 @@ kbd {
 /* ────────────────────────────────────────────────────────────── kết quả ── */
 
 .seal-big {
-  width: 56px; height: 56px;
+  width: 64px; height: 64px;
   display: grid; place-items: center;
-  background: var(--cinnabar);
+  background-color: var(--cinnabar);
+  background-image: var(--grain);
   color: var(--seal-fg);
   font-family: var(--font-zh);
   font-size: 32px;
   font-weight: 900;
+  line-height: 1;
+  border: 3px solid var(--cinnabar);
   border-radius: 2px;
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--seal-fg) 60%, transparent);
   margin-bottom: 18px;
 }
 
@@ -1188,6 +1302,54 @@ kbd {
 
   .list__zh { min-width: 0; flex-basis: 100%; }
   .kbd-hint { display: none; }
+
+  /* Màn hẹp không đủ chỗ cho vết khắc: nó chỉ còn một lát cắt ở mép trên,
+     trông như vết bẩn chứ không ra con chữ. Bỏ hẳn. */
+  .watermark { display: none; }
+
+  /* Đang học trên điện thoại: hàng điều hướng ăn mất một dải màn hình.
+     Nút Thoát và logo (về trang chủ) vẫn đủ để đi tiếp. */
+  body.is-studying .nav { display: none; }
+}
+
+/* ──────────────────────────────────────────────────────── chuyển động ── */
+
+/* Chỉ động ở ba chỗ có nghĩa: mở đáp án, tấm thẻ hạ xuống, vệt mực chấm bài. */
+@media (prefers-reduced-motion: no-preference) {
+  .card__back:not([hidden]) {
+    animation: unfold 320ms cubic-bezier(.2, .75, .3, 1) both;
+  }
+  .card.is-turning {
+    animation: settle 340ms cubic-bezier(.25, .8, .3, 1);
+  }
+  .verdict--right::before,
+  .verdict--wrong::before {
+    animation: ink-bleed 560ms cubic-bezier(.22, .7, .3, 1) both;
+  }
+}
+
+/* mặt sau mở ra như tờ giấy gập, bản lề ở mép trên */
+@keyframes unfold {
+  from {
+    opacity: 0;
+    transform: perspective(1200px) rotateX(-14deg) translateY(-8px);
+    transform-origin: 50% 0;
+  }
+  to { opacity: 1; transform: none; }
+}
+
+/* tấm thẻ nhấc lên rồi đặt lại khi lật, đủ để mắt biết vừa có chuyện gì */
+@keyframes settle {
+  0%   { transform: perspective(1600px) rotateX(0) translateY(0); }
+  40%  { transform: perspective(1600px) rotateX(-2.2deg) translateY(-4px); }
+  100% { transform: perspective(1600px) rotateX(0) translateY(0); }
+}
+
+/* giọt mực rơi xuống rồi loang ra và nhạt dần */
+@keyframes ink-bleed {
+  0%   { opacity: .32; transform: scale(.06); }
+  65%  { opacity: .12; }
+  100% { opacity: 0;   transform: scale(2); }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -119,6 +119,8 @@
     VIEWS.forEach(function (name) {
       $('view-' + name).hidden = (name !== view);
     });
+    // Màn hình học cần thanh trên thu gọn, CSS đọc class này.
+    document.body.classList.toggle('is-studying', view === 'study');
     document.querySelectorAll('[data-nav]').forEach(function (link) {
       var active = link.getAttribute('data-nav') === view ||
         (view === 'setup' && link.getAttribute('data-nav') === 'home');
@@ -239,6 +241,7 @@
     $('home-total').textContent = cards.length;
     $('home-source').textContent = subject.name;
     $('hero-zh').textContent = subject.zh;
+    $('home-watermark').textContent = subject.zh;
     $('foot-count').textContent = cardsOf('all').length;
     $('foot-sources').textContent = SUBJECTS.map(function (s) {
       return s.name;
@@ -611,6 +614,11 @@
     else note.hidden = true;
 
     $('card-back').hidden = false;
+    // Gỡ rồi gán lại để animation chạy lại từ đầu ở mỗi thẻ.
+    var cardEl = $('card');
+    cardEl.classList.remove('is-turning');
+    void cardEl.offsetWidth;
+    cardEl.classList.add('is-turning');
     $('btn-flip').hidden = true;
     $('btn-speak').hidden = !state.voice;
 

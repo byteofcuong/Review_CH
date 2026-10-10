@@ -1,7 +1,7 @@
 /* Cache toàn bộ trang để học được cả khi mất mạng.
    Đổi CACHE mỗi lần build lại dữ liệu để người học nhận bản mới. */
 
-var CACHE = 'han-ngu-duong-v5';
+var CACHE = 'han-ngu-duong-v6';
 
 var ASSETS = [
   './',

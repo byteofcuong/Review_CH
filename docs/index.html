@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Hán Ngữ Đường</title>
 <meta name="description" content="Học thuộc từ vựng và kiến thức tiếng Trung ba môn: biên du lịch, phiên dịch nâng cao, lịch sử phong kiến Trung Quốc.">
-<meta name="theme-color" content="#E9E6DD" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#16181C" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FAF9F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121A16" media="(prefers-color-scheme: dark)">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif:ital,wght@1,400;1,500&family=Noto+Serif+SC:wght@400;600;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+SC:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -61,14 +61,14 @@
   <!-- ══════════════════════════════════ TRANG CHỦ ══════════════════════════ -->
   <section class="view" id="view-home">
     <div class="wrap">
-      <div class="watermark" id="home-watermark" aria-hidden="true">旅游</div>
-
       <div class="hero">
-        <h1 class="hero__title">
-          <span id="home-source"></span>
-          <span class="zh-inline" id="hero-zh"></span>
-        </h1>
-        <p class="hero__lead"><span id="home-total"></span> thẻ<span id="home-learned"></span></p>
+        <div class="hero__text">
+          <h1 class="hero__title" id="home-source"></h1>
+          <p class="hero__lead"><span id="home-total"></span> thẻ<span id="home-learned"></span></p>
+        </div>
+        <!-- Ô người ta luyện viết đúng chữ của môn này. Chỗ duy nhất trên
+             trang được phép to tiếng. -->
+        <div class="tianzige" id="hero-zh" aria-hidden="true"></div>
       </div>
 
       <div class="subject-tabs" id="subject-tabs" role="tablist" aria-label="Chọn môn"></div>

@@ -1,199 +1,217 @@
 /* ═══════════════════════════════════════════════════════════════════════════
-   Biên Du Lịch — từ vựng du lịch Trung – Việt
+   Hán Ngữ Đường 汉语堂
 
-   Hai thái cực của thư pháp:
-   sáng  = mực nho trên giấy tuyên (宣纸)
-   tối   = bản rập bia đá (拓片), chữ sáng nổi trên nền mực
-   ═══════════════════════════════════════════════════════════════════════ */
+   Chủ thể: một sinh viên Việt Nam ôn thi ba môn tiếng Trung, phần lớn là trên
+   điện thoại, phần lớn là đêm trước hôm thi. Thế giới vật chất của việc đó là
+   稿纸 giấy ô, 田字格 ô luyện chữ, 生词本 sổ từ mới, và cây bút đỏ chấm bài.
+   Toàn bộ lựa chọn hình ảnh dưới đây rút từ đó, không rút từ ấn tượng chung
+   về "văn hoá Trung Hoa".
+
+   Nguyên tắc:
+     1. Trang là tờ giấy ô. Lưới kẻ là thật, đều, không phụ thuộc nội dung.
+     2. Táo bạo đúng một chỗ: chữ Hán trong 田字格. Còn lại im lặng hết.
+     3. Đỏ là vết bút chấm bài, không bao giờ là trang trí.
+        Lục là mực của chính tờ giấy.
+     4. Không nhãn nào chỉ để gọi tên thứ đã quá rõ.
+     5. Chuyển động chỉ để trả lời một hành động của người dùng.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────── tầng 1: token nguyên thuỷ ── */
+
+:root {
+  /* Màu lấy từ tờ 稿纸: giấy trắng ngà, ô kẻ in xanh lục, mực đen ngả lục. */
+  --c-paper-50:  #FDFCF9;
+  --c-paper-100: #FAF9F5;
+  --c-paper-200: #F1F0E9;
+  --c-paper-300: #E6E5DC;
+
+  --c-green-50:  #EDF2EA;
+  --c-green-100: #DDE6D8;
+  --c-green-200: #C9D6C4;
+  --c-green-400: #6E8A79;   /* chỉ dùng làm mảng màu, không dùng cho chữ */
+  --c-green-450: #55695D;   /* mực nhạt nhất còn đạt 4.5:1 trên giấy */
+  --c-green-500: #4A6F59;
+  --c-green-600: #2E6B4F;
+  --c-green-700: #24543F;
+  --c-green-800: #1B3A2C;
+  --c-green-900: #16211C;
+
+  /* Bút đỏ chấm bài. Hai sắc, không hơn. */
+  --c-red-500: #9E2B25;
+  --c-red-400: #C0544B;
+
+  /* Nhịp dòng. Mọi khoảng cách dọc là bội của nửa nhịp này, nên nội dung
+     ngồi đúng lên lưới kẻ của tờ giấy. */
+  --line: 28px;
+
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 14px;
+  --s-4: 28px;
+  --s-5: 42px;
+  --s-6: 56px;
+  --s-7: 84px;
+
+  /* Thang chữ tỉ lệ 1.25 từ 16px */
+  --t-xs:   12.8px;
+  --t-sm:   14px;
+  --t-base: 16px;
+  --t-md:   20px;
+  --t-lg:   25px;
+  --t-xl:   31px;
+
+  --font-text: "Noto Serif", Georgia, "Times New Roman", serif;
+  --font-zh:   "Noto Serif SC", "Songti SC", "SimSun", "Noto Serif", serif;
+  /* Pinyin cùng họ với phần còn lại, chỉ nghiêng. Noto Serif vẽ đúng cả
+     caron lẫn macron; Newsreader và Playfair đều vẽ sai dấu thanh. */
+  --font-pinyin: "Noto Serif", Georgia, serif;
+
+  --gutter: clamp(18px, 4vw, 44px);
+  --measure: 64ch;
+
+  /* Shape lock: vuông hết. Giấy kẻ ô không có góc bo. */
+  --radius: 0;
+}
+
+/* ─────────────────────────────────────────── tầng 2: token ngữ nghĩa ── */
 
 :root {
   color-scheme: light;
 
-  /* Mặt bàn sơn, tối hơn tờ giấy đặt lên trên. Có mặt bàn thì tờ giấy mới
-     nổi lên được; nền phẳng một màu là thứ làm bản trước trông rẻ. */
-  --desk:       #DED6C4;
-  --desk-2:     #D2C9B4;
+  --surface:       var(--c-paper-100);
+  --surface-sunk:  var(--c-paper-200);
+  --surface-high:  var(--c-paper-50);
+  --surface-edge:  var(--c-paper-300);
 
-  /* Tờ giấy 绢: ấm và đậm hơn trước, không còn trắng ngà nhạt thếch */
-  --paper:      #EFEADE;
-  --surface:    #F7F3E9;
-  --surface-2:  #E3DCCA;
-  --rule:       #C6BCA4;
-  --rule-soft:  #DAD2BE;
+  --text:          var(--c-green-900);
+  --text-muted:    var(--c-green-500);
+  --text-faint:    var(--c-green-450);
 
-  /* Mực nho, ấm chứ không đen thuần */
-  --ink:        #191511;
-  --ink-2:      #4A4237;
-  --ink-3:      #6A6052;
+  --rule:          var(--c-green-200);
+  --rule-soft:     var(--c-green-100);
+  --rule-paper:    rgba(46, 107, 79, .055);   /* nét kẻ in sẵn trên giấy */
 
-  /* Son ấn triện 朱砂, đẩy sâu về phía sơn mài thay vì đỏ tươi */
-  --cinnabar:   #A32E23;
-  --cinnabar-2: #85241B;
-  --cinnabar-wash: rgba(163, 46, 35, .09);
+  --accent:        var(--c-green-600);
+  --accent-strong: var(--c-green-700);
+  --accent-wash:   rgba(46, 107, 79, .10);
+  --on-accent:     var(--c-paper-50);
 
-  /* 描金: nét kim loại duy nhất. Trên nền sáng phải đủ sẫm để đọc được. */
-  --gold:       #8A6A20;
-  --gold-line:  rgba(138, 106, 32, .42);
+  --mark:          var(--c-red-500);
+  --on-mark:       var(--c-paper-50);
+  --mark-wash:     rgba(158, 43, 37, .09);
 
-  --jade:       #2F5B49;
-  --jade-wash:  rgba(47, 91, 73, .10);
-  --ochre:      #7E6230;
-  --ochre-wash: rgba(126, 98, 48, .12);
+  --shadow-card: 0 1px 1px rgba(22, 33, 28, .05),
+                 0 2px 6px rgba(22, 33, 28, .05),
+                 0 16px 36px -14px rgba(22, 33, 28, .18);
 
-  --seal-fg:    #F7F3E9;
+  /* Vân giấy: nhiễu fractal nhúng thẳng vào CSS, không tải thêm file nào.
+     redesign-skill: thiết kế phẳng không vân thì vô trùng. */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='170' height='170' filter='url(%23n)' opacity='0.075'/%3E%3C/svg%3E");
+}
 
-  /* Vân giấy: nhiễu fractal nhúng thẳng vào CSS, không tải thêm file nào. */
-  --grain: --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='170' height='170' filter='url(%23n)' opacity='0.085'/%3E%3C/svg%3E");
-  --watermark-o: .055;
+/* Tối: không phải đen cộng son chói. Là mực tàu đặc, vẫn ngả lục, ô kẻ vẫn
+   lục, nhấn vẫn lục. Cùng một họ màu với chế độ sáng. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { color-scheme: dark; }
+}
 
-  --lift:       0 1px 2px rgba(25, 21, 17, .07), 0 6px 18px rgba(25, 21, 17, .05);
-  --lift-sm:    0 1px 2px rgba(25, 21, 17, .08);
-  --lift-paper: 0 1px 1px rgba(25, 21, 17, .05),
-                0 3px 8px rgba(25, 21, 17, .06),
-                0 20px 44px -14px rgba(25, 21, 17, .20);
-  /* Tờ giấy đặt trên bàn: bóng tiếp giáp sắc, bóng xa tản rộng, ăn theo
-     màu nền chứ không phải đen thuần (taste-skill 4.4). */
-  --lift-sheet: 0 1px 1px rgba(25, 21, 17, .06),
-                0 8px 20px -6px rgba(25, 21, 17, .10),
-                0 40px 80px -30px rgba(25, 21, 17, .26);
-  /* Ánh sáng rọi xuống mặt bàn, giữ cho nền không phẳng như tấm bìa. */
-  --vignette: radial-gradient(120% 80% at 50% -10%,
-                rgba(255, 252, 244, .75) 0%, rgba(255, 252, 244, 0) 60%);
+:root[data-theme="dark"],
+:root:not([data-theme="light"]) {
+  --dark-surface:      #121A16;
+  --dark-surface-sunk: #0D1411;
+  --dark-surface-high: #1A2520;
+  --dark-surface-edge: #26332C;
 
-  --font-body: "Be Vietnam Pro", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
-  /* Playfair Display: tra ui-ux-pro-max domain typography, cả hai cặp
-     "Classic Elegant" và "Minimalist Monochrome Editorial" đều lấy nó,
-     mood "elegant, luxury, premium". Nó cũng là chữ Latin gần 宋体 nhất,
-     cùng lối nét ngang mảnh nét dọc đậm, nên đứng cạnh chữ Hán không lệch. */
-  --font-display: "Playfair Display", "Be Vietnam Pro", Georgia, serif;
-  /* Pinyin cần font vẽ đúng dấu thanh. Newsreader thiếu: chữ ī giữ nguyên
-     dấu chấm rồi chồng thêm macron, còn caron (ǎ ě ǐ ǒ ǔ ǚ) mảnh tới mức
-     biến mất ở cỡ nhỏ. Noto Serif vẽ đủ và đúng cả caron lẫn macron. */
-  --font-pinyin: "Noto Serif", "Be Vietnam Pro", Georgia, serif;
-  --font-zh: "Noto Serif SC", "Songti SC", "SimSun", "Noto Serif", serif;
+  --dark-text:         #E8EFE8;
+  --dark-text-muted:   #A3B3A8;
+  --dark-text-faint:   #86998C;
 
-  --gutter: clamp(16px, 4vw, 40px);
-  --measure: 62ch;
-  /* Giấy in không có góc bo. Mọi khung đều vuông, như 版框 của trang khắc. */
-  --radius: 0;
-  --radius-lg: 0;
+  --dark-rule:         #2E3D35;
+  --dark-rule-soft:    #212E27;
+  --dark-rule-paper:   rgba(144, 196, 166, .05);
+
+  --dark-accent:       #7FBE9A;
+  --dark-accent-wash:  rgba(127, 190, 154, .13);
+  --dark-mark:         #E0796C;
+  --dark-mark-wash:    rgba(224, 121, 108, .14);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    color-scheme: dark;
-
-    /* Sơn mài đêm: đen ấm, không phải xám xanh kiểu dark mode công nghệ. */
-    --desk:       #0C0A08;
-    --desk-2:     #080706;
-    --paper:      #171310;
-    --surface:    #201A15;
-    --surface-2:  #2B241C;
-    --rule:       #3E3428;
-    --rule-soft:  #2C251D;
-
-    --ink:        #F0E8D7;
-    --ink-2:      #BFB29B;
-    --ink-3:      #9B8F79;
-
-    --cinnabar:   #E2604A;
-    --cinnabar-2: #F18974;
-    --cinnabar-wash: rgba(226, 96, 74, .14);
-
-    /* Trên nền sơn tối thì vàng kim mới thật sự là vàng kim */
-    --gold:       #D4AF55;
-    --gold-line:  rgba(212, 175, 85, .40);
-
-    --jade:       #74B096;
-    --jade-wash:  rgba(116, 176, 150, .14);
-    --ochre:      #C9A063;
-    --ochre-wash: rgba(201, 160, 99, .14);
-
-    --seal-fg:    #171310;
-
-    /* Tối là mặt sơn mài có vân đá, thô hơn mặt giấy */
-    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.62' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
-    --watermark-o: .075;
-
-    --lift:       0 1px 2px rgba(0, 0, 0, .5), 0 8px 24px rgba(0, 0, 0, .4);
-    --lift-sm:    0 1px 2px rgba(0, 0, 0, .5);
-    --lift-paper: 0 1px 1px rgba(0, 0, 0, .4),
-                  0 3px 10px rgba(0, 0, 0, .35),
-                  0 22px 48px -14px rgba(0, 0, 0, .6);
-    --lift-sheet: 0 1px 1px rgba(0, 0, 0, .5),
-                  0 10px 28px -8px rgba(0, 0, 0, .55),
-                  0 50px 90px -34px rgba(0, 0, 0, .8);
-    --vignette: radial-gradient(120% 80% at 50% -10%,
-                  rgba(118, 96, 64, .20) 0%, rgba(118, 96, 64, 0) 62%);
-}
+    --surface:       var(--dark-surface);
+    --surface-sunk:  var(--dark-surface-sunk);
+    --surface-high:  var(--dark-surface-high);
+    --surface-edge:  var(--dark-surface-edge);
+    --text:          var(--dark-text);
+    --text-muted:    var(--dark-text-muted);
+    --text-faint:    var(--dark-text-faint);
+    --rule:          var(--dark-rule);
+    --rule-soft:     var(--dark-rule-soft);
+    --rule-paper:    var(--dark-rule-paper);
+    --accent:        var(--dark-accent);
+    --accent-strong: #9AD0B2;
+    --accent-wash:   var(--dark-accent-wash);
+    --on-accent:     #0D1411;
+    --mark:          var(--dark-mark);
+    --on-mark:       #0D1411;
+    --mark-wash:     var(--dark-mark-wash);
+    --shadow-card:   0 1px 1px rgba(0, 0, 0, .4),
+                     0 2px 8px rgba(0, 0, 0, .35),
+                     0 18px 40px -14px rgba(0, 0, 0, .6);
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.1'/%3E%3C/svg%3E");
+  }
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-
-  /* Sơn mài đêm: đen ấm, không phải xám xanh kiểu dark mode công nghệ. */
-  --desk:       #0C0A08;
-  --desk-2:     #080706;
-  --paper:      #171310;
-  --surface:    #201A15;
-  --surface-2:  #2B241C;
-  --rule:       #3E3428;
-  --rule-soft:  #2C251D;
-
-  --ink:        #F0E8D7;
-  --ink-2:      #BFB29B;
-  --ink-3:      #9B8F79;
-
-  --cinnabar:   #E2604A;
-  --cinnabar-2: #F18974;
-  --cinnabar-wash: rgba(226, 96, 74, .14);
-
-  /* Trên nền sơn tối thì vàng kim mới thật sự là vàng kim */
-  --gold:       #D4AF55;
-  --gold-line:  rgba(212, 175, 85, .40);
-
-  --jade:       #74B096;
-  --jade-wash:  rgba(116, 176, 150, .14);
-  --ochre:      #C9A063;
-  --ochre-wash: rgba(201, 160, 99, .14);
-
-  --seal-fg:    #171310;
-
-  /* Tối là mặt sơn mài có vân đá, thô hơn mặt giấy */
-  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.62' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
-  --watermark-o: .075;
-
-  --lift:       0 1px 2px rgba(0, 0, 0, .5), 0 8px 24px rgba(0, 0, 0, .4);
-  --lift-sm:    0 1px 2px rgba(0, 0, 0, .5);
-  --lift-paper: 0 1px 1px rgba(0, 0, 0, .4),
-                0 3px 10px rgba(0, 0, 0, .35),
-                0 22px 48px -14px rgba(0, 0, 0, .6);
-  --lift-sheet: 0 1px 1px rgba(0, 0, 0, .5),
-                0 10px 28px -8px rgba(0, 0, 0, .55),
-                0 50px 90px -34px rgba(0, 0, 0, .8);
-  --vignette: radial-gradient(120% 80% at 50% -10%,
-                rgba(118, 96, 64, .20) 0%, rgba(118, 96, 64, 0) 62%);
+  --surface:       var(--dark-surface);
+  --surface-sunk:  var(--dark-surface-sunk);
+  --surface-high:  var(--dark-surface-high);
+  --surface-edge:  var(--dark-surface-edge);
+  --text:          var(--dark-text);
+  --text-muted:    var(--dark-text-muted);
+  --text-faint:    var(--dark-text-faint);
+  --rule:          var(--dark-rule);
+  --rule-soft:     var(--dark-rule-soft);
+  --rule-paper:    var(--dark-rule-paper);
+  --accent:        var(--dark-accent);
+  --accent-strong: #9AD0B2;
+  --accent-wash:   var(--dark-accent-wash);
+  --on-accent:     #0D1411;
+  --mark:          var(--dark-mark);
+  --on-mark:       #0D1411;
+  --mark-wash:     var(--dark-mark-wash);
+  --shadow-card:   0 1px 1px rgba(0, 0, 0, .4),
+                   0 2px 8px rgba(0, 0, 0, .35),
+                   0 18px 40px -14px rgba(0, 0, 0, .6);
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.1'/%3E%3C/svg%3E");
 }
 
 /* ───────────────────────────────────────────────────────────── nền tảng ── */
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { height: 100%; -webkit-text-size-adjust: 100%; }
+html { height: 100%; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 
+/* Tờ giấy ô: lưới kẻ ngang chạy đều khắp trang theo đúng nhịp dòng, cộng
+   vân giấy. Đây là chất nền, không phải hoạ tiết trang trí. */
 body {
   margin: 0;
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--desk);
-  background-image: var(--vignette), var(--grain),
-                    linear-gradient(var(--desk), var(--desk-2));
-  background-attachment: fixed, scroll, fixed;
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
+  background-color: var(--surface);
+  background-image:
+    var(--grain),
+    repeating-linear-gradient(to bottom,
+      transparent 0,
+      transparent calc(var(--line) - 1px),
+      var(--rule-paper) calc(var(--line) - 1px),
+      var(--rule-paper) var(--line));
+  color: var(--text);
+  font-family: var(--font-text);
+  font-size: var(--t-base);
+  line-height: var(--line);
   padding-top: env(safe-area-inset-top, 0px);
   padding-bottom: env(safe-area-inset-bottom, 0px);
   -webkit-font-smoothing: antialiased;
@@ -202,12 +220,16 @@ body {
 img { max-width: 100%; }
 [hidden] { display: none !important; }
 
-h1, h2, h3 { font-family: var(--font-display); font-weight: 600; text-wrap: balance; }
+h1, h2, h3 {
+  font-weight: 600;
+  text-wrap: balance;
+  letter-spacing: -.012em;
+}
 
-button, input { font: inherit; color: inherit; }
+button, input, select { font: inherit; color: inherit; }
 
 :focus-visible {
-  outline: 2px solid var(--cinnabar);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -219,16 +241,21 @@ button, input { font: inherit; color: inherit; }
 
 .skip-link {
   position: absolute; left: -9999px; top: 0; z-index: 50;
-  background: var(--cinnabar); color: var(--seal-fg);
+  background: var(--accent); color: var(--on-accent);
   padding: 10px 16px; text-decoration: none;
 }
 .skip-link:focus { left: 8px; top: 8px; }
 
-.zh, .zh-inline {
-  font-family: var(--font-zh);
-  font-weight: 600;
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.icon {
+  width: 1em; height: 1em;
+  fill: currentColor;
+  flex: none;
+  vertical-align: -.14em;
 }
 
+.zh, .zh-inline { font-family: var(--font-zh); font-weight: 500; }
 /* Chữ Hán không bao giờ được ngắt giữa chừng: 旅游 tách đôi qua hai dòng
    đọc thành hai chữ rời, sai nghĩa. */
 .zh-inline { white-space: nowrap; }
@@ -238,32 +265,14 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   touch-action: manipulation;
 }
 
-#main { padding-block: clamp(12px, 1.8vw, 22px) clamp(20px, 3vw, 40px); }
-
-/* Mỗi màn hình là một tờ giấy đặt trên mặt bàn sơn. Một mặt phẳng lớn
-   thay cho mười cái hộp nhỏ: đó mới là chỗ chiều sâu nên nằm. */
 .wrap {
-  position: relative;
   width: 100%;
-  max-width: 1120px;
+  max-width: 1080px;
   margin-inline: auto;
   padding-inline: var(--gutter);
-  padding-block: clamp(30px, 5vw, 56px);
-  background-color: var(--paper);
-  background-image: var(--grain);
-  box-shadow: var(--lift-sheet);
+  padding-block: var(--s-5) var(--s-6);
 }
-
-/* Mép giấy: một nét mảnh sẫm rồi một nét kim loại, như bìa sách bọc gấm. */
-.wrap::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  box-shadow: inset 0 0 0 1px var(--rule-soft),
-              inset 0 3px 0 -1px var(--gold-line);
-}
-.wrap--narrow { max-width: 680px; }
+.wrap--narrow { max-width: 660px; }
 
 /* ──────────────────────────────────────────────────────────────── topbar ── */
 
@@ -271,19 +280,19 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   position: sticky;
   top: env(safe-area-inset-top, 0px);
   z-index: 20;
-  background: color-mix(in srgb, var(--desk) 90%, transparent);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule);
 }
 
 .topbar__inner {
-  max-width: 1120px;
+  max-width: 1080px;
   margin-inline: auto;
   padding-inline: var(--gutter);
-  padding-block: 10px;
+  padding-block: var(--s-2);
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: var(--s-3);
 }
 
 .brand {
@@ -293,75 +302,68 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   margin-right: auto;
 }
 
-/* Ấn triện 朱文: nền son, gờ son dày, một đường giấy mảnh chạy bên trong —
-   đúng lối khắc dấu. Vân giấy phủ lên cho ra vẻ mực đóng đã lâu. */
+/* Con dấu vuông, mực đỏ. Đây là một trong hai chỗ duy nhất dùng màu đỏ. */
 .seal {
-  width: 34px; height: 34px;
+  width: 32px; height: 32px;
   display: grid; place-items: center;
-  background-color: var(--cinnabar);
-  background-image: var(--grain);
-  color: var(--seal-fg);
+  background: var(--mark);
+  color: var(--on-mark);
   font-family: var(--font-zh);
-  font-weight: 900;
+  font-weight: 600;
   font-size: 18px;
   line-height: 1;
-  border: 2px solid var(--cinnabar);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--gold) 72%, transparent);
   flex: none;
 }
 
-.brand__text { display: flex; flex-direction: column; line-height: 1.15; }
-.brand__text strong { font-family: var(--font-display); font-size: 17px; font-weight: 600; }
+.brand__text { display: flex; flex-direction: column; line-height: 1.2; }
+.brand__text strong { font-size: var(--t-base); font-weight: 600; }
 .brand__sub {
   font-family: var(--font-zh);
-  font-size: 11px;
-  color: var(--ink-3);
-  letter-spacing: .18em;
+  font-size: var(--t-xs);
+  color: var(--text-faint);
+  letter-spacing: .14em;
 }
 
-/* bộ đổi môn trên thanh trên: luôn trong tầm tay, kể cả giữa phiên học */
 .switcher { display: flex; align-items: center; flex: none; }
 
 .switcher__select {
   appearance: none;
   -webkit-appearance: none;
-  padding: 0 28px 0 11px;
+  padding: 0 30px 0 12px;
   min-height: 44px;
-  max-width: 11rem;
-  background-color: var(--surface);
-  background-image: linear-gradient(45deg, transparent 50%, var(--ink-3) 50%),
-                    linear-gradient(135deg, var(--ink-3) 50%, transparent 50%);
-  background-position: right 12px center, right 7px center;
+  max-width: 12rem;
+  background-color: transparent;
+  background-image: linear-gradient(45deg, transparent 50%, var(--text-muted) 50%),
+                    linear-gradient(135deg, var(--text-muted) 50%, transparent 50%);
+  background-position: right 14px center, right 9px center;
   background-size: 5px 5px, 5px 5px;
   background-repeat: no-repeat;
   border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  color: var(--ink);
-  font-size: 14px;
+  color: var(--text);
+  font-size: var(--t-sm);
   cursor: pointer;
   text-overflow: ellipsis;
 }
-.switcher__select:hover { border-color: var(--ink-3); }
-.switcher__select:focus-visible { border-color: var(--cinnabar); }
+.switcher__select:hover { border-color: var(--text-faint); }
 
-.nav { display: flex; gap: 2px; }
+.nav { display: flex; gap: var(--s-3); }
 
 .nav__link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-width: 44px;
   min-height: 44px;
-  padding: 0 13px;
   text-decoration: none;
-  color: var(--ink-2);
-  font-size: 14.5px;
-  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: var(--t-sm);
   white-space: nowrap;
+  border-bottom: 2px solid transparent;
 }
-.nav__link:hover { color: var(--ink); background: var(--surface); }
+.nav__link:hover { color: var(--text); }
 .nav__link[aria-current="page"] {
-  color: var(--cinnabar);
-  background: var(--cinnabar-wash);
-  font-weight: 500;
+  color: var(--text);
+  border-bottom-color: var(--accent);
 }
 
 .icon-btn {
@@ -369,287 +371,233 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   display: grid; place-items: center;
   background: transparent;
   border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  color: var(--ink-2);
+  color: var(--text-muted);
   cursor: pointer;
   flex: none;
 }
-.icon-btn:hover { border-color: var(--ink-3); color: var(--ink); }
+.icon-btn:hover { border-color: var(--text-faint); color: var(--text); }
+.icon-btn .icon { width: 19px; height: 19px; }
 
-/* ────────────────────────────────────────────────────────────── icon ── */
+/* ────────────────────────────────────────────────────────── trang chủ ── */
 
-/* Sprite nằm ngoài luồng, không chiếm chỗ. */
-.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
-
-.icon {
-  width: 1em;
-  height: 1em;
-  fill: currentColor;
-  flex: none;
-  vertical-align: -.14em;
+/* Chữ bên trái, ô luyện chữ bên phải. Hai khối lệch nhau có chủ đích thay
+   cho một cột giữa trang. */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, max-content) auto;
+  justify-content: start;
+  align-items: center;
+  gap: var(--s-6);
+  margin-bottom: var(--s-5);
 }
-.icon-btn .icon { width: 20px; height: 20px; }
-
-/* ──────────────────────────────────── vết khắc chữ Hán sau trang chủ ── */
-
-/* Chữ của môn đang học, khổ rất lớn, mờ như vết khắc trên bia đã rập.
-   Chỉ ở trang chủ: đặt ở màn hình học thì chữ nền đè lên chữ cần đọc. */
-#view-home > .wrap { overflow: hidden; overflow: clip; }
-#view-home > .wrap > *:not(.watermark) { position: relative; z-index: 1; }
-
-.watermark {
-  position: absolute;
-  top: -.06em;
-  right: -.1em;
-  z-index: 0 !important;
-  font-family: var(--font-zh);
-  font-weight: 900;
-  font-size: clamp(180px, 26vw, 330px);
-  /* line-height 1 là mức thấp nhất mà nét trên cùng của chữ Hán còn nằm
-     trong khung; thấp hơn nữa là đỉnh chữ bị cắt mất. */
-  line-height: 1;
-  letter-spacing: -.05em;
-  color: var(--ink);
-  opacity: var(--watermark-o);
-  pointer-events: none;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* ────────────────────────────────────────────────────────────────── hero ── */
-
-.hero { max-width: var(--measure); }
 
 .hero__title {
-  margin: 0 0 14px;
-  font-size: clamp(34px, 7.4vw, 58px);
-  line-height: 1.08;
-  letter-spacing: -.015em;
+  margin: 0 0 var(--s-2);
+  font-size: clamp(var(--t-xl), 5.2vw, 44px);
+  line-height: 1.14;
+  font-weight: 600;
 }
-.hero__title .zh-inline { color: var(--cinnabar); }
 
-.hero__lead { margin: 0; color: var(--ink-2); max-width: 52ch; font-size: 17px; }
+.hero__lead {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: var(--t-base);
+  max-width: 40ch;
+}
+
+/* 田字格: ô người ta luyện viết đúng chữ đó. Đây là chỗ duy nhất trên trang
+   được phép to tiếng, nên mọi thứ quanh nó phải im. */
+.tianzige {
+  display: flex;
+  font-size: clamp(84px, 12vw, 132px);
+  flex: none;
+}
+.tianzige__cell {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--rule);
+}
+.tianzige__cell + .tianzige__cell { margin-left: -1px; }
+.tianzige__cell::before {
+  content: "";
+  position: absolute; left: 0; right: 0; top: 50%;
+  border-top: 1px dashed var(--rule);
+}
+.tianzige__cell::after {
+  content: "";
+  position: absolute; top: 0; bottom: 0; left: 50%;
+  border-left: 1px dashed var(--rule);
+}
+.tianzige__char {
+  position: relative;
+  font-family: var(--font-zh);
+  font-size: .68em;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--text);
+}
 
 .page-title {
-  margin: 0 0 20px;
-  font-size: clamp(24px, 4.5vw, 32px);
+  margin: 0 0 var(--s-4);
+  font-size: clamp(var(--t-lg), 4vw, var(--t-xl));
   line-height: 1.2;
 }
 
-/* ─────────────────────────────────────────────────────── thẻ hôm nay ── */
+/* ──────────────────────────────────────────────── dải chọn môn ── */
 
-/* Không phải cái hộp nữa. Đây là dải việc cần làm, kẹp giữa đường văn võ:
-   một nét dày bên trên, một nét mảnh bên dưới, đúng lối 文武边框 của sách
-   khắc. Bó trong bề ngang đọc được để không còn khoảng trống chết ở giữa. */
-.today {
-  position: relative;
-  max-width: var(--measure);
-  margin-top: 34px;
-  padding: 22px 0;
-  border-top: 3px solid var(--ink);
-  border-bottom: 1px solid var(--rule);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.today__label {
-  margin: 0;
-  font-size: 14.5px;
-  font-weight: 500;
-  color: var(--ink-2);
-}
-
-.today__count {
-  margin: 4px 0 6px;
-  font-family: var(--font-display);
-  font-size: clamp(38px, 8vw, 54px);
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-}
-.today__unit { font-size: 18px; color: var(--ink-3); }
-.today__hint { margin: 0; font-size: 14px; color: var(--ink-2); max-width: 44ch; }
-
-.today__actions { display: flex; gap: 10px; flex-wrap: wrap; }
-
-/* Không có thẻ đến hạn: bỏ con số, nhường chỗ cho lời mời học thẻ mới */
-.today--clear .today__count { display: none; }
-.today--clear .today__label { margin-bottom: 6px; }
-.today--clear { border-top-color: var(--ink-3); }
-
-/* Nét vàng chạy ngay dưới nét mực: 文武线 có 描金. */
-.today::before {
-  content: "";
-  position: absolute;
-  top: 3px; left: 0; right: 0;
-  height: 1px;
-  background: var(--gold-line);
-}
-
-/* ─────────────────────────────────────────────────────────── chọn môn ── */
-
-/* Tên môn đang học đã nằm ở tiêu đề trang, nên đây chỉ còn là dải chuyển
-   môn: chữ Hán, tên ngắn, số thẻ đến hạn. Không lặp lại cả tấm thẻ. */
 .subject-tabs {
-  max-width: var(--measure);
-  margin-top: 22px;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 30px;
+  column-gap: var(--s-4);
   border-bottom: 1px solid var(--rule);
+  margin-bottom: var(--s-4);
 }
 
-/* Tab gạch chân, không phải viên thuốc bo tròn. */
 .subject {
   display: flex;
-  align-items: center;
-  gap: 9px;
+  align-items: baseline;
+  gap: var(--s-2);
   min-height: 44px;
   padding: 10px 0;
   margin-bottom: -1px;
-  text-align: left;
   background: transparent;
   border: 0;
   border-bottom: 2px solid transparent;
-  color: var(--ink-2);
+  color: var(--text-muted);
   cursor: pointer;
-  transition: color .15s, border-color .15s;
+  text-align: left;
 }
-.subject:hover { color: var(--ink); }
+.subject:hover { color: var(--text); }
+.subject[aria-selected="true"] {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
 
 .subject__seal {
-  flex: none;
   font-family: var(--font-zh);
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1;
-  color: var(--ink-3);
+  font-size: var(--t-sm);
+  flex: none;
+}
+.subject__text { display: flex; align-items: baseline; gap: var(--s-2); min-width: 0; }
+.subject__name { font-size: var(--t-sm); }
+.subject__meta {
+  font-size: var(--t-xs);
+  color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
 }
 
-.subject__text { display: flex; align-items: baseline; gap: 7px; min-width: 0; }
-.subject__name { font-size: 14.5px; }
-.subject__meta { font-size: 13px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
-
-/* môn đang chọn: một nét son dưới chân, đủ rồi */
-.subject[aria-selected="true"] {
-  border-bottom-color: var(--cinnabar);
-  color: var(--ink);
-}
-.subject[aria-selected="true"] .subject__seal,
-.subject[aria-selected="true"] .subject__name { color: var(--cinnabar); }
-.subject[aria-selected="true"] .subject__name { font-weight: 500; }
-
-.subject-tabs--inline { max-width: none; margin-top: 0; margin-bottom: 18px; }
+.subject-tabs--inline { margin-bottom: var(--s-4); }
 
 .other-note {
-  margin: 14px 0 0;
-  font-size: 13.5px;
-  color: var(--ink-3);
+  margin: var(--s-3) 0 0;
+  font-size: var(--t-sm);
+  color: var(--text-muted);
 }
 .other-note button {
   background: none; border: 0; padding: 0;
-  color: var(--cinnabar); cursor: pointer;
+  color: var(--accent); cursor: pointer;
   font: inherit; text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-/* ───────────────────────────────────────────────────────────────── khối ── */
+/* ─────────────────────────────────────────────── việc của hôm nay ── */
 
-.block { margin-top: clamp(32px, 5vw, 48px); }
+.today {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s-3) var(--s-4);
+  padding-block: var(--s-3) var(--s-4);
+  border-bottom: 1px solid var(--rule);
+  max-width: var(--measure);
+}
+.today__main { flex: 1 1 18rem; }
+.today__label { margin: 0; font-size: var(--t-base); }
+.today__count {
+  margin: 0;
+  font-size: var(--t-xl);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+}
+.today__unit { font-size: var(--t-base); color: var(--text-muted); }
+.today__hint { margin: 0; font-size: var(--t-sm); color: var(--text-muted); }
+.today__actions { display: flex; align-items: center; gap: var(--s-4); flex-wrap: wrap; }
+.today--clear .today__count { display: none; }
+
+/* ─────────────────────────────────────────────────────────── khối ── */
+
+.block { margin-top: var(--s-5); }
 
 .block__title {
-  position: relative;
-  margin: 0 0 16px;
-  font-family: var(--font-display);
-  font-size: 20px;
+  margin: 0 0 var(--s-3);
+  font-size: var(--t-md);
   font-weight: 600;
-  letter-spacing: -.005em;
-  color: var(--ink);
-  padding-bottom: 10px;
+  color: var(--text);
 }
 
-/* Nét bút lông nhấc tay: dày và đậm ở đầu nét, mỏng rồi tan về cuối.
-   Một border-bottom đều tăm tắp không có chuyện đó. */
-.block__title::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 3px;
-  background: linear-gradient(90deg,
-    var(--gold) 0%, var(--rule) 34%, var(--rule-soft) 70%, transparent 100%);
-  clip-path: polygon(0 0, 100% 58%, 100% 100%, 0 100%);
-}
+/* ─────────────────────────────── chủ đề, dựng như một cuốn sổ từ mới ── */
 
-/* ─────────────────────────────────────────────────────────── lưới chủ đề ── */
-
-/* Kẻ dọc chia cột như 界行 trên trang khắc, không phải bốn tấm thẻ bo góc
-   giống hệt nhau. Nét kẻ do khe của lưới để lộ nền bên dưới, nên tự đúng cả
-   khi xuống dòng. */
 .topic-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1px;
-  background: var(--rule-soft);
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--rule-soft);
 }
 
 .topic {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  padding: 20px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 3.4em minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: var(--s-3);
+  width: 100%;
+  min-height: 52px;
+  padding: 11px 0;
   text-align: left;
-  background: var(--paper);
+  background: transparent;
   border: 0;
+  border-bottom: 1px solid var(--rule-soft);
   cursor: pointer;
-  transition: background .15s;
 }
-.topic:hover { background: var(--surface); }
-
-@media (min-width: 561px) {
-  .topic-grid { margin-left: -20px; width: calc(100% + 20px); }
-}
-@media (max-width: 560px) {
-  .topic { padding-inline: 0; }
-}
+.topic:hover { background: var(--accent-wash); }
 
 .topic__zh {
   font-family: var(--font-zh);
-  font-size: 22px;
-  color: var(--cinnabar);
-  line-height: 1;
+  font-size: var(--t-md);
+  color: var(--text);
+  line-height: 1.1;
 }
-.topic__name { font-weight: 500; line-height: 1.3; }
+.topic__name { font-size: var(--t-base); }
 .topic__meta {
-  font-size: 13px;
-  color: var(--ink-3);
+  font-size: var(--t-sm);
+  color: var(--text-faint);
   font-variant-numeric: tabular-nums;
-  margin-top: auto;
 }
 
+/* Phần đã thuộc tô vào chính nét kẻ chân dòng. Không có track nền, không vẽ
+   gì khi chưa học. */
 .meter {
-  height: 3px;
-  background: var(--surface-2);
-  overflow: hidden;
+  position: absolute;
+  left: 0; bottom: -1px;
+  width: 100%;
+  height: 2px;
 }
-.meter__fill { height: 100%; background: var(--jade); }
+.meter__fill { display: block; height: 100%; background: var(--accent); }
 
-/* ─────────────────────────────────────────────────────────────── ôn nhanh ── */
+/* ──────────────────────────────────────────────────────── ôn nhanh ── */
 
-/* Trước đây là ba thẻ gạch đứt giống hệt nhau xếp ngang, đúng khuôn mẫu
-   "ba thẻ tính năng" của trang quảng cáo. Giờ là một dải mục gọn, nhẹ hơn
-   hẳn lưới chủ đề bên trên. */
 .quick-row { display: flex; flex-direction: column; }
 
 .quick {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-  gap: 16px;
-  min-height: 52px;
-  padding: 12px 4px;
+  gap: var(--s-4);
+  min-height: 48px;
+  padding: 10px 0;
   text-align: left;
   background: transparent;
   border: 0;
@@ -657,393 +605,337 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   cursor: pointer;
 }
 .quick:last-child { border-bottom: 0; }
-.quick:hover:not(:disabled) { background: var(--surface); }
-.quick:disabled { color: var(--ink-3); cursor: not-allowed; }
-.quick__title { font-size: 15px; font-weight: 500; }
-.quick__meta { font-size: 14px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.quick:hover:not(:disabled) { background: var(--accent-wash); }
+.quick:disabled { color: var(--text-faint); cursor: not-allowed; }
+.quick__title { font-size: var(--t-base); }
+.quick__meta {
+  font-size: var(--t-sm);
+  color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+}
 
-/* ─────────────────────────────────────────────────────────────────── nút ── */
+/* ──────────────────────────────────────────────────────────────── nút ── */
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  padding: 11px 20px;
+  gap: var(--s-2);
+  min-height: 44px;
+  padding: 10px 22px;
   border: 1px solid transparent;
-  border-radius: var(--radius);
-  font-size: 15px;
-  font-weight: 500;
-  cursor: pointer;
   background: transparent;
-  transition: background .15s, border-color .15s;
+  color: inherit;
+  font-size: var(--t-base);
+  cursor: pointer;
 }
 .btn--wide { width: 100%; }
 
-/* Một thanh son dài hết khung là nút của trang quảng cáo. Trên màn rộng thu
-   lại cho vừa chữ; màn hẹp vẫn full để dễ chạm. */
-@media (min-width: 561px) {
-  #btn-start { width: auto; align-self: flex-start; padding-inline: 44px; }
+.btn--primary {
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 500;
 }
+.btn--primary:hover { background: var(--accent-strong); }
+.btn--primary:disabled { opacity: .5; cursor: not-allowed; }
 
-.btn--primary { background: var(--cinnabar); color: var(--seal-fg); }
-.btn--primary:hover { background: var(--cinnabar-2); }
+/* Nút phụ là chữ có gạch chân, không phải cái hộp viền thứ hai. Một nút tô
+   đặc cộng một nút rỗng là mẫu generic (redesign-skill). */
+.btn--ghost {
+  padding-inline: 0;
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+.btn--ghost:hover { color: var(--text); }
 
-.btn--ghost { border-color: var(--rule); color: var(--ink-2); }
-.btn--ghost:hover { border-color: var(--ink-3); color: var(--ink); background: var(--surface); }
+.btn--quiet {
+  padding: 8px 0;
+  min-height: 40px;
+  color: var(--text-muted);
+  font-size: var(--t-sm);
+}
+.btn--quiet:hover { color: var(--accent); }
 
-.btn--quiet { color: var(--ink-3); font-size: 14px; padding: 8px 12px; }
-.btn--quiet:hover { color: var(--cinnabar); background: var(--cinnabar-wash); }
-
-.btn--danger { border: 1px solid var(--cinnabar); color: var(--cinnabar); }
-.btn--danger:hover { background: var(--cinnabar-wash); }
+.btn--danger {
+  padding-inline: 0;
+  color: var(--mark);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.btn--danger:hover { color: var(--mark); text-decoration-thickness: 2px; }
 
 .linkish {
-  background: none; border: 0;
-  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
   min-height: 44px;
-  margin-left: -10px;
-  display: inline-flex; align-items: center;
-  color: var(--ink-3); font-size: 14px; cursor: pointer;
-  flex: none;
+  background: none; border: 0; padding: 0;
+  color: var(--text-muted); cursor: pointer;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
-.linkish:hover { color: var(--cinnabar); }
+.linkish:hover { color: var(--text); }
 
-/* ──────────────────────────────────────────────────────── form cấu hình ── */
+/* ───────────────────────────────────────────────────────── biểu mẫu ── */
 
-.field { border: 0; margin: 0 0 26px; padding: 0; }
+.field { border: 0; margin: 0 0 var(--s-4); padding: 0; }
 
 .field__label {
-  padding: 0 0 10px;
-  font-size: 14.5px;
-  font-weight: 500;
-  color: var(--ink-2);
+  padding: 0 0 var(--s-2);
+  font-size: var(--t-base);
+  color: var(--text-muted);
 }
 
-.field__note { margin: 10px 0 0; font-size: 13.5px; color: var(--ink-3); }
-.field__note--lead { margin: 0 0 12px; font-size: 15px; color: var(--ink-2); }
+.field__note { margin: var(--s-2) 0 0; font-size: var(--t-sm); color: var(--text-faint); }
+.field__note--lead { margin: 0 0 var(--s-3); font-size: var(--t-base); color: var(--text-muted); }
 
-.field__actions { margin-top: 30px; display: flex; flex-direction: column; gap: 10px; }
-.field__actions--row { flex-direction: row; flex-wrap: wrap; }
+.field__actions { margin-top: var(--s-4); display: flex; flex-direction: column; gap: var(--s-3); }
+.field__actions--row { flex-direction: row; flex-wrap: wrap; gap: var(--s-4); align-items: center; }
 
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: var(--s-2); }
 
 .chip {
   display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  align-items: baseline;
+  gap: var(--s-2);
   min-height: 44px;
-  padding: 0 16px;
+  padding: 9px 14px;
   background: transparent;
   border: 1px solid var(--rule);
-  font-size: 14px;
-  color: var(--ink-2);
+  color: var(--text-muted);
+  font-size: var(--t-sm);
   cursor: pointer;
 }
-.chip:hover { border-color: var(--ink-3); color: var(--ink); }
+.chip:hover { border-color: var(--text-faint); color: var(--text); }
 .chip[aria-pressed="true"] {
-  background: var(--cinnabar-wash);
-  border-color: var(--cinnabar);
-  color: var(--cinnabar);
-  font-weight: 500;
+  background: var(--accent-wash);
+  border-color: var(--accent);
+  color: var(--accent-strong);
 }
-.chip__n { color: inherit; opacity: .55; font-variant-numeric: tabular-nums; }
+.chip__n { color: var(--text-faint); font-variant-numeric: tabular-nums; }
+.chip[aria-pressed="true"] .chip__n { color: inherit; }
 
-/* Rãnh chìm, ô đang chọn nổi lên trên. Trước đây ô đang chọn tô đen gần
-   tuyệt đối: nặng và lạc hẳn khỏi bảng màu mực son. */
 .segmented {
   display: flex;
   flex-wrap: wrap;
-  gap: 3px;
-  padding: 3px;
-  background: var(--paper);
   border: 1px solid var(--rule);
-  border-radius: var(--radius-lg);
 }
 .segmented button {
   flex: 1 1 auto;
-  min-width: 84px;
+  min-width: 88px;
   min-height: 44px;
   padding: 10px 12px;
   background: transparent;
   border: 0;
-  border-radius: var(--radius);
-  font-size: 14px;
-  color: var(--ink-2);
+  border-left: 1px solid var(--rule);
+  font-size: var(--t-sm);
+  color: var(--text-muted);
   cursor: pointer;
 }
-.segmented button:hover { color: var(--ink); }
+.segmented button:first-child { border-left: 0; }
+.segmented button:hover { color: var(--text); }
 .segmented button[aria-checked="true"] {
-  background: var(--surface);
-  color: var(--cinnabar);
+  background: var(--accent-wash);
+  color: var(--accent-strong);
   font-weight: 500;
-  box-shadow: var(--lift-sm);
+  box-shadow: inset 0 -2px 0 var(--accent);
 }
 
-/* Tên môn dài, xếp thành lưới đều thay vì tràn lệch 3 cộng 1. */
 #setup-subject { display: grid; grid-template-columns: repeat(2, 1fr); }
+#setup-subject button:nth-child(odd) { border-left: 0; }
+#setup-subject button:nth-child(n + 3) { border-top: 1px solid var(--rule); }
 
 .input {
   width: 100%;
-  padding: 12px 14px;
-  background: var(--surface);
+  min-height: 44px;
+  padding: 10px 14px;
+  background: var(--surface-high);
   border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  color: var(--ink);
+  color: var(--text);
+  font-size: var(--t-base);
 }
-.input::placeholder { color: var(--ink-3); }
-.input:focus { border-color: var(--cinnabar); outline: none; }
+.input::placeholder { color: var(--text-faint); }
+.input:focus { border-color: var(--accent); outline: none; box-shadow: inset 0 -2px 0 var(--accent); }
 
-/* ────────────────────────────────────────────────────────── màn hình học ── */
+/* ────────────────────────────────────────────────────── màn hình học ── */
 
-/* Đang học thì thanh trên co lại, chừa đất cho tấm thẻ. Vẫn giữ đủ điều
-   hướng và vùng bấm 44px — thu gọn chứ không cắt bỏ. */
-body.is-studying .topbar { background: color-mix(in srgb, var(--desk) 95%, transparent); }
-body.is-studying .topbar__inner { padding-block: 4px; }
+/* Đang học thì thanh trên co lại, chừa đất cho tấm thẻ. */
+body.is-studying .topbar__inner { padding-block: var(--s-1); }
 body.is-studying .brand__sub { display: none; }
-body.is-studying .brand__text strong { font-size: 15px; }
-body.is-studying .seal { width: 28px; height: 28px; font-size: 15px; border-width: 1.5px; }
-body.is-studying .nav__link { font-size: 13.5px; padding-inline: 10px; }
-body.is-studying #view-study > .wrap {
-  padding-block: clamp(14px, 2.4vw, 24px) clamp(30px, 5vw, 52px);
-}
+body.is-studying .seal { width: 28px; height: 28px; font-size: 16px; }
 
 .studybar {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 18px;
+  gap: var(--s-3);
+  margin-bottom: var(--s-4);
 }
-
-.progress {
-  flex: 1;
-  height: 2px;
-  background: var(--surface-2);
-  overflow: hidden;
-}
-.progress__fill {
-  height: 100%;
-  width: 0;
-  background: var(--cinnabar);
-  transition: width .25s ease;
-}
-
+.progress { flex: 1; height: 1px; background: var(--rule); overflow: hidden; }
+.progress__fill { height: 100%; width: 0; background: var(--accent); transition: width .25s ease; }
 .studybar__count {
   margin: 0;
-  font-size: 13px;
-  color: var(--ink-3);
+  font-size: var(--t-sm);
+  color: var(--text-faint);
   font-variant-numeric: tabular-nums;
   flex: none;
 }
 
+/* Chỗ duy nhất còn dùng mặt phẳng nổi, vì ở đây độ nổi mang nghĩa thật:
+   nó đúng là một tấm thẻ. */
 .card {
   position: relative;
-  background-color: var(--surface);
-  background-image: var(--grain);
+  background: var(--surface-high);
   border: 1px solid var(--rule);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--lift-paper);
-  overflow: hidden;
+  box-shadow: var(--shadow-card);
 }
 
 .card__head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  padding: 12px 16px;
+  gap: var(--s-2);
+  padding: 10px var(--s-3);
   border-bottom: 1px solid var(--rule-soft);
 }
+.card__tags { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px var(--s-3); min-width: 0; }
 
-.card__tags {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 4px 10px;
-  min-width: 0;
-}
-
-.tag {
-  font-size: 11.5px;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--gold);
-}
-
-/* nhóm con trong môn Phiên dịch — 48 nhóm, giúp định vị thẻ đang học */
+.tag { font-size: var(--t-sm); color: var(--text-faint); }
 .tag--group {
-  text-transform: none;
-  letter-spacing: 0;
-  font-size: 12px;
   padding: 2px 8px;
   border: 1px solid var(--rule);
-  color: var(--ink-2);
+  color: var(--text-muted);
+  font-size: var(--t-xs);
 }
 
 .star {
   background: none; border: 0; cursor: pointer;
-  color: var(--ink-3); line-height: 1;
+  color: var(--text-faint); line-height: 1;
   width: 44px; height: 44px;
-  margin: -6px -10px -6px 0;      /* giữ nguyên vị trí quang học của dấu sao */
+  margin: -6px -10px -6px 0;
   display: grid; place-items: center;
   flex: none;
 }
 .star .icon { width: 20px; height: 20px; grid-area: 1 / 1; }
-.star:hover { color: var(--ochre); }
-.star[aria-pressed="true"] { color: var(--ochre); }
-
-/* Sao rỗng khi chưa đánh dấu, sao đặc khi đã đánh dấu. Đổi bằng CSS để
-   JS chỉ phải lật aria-pressed như cũ. */
+.star:hover { color: var(--accent); }
+.star[aria-pressed="true"] { color: var(--accent); }
 .star .icon--star-f { display: none; }
 .star[aria-pressed="true"] .icon--star-o { display: none; }
 .star[aria-pressed="true"] .icon--star-f { display: block; }
 
 .card__body {
-  padding: clamp(34px, 7vw, 58px) clamp(20px, 5vw, 40px);
+  padding: var(--s-5) var(--s-4);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  min-height: 190px;
+  gap: var(--s-3);
+  min-height: 180px;
   justify-content: center;
 }
 
 .card__prompt-label {
   margin: 0;
-  font-size: 11.5px;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--gold);
+  font-size: var(--t-sm);
+  color: var(--text-faint);
 }
 
 .card__prompt {
-  font-size: clamp(26px, 6vw, 38px);
+  font-size: clamp(var(--t-lg), 5.5vw, 36px);
   line-height: 1.25;
   font-weight: 500;
   text-wrap: balance;
 }
 
-/* chữ Hán đặt trong 田字格 — ô kẻ luyện chữ */
-.card__prompt.is-zh, .reveal__zh {
-  font-family: var(--font-zh);
-  font-weight: 600;
-  letter-spacing: .04em;
-}
+/* Chữ Hán đặt trong 田字格, cùng một ô với ô ở trang chủ. */
+.card__prompt.is-zh, .reveal__zh { font-family: var(--font-zh); font-weight: 500; }
 
 .card__prompt.is-zh {
-  font-size: clamp(44px, 12vw, 78px);
-  line-height: 1.1;
-  padding: 18px 26px;
-  position: relative;
-  border: 1px solid var(--rule);
-  background:
-    linear-gradient(to right, transparent calc(50% - .5px), var(--rule-soft) calc(50% - .5px),
-                    var(--rule-soft) calc(50% + .5px), transparent calc(50% + .5px)),
-    linear-gradient(to bottom, transparent calc(50% - .5px), var(--rule-soft) calc(50% - .5px),
-                    var(--rule-soft) calc(50% + .5px), transparent calc(50% + .5px));
+  display: flex;
+  justify-content: center;
+  font-size: clamp(76px, 17vw, 112px);
+  line-height: 1;
   max-width: 100%;
 }
 
 .card__prompt.is-pinyin {
   font-family: var(--font-pinyin);
   font-style: italic;
-  letter-spacing: .01em;
+  color: var(--text);
 }
 
-/* Câu hỏi lịch sử là cả một câu, không phải một từ — cỡ chữ vừa phải để
-   đọc trôi, căn trái cho mắt bám dòng. */
+/* Câu hỏi lịch sử là cả một câu, không phải một từ. Cỡ vừa phải để đọc
+   trôi, căn trái cho mắt bám dòng. */
 .card__prompt.is-question {
   font-family: var(--font-zh);
-  font-size: clamp(20px, 4.4vw, 27px);
-  font-weight: 600;
-  line-height: 1.55;
-  letter-spacing: .02em;
+  font-size: clamp(var(--t-md), 4.2vw, 26px);
+  font-weight: 500;
+  line-height: 1.6;
   text-align: left;
-  max-width: 34em;
+  max-width: 32em;
 }
 
-/* Đáp án hỏi đáp cũng có thể dài, không để nó to như một từ đơn */
 .reveal__zh--answer {
-  font-size: clamp(22px, 5vw, 32px) !important;
-  line-height: 1.45;
-  max-width: 30em;
+  font-size: clamp(var(--t-lg), 5vw, 32px) !important;
+  line-height: 1.5;
+  max-width: 28em;
 }
 
-.card__context {
-  margin: 0;
-  font-size: 14px;
-  color: var(--ink-3);
-}
+.card__context { margin: 0; font-size: var(--t-sm); color: var(--text-muted); }
 
-/* ───────────────────────────────────────────────────── vùng trả lời ── */
+/* ──────────────────────────────────────────────────── vùng trả lời ── */
 
 .answer-type {
   display: flex;
-  gap: 8px;
-  padding: 0 clamp(16px, 4vw, 32px) 22px;
+  gap: var(--s-2);
+  padding: 0 var(--s-4) var(--s-4);
 }
 .answer-type .input { flex: 1; }
 .answer-type .btn { flex: none; }
 
 .answer-choice {
   display: grid;
-  gap: 8px;
-  padding: 0 clamp(16px, 4vw, 32px) 22px;
+  gap: var(--s-2);
+  padding: 0 var(--s-4) var(--s-4);
 }
-
 .choice {
-  padding: 14px 16px;
-  text-align: left;
-  background: var(--paper);
+  min-height: 48px;
+  padding: 11px 16px;
+  background: transparent;
   border: 1px solid var(--rule);
-  border-radius: var(--radius);
+  color: var(--text);
+  font-size: var(--t-base);
   cursor: pointer;
-  font-size: 16px;
-  line-height: 1.35;
+  text-align: center;
 }
-.choice:hover:not(:disabled) { border-color: var(--ink-3); }
+.choice:hover:not(:disabled) { border-color: var(--text-faint); }
 .choice:disabled { cursor: default; }
-.choice.is-zh { font-family: var(--font-zh); font-size: 22px; }
+.choice.is-zh { font-family: var(--font-zh); font-size: var(--t-lg); }
+.choice--right { border-color: var(--accent); background: var(--accent-wash); color: var(--accent-strong); font-weight: 500; }
+.choice--wrong { border-color: var(--mark); background: var(--mark-wash); color: var(--mark); }
 
-.choice--right {
-  border-color: var(--jade);
-  background: var(--jade-wash);
-  color: var(--jade);
-  font-weight: 500;
-}
-.choice--wrong {
-  border-color: var(--cinnabar);
-  background: var(--cinnabar-wash);
-  color: var(--cinnabar);
-}
-
-/* ─────────────────────────────────────────────────────────────── mặt sau ── */
+/* ───────────────────────────────────────────────────────── mặt sau ── */
 
 .card__back {
   border-top: 1px solid var(--rule-soft);
-  padding: 22px clamp(20px, 5vw, 40px) 26px;
+  padding: var(--s-4);
   text-align: center;
-  background: var(--paper);
+  background: var(--surface);
 }
 
+/* Đỏ là vết bút chấm bài. Đây là chỗ thứ hai và cuối cùng dùng nó. */
 .verdict {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  margin-bottom: 14px;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: .04em;
-  padding: 7px 12px;
-  border-radius: var(--radius);
   display: inline-block;
+  margin-bottom: var(--s-3);
+  padding: 5px 12px;
+  font-size: var(--t-sm);
 }
-.verdict--right { color: var(--jade); background: var(--jade-wash); }
-.verdict--wrong { color: var(--cinnabar); background: var(--cinnabar-wash); }
-
-/* Vệt mực loang: chấm đúng thì lục, chấm sai thì son — một giọt rơi rồi tan.
-   Nằm sau chữ nên không bao giờ làm chữ khó đọc. */
+.verdict--right { color: var(--accent-strong); background: var(--accent-wash); }
+.verdict--wrong { color: var(--mark); background: var(--mark-wash); }
 .verdict::before {
   content: "";
   position: absolute;
@@ -1054,142 +946,107 @@ body.is-studying #view-study > .wrap {
   opacity: 0;
 }
 
-.reveal { display: flex; flex-direction: column; gap: 6px; align-items: center; }
+.reveal { display: flex; flex-direction: column; gap: var(--s-2); align-items: center; }
 
-.reveal__zh {
-  margin: 0;
-  font-size: clamp(40px, 10vw, 62px);
-  line-height: 1.15;
-  letter-spacing: .03em;
-}
+.reveal__zh { margin: 0; font-size: clamp(36px, 9vw, 52px); line-height: 1.2; }
 .reveal__py {
   margin: 0;
   font-family: var(--font-pinyin);
   font-style: italic;
-  font-size: 18px;
-  color: var(--cinnabar);
+  font-size: var(--t-md);
+  color: var(--accent-strong);
 }
-.reveal__vi { margin: 0; font-size: 18px; }
+.reveal__vi { margin: 0; font-size: var(--t-md); }
 .reveal__alt, .reveal__note {
-  margin: 4px 0 0;
-  font-size: 13.5px;
-  color: var(--ink-3);
+  margin: 0;
+  font-size: var(--t-sm);
+  color: var(--text-muted);
   max-width: 46ch;
 }
-.reveal__note { border-top: 1px solid var(--rule-soft); padding-top: 8px; }
+.reveal__note { border-top: 1px solid var(--rule-soft); padding-top: var(--s-2); }
 
-/* ─────────────────────────────────── nghĩa tiếng Việt (ẩn mặc định) ── */
+/* ─────────────────────────────── nghĩa tiếng Việt, ẩn cho tới khi cần ── */
 
-/* Người học muốn tự nhớ bằng tiếng Trung trước; bản dịch chỉ bung ra khi
-   họ thật sự cần, nên mặc định nó không được đập vào mắt. */
-.gloss { margin-top: 18px; }
+.gloss { margin-top: var(--s-3); }
 
 .gloss__toggle {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--s-2);
   min-height: 44px;
-  padding: 0 14px;
+  padding: 8px 14px;
   background: transparent;
-  border: 1px dashed var(--rule);
-  border-radius: var(--radius);
-  color: var(--ink-3);
-  font-size: 13.5px;
+  border: 1px solid var(--rule);
+  color: var(--text-muted);
+  font-size: var(--t-sm);
   cursor: pointer;
 }
-.gloss__toggle:hover { border-style: solid; color: var(--ink-2); }
-.gloss__toggle[aria-expanded="true"] { color: var(--ink-2); border-style: solid; }
+.gloss__toggle:hover { color: var(--text); border-color: var(--text-faint); }
 
-.gloss__sign {
-  display: grid;
-  place-items: center;
-  width: 15px;
-  height: 15px;
-  flex: none;
-}
-.gloss__sign .icon { width: 15px; height: 15px; grid-area: 1 / 1; }
+.gloss__sign { display: grid; place-items: center; width: 14px; height: 14px; flex: none; }
+.gloss__sign .icon { width: 14px; height: 14px; grid-area: 1 / 1; }
 .gloss__toggle .icon--minus { display: none; }
 .gloss__toggle[aria-expanded="true"] .icon--plus { display: none; }
 .gloss__toggle[aria-expanded="true"] .icon--minus { display: block; }
 
 .gloss__body {
-  margin-top: 12px;
-  padding: 14px 16px;
+  margin-top: var(--s-3);
+  padding: var(--s-3);
+  border-left: 2px solid var(--accent);
+  background: var(--accent-wash);
   text-align: left;
-  background: var(--surface);
-  border: 1px solid var(--rule-soft);
-  border-left: 2px solid var(--jade);
-  border-radius: var(--radius);
 }
-.gloss__q {
-  margin: 0 0 6px;
-  font-size: 14px;
-  color: var(--ink-3);
-}
-.gloss__a {
-  margin: 0;
-  font-size: 15.5px;
-  line-height: 1.5;
-}
+.gloss__q { margin: 0 0 4px; font-size: var(--t-sm); color: var(--text-muted); }
+.gloss__a { margin: 0; font-size: var(--t-base); }
 
-/* ──────────────────────────────────────────────────────────── chấm điểm ── */
+/* ────────────────────────────────────────────────────────── chấm điểm ── */
 
-.controls { margin-top: 16px; }
+.controls { margin-top: var(--s-4); }
 
-.grade { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
-
+.grade { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-2); }
 .grade__btn {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2px;
-  padding: 12px 4px;
-  background: var(--surface);
+  min-height: 56px;
+  padding: 9px 6px;
+  background: transparent;
   border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  font-size: 14.5px;
-  font-weight: 500;
+  color: var(--text);
+  font-size: var(--t-sm);
   cursor: pointer;
 }
-.grade__btn small { font-size: 11px; font-weight: 400; color: var(--ink-3); }
+.grade__btn small { font-size: var(--t-xs); color: var(--text-faint); }
 .grade__btn:hover { border-color: currentColor; }
-.grade__btn--again:hover { color: var(--cinnabar); }
-.grade__btn--hard:hover  { color: var(--ochre); }
-.grade__btn--good:hover  { color: var(--jade); }
-.grade__btn--easy:hover  { color: var(--jade); }
+.grade__btn--again:hover { color: var(--mark); }
+.grade__btn--hard:hover  { color: var(--text-muted); }
+.grade__btn--good:hover,
+.grade__btn--easy:hover  { color: var(--accent); }
 
-.kbd-hint {
-  margin: 16px 0 0;
-  font-size: 12.5px;
-  color: var(--ink-3);
-  text-align: center;
-}
-kbd {
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  font-size: 11.5px;
-  padding: 2px 5px;
+.kbd-hint { margin: var(--s-3) 0 0; font-size: var(--t-sm); color: var(--text-faint); text-align: center; }
+.kbd-hint kbd {
+  font: inherit;
+  padding: 1px 6px;
   border: 1px solid var(--rule);
-  background: var(--surface);
+  background: var(--surface-sunk);
 }
 
-/* ────────────────────────────────────────────────────────────── kết quả ── */
+/* ────────────────────────────────────────────────────────── kết quả ── */
 
 .seal-big {
-  width: 64px; height: 64px;
+  width: 56px; height: 56px;
   display: grid; place-items: center;
-  background-color: var(--cinnabar);
-  background-image: var(--grain);
-  color: var(--seal-fg);
+  background: var(--mark);
+  color: var(--on-mark);
   font-family: var(--font-zh);
-  font-size: 32px;
-  font-weight: 900;
+  font-size: 30px;
+  font-weight: 600;
   line-height: 1;
-  border: 3px solid var(--cinnabar);
-  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--gold) 72%, transparent);
-  margin-bottom: 18px;
+  margin-bottom: var(--s-3);
 }
 
-.result__line { margin: 0 0 24px; color: var(--ink-2); }
+.result__line { margin: 0 0 var(--s-4); color: var(--text-muted); }
 
 .result__stats {
   display: grid;
@@ -1197,250 +1054,184 @@ kbd {
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
-.result__stats--4 { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
+.result__stats--4 { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
 
 .stat {
-  padding: 18px 20px;
+  padding: var(--s-3) var(--s-3);
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
   border-left: 1px solid var(--rule-soft);
 }
 .stat:first-child { padding-left: 0; border-left: 0; }
 .stat__num {
-  font-family: var(--font-display);
-  font-size: 30px;
-  line-height: 1;
+  font-size: var(--t-xl);
+  line-height: 1.1;
   font-variant-numeric: tabular-nums;
 }
-.stat__label { font-size: 12.5px; color: var(--ink-3); }
+.stat__label { font-size: var(--t-sm); color: var(--text-muted); }
 
-/* ─────────────────────────────────────────────────────────── danh sách ── */
+/* ──────────────────────────────────────────────────────── danh sách ── */
 
 .list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
-
 .list li {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 4px 14px;
-  padding: 13px 2px;
+  gap: var(--s-2) var(--s-3);
+  padding-block: 10px;
   border-bottom: 1px solid var(--rule-soft);
 }
-
-.list__zh {
-  font-family: var(--font-zh);
-  font-size: 21px;
-  font-weight: 600;
-  min-width: 4.5em;
-}
+.list__zh { font-family: var(--font-zh); font-size: var(--t-md); min-width: 7rem; }
 .list__vi { flex: 1 1 180px; }
-.list__py {
-  font-family: var(--font-pinyin);
-  font-style: italic;
-  color: var(--cinnabar);
-  font-size: 14.5px;
-}
-.list__ctx { font-size: 13px; color: var(--ink-3); }
+.list__py { font-family: var(--font-pinyin); font-style: italic; color: var(--accent-strong); font-size: var(--t-sm); }
+.list__ctx { font-size: var(--t-sm); color: var(--text-faint); }
+.list--browse li { padding-block: 12px; }
+.list__qa { flex-direction: column; align-items: flex-start; gap: 4px; }
+.list__q { font-family: var(--font-zh); font-size: var(--t-base); }
+.list__a { font-family: var(--font-zh); color: var(--text-muted); }
 
-.list--browse li { padding-block: 15px; }
+.empty { padding: var(--s-4) 0; color: var(--text-faint); }
+.list + .empty { text-align: center; }
+#stat-bars .empty { padding: 0 0 var(--s-3); }
 
-/* Tra cứu thẻ hỏi đáp: câu hỏi trên, đáp án dưới */
-.list__qa { flex-direction: column; align-items: flex-start; gap: 5px; }
-.list__q {
-  font-family: var(--font-zh);
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--ink-2);
-}
-.list__a {
-  font-family: var(--font-zh);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.45;
-}
+.search { margin-bottom: var(--s-3); }
 
-.empty {
-  padding: 28px 0;
-  color: var(--ink-3);
-}
-/* Trong danh sách tra cứu thì căn giữa mới đúng, còn ở trang tiến độ nó là
-   một câu mở đầu, phải căn trái như mọi dòng khác. */
-.list + .empty, .empty--center { text-align: center; }
-#stat-bars .empty { padding: 0 0 22px; }
-
-.search { margin-bottom: 14px; }
-
-/* ──────────────────────────────────────────────────────── biểu đồ cột ── */
+/* ───────────────────────────────────────────────────────── tiến độ ── */
 
 .bars { display: flex; flex-direction: column; }
 
-/* Mỗi môn một khối, đường kẻ chỉ nằm giữa các môn. Trước đây mỗi hàng chủ đề
-   kéo theo một thanh tiến độ nền xám riêng: 23 vạch chết khi chưa học gì. */
 .subj + .subj {
-  margin-top: 26px;
-  padding-top: 26px;
-  border-top: 1px solid var(--rule-soft);
+  margin-top: var(--s-4);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--rule);
 }
+.bars__subject { margin: 0; font-size: var(--t-md); font-weight: 600; }
 .subj__sum {
-  margin: 2px 0 10px;
-  font-size: 14px;
-  color: var(--ink-3);
+  margin: 2px 0 var(--s-2);
+  font-size: var(--t-sm);
+  color: var(--text-faint);
   font-variant-numeric: tabular-nums;
 }
 
-.trows { list-style: none; margin: 14px 0 0; padding: 0; }
+.bar__track { height: 4px; background: var(--surface-sunk); display: flex; }
+.bar__seg--learned { background: var(--accent); }
+.bar__seg--learning { background: var(--c-green-400); }
 
+.trows { list-style: none; margin: var(--s-3) 0 0; padding: 0; }
 .trow {
   position: relative;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 16px;
-  padding: 9px 0;
-  font-size: 14.5px;
+  gap: var(--s-3);
+  padding: 7px 0;
+  font-size: var(--t-base);
 }
-.trow__num { color: var(--ink-3); font-variant-numeric: tabular-nums; flex: none; }
-
-/* Vạch đã thuộc: không có nền track, và chỉ vẽ khi thật sự có tiến độ. */
-.trow__fill {
-  position: absolute;
-  left: 0; bottom: 0;
-  height: 2px;
-  background: var(--jade);
-}
-
-.bars__subject {
-  margin: 10px 0 2px;
-  font-family: var(--font-display);
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--ink);
-}
-.bars__subject:first-child { margin-top: 0; }
-
-.bar__head {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  font-size: 14px;
-  margin-bottom: 6px;
-}
-.bar__num { color: var(--ink-3); font-variant-numeric: tabular-nums; }
-
-.bar__track {
-  height: 8px;
-  background: var(--surface-2);
-  overflow: hidden;
-  display: flex;
-}
-.bar__seg--learned { background: var(--jade); }
-.bar__seg--learning { background: var(--ochre); }
+.trow__num { color: var(--text-faint); font-variant-numeric: tabular-nums; flex: none; }
+.trow__fill { position: absolute; left: 0; bottom: 0; height: 2px; background: var(--accent); }
 
 .bar__legend {
-  margin: 6px 0 0;
-  font-size: 12px;
-  color: var(--ink-3);
+  margin: var(--s-3) 0 0;
+  font-size: var(--t-sm);
+  color: var(--text-muted);
   display: flex;
-  gap: 14px;
+  gap: var(--s-4);
   flex-wrap: wrap;
 }
-.dot {
-  display: inline-block;
-  width: 7px; height: 7px;
-  margin-right: 6px;
-}
-.dot--learned { background: var(--jade); }
-.dot--learning { background: var(--ochre); }
-.dot--new { background: var(--surface-2); }
+.dot { display: inline-block; width: 8px; height: 8px; margin-right: 6px; }
+.dot--learned { background: var(--accent); }
+.dot--learning { background: var(--c-green-400); }
+.dot--new { background: var(--surface-sunk); border: 1px solid var(--rule); }
 
-.prose { max-width: var(--measure); color: var(--ink-2); font-size: 14.5px; }
+.prose { max-width: var(--measure); color: var(--text-muted); }
 
-/* ───────────────────────────────────────────────────────────── chân trang ── */
+/* ───────────────────────────────────────────────────────── chân trang ── */
 
 .foot {
   margin-top: auto;
-  border-top: 0;
-  color: var(--ink-2);
-  font-size: 13px;
+  border-top: 1px solid var(--rule);
+  color: var(--text-muted);
+  font-size: var(--t-sm);
 }
-.foot .wrap {
-  padding-block: 22px;
-  background: transparent;
-  box-shadow: none;
-}
-.foot .wrap::before { display: none; }
+.foot .wrap { padding-block: var(--s-4); }
 .foot p { margin: 0; }
-.foot__fine { margin-top: 4px; opacity: .8; }
+.foot__fine { margin-top: 2px; color: var(--text-faint); }
 
-/* ───────────────────────────────────────────────────────────────── toast ── */
+/* ───────────────────────────────────────────────────────────── toast ── */
 
 .toast {
   position: fixed;
   left: 50%;
-  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
   transform: translateX(-50%);
   z-index: 40;
-  background: var(--ink);
-  color: var(--paper);
-  padding: 11px 18px;
-  border-radius: var(--radius);
-  font-size: 14px;
-  box-shadow: var(--lift);
+  background: var(--text);
+  color: var(--surface);
+  padding: 10px 18px;
+  font-size: var(--t-sm);
   max-width: calc(100vw - 32px);
 }
 
-/* ──────────────────────────────────────────────────────────── responsive ── */
+/* ───────────────────────────────────────────────────────── responsive ── */
+
+@media (max-width: 760px) {
+  /* Ô luyện chữ xuống dưới khối chữ, vẫn căn trái cùng một mép. */
+  .hero { grid-template-columns: 1fr; gap: var(--s-4); }
+  .tianzige { font-size: clamp(72px, 22vw, 108px); }
+}
 
 @media (max-width: 560px) {
-  /* Hàng trên gồm logo, bộ chọn môn và nút sáng tối; thanh điều hướng
-     xuống hàng dưới. Logo co được để nút sáng tối không bị đẩy xuống
-     một hàng riêng của nó. */
-  .topbar__inner { flex-wrap: wrap; row-gap: 6px; gap: 8px; }
-  .brand { min-width: 0; flex: 0 1 auto; }
+  .topbar__inner { flex-wrap: wrap; row-gap: 4px; gap: var(--s-2); }
+  /* Logo co lại để bộ chọn môn và nút sáng tối còn nằm chung một hàng. */
+  .brand { min-width: 0; flex: 1 1 auto; margin-right: 0; }
   .brand__text { min-width: 0; }
-  .brand__text strong {
-    font-size: 15px;
-    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-  }
+  .brand__text strong { font-size: var(--t-sm); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .brand__sub { display: none; }
-  .seal { width: 32px; height: 32px; font-size: 19px; }
 
   .switcher { flex: 0 1 auto; min-width: 0; }
-  .switcher__select { max-width: 7.5rem; font-size: 13px; padding-right: 24px; }
+  .switcher__select { max-width: 7rem; font-size: var(--t-xs); padding-right: 24px; }
 
-  .nav { order: 3; width: 100%; overflow-x: auto; padding-bottom: 2px; }
-  .nav__link { padding-inline: 11px; }
+  .nav { order: 3; width: 100%; gap: var(--s-4); overflow-x: auto; }
+  body.is-studying .nav { display: none; }
 
   .today { flex-direction: column; align-items: stretch; }
-  .today__actions .btn { flex: 1; }
+  /* flex-basis 18rem trong hộp xếp dọc biến thành chiều cao 18rem, để lại
+     một khoảng trống chết giữa dòng chữ và hai cái nút. */
+  .today__main { flex: 0 0 auto; }
+  .today__actions { gap: var(--s-3) var(--s-4); }
+
+  #setup-subject { grid-template-columns: 1fr; }
+  #setup-subject button { border-left: 0; border-top: 1px solid var(--rule); }
+  #setup-subject button:first-child { border-top: 0; }
 
   .grade { grid-template-columns: repeat(2, 1fr); }
   .result__stats { grid-template-columns: 1fr; }
+  .stat { border-left: 0; border-top: 1px solid var(--rule-soft); padding-left: 0; }
+  .stat:first-child { border-top: 0; }
 
   .answer-type { flex-direction: column; }
   .answer-type .btn { width: 100%; }
 
+  .topic { grid-template-columns: 2.6em minmax(0, 1fr); row-gap: 0; }
+  .topic__meta { grid-column: 2; }
+
   .list__zh { min-width: 0; flex-basis: 100%; }
   .kbd-hint { display: none; }
-
-  /* Màn hẹp không đủ chỗ cho vết khắc: nó chỉ còn một lát cắt ở mép trên,
-     trông như vết bẩn chứ không ra con chữ. Bỏ hẳn. */
-  .watermark { display: none; }
-
-  /* Đang học trên điện thoại: hàng điều hướng ăn mất một dải màn hình.
-     Nút Thoát và logo (về trang chủ) vẫn đủ để đi tiếp. */
-  body.is-studying .nav { display: none; }
 }
 
-/* ──────────────────────────────────────────────────────── chuyển động ── */
+@media (min-width: 561px) {
+  #btn-start { width: auto; align-self: flex-start; padding-inline: 40px; }
+}
 
-/* Chỉ động ở ba chỗ có nghĩa: mở đáp án, tấm thẻ hạ xuống, vệt mực chấm bài. */
+/* ───────────────────────────────────────────────────────── chuyển động ── */
+
+/* Chỉ động ở ba chỗ, và cả ba đều trả lời một hành động của người dùng. */
 @media (prefers-reduced-motion: no-preference) {
-  /* Bấm vào thì vật phải lún xuống một chút, như con dấu ấn xuống giấy. */
-  .btn, .quick, .topic, .chip, .subject,
-  .segmented button, .grade__btn, .choice, .icon-btn {
-    transition: transform .08s ease-out;
+  .btn, .quick, .topic, .chip, .subject, .segmented button,
+  .grade__btn, .choice, .icon-btn, .linkish {
+    transition: background .15s ease, color .15s ease,
+                border-color .15s ease, transform .08s ease-out;
   }
   .btn:active, .quick:active:not(:disabled), .topic:active, .chip:active,
   .subject:active, .segmented button:active, .grade__btn:active,
@@ -1449,40 +1240,27 @@ kbd {
   }
   .star:active .icon { transform: scale(.88); }
 
-  .card__back:not([hidden]) {
-    animation: unfold 320ms cubic-bezier(.2, .75, .3, 1) both;
-  }
-  .card.is-turning {
-    animation: settle 340ms cubic-bezier(.25, .8, .3, 1);
-  }
+  .card__back:not([hidden]) { animation: unfold 300ms cubic-bezier(.2, .75, .3, 1) both; }
+  .card.is-turning { animation: settle 320ms cubic-bezier(.25, .8, .3, 1); }
   .verdict--right::before,
-  .verdict--wrong::before {
-    animation: ink-bleed 560ms cubic-bezier(.22, .7, .3, 1) both;
-  }
+  .verdict--wrong::before { animation: ink-bleed 520ms cubic-bezier(.22, .7, .3, 1) both; }
 }
 
-/* mặt sau mở ra như tờ giấy gập, bản lề ở mép trên */
 @keyframes unfold {
-  from {
-    opacity: 0;
-    transform: perspective(1200px) rotateX(-14deg) translateY(-8px);
-    transform-origin: 50% 0;
-  }
-  to { opacity: 1; transform: none; }
+  from { opacity: 0; transform: perspective(1200px) rotateX(-12deg) translateY(-6px); transform-origin: 50% 0; }
+  to   { opacity: 1; transform: none; }
 }
 
-/* tấm thẻ nhấc lên rồi đặt lại khi lật, đủ để mắt biết vừa có chuyện gì */
 @keyframes settle {
-  0%   { transform: perspective(1600px) rotateX(0) translateY(0); }
-  40%  { transform: perspective(1600px) rotateX(-2.2deg) translateY(-4px); }
-  100% { transform: perspective(1600px) rotateX(0) translateY(0); }
+  0%   { transform: translateY(0); }
+  40%  { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
 }
 
-/* giọt mực rơi xuống rồi loang ra và nhạt dần */
 @keyframes ink-bleed {
-  0%   { opacity: .32; transform: scale(.06); }
-  65%  { opacity: .12; }
-  100% { opacity: 0;   transform: scale(2); }
+  0%   { opacity: .3; transform: scale(.06); }
+  65%  { opacity: .1; }
+  100% { opacity: 0; transform: scale(2); }
 }
 
 @media (prefers-reduced-motion: reduce) {

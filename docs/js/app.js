@@ -178,7 +178,7 @@
     select.innerHTML = SUBJECTS.map(function (subject) {
       var due = dueIn(subject.cards);
       return '<option value="' + esc(subject.id) + '">' +
-        esc(subject.zh) + ' · ' + esc(subject.short || subject.name) +
+        esc(subject.zh) + ' ' + esc(subject.short || subject.name) +
         (due ? ' (' + due + ')' : '') + '</option>';
     }).join('');
     select.value = state.subject;
@@ -246,8 +246,11 @@
 
     $('home-total').textContent = cards.length;
     $('home-source').textContent = subject.name;
-    $('hero-zh').textContent = subject.zh;
-    $('home-watermark').textContent = subject.zh;
+    // Mỗi chữ một ô 田字格, đúng như trang giấy tập viết.
+    $('hero-zh').innerHTML = subject.zh.split('').map(function (ch) {
+      return '<span class="tianzige__cell">' +
+        '<span class="tianzige__char">' + esc(ch) + '</span></span>';
+    }).join('');
 
     // Dòng trạng thái: nói tình hình thật, không giải thích cách app hoạt động.
     var learned = countBy(function (p) { return LC.srs.isLearned(p); });

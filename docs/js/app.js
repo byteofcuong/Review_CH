@@ -574,8 +574,6 @@
     py.hidden = isQa;                       // câu trả lời dài, pinyin vô dụng
     if (!isQa) {
       py.textContent = card.pinyin;
-      if (card.pinyinAuto) py.setAttribute('data-auto', '1');
-      else py.removeAttribute('data-auto');
     }
 
     // Không lặp lại chính câu hỏi ở mặt sau: nếu vừa hỏi bằng tiếng Việt thì

@@ -322,13 +322,15 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 .watermark {
   position: absolute;
-  top: -.1em;
-  right: -.06em;
+  top: 0;
+  right: 0;
   z-index: 0;
   font-family: var(--font-zh);
   font-weight: 900;
   font-size: clamp(200px, 36vw, 440px);
-  line-height: .74;
+  /* line-height 1 là mức thấp nhất mà nét trên cùng của chữ Hán còn nằm
+     trong khung; thấp hơn nữa là đỉnh chữ bị thanh trên cắt mất. */
+  line-height: 1;
   letter-spacing: -.05em;
   color: var(--ink);
   opacity: var(--watermark-o);
@@ -977,15 +979,6 @@ body.is-studying #view-study > .wrap {
   font-style: italic;
   font-size: 18px;
   color: var(--cinnabar);
-}
-.reveal__py[data-auto="1"]::after {
-  content: " ·  pinyin tự sinh";
-  font-style: normal;
-  font-family: var(--font-body);
-  font-size: 11px;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--ochre);
 }
 .reveal__vi { margin: 0; font-size: 18px; }
 .reveal__alt, .reveal__note {

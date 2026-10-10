@@ -55,8 +55,9 @@
 
   --gutter: clamp(16px, 4vw, 40px);
   --measure: 62ch;
-  --radius: 3px;
-  --radius-lg: 5px;
+  /* Giấy in không có góc bo. Mọi khung đều vuông, như 版框 của trang khắc. */
+  --radius: 0;
+  --radius-lg: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -161,7 +162,6 @@ button, input { font: inherit; color: inherit; }
 :focus-visible {
   outline: 2px solid var(--cinnabar);
   outline-offset: 2px;
-  border-radius: 2px;
 }
 
 .sr-only {
@@ -241,7 +241,6 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   font-size: 18px;
   line-height: 1;
   border: 2px solid var(--cinnabar);
-  border-radius: 2px;
   box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--seal-fg) 60%, transparent);
   flex: none;
 }
@@ -374,15 +373,15 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 /* ─────────────────────────────────────────────────────── thẻ hôm nay ── */
 
+/* Không phải cái hộp nữa. Đây là dải việc cần làm, kẹp giữa đường văn võ:
+   một nét dày bên trên, một nét mảnh bên dưới, đúng lối 文武边框 của sách
+   khắc. Bó trong bề ngang đọc được để không còn khoảng trống chết ở giữa. */
 .today {
-  margin-top: 30px;
-  padding: clamp(22px, 3.8vw, 30px);
-  background-color: var(--surface);
-  background-image: var(--grain);
-  border: 1px solid var(--rule);
-  border-left: 4px solid var(--cinnabar);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--lift-sm);
+  max-width: var(--measure);
+  margin-top: 34px;
+  padding: 20px 0 22px;
+  border-top: 3px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -412,33 +411,38 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 /* Không có thẻ đến hạn: bỏ con số, nhường chỗ cho lời mời học thẻ mới */
 .today--clear .today__count { display: none; }
 .today--clear .today__label { margin-bottom: 6px; }
-.today--clear { border-left-color: var(--rule); }
+.today--clear { border-top-color: var(--ink-3); }
 
 /* ─────────────────────────────────────────────────────────── chọn môn ── */
 
 /* Tên môn đang học đã nằm ở tiêu đề trang, nên đây chỉ còn là dải chuyển
    môn: chữ Hán, tên ngắn, số thẻ đến hạn. Không lặp lại cả tấm thẻ. */
 .subject-tabs {
+  max-width: var(--measure);
   margin-top: 22px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  column-gap: 30px;
+  border-bottom: 1px solid var(--rule);
 }
 
+/* Tab gạch chân, không phải viên thuốc bo tròn. */
 .subject {
   display: flex;
   align-items: center;
   gap: 9px;
   min-height: 44px;
-  padding: 8px 14px;
+  padding: 10px 0;
+  margin-bottom: -1px;
   text-align: left;
   background: transparent;
-  border: 1px solid var(--rule);
-  border-radius: 100px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  color: var(--ink-2);
   cursor: pointer;
-  transition: border-color .15s, background .15s, color .15s;
+  transition: color .15s, border-color .15s;
 }
-.subject:hover { border-color: var(--ink-3); background: var(--surface); }
+.subject:hover { color: var(--ink); }
 
 .subject__seal {
   flex: none;
@@ -453,16 +457,16 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 .subject__name { font-size: 14.5px; }
 .subject__meta { font-size: 13px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
 
-/* môn đang chọn: nền son nhạt, viền son, không cần tô đặc */
+/* môn đang chọn: một nét son dưới chân, đủ rồi */
 .subject[aria-selected="true"] {
-  background: var(--cinnabar-wash);
-  border-color: var(--cinnabar);
+  border-bottom-color: var(--cinnabar);
+  color: var(--ink);
 }
 .subject[aria-selected="true"] .subject__seal,
 .subject[aria-selected="true"] .subject__name { color: var(--cinnabar); }
 .subject[aria-selected="true"] .subject__name { font-weight: 500; }
 
-.subject-tabs--inline { margin-top: 0; margin-bottom: 14px; }
+.subject-tabs--inline { max-width: none; margin-top: 0; margin-bottom: 18px; }
 
 .other-note {
   margin: 14px 0 0;
@@ -504,28 +508,36 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 /* ─────────────────────────────────────────────────────────── lưới chủ đề ── */
 
+/* Kẻ dọc chia cột như 界行 trên trang khắc, không phải bốn tấm thẻ bo góc
+   giống hệt nhau. Nét kẻ do khe của lưới để lộ nền bên dưới, nên tự đúng cả
+   khi xuống dòng. */
 .topic-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px;
+  background: var(--rule-soft);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
 }
 
 .topic {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 18px;
+  gap: 9px;
+  padding: 20px;
   text-align: left;
-  background: transparent;
-  border: 1px solid var(--rule);
-  border-radius: var(--radius-lg);
+  background: var(--paper);
+  border: 0;
   cursor: pointer;
-  transition: border-color .15s, background .15s, transform .15s;
+  transition: background .15s;
 }
-.topic:hover {
-  border-color: var(--ink-3);
-  background: var(--surface);
-  transform: translateY(-1px);
+.topic:hover { background: var(--surface); }
+
+@media (min-width: 561px) {
+  .topic-grid { margin-left: -20px; width: calc(100% + 20px); }
+}
+@media (max-width: 560px) {
+  .topic { padding-inline: 0; }
 }
 
 .topic__zh {
@@ -545,7 +557,6 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 .meter {
   height: 3px;
   background: var(--surface-2);
-  border-radius: 2px;
   overflow: hidden;
 }
 .meter__fill { height: 100%; background: var(--jade); }
@@ -650,7 +661,6 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   padding: 0 16px;
   background: transparent;
   border: 1px solid var(--rule);
-  border-radius: 100px;
   font-size: 14px;
   color: var(--ink-2);
   cursor: pointer;
@@ -792,7 +802,6 @@ body.is-studying #view-study > .wrap {
   font-size: 12px;
   padding: 2px 8px;
   border: 1px solid var(--rule);
-  border-radius: 100px;
   color: var(--ink-2);
 }
 
@@ -1085,7 +1094,6 @@ kbd {
   font-size: 11.5px;
   padding: 2px 5px;
   border: 1px solid var(--rule);
-  border-radius: 3px;
   background: var(--surface);
 }
 
@@ -1102,7 +1110,6 @@ kbd {
   font-weight: 900;
   line-height: 1;
   border: 3px solid var(--cinnabar);
-  border-radius: 2px;
   box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--seal-fg) 60%, transparent);
   margin-bottom: 18px;
 }
@@ -1249,7 +1256,6 @@ kbd {
 .bar__track {
   height: 8px;
   background: var(--surface-2);
-  border-radius: 2px;
   overflow: hidden;
   display: flex;
 }
@@ -1267,8 +1273,7 @@ kbd {
 .dot {
   display: inline-block;
   width: 7px; height: 7px;
-  border-radius: 50%;
-  margin-right: 5px;
+  margin-right: 6px;
 }
 .dot--learned { background: var(--jade); }
 .dot--learning { background: var(--ochre); }
@@ -1352,6 +1357,18 @@ kbd {
 
 /* Chỉ động ở ba chỗ có nghĩa: mở đáp án, tấm thẻ hạ xuống, vệt mực chấm bài. */
 @media (prefers-reduced-motion: no-preference) {
+  /* Bấm vào thì vật phải lún xuống một chút, như con dấu ấn xuống giấy. */
+  .btn, .quick, .topic, .chip, .subject,
+  .segmented button, .grade__btn, .choice, .icon-btn {
+    transition: transform .08s ease-out;
+  }
+  .btn:active, .quick:active:not(:disabled), .topic:active, .chip:active,
+  .subject:active, .segmented button:active, .grade__btn:active,
+  .choice:active:not(:disabled), .icon-btn:active {
+    transform: translateY(1px);
+  }
+  .star:active .icon { transform: scale(.88); }
+
   .card__back:not([hidden]) {
     animation: unfold 320ms cubic-bezier(.2, .75, .3, 1) both;
   }

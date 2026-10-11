@@ -57,9 +57,11 @@
   /* Dải khung, thanh trên và mặt giấy phải là hai tông khác nhau, đúng như
      bản tối: ở đó khung #15120E nằm dưới mặt nền một bậc 30%, nhờ thế mới
      thấy được đâu là mép đá đâu là mặt bia. Bản sáng trước đây để hai thứ
-     bằng đúng nhau nên nhìn phẳng lì. */
-  --bg:         #E2D4B5;
-  --bg-2:       #D9C9A5;
+     bằng đúng nhau nên nhìn phẳng lì.
+     Sắc phải tránh vùng 41-44 độ: đó là vùng khaki, đã bị loại một lần ở
+     b46e92f. Nâu trầm này ở sắc 34 độ. */
+  --bg:         #C9B9A4;
+  --bg-2:       #BDAB92;
   --surface:    #FBF7EE;
   --surface-2:  #F0E9DA;
   --line:       #C7BB9F;
@@ -67,12 +69,14 @@
 
   --text:       #17120C;
   --text-2:     #4A4133;
-  /* Nền sáng nay thẫm hơn (dải khung #E2D4B5), nên chữ phụ phải xuống
-     theo: #6D6250 chỉ còn 4.08:1 trên nền đó. */
-  --text-3:     #645A49;
+  /* Dải khung #C9B9A4 thẫm, nên chữ phụ phải xuống theo: #6D6250 chỉ còn
+     4.08:1 trên nền đó, #645A49 còn 3.53:1. */
+  --text-3:     #52493B;
 
   /* 朱砂: màu nhấn duy nhất. --accent đọc được ở cỡ chữ thường (5.6:1). */
-  --accent:       #A82611;
+  /* Son phải đậm hơn vì giờ còn phải đọc được trên dải khung #C9B9A4:
+     #A82611 chỉ còn 3.71:1 ở đó. Màu này 4.57:1 trên khung, 7.88:1 trên giấy. */
+  --accent:       #90200E;
   --accent-edge:  #B32C16;
   --accent-solid: #B32C16;
   --accent-wash:  rgba(163, 38, 16, .09);
@@ -92,7 +96,7 @@
 
   --ok:      #2C6244;
   --ok-wash: rgba(44, 98, 68, .10);
-  --no:      #A32610;
+  --no:      #8F200E;   /* cùng mức với --accent, đọc được trên dải khung */
   --no-wash: rgba(163, 38, 16, .09);
 
   --inner-top: inset 0 1px 0 rgba(255, 255, 255, .55);
@@ -104,7 +108,7 @@
      nên nổi được vân mà không kéo tụt màu giấy. Một lớp nhiễu xám
      thường chỉ làm nền kem xỉn đi chứ không thành hạt. */
   --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='d'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.62' numOctaves='4' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.1 0 0 0 0 0.085 0 0 0 0 0.06 0.85 0 0 0 -0.425'/%3E%3C/filter%3E%3Cfilter id='l'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.62' numOctaves='4' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 0.961 0 0 0 0 0.882 -0.85 0 0 0 0.425'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23d)'/%3E%3Crect width='200' height='200' filter='url(%23l)'/%3E%3C/svg%3E");
-  --frame-bg:   #E2D4B5;
+  --frame-bg:   #C9B9A4;
   --mount-line: #A89A7C;
   /* Dải sáng tối phải rất hẹp: bốn dải mép là màu phẳng, chênh nhiều thì
      lộ ra một đường cắt ngang đúng chỗ khung. */

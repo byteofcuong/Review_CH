@@ -317,7 +317,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -330,7 +330,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Bài giảng nguyên văn.",
    "conf": 3
   },
@@ -343,7 +343,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -356,7 +356,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Bài giảng: 汉字…一直在使用 — chữ Hán chưa từng biến mất.",
    "conf": 3
   },
@@ -369,7 +369,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Tính liên tục của văn hoá Trung Quốc rất mạnh.",
    "conf": 3
   },
@@ -382,7 +382,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Cái nôi là trung hạ du Hoàng Hà, không phải Trường Giang.",
    "conf": 3
   },
@@ -395,7 +395,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "An Dương (Ân Khư) là nơi tìm ra giáp cốt văn và là đô thành nhà Thương.",
    "conf": 3
   },
@@ -408,7 +408,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Bài giảng: 镐京(西安附近), 咸阳（今西安）, 长安（今西安）.",
    "conf": 3
   },
@@ -421,7 +421,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Khớp phương án C của trắc nghiệm câu 5: 前475—公元1840.",
    "conf": 3
   },
@@ -434,7 +434,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Bài giảng nguyên văn.",
    "conf": 3
   },
@@ -447,7 +447,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Bài giảng: 父系…以龙山文化为代表.",
    "conf": 3
   },
@@ -460,7 +460,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Các thuyết về tam hoàng ngũ đế khác nhau giữa các sách.",
    "conf": 3
   },
@@ -473,7 +473,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Trận Trác Lộc là Hoàng Đế đánh Xuy Vưu, không phải Thần Nông.",
    "conf": 3
   },
@@ -486,7 +486,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Bài giảng dùng 炎黄子孙: tổ tiên là Viêm Đế và Hoàng Đế.",
    "conf": 3
   },
@@ -499,7 +499,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Bài giảng: 从禹开始到桀死亡.",
    "conf": 3
   },
@@ -512,7 +512,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Bài giảng: 当时适合农业的-日历已经出现，就是…夏历.",
    "conf": 3
   },
@@ -525,7 +525,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Bài giảng tính từ Vũ, không phải từ Cổn.",
    "conf": 3
   },
@@ -538,7 +538,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Cổn đắp đê nên thất bại; Vũ khơi dòng dẫn nước nên thành công.",
    "conf": 3
   },
@@ -551,7 +551,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -564,7 +564,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Trụ Vương họ Tử (子受/帝辛); 纣 là tên gọi xấu đặt sau khi chết.",
    "conf": 3
   }

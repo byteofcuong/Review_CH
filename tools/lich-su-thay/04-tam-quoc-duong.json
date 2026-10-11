@@ -287,7 +287,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -300,7 +300,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -313,7 +313,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -326,7 +326,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Tuân Úc, Quách Gia, Giả Hủ, Tuân Du đều là mưu sĩ của Tào Tháo.",
    "conf": 3
   },
@@ -339,7 +339,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -352,7 +352,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Kinh Châu không phải Chu Du lấy từ tay Quan Vũ.",
    "conf": 3
   },
@@ -365,7 +365,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -378,7 +378,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -391,7 +391,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -404,7 +404,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Tư Mã Duệ xưng đế ở Kiến Khang năm 317, không phải năm 400.",
    "conf": 3
   },
@@ -417,7 +417,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Bài giảng ghi 北魏、东/西魏、北齐、北周 — mệnh đề thiếu Tây Ngụy.",
    "conf": 2
   },
@@ -430,7 +430,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Hiếu Văn Đế BẮT BUỘC nói tiếng Hán, mặc Hán phục, đổi họ Hán — mệnh đề nói ngược.",
    "conf": 3
   },
@@ -443,7 +443,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Dương Kiên đổi quốc hiệu thành Tuỳ, không phải Đường.",
    "conf": 3
   },
@@ -456,7 +456,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Bài giảng nguyên văn.",
    "conf": 3
   },
@@ -469,7 +469,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -482,7 +482,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Nhà Tuỳ mất năm 618, không phải 638.",
    "conf": 3
   },
@@ -495,7 +495,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -508,7 +508,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Năm 618 Lý Uyên lập nhà Đường, không phải Lý Thế Dân.",
    "conf": 3
   },
@@ -521,7 +521,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Bài giảng: 626年，唐太宗李世民即位 — là Đường Thái Tông, không phải Đường Cao Tổ.",
    "conf": 3
   },
@@ -534,7 +534,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -547,7 +547,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -560,7 +560,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Bài giảng nêu đúng ba nguyên nhân này.",
    "conf": 3
   }

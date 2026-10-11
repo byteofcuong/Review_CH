@@ -190,7 +190,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -203,7 +203,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -216,7 +216,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Tây Hạ do Lý Nguyên Hạo lập năm 1038, không phải 960.",
    "conf": 3
   },
@@ -229,7 +229,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -242,7 +242,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -255,7 +255,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -268,7 +268,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "1368–1644 đúng 276 năm.",
    "conf": 3
   },
@@ -281,7 +281,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Chân Vũ Đại Đế là thần Đạo giáo, không phải Phật giáo.",
    "conf": 3
   },
@@ -294,7 +294,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Nỗ Nhĩ Cáp Xích mất năm 1626; nhà Thanh do Hoàng Thái Cực lập năm 1636.",
    "conf": 3
   },
@@ -307,7 +307,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Ngược lại: phe Ngụy Trung Hiền vu hãm Viên Sùng Hoán; Ngụy Trung Hiền tự sát rồi bị phanh thây.",
    "conf": 3
   },
@@ -320,7 +320,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   }

@@ -347,7 +347,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -360,7 +360,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Bài giảng nguyên văn.",
    "conf": 3
   },
@@ -373,7 +373,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Bài giảng nguyên văn.",
    "conf": 3
   },
@@ -386,7 +386,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Bài giảng nguyên văn.",
    "conf": 3
   },
@@ -399,7 +399,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Bài giảng nguyên văn: 公元前841年…朝政由诸侯共管，史称 共和行政.",
    "conf": 3
   },
@@ -412,7 +412,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -425,7 +425,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Khuyển Nhung ở phía tây (Thiểm Tây – Cam Túc), không phải Nội Mông.",
    "conf": 2
   },
@@ -438,7 +438,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Bài giảng: 春秋(前770—前476) — mốc chia là 476, không phải 400.",
    "conf": 3
   },
@@ -451,7 +451,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Bài giảng: Câu Tiễn 被周天子命为 伯，成为春秋时期最后一位霸主.",
    "conf": 3
   },
@@ -464,7 +464,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Bài giảng: 齐桓公…姜太公吕尚的第十二代孙.",
    "conf": 3
   },
@@ -477,7 +477,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Bài giảng: 春秋五霸之首; Tấn Văn Công mới là bá chủ thứ hai.",
    "conf": 3
   },
@@ -490,7 +490,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Bài giảng: 楚伐陆浑之戎 — là Sở, không phải Tần.",
    "conf": 3
   },
@@ -503,7 +503,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Câu này là lời Phạm Lãi nói về Câu Tiễn, không phải Câu Tiễn nói ra.",
    "conf": 2
   },
@@ -516,7 +516,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Bài giảng nguyên văn.",
    "conf": 3
   },
@@ -529,7 +529,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -542,7 +542,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Tam gia phân Tấn là Hàn, Triệu, Ngụy — không có Tần.",
    "conf": 3
   },
@@ -555,7 +555,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Bài giảng nguyên văn.",
    "conf": 3
   },
@@ -568,7 +568,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Phạm Thư là người nước Ngụy, không phải nước Sở.",
    "conf": 3
   },
@@ -581,7 +581,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Liêm Pha là tướng nước Triệu, không phải nước Tần.",
    "conf": 3
   },
@@ -594,7 +594,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "Lời Tô Tần thuyết Hàn Vương.",
    "conf": 3
   },
@@ -607,7 +607,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   },
@@ -620,7 +620,7 @@
     "错误"
    ],
    "a": "错误",
-   "aVi": "Sai",
+   "aVi": "",
    "note": "Pháp gia coi trọng pháp chế và thưởng phạt, gạt bỏ lễ nghi — mệnh đề nói ngược.",
    "conf": 3
   },
@@ -633,7 +633,7 @@
     "错误"
    ],
    "a": "正确",
-   "aVi": "Đúng",
+   "aVi": "",
    "note": "",
    "conf": 3
   }

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thử A — 碑帖</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Cormorant+Garamond:wght@600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap">
+<style>
+/* ══════════════════════════════════════════════════════════════════
+   THỬ A — 碑帖 thác bản
+   Cả trang là mặt bia đá dập mực: nền mực đen, chữ hiện ra trắng âm
+   bản. Viền 回纹 bao bốn phía. Ấn triện son đóng rải như người xưa
+   đóng lên thác bản mình sưu tầm. Đề bạt viết dọc bên phải.
+   ══════════════════════════════════════════════════════════════════ */
+
+:root {
+  --ink:      #15120E;
+  --ink-2:    #1E1A14;
+  --stone:    #262019;
+  --rub:      #EFE7D4;   /* chỗ giấy không ăn mực */
+  --rub-2:    #C2B79C;
+  --rub-3:    #8E8571;
+  --seal:     #B32C16;
+  --seal-2:   #8E1F10;
+
+  /* 回纹 chạy ngang, vẽ bằng SVG nhúng thẳng, không gọi file nào */
+  --hui-x: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='24'%3E%3Cpath d='M2 22 L2 2 L30 2 L30 16 L10 16 L10 9 L22 9' fill='none' stroke='%23C2B79C' stroke-width='2.5'/%3E%3C/svg%3E");
+  --hui-y: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='40'%3E%3Cpath d='M2 2 L22 2 L22 30 L8 30 L8 10 L15 10 L15 22' fill='none' stroke='%23C2B79C' stroke-width='2.5'/%3E%3C/svg%3E");
+
+  /* vân đá: nhiễu thô, đây là thứ làm mặt bia không phẳng như tấm bìa */
+  --stone-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='0.22'/%3E%3C/svg%3E");
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--ink);
+  background-image: var(--stone-grain),
+    radial-gradient(130% 80% at 50% 0%, var(--stone) 0%, var(--ink) 70%);
+  color: var(--rub);
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+  font-size: 15.5px;
+  line-height: 1.6;
+  padding: 26px;
+}
+
+/* ─── viền 回纹 bốn phía ────────────────────────────────────────── */
+.stele {
+  position: relative;
+  min-height: calc(100vh - 52px);
+  padding: 30px;
+  border: 2px solid var(--rub-3);
+  outline: 1px solid rgba(194,183,156,.3);
+  outline-offset: 7px;
+}
+.stele::before,
+.stele::after {
+  content: "";
+  position: absolute;
+  left: 26px; right: 26px;
+  height: 24px;
+  background-image: var(--hui-x);
+  background-repeat: repeat-x;
+  opacity: .72;
+}
+.stele::before { top: 7px; }
+.stele::after  { bottom: 7px; transform: scaleY(-1); }
+
+.stele__side {
+  position: absolute;
+  top: 26px; bottom: 26px;
+  width: 24px;
+  background-image: var(--hui-y);
+  background-repeat: repeat-y;
+  opacity: .72;
+}
+.stele__side--l { left: 7px; }
+.stele__side--r { right: 7px; transform: scaleX(-1); }
+
+.inner { position: relative; padding: 24px 30px 30px; }
+
+/* ─── đầu trang ─────────────────────────────────────────────────── */
+.top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(194,183,156,.34);
+}
+.chop {
+  width: 42px; height: 42px;
+  display: grid; place-items: center;
+  background: var(--seal);
+  color: #F6EDE2;
+  font-family: "Noto Serif SC", serif;
+  font-size: 24px; font-weight: 700;
+  box-shadow: inset 0 0 0 2px rgba(246,237,226,.5);
+  transform: rotate(-2deg);
+  flex: none;
+}
+.brand b { font-family: "Cormorant Garamond", serif; font-size: 22px; font-weight: 700; display: block; line-height: 1.1; }
+.brand span { font-family: "Noto Serif SC", serif; font-size: 12px; letter-spacing: .3em; color: var(--rub-2); }
+.nav { margin-left: auto; display: flex; gap: 22px; font-size: 14px; }
+.nav a { color: var(--rub-2); text-decoration: none; padding-bottom: 3px; }
+.nav a.on { color: var(--rub); border-bottom: 2px solid var(--seal); }
+
+/* ─── khối bia chính ────────────────────────────────────────────── */
+.plate {
+  position: relative;
+  margin-top: 26px;
+  padding: 40px 0 34px;
+  overflow: hidden;
+}
+
+/* chữ âm bản: trắng trên mực, mép hơi nhoè như mực thấm giấy */
+.rub-zh {
+  position: absolute;
+  top: 50%; right: 42px;
+  transform: translateY(-50%);
+  display: flex;
+  font-family: "Noto Serif SC", serif;
+  font-weight: 700;
+  font-size: clamp(150px, 27vw, 330px);
+  line-height: 1;
+  color: var(--rub);
+  opacity: .93;
+  white-space: nowrap;
+  text-shadow: 0 0 22px rgba(239,231,212,.18);
+}
+.rub-zh i { font-style: normal; }
+.rub-zh i:first-child { opacity: .3; }
+
+.plate__text { position: relative; z-index: 2; padding-bottom: 86px; }
+.plate h1 {
+  margin: 0 0 6px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(38px, 6.6vw, 76px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+  text-shadow: 0 2px 18px rgba(21,18,14,.9);
+}
+.plate p { margin: 0; color: var(--rub-2); text-shadow: 0 1px 10px rgba(21,18,14,.9); }
+
+/* đề bạt viết dọc, lối người xưa ghi chú bên lề thác bản */
+.colophon {
+  position: absolute;
+  top: 24px; right: 0;
+  z-index: 3;
+  writing-mode: vertical-rl;
+  font-family: "Noto Serif SC", serif;
+  font-size: 15px;
+  letter-spacing: .22em;
+  color: var(--rub-2);
+  padding-left: 12px;
+  border-left: 1px solid rgba(194,183,156,.4);
+}
+
+/* ấn triện đóng rải, hơi lệch, như đóng tay */
+.stamp {
+  position: absolute;
+  z-index: 4;
+  display: grid; place-items: center;
+  background: var(--seal);
+  color: #F8F0E6;
+  font-family: "Noto Serif SC", serif;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: inset 0 0 0 2px rgba(248,240,230,.55);
+  opacity: .92;
+}
+/* Đóng vào chỗ trống dưới khối chữ, không đè lên chữ Việt. */
+.stamp--1 { width: 58px; height: 58px; font-size: 29px; bottom: 10px; left: 0; transform: rotate(-5deg); }
+.stamp--2 { width: 40px; height: 74px; font-size: 21px; bottom: 2px; left: 76px; transform: rotate(3deg);
+            writing-mode: vertical-rl; letter-spacing: .1em; background: var(--seal-2); }
+
+/* ─── dải việc hôm nay ──────────────────────────────────────────── */
+.today {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px;
+  margin-top: 8px;
+  padding: 18px 0;
+  border-top: 2px solid var(--rub-3);
+  border-bottom: 1px solid rgba(194,183,156,.34);
+}
+.btn {
+  border: 0; cursor: pointer;
+  padding: 13px 28px;
+  background: var(--seal);
+  color: #F8F0E6;
+  font: inherit; font-weight: 600;
+  box-shadow: inset 0 0 0 1px rgba(248,240,230,.35);
+}
+.btn--q { background: none; box-shadow: none; color: var(--rub-2); padding: 13px 0;
+          text-decoration: underline; text-underline-offset: 5px; }
+
+/* ─── mục lục chủ đề ────────────────────────────────────────────── */
+.sec { margin-top: 30px; }
+.sec h2 {
+  margin: 0 0 4px;
+  font-size: 13px; font-weight: 500;
+  letter-spacing: .26em;
+  color: var(--rub-3);
+  font-family: "Noto Serif SC", serif;
+}
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(430px, 1fr)); column-gap: 46px; }
+.row {
+  display: grid; grid-template-columns: 3.4em 1fr auto;
+  align-items: baseline; gap: 14px;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(194,183,156,.2);
+}
+.row b { font-family: "Noto Serif SC", serif; font-size: 20px; font-weight: 500; color: var(--rub); }
+.row span { color: var(--rub-2); font-variant-numeric: tabular-nums; font-size: 13.5px; }
+
+.foot { margin-top: 34px; padding-top: 16px; border-top: 1px solid rgba(194,183,156,.2);
+        font-size: 13.5px; color: var(--rub-3); }
+
+@media (max-width: 760px) {
+  body { padding: 12px; }
+  .stele { padding: 22px; }
+  .inner { padding: 18px 10px 14px; }
+  .colophon { display: none; }
+  .stamp--2 { display: none; }
+  .rub-zh { font-size: clamp(130px, 40vw, 220px); }
+  .rub-zh i:first-child { opacity: .22; }
+}
+</style>
+</head>
+<body>
+
+<div class="stele">
+  <div class="stele__side stele__side--l"></div>
+  <div class="stele__side stele__side--r"></div>
+
+  <div class="inner">
+
+    <div class="top">
+      <div class="chop">堂</div>
+      <div class="brand"><b>Hán Ngữ Đường</b><span>汉语堂</span></div>
+      <nav class="nav"><a class="on" href="#">Học</a><a href="#">Tra cứu</a><a href="#">Tiến độ</a></nav>
+    </div>
+
+    <div class="plate">
+      <div class="rub-zh"><i>旅</i><i>游</i></div>
+      <div class="colophon">旅游专业词汇二百零三帖</div>
+      <div class="stamp stamp--1">旅</div>
+      <div class="stamp stamp--2">汉语堂</div>
+      <div class="plate__text">
+        <h1>Biên du lịch</h1>
+        <p>203 thẻ, chưa thuộc thẻ nào</p>
+      </div>
+    </div>
+
+    <div class="today">
+      <span>Hôm nay không có thẻ nào đến hạn</span>
+      <button class="btn">Học thẻ mới</button>
+      <button class="btn btn--q">Tự chọn phiên</button>
+    </div>
+
+    <div class="sec">
+      <h2>目录</h2>
+      <div class="grid">
+        <div class="row"><b>地名</b>Địa danh &amp; Di sản Việt Nam<span>0/97</span></div>
+        <div class="row"><b>词汇</b>Từ vựng ngành du lịch<span>0/60</span></div>
+        <div class="row"><b>名胜</b>Danh thắng Trung Quốc<span>0/33</span></div>
+        <div class="row"><b>短语</b>Cụm từ &amp; thành ngữ<span>0/13</span></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h2>温习</h2>
+      <div class="grid">
+        <div class="row"><b>标记</b>Thẻ đã đánh dấu<span>0</span></div>
+        <div class="row"><b>易错</b>Thẻ hay sai<span>0</span></div>
+        <div class="row"><b>未学</b>Thẻ chưa học<span>203</span></div>
+      </div>
+    </div>
+
+    <p class="foot">1052 thẻ từ Biên du lịch, Phiên dịch nâng cao và Lịch sử phong kiến Trung Quốc.</p>
+
+  </div>
+</div>
+
+</body>
+</html>

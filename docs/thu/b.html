@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thử B — 册页</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Cormorant+Garamond:wght@600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap">
+<style>
+/* ══════════════════════════════════════════════════════════════════
+   THỬ B — 册页 sách gấp
+   Mỗi khối là một tờ album có khung kép. 缠枝纹 dây leo cuốn chạy dọc
+   hai mép trang. Nền trong khung là 窗棂, hoa văn chấn song cửa sổ.
+   Góc khung có nẹp 回纹. Dày đặc bằng hoa văn chứ không bằng ảnh.
+   ══════════════════════════════════════════════════════════════════ */
+
+:root {
+  --paper:   #F2E9D5;
+  --paper-2: #E8DCC0;
+  --panel:   #FAF4E6;
+  --ink:     #1C1510;
+  --ink-2:   #4E4133;
+  --ink-3:   #71614C;
+  --gold:    #A9842C;
+  --gold-2:  #8A6A20;
+  --seal:    #B32C16;
+  --seal-2:  #8E1F10;
+
+  /* 缠枝纹: thân dây uốn, lá son, nụ nhũ vàng. Lặp dọc. */
+  --vine: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='96'%3E%3Cpath d='M27 0 C5 16 5 32 27 48 C49 64 49 80 27 96' fill='none' stroke='%238A6A20' stroke-width='3'/%3E%3Cpath d='M26 10 C14 2 4 8 6 20 C8 30 20 30 26 20 Z' fill='%23B32C16'/%3E%3Cpath d='M28 58 C40 50 50 56 48 68 C46 78 34 78 28 68 Z' fill='%23B32C16'/%3E%3Cpath d='M26 34 C18 30 12 34 13 41 C19 43 25 40 26 34 Z' fill='%23A9842C'/%3E%3Cpath d='M28 82 C36 78 42 82 41 89 C35 91 29 88 28 82 Z' fill='%23A9842C'/%3E%3Ccircle cx='27' cy='48' r='4' fill='%238A6A20'/%3E%3C/svg%3E");
+
+  /* 窗棂: chấn song cửa, lối 步步锦 */
+  --lattice: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cg stroke='%23A9842C' stroke-width='1.1' fill='none' opacity='0.34'%3E%3Cpath d='M0 32 H64 M32 0 V64'/%3E%3Crect x='19' y='19' width='26' height='26'/%3E%3Cpath d='M0 0 H13 V13 M64 0 H51 V13 M0 64 H13 V51 M64 64 H51 V51'/%3E%3C/g%3E%3C/svg%3E");
+
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 52px;
+  background-color: var(--paper);
+  background-image: var(--grain), linear-gradient(var(--paper), var(--paper-2));
+  color: var(--ink);
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+  font-size: 15.5px;
+  line-height: 1.62;
+}
+
+/* ─── 缠枝纹 chạy dọc hai mép trang ─────────────────────────────── */
+.vine {
+  position: fixed;
+  top: 0; bottom: 0;
+  width: 54px;
+  background-image: var(--vine);
+  background-repeat: repeat-y;
+  opacity: .85;
+  z-index: 5;
+  pointer-events: none;
+}
+.vine--l { left: 4px; }
+.vine--r { right: 4px; transform: scaleX(-1); }
+
+.page { max-width: 940px; margin: 0 auto; padding: 22px 0 46px; }
+
+/* ─── tờ album: khung kép, nẹp 回纹 bốn góc ─────────────────────── */
+.leaf {
+  position: relative;
+  margin-bottom: 22px;
+  padding: 24px 26px;
+  background-color: var(--panel);
+  border: 2px solid var(--gold-2);
+  outline: 1px solid var(--gold);
+  outline-offset: 4px;
+  box-shadow: 0 2px 4px rgba(28,21,16,.07), 0 16px 34px -18px rgba(28,21,16,.3);
+}
+.leaf::before, .leaf::after {
+  content: "";
+  position: absolute;
+  width: 20px; height: 20px;
+  border: 2px solid var(--seal);
+}
+.leaf::before { top: 6px;    left: 6px;  border-right: 0; border-bottom: 0; }
+.leaf::after  { bottom: 6px; right: 6px; border-left: 0;  border-top: 0; }
+
+/* ─── đầu trang ─────────────────────────────────────────────────── */
+.top { display: flex; align-items: center; gap: 14px; padding: 4px 0; }
+.chop {
+  width: 44px; height: 44px; flex: none;
+  display: grid; place-items: center;
+  background: var(--seal); color: #FBF3E8;
+  font-family: "Noto Serif SC", serif; font-size: 25px; font-weight: 700;
+  box-shadow: inset 0 0 0 2px rgba(251,243,232,.55);
+}
+.brand b { font-family: "Cormorant Garamond", serif; font-size: 23px; font-weight: 700; display: block; line-height: 1.1; }
+.brand span { font-family: "Noto Serif SC", serif; font-size: 12px; letter-spacing: .3em; color: var(--seal); }
+.nav { margin-left: auto; display: flex; gap: 22px; font-size: 14px; }
+.nav a { color: var(--ink-2); text-decoration: none; padding-bottom: 4px; }
+.nav a.on { color: var(--seal); border-bottom: 2px solid var(--seal); font-weight: 500; }
+
+/* ─── tờ chính: nền 窗棂, chữ Hán đè lên ────────────────────────── */
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  display: flex; align-items: center;
+  background-image: var(--lattice);
+  background-position: center;
+}
+.hero::after {           /* làm nhạt chấn song ở giữa để chữ nổi lên */
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(70% 90% at 32% 50%, var(--panel) 0%, rgba(250,244,230,.55) 55%, rgba(250,244,230,0) 80%);
+}
+.hero-zh {
+  position: absolute;
+  top: 50%; right: -.05em;
+  transform: translateY(-50%);
+  display: flex;
+  font-family: "Noto Serif SC", serif; font-weight: 700;
+  font-size: clamp(150px, 27vw, 310px);
+  line-height: 1;
+  white-space: nowrap;
+  background-image: linear-gradient(100deg,
+    rgba(179,44,22,.16) 0%, rgba(179,44,22,.16) 30%, #B32C16 74%, #8E1F10 100%);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+.hero__t { position: relative; z-index: 2; padding: 10px 4px; }
+.hero__t h1 {
+  margin: 0 0 6px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(38px, 6.4vw, 74px);
+  font-weight: 700; line-height: 1.04; letter-spacing: -.015em;
+}
+.hero__t p { margin: 0; color: var(--ink-2); }
+
+/* ─── dải việc hôm nay ──────────────────────────────────────────── */
+.today { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; }
+.today > span { font-size: 15.5px; }
+.btn {
+  border: 0; cursor: pointer; font: inherit; font-weight: 600;
+  padding: 13px 28px;
+  background: var(--seal); color: #FBF3E8;
+}
+.btn--q { background: none; color: var(--ink-2); padding: 13px 0; font-weight: 400;
+          text-decoration: underline; text-underline-offset: 5px; text-decoration-color: var(--gold); }
+
+/* ─── mục lục ───────────────────────────────────────────────────── */
+.cap {
+  display: flex; align-items: center; gap: 12px;
+  margin: 0 0 12px;
+  font-family: "Noto Serif SC", serif;
+  font-size: 17px; font-weight: 600; color: var(--seal);
+}
+.cap::after { content: ""; flex: 1; height: 3px; border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); column-gap: 38px; }
+.row {
+  display: grid; grid-template-columns: 3.4em 1fr auto;
+  align-items: baseline; gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px dotted var(--gold);
+}
+.row b { font-family: "Noto Serif SC", serif; font-size: 20px; font-weight: 500; color: var(--seal); }
+.row span { color: var(--ink-3); font-variant-numeric: tabular-nums; font-size: 13.5px; }
+
+.foot { max-width: 940px; margin: 0 auto; padding-bottom: 34px;
+        font-size: 13.5px; color: var(--ink-3); }
+
+@media (max-width: 760px) {
+  body { padding: 0 24px; }
+  .vine { width: 26px; background-size: 26px auto; }
+  .vine--l { left: 1px; } .vine--r { right: 1px; }
+  .leaf { padding: 18px 16px; }
+  .hero { min-height: 220px; }
+  .hero-zh { font-size: clamp(130px, 40vw, 220px);
+             background-image: linear-gradient(100deg, rgba(179,44,22,.15) 0%, rgba(179,44,22,.15) 56%, #B32C16 100%); }
+}
+</style>
+</head>
+<body>
+
+<div class="vine vine--l"></div>
+<div class="vine vine--r"></div>
+
+<div class="page">
+
+  <div class="leaf">
+    <div class="top">
+      <div class="chop">堂</div>
+      <div class="brand"><b>Hán Ngữ Đường</b><span>汉语堂</span></div>
+      <nav class="nav"><a class="on" href="#">Học</a><a href="#">Tra cứu</a><a href="#">Tiến độ</a></nav>
+    </div>
+  </div>
+
+  <div class="leaf hero">
+    <div class="hero-zh">旅游</div>
+    <div class="hero__t">
+      <h1>Biên du lịch</h1>
+      <p>203 thẻ, chưa thuộc thẻ nào</p>
+    </div>
+  </div>
+
+  <div class="leaf">
+    <div class="today">
+      <span>Hôm nay không có thẻ nào đến hạn</span>
+      <button class="btn">Học thẻ mới</button>
+      <button class="btn btn--q">Tự chọn phiên</button>
+    </div>
+  </div>
+
+  <div class="leaf">
+    <p class="cap">目录 &nbsp;Chủ đề</p>
+    <div class="grid">
+      <div class="row"><b>地名</b>Địa danh &amp; Di sản Việt Nam<span>0/97</span></div>
+      <div class="row"><b>词汇</b>Từ vựng ngành du lịch<span>0/60</span></div>
+      <div class="row"><b>名胜</b>Danh thắng Trung Quốc<span>0/33</span></div>
+      <div class="row"><b>短语</b>Cụm từ &amp; thành ngữ<span>0/13</span></div>
+    </div>
+  </div>
+
+  <div class="leaf">
+    <p class="cap">温习 &nbsp;Ôn nhanh</p>
+    <div class="grid">
+      <div class="row"><b>标记</b>Thẻ đã đánh dấu<span>0</span></div>
+      <div class="row"><b>易错</b>Thẻ hay sai<span>0</span></div>
+      <div class="row"><b>未学</b>Thẻ chưa học<span>203</span></div>
+    </div>
+  </div>
+
+</div>
+
+<p class="foot">1052 thẻ từ Biên du lịch, Phiên dịch nâng cao và Lịch sử phong kiến Trung Quốc.</p>
+
+</body>
+</html>

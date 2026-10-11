@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thử C — 年画</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Cormorant+Garamond:wght@600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap">
+<style>
+/* ══════════════════════════════════════════════════════════════════
+   THỬ C — 年画 tranh khắc gỗ dân gian
+   Không có giấy trắng. Mỗi khối là một mảng màu phẳng lớn: chàm,
+   son, thổ hoàng, ngà. 云纹 mây cuộn làm hình nền, 回纹 làm dải ngăn.
+   Màu phủ gần kín trang, đó là chỗ nó khác ba bản trước.
+   ══════════════════════════════════════════════════════════════════ */
+
+:root {
+  --indigo:   #1B3A5C;
+  --indigo-2: #142C46;
+  --cinnabar: #C0311A;
+  --cinnabar-2: #9C2413;
+  --ochre:    #D9A441;
+  --ochre-2:  #C08C2C;
+  --cream:    #F4E9D2;
+  --cream-2:  #E7D8B8;
+  --ink:      #17120D;
+
+  --hui: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='18'%3E%3Cpath d='M2 16 L2 2 L30 2 L30 12 L10 12 L10 7 L22 7' fill='none' stroke='%23D9A441' stroke-width='2.2'/%3E%3C/svg%3E");
+
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.1'/%3E%3C/svg%3E");
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+  font-size: 15.5px;
+  line-height: 1.6;
+}
+
+.band { position: relative; background-image: var(--grain); }
+.in   { max-width: 1000px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 44px); }
+
+/* dải 回纹 ngăn giữa hai mảng màu */
+.fret { height: 18px; background-image: var(--hui); background-repeat: repeat-x; }
+
+/* ─── đầu trang: mảng chàm ──────────────────────────────────────── */
+.top-band { background: var(--indigo); color: var(--cream); }
+.top { display: flex; align-items: center; gap: 14px; padding: 14px 0; }
+.chop {
+  width: 44px; height: 44px; flex: none;
+  display: grid; place-items: center;
+  background: var(--cinnabar); color: var(--cream);
+  font-family: "Noto Serif SC", serif; font-size: 25px; font-weight: 700;
+  box-shadow: inset 0 0 0 2px rgba(244,233,210,.6);
+}
+.brand b { font-family: "Cormorant Garamond", serif; font-size: 23px; font-weight: 700; display: block; line-height: 1.1; }
+.brand span { font-family: "Noto Serif SC", serif; font-size: 12px; letter-spacing: .3em; color: var(--ochre); }
+.nav { margin-left: auto; display: flex; gap: 22px; font-size: 14px; }
+.nav a { color: var(--cream-2); text-decoration: none; padding-bottom: 4px; }
+.nav a.on { color: var(--ochre); border-bottom: 3px solid var(--ochre); font-weight: 600; }
+
+/* ─── hero: mảng son, mây cuộn, chữ âm bản ngà ──────────────────── */
+.hero-band { background: var(--cinnabar); color: var(--cream); overflow: hidden; }
+.hero { position: relative; min-height: 340px; display: flex; align-items: center; padding: 34px 0; }
+
+.cloud { position: absolute; pointer-events: none; opacity: .62; }
+.cloud--1 { top: -26px;  left: -40px;  width: 330px; }
+.cloud--2 { bottom: -46px; left: 34%;  width: 290px; transform: scaleX(-1); }
+.cloud--3 { top: 18px;   right: -30px; width: 240px; opacity: .32; }
+
+.hero-zh {
+  position: absolute;
+  top: 50%; right: -.04em;
+  transform: translateY(-50%);
+  font-family: "Noto Serif SC", serif; font-weight: 700;
+  font-size: clamp(150px, 27vw, 320px);
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--cream);
+  opacity: .95;
+}
+.hero-zh i { font-style: normal; }
+.hero-zh i:first-child { opacity: .34; }
+
+.hero__t { position: relative; z-index: 3; }
+.hero__t h1 {
+  margin: 0 0 8px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(40px, 6.8vw, 80px);
+  font-weight: 700; line-height: 1.02; letter-spacing: -.015em;
+  text-shadow: 0 3px 20px rgba(120,24,10,.65);
+}
+.hero__t p { margin: 0; color: var(--cream-2); text-shadow: 0 2px 12px rgba(120,24,10,.65); }
+
+/* ─── việc hôm nay: mảng thổ hoàng ──────────────────────────────── */
+.today-band { background: var(--ochre); color: var(--ink); }
+.today { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; padding: 22px 0; }
+.today > span { font-weight: 500; }
+.btn {
+  border: 0; cursor: pointer; font: inherit; font-weight: 700;
+  padding: 14px 30px;
+  background: var(--cinnabar); color: var(--cream);
+  box-shadow: inset 0 0 0 2px rgba(244,233,210,.4);
+}
+.btn--q { background: none; color: var(--ink); padding: 14px 0; font-weight: 500;
+          box-shadow: none; text-decoration: underline; text-underline-offset: 5px; }
+
+/* ─── mục lục: mảng ngà ─────────────────────────────────────────── */
+.list-band { background: var(--cream); padding: 30px 0 34px; }
+.cap {
+  display: flex; align-items: center; gap: 12px;
+  margin: 0 0 10px;
+  font-family: "Noto Serif SC", serif; font-size: 18px; font-weight: 700; color: var(--cinnabar);
+}
+.cap small { font-family: "Be Vietnam Pro", sans-serif; font-size: 14px; font-weight: 500; color: var(--ink); }
+.cap::after { content: ""; flex: 1; height: 0; border-top: 3px double var(--ochre-2); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); column-gap: 38px; }
+.row {
+  display: grid; grid-template-columns: 3.4em 1fr auto;
+  align-items: baseline; gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--cream-2);
+}
+.row b {
+  font-family: "Noto Serif SC", serif; font-size: 19px; font-weight: 600;
+  color: var(--cream); background: var(--indigo);
+  text-align: center; padding: 3px 0; line-height: 1.35;
+}
+.row span { color: #6A5B45; font-variant-numeric: tabular-nums; font-size: 13.5px; }
+
+/* ─── ôn nhanh: mảng chàm lần nữa, khép lại nhịp màu ────────────── */
+.quick-band { background: var(--indigo-2); color: var(--cream); padding: 28px 0 32px; }
+.quick-band .cap { color: var(--ochre); }
+.quick-band .cap small { color: var(--cream-2); }
+.quick-band .row { border-bottom-color: rgba(244,233,210,.2); }
+.quick-band .row b { background: var(--cinnabar); }
+.quick-band .row span { color: var(--cream-2); }
+
+.foot { background: var(--ink); color: #9C8F7A; font-size: 13.5px; }
+.foot .in { padding-top: 16px; padding-bottom: 18px; }
+
+@media (max-width: 760px) {
+  .hero { min-height: 230px; }
+  .hero-zh { font-size: clamp(130px, 40vw, 220px); }
+  .hero-zh i:first-child { opacity: .26; }
+  .cloud--2, .cloud--3 { display: none; }
+  .cloud--1 { width: 220px; top: -16px; left: -60px; }
+}
+</style>
+</head>
+<body>
+
+<!-- 云纹 mây cuộn, vẽ một lần rồi gọi lại ba chỗ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="yun" viewBox="0 0 200 104">
+<!-- 云纹 thật phải thấy được vòng xoắn ở đầu mỗi cụm, nếu không nó chỉ
+         là đám mây thời tiết. Vẽ bằng nét dày thay vì mảng đặc. -->
+    <g fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 98 C4 72 22 54 46 58 C56 34 92 28 106 50 C126 34 158 44 160 68 C186 68 198 80 196 98"/>
+      <path d="M34 98 C30 80 42 68 54 73 C64 77 64 90 55 91 C48 92 45 86 49 82"/>
+      <path d="M104 98 C100 78 114 66 127 72 C137 77 136 90 127 91 C120 92 117 86 121 82"/>
+      <path d="M166 98 C163 84 173 75 182 79"/>
+    </g>
+  </symbol>
+</svg>
+
+<div class="band top-band">
+  <div class="in">
+    <div class="top">
+      <div class="chop">堂</div>
+      <div class="brand"><b>Hán Ngữ Đường</b><span>汉语堂</span></div>
+      <nav class="nav"><a class="on" href="#">Học</a><a href="#">Tra cứu</a><a href="#">Tiến độ</a></nav>
+    </div>
+  </div>
+</div>
+<div class="fret"></div>
+
+<div class="band hero-band">
+  <svg class="cloud cloud--1" viewBox="0 0 200 104" style="color:#9C2413"><use href="#yun"/></svg>
+  <svg class="cloud cloud--2" viewBox="0 0 200 104" style="color:#9C2413"><use href="#yun"/></svg>
+  <svg class="cloud cloud--3" viewBox="0 0 200 104" style="color:#D9A441"><use href="#yun"/></svg>
+  <div class="in">
+    <div class="hero">
+      <div class="hero-zh"><i>旅</i><i>游</i></div>
+      <div class="hero__t">
+        <h1>Biên du lịch</h1>
+        <p>203 thẻ, chưa thuộc thẻ nào</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fret"></div>
+
+<div class="band today-band">
+  <div class="in">
+    <div class="today">
+      <span>Hôm nay không có thẻ nào đến hạn</span>
+      <button class="btn">Học thẻ mới</button>
+      <button class="btn btn--q">Tự chọn phiên</button>
+    </div>
+  </div>
+</div>
+
+<div class="band list-band">
+  <div class="in">
+    <p class="cap">目录 <small>Chủ đề</small></p>
+    <div class="grid">
+      <div class="row"><b>地名</b>Địa danh &amp; Di sản Việt Nam<span>0/97</span></div>
+      <div class="row"><b>词汇</b>Từ vựng ngành du lịch<span>0/60</span></div>
+      <div class="row"><b>名胜</b>Danh thắng Trung Quốc<span>0/33</span></div>
+      <div class="row"><b>短语</b>Cụm từ &amp; thành ngữ<span>0/13</span></div>
+    </div>
+  </div>
+</div>
+<div class="fret"></div>
+
+<div class="band quick-band">
+  <div class="in">
+    <p class="cap">温习 <small>Ôn nhanh</small></p>
+    <div class="grid">
+      <div class="row"><b>标记</b>Thẻ đã đánh dấu<span>0</span></div>
+      <div class="row"><b>易错</b>Thẻ hay sai<span>0</span></div>
+      <div class="row"><b>未学</b>Thẻ chưa học<span>203</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="band foot">
+  <div class="in">1052 thẻ từ Biên du lịch, Phiên dịch nâng cao và Lịch sử phong kiến Trung Quốc.</div>
+</div>
+
+</body>
+</html>

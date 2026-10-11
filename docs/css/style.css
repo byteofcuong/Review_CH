@@ -908,6 +908,10 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 #setup-subject { display: grid; grid-template-columns: repeat(2, 1fr); }
 #setup-subject button:nth-child(odd) { border-left: 0; }
 #setup-subject button:nth-child(n + 3) { border-top: 1px solid var(--line); }
+/* Số môn lẻ thì ô cuối nằm trơ ở cột trái và chừa một lỗ bên phải. Cho nó
+   ăn cả hai cột. Viết theo vị trí lẻ chứ không theo số môn, nên thêm bớt
+   môn về sau vẫn đúng. */
+#setup-subject button:last-child:nth-child(odd) { grid-column: 1 / -1; }
 
 .input {
   width: 100%;

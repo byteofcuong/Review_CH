@@ -59,6 +59,10 @@ LC.session = (function () {
         answer: card.a,
         answerKind: 'zh',
         accepted: [card.a].concat(card.altA || []),
+        // Đề cương của thầy mang sẵn bộ lựa chọn. Giữ nguyên thứ tự A–D vì
+        // trong phòng thi chữ cái là một phần của đáp án; trộn lên thì học
+        // thuộc "đáp án là B" sẽ thành học sai.
+        choices: card.options && card.options.length ? card.options.slice() : null,
         hint: 'Gõ đáp án bằng chữ Hán'
       };
     }

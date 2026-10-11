@@ -35,7 +35,14 @@
     'ls-tam-quoc': '三国',
     'ls-tuy-duong': '隋唐',
     'ls-tong-nguyen': '宋元',
-    'ls-minh-thanh': '明清'
+    'ls-minh-thanh': '明清',
+    'ts-nguyen-thuy-thuong': '原始',
+    'ts-xuan-thu-chien-quoc': '春秋',
+    'ts-tan-han': '秦汉',
+    'ts-tam-quoc-duong': '三国',
+    'ts-ngu-dai-thanh': '五代',
+    'ts-can-dai': '近代',
+    'ts-hien-dai': '现代'
   };
 
   var state = {
@@ -46,6 +53,7 @@
       topics: [], direction: 'vi2zh', mode: 'flash', size: 20, only: null
     },
     session: null,
+    mode: 'flash',          // chế độ thật của thẻ đang hiện, xem showCurrent
     item: null,
     question: null,
     revealed: false,
@@ -400,6 +408,16 @@
     });
     $('setup-direction').closest('.field').hidden = qaOnly;
 
+    // Đề cương của thầy đã là câu trắc nghiệm và câu đúng/sai. Lật thẻ hay gõ
+    // đáp án đều không đúng dạng đề, nên bộ chọn cách kiểm tra bị ẩn thay vì
+    // bày ra một lựa chọn không có tác dụng.
+    var examOnly = subjectsFor(state.prefs.subject).every(function (sub) {
+      return sub.cards.length && sub.cards.every(function (card) {
+        return card.options && card.options.length;
+      });
+    });
+    $('setup-mode').closest('.field').hidden = examOnly;
+
     syncSegmented('setup-direction', state.prefs.direction);
     syncSegmented('setup-mode', state.prefs.mode);
     syncSegmented('setup-size', String(state.prefs.size));
@@ -510,7 +528,17 @@
     $('answer-choice').hidden = true;
     $('btn-flip').hidden = true;
 
-    if (state.prefs.mode === 'type') {
+    // Thẻ mang sẵn lựa chọn thì luôn hỏi theo đúng dạng đề, bất kể người học
+    // đang đặt cách kiểm tra nào. Giữ vào state vì phím tắt và bảng tự chấm
+    // điểm cũng phải theo chế độ thật, không theo thứ người học đã đặt.
+    state.mode = q.choices ? 'choice' : state.prefs.mode;
+    var mode = state.mode;
+    // Chuỗi cố định, không có dữ liệu người dùng, nên dựng thẳng bằng innerHTML
+    // để giữ thẻ <kbd> vẽ hình phím.
+    $('kbd-hint').innerHTML = mode === 'flash'
+      ? 'Phím tắt: <kbd>Space</kbd> lật thẻ, <kbd>1</kbd> tới <kbd>4</kbd> chấm điểm'
+      : 'Phím tắt: <kbd>Space</kbd> sang thẻ tiếp theo';
+    if (mode === 'type') {
       $('answer-type').hidden = false;
       var input = $('type-input');
       input.value = '';
@@ -518,7 +546,7 @@
       input.disabled = false;
       $('type-submit').disabled = false;
       setTimeout(function () { input.focus(); }, 40);
-    } else if (state.prefs.mode === 'choice') {
+    } else if (mode === 'choice') {
       renderChoices(item, q);
       $('answer-choice').hidden = false;
     } else {
@@ -527,17 +555,24 @@
   }
 
   function renderChoices(item, q) {
-    // Đáp án nhiễu phải lấy trong cùng môn: trộn thuật ngữ WTO vào thẻ địa
-    // danh du lịch thì đoán ra ngay mà không cần biết nghĩa.
-    var subject = subjectOfCard(item.card);
-    var pool = subject ? subject.cards : cardsOf('all');
-    var options = LC.text.shuffle(
-      LC.session.distractors(item.card, item.direction, pool).concat([q.answer])
-    );
+    var options;
+    if (q.choices) {
+      options = q.choices;        // đề đã có sẵn lựa chọn, không trộn, không sinh
+    } else {
+      // Đáp án nhiễu phải lấy trong cùng môn: trộn thuật ngữ WTO vào thẻ địa
+      // danh du lịch thì đoán ra ngay mà không cần biết nghĩa.
+      var subject = subjectOfCard(item.card);
+      var pool = subject ? subject.cards : cardsOf('all');
+      options = LC.text.shuffle(
+        LC.session.distractors(item.card, item.direction, pool).concat([q.answer])
+      );
+    }
     var box = $('answer-choice');
+    var exam = q.choices ? ' choice--exam' : '';
     box.innerHTML = options.map(function (value) {
       return '<button class="choice' + (q.answerKind === 'zh' ? ' is-zh' : '') +
-        '" type="button" data-value="' + esc(value) + '">' + esc(value) + '</button>';
+        exam + '" type="button" data-value="' + esc(value) + '">' +
+        esc(value) + '</button>';
     }).join('');
 
     box.querySelectorAll('.choice').forEach(function (btn) {
@@ -616,6 +651,7 @@
     var gloss = $('gloss');
     if (isQa && (card.qVi || card.aVi)) {
       $('gloss-q').textContent = card.qVi;
+      $('gloss-q').hidden = !card.qVi;      // đề của thầy không có bản dịch câu hỏi
       $('gloss-a').textContent = card.aVi;
       closeGloss();
       gloss.hidden = false;
@@ -643,7 +679,7 @@
       $('rev-zh').classList.remove('reveal__zh--answer');
     }
 
-    if (state.prefs.mode === 'flash') {
+    if (state.mode === 'flash') {
       var progress = LC.store.get(card.id);
       $('g-hard').textContent = LC.srs.label(LC.srs.preview(progress, 1));
       $('g-good').textContent = LC.srs.label(LC.srs.preview(progress, 2));
@@ -915,11 +951,11 @@
 
       if (event.code === 'Space') {
         event.preventDefault();
-        if (!state.revealed && state.prefs.mode === 'flash') reveal();
+        if (!state.revealed && state.mode === 'flash') reveal();
         else if (!$('btn-next').hidden) advance();
         return;
       }
-      if (state.revealed && state.prefs.mode === 'flash' && /^[1-4]$/.test(event.key)) {
+      if (state.revealed && state.mode === 'flash' && /^[1-4]$/.test(event.key)) {
         event.preventDefault();
         grade(parseInt(event.key, 10) - 1, false);
       }

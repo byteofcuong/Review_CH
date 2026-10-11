@@ -20,9 +20,10 @@ from pypinyin import lazy_pinyin, Style
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
-XLSX_TRAVEL = ROOT / "Biên du lịch.xlsx"
-XLSX_INTERPRET = ROOT / "Phiên dịch nâng cao.xlsx"
+XLSX_TRAVEL = ROOT / "source" / "Biên du lịch.xlsx"
+XLSX_INTERPRET = ROOT / "source" / "Phiên dịch nâng cao.xlsx"
 HISTORY_DIR = HERE / "lich-su"
+HISTORY_TEACHER_DIR = HERE / "lich-su-thay"
 OVERRIDES_PATH = HERE / "overrides.json"
 OUT_JSON = ROOT / "docs" / "data" / "vocab.json"
 OUT_JS = ROOT / "docs" / "data" / "vocab.js"
@@ -530,7 +531,10 @@ def check(cards):
             problems.append(f"id trùng: {card['id']}")
         seen.add(card["id"])
         if card.get("kind") == "qa":
-            fields = ("q", "a", "qVi", "aVi")
+            # Thẻ đề cương của thầy mang sẵn lựa chọn A–D (hoặc đúng/sai) và
+            # chỉ cần bản chữ Hán: đề thi ra bằng tiếng Trung, bản dịch là
+            # phần thêm chứ không phải điều kiện để thẻ dùng được.
+            fields = ("q", "a") if card.get("options") else ("q", "a", "qVi", "aVi")
         else:
             fields = ("vi", "zh", "pinyin")
         for field in fields:
@@ -678,10 +682,11 @@ def write_subject_sections(add, subject, rep):
         heading("Ghi chú mang từ Excel sang")
         add("Hiển thị ở mặt sau thẻ khi học:")
         add("")
-        add("| Chữ Hán | Ghi chú |")
+        # Thẻ hỏi đáp không có trường zh: lấy chính câu hỏi làm cột nhận diện.
+        add("| Thẻ | Ghi chú |")
         add("|---|---|")
         for c in notes:
-            add(f"| {c['zh']} | {c['note']} |")
+            add(f"| {c.get('zh') or c.get('q', '')} | {c['note']} |")
         add("")
 
     if rep["skipped"]:
@@ -809,6 +814,88 @@ def build_history():
     }
 
 
+def build_history_teacher():
+    """Môn Đề cương lịch sử: ngân hàng câu hỏi của thầy, bảy giai đoạn.
+
+    Khác môn Lịch sử (câu hỏi tôi soạn từ slide), đây là đề của thầy nên câu
+    hỏi giữ nguyên văn, không sửa cả lỗi gõ — vào phòng thi sẽ gặp đúng chữ
+    đó. Mỗi câu mang sẵn bộ lựa chọn của chính nó, vì vậy thẻ có thêm trường
+    "options" và chế độ trắc nghiệm không được tự sinh đáp án nhiễu.
+
+    Đáp án do tôi chọn, đối chiếu với bài giảng gốc; "conf" ghi độ chắc để
+    người học biết câu nào nên hỏi lại thầy.
+    """
+    files = sorted(HISTORY_TEACHER_DIR.glob("*.json"))
+    if not files:
+        report["warnings"].append(
+            f"Không tìm thấy file câu hỏi nào trong {HISTORY_TEACHER_DIR}.")
+
+    topics = []
+    cards = []
+    raw_count = 0
+    for index, path in enumerate(files, 1):
+        data = json.loads(path.read_text(encoding="utf-8"))
+        topics.append({"id": data["id"], "name": data["name"], "zh": data["zh"]})
+        prefix = f"ts{index:02d}"
+
+        skipped = data.get("skipped", {})
+        for kind, numbers in (("trắc nghiệm", skipped.get("mcq", [])),
+                              ("đúng/sai", skipped.get("tf", []))):
+            if numbers:
+                report["warnings"].append(
+                    f"{path.name}: thầy để trống {kind} số "
+                    f"{', '.join(str(x) for x in numbers)} — bỏ qua.")
+
+        seen = set()
+        for item in data["questions"]:
+            raw_count += 1
+            question = cell(item.get("q"))
+            answer = cell(item.get("a"))
+            key = norm_key(question)
+            if key in seen:
+                report["warnings"].append(
+                    f"{path.name}: câu hỏi lặp lại — {question[:40]}")
+            seen.add(key)
+
+            options = [cell(x) for x in item.get("options", []) if cell(x)]
+            if answer not in options:
+                report["warnings"].append(
+                    f"{path.name}: câu {item.get('no')} có đáp án ngoài bộ "
+                    f"lựa chọn — {answer[:30]}")
+
+            note = cell(item.get("note", ""))
+            if item.get("conf", 3) <= 1:
+                note = ("Chưa chắc, nên hỏi lại thầy. " + note).strip()
+
+            cards.append({
+                "kind": "qa",
+                "q": question,
+                "a": answer,
+                "qVi": "",
+                "aVi": cell(item.get("aVi", "")),
+                "altA": [],
+                "options": options,
+                "topics": [data["id"]],
+                "group": "Trắc nghiệm" if item.get("type") == "mcq" else "Đúng/Sai",
+                "note": note,
+                "prefix": prefix,
+                "sources": [path.name],
+            })
+
+    cards = finalise(cards)
+    return {
+        "id": "lich-su-thay",
+        "name": "Đề cương lịch sử",
+        "short": "Đề cương",
+        "zh": "提纲",
+        "kind": "qa",
+        "source": "source/lịch sử - thầy/*.xlsx",
+        "topicConf": topics,
+        "cards": cards,
+        "rawCount": raw_count,
+    }
+
+
 def main():
     global report
 
@@ -832,7 +919,11 @@ def main():
     history = build_history()
     reports[history["id"]] = report
 
-    for subject in (travel, interpret, history):
+    report = new_report()
+    history_teacher = build_history_teacher()
+    reports[history_teacher["id"]] = report
+
+    for subject in (travel, interpret, history, history_teacher):
         counts = {}
         for card in subject["cards"]:
             for topic_id in card["topics"]:
@@ -870,11 +961,11 @@ def main():
         "window.VOCAB = " + serialised + ";\n",
         encoding="utf-8")
 
-    write_report([travel, interpret, history], reports)
+    write_report([travel, interpret, history, history_teacher], reports)
 
     total = 0
     warnings = 0
-    for subject in (travel, interpret, history):
+    for subject in (travel, interpret, history, history_teacher):
         rep = reports[subject["id"]]
         total += len(subject["cards"])
         warnings += len(rep["warnings"])

@@ -1028,6 +1028,14 @@ body.is-studying .seal { width: 30px; height: 30px; font-size: 17px; }
 .choice:hover:not(:disabled) { border-color: var(--accent-edge); }
 .choice:disabled { cursor: default; }
 .choice.is-zh { font-family: var(--font-zh); font-size: var(--t-lg); }
+/* Lựa chọn của đề thầy dài và đã có chữ cái dẫn đầu, nên xếp trái và nhỏ
+   hơn: đọc như đang đọc đề, không như bấm một cái nút. */
+.choice--exam {
+  text-align: left;
+  line-height: 1.55;
+  padding: 11px 14px;
+}
+.choice--exam.is-zh { font-size: var(--t-md); }
 .choice--right { border-color: var(--ok); background: var(--ok-wash); color: var(--ok); font-weight: 500; }
 .choice--wrong { border-color: var(--no); background: var(--no-wash); color: var(--no); }
 

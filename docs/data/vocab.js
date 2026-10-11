@@ -1,7 +1,7 @@
 /* Tự sinh bởi tools/build_data.py — đừng sửa tay. */
 window.VOCAB = {
  "version": 2,
- "generatedAt": "2026-10-10",
+ "generatedAt": "2026-10-11",
  "subjects": [
   {
    "id": "bien-du-lich",
@@ -20331,6 +20331,6131 @@ window.VOCAB = {
       "08-minh-thanh.json"
      ],
      "id": "ls08-020"
+    }
+   ],
+   "kind": "qa"
+  },
+  {
+   "id": "lich-su-thay",
+   "name": "Đề cương lịch sử",
+   "short": "Đề cương",
+   "zh": "提纲",
+   "source": "source/lịch sử - thầy/*.xlsx",
+   "topics": [
+    {
+     "id": "ts-nguyen-thuy-thuong",
+     "name": "Nguyên thuỷ – Thương",
+     "count": 40
+    },
+    {
+     "id": "ts-xuan-thu-chien-quoc",
+     "name": "Xuân Thu – Chiến Quốc",
+     "count": 45
+    },
+    {
+     "id": "ts-tan-han",
+     "name": "Tần – Hán",
+     "count": 35
+    },
+    {
+     "id": "ts-tam-quoc-duong",
+     "name": "Tam Quốc – Đường",
+     "count": 40
+    },
+    {
+     "id": "ts-ngu-dai-thanh",
+     "name": "Ngũ Đại – Thanh",
+     "count": 21
+    },
+    {
+     "id": "ts-can-dai",
+     "name": "Cận đại",
+     "count": 48
+    },
+    {
+     "id": "ts-hien-dai",
+     "name": "Hiện đại & đương đại",
+     "count": 36
+    }
+   ],
+   "cards": [
+    {
+     "kind": "qa",
+     "q": "黄河中下游地区也被叫作：",
+     "a": "A.中原",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.中原",
+      "B.中国",
+      "C.中心",
+      "D.中华"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-001"
+    },
+    {
+     "kind": "qa",
+     "q": "下面哪一地方属于“中原”？",
+     "a": "A.河南",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.河南",
+      "B.湖南",
+      "C.江南",
+      "D.西南"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-002"
+    },
+    {
+     "kind": "qa",
+     "q": "陕西省西安市亲厚有多少个朝代？",
+     "a": "D.11",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.5",
+      "B.7",
+      "C.9",
+      "D.11"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Chưa chắc, nên hỏi lại thầy. Tây An thường được gọi là 十三朝古都 (13 triều). Đề không có phương án 13 nên chọn số lớn nhất. Nên hỏi lại thầy.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-003"
+    },
+    {
+     "kind": "qa",
+     "q": "最能划分中国南北的是：",
+     "a": "C.秦岭",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.华山",
+      "B.嵩山",
+      "C.秦岭",
+      "D.泰山"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Ranh giới Nam–Bắc là tuyến Tần Lĩnh – Hoài Hà.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-004"
+    },
+    {
+     "kind": "qa",
+     "q": "中国奴隶社会大概在哪个阶段？",
+     "a": "B.约前2070—前 476",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.大约前170万年-约前21世纪初",
+      "B.约前2070—前 476",
+      "C.前475—公元1840",
+      "D.1840—1949"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 奴隶社会(约前2070——前476).",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-005"
+    },
+    {
+     "kind": "qa",
+     "q": "约前2070-前771的时段，中国经过：",
+     "a": "A.夏朝",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.夏朝",
+      "B.秦朝",
+      "C.汉朝",
+      "D.唐朝"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-006"
+    },
+    {
+     "kind": "qa",
+     "q": "达尔文所提出的“进化论”是在：",
+     "a": "C.19世纪",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.17世纪",
+      "B.18世纪",
+      "C.19世纪",
+      "D.20世纪"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Darwin ra 物种起源 năm 1859.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-007"
+    },
+    {
+     "kind": "qa",
+     "q": "元谋人考古遗址是在：",
+     "a": "C.云南",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.陕西",
+      "B.北京",
+      "C.云南",
+      "D.西安"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-008"
+    },
+    {
+     "kind": "qa",
+     "q": "大约四五十万年前，在周口店地区出土：",
+     "a": "B.北京猿人遗址",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.元谋人遗址",
+      "B.北京猿人遗址",
+      "C.蓝田人遗址",
+      "D.仰韶文化遗址"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 大约四五十万年以前北京猿人出现于北京周口店.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-009"
+    },
+    {
+     "kind": "qa",
+     "q": "考古学家发现中国时代最早的直立人遗迹是在：",
+     "a": "A.云南、陕西",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.云南、陕西",
+      "B.陕西、北京",
+      "C.云南、北京",
+      "D.蓝田、周口店"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 云南 元谋人, 陕西 蓝田人.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-010"
+    },
+    {
+     "kind": "qa",
+     "q": "蓝田人、元谋人、北京猿人属于：",
+     "a": "D.直立人",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.海德堡人",
+      "B.智慧人",
+      "C.尼安德特人",
+      "D.直立人"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-011"
+    },
+    {
+     "kind": "qa",
+     "q": "根据司马迁的想法，下面哪一位不属于“三皇五帝”系统：",
+     "a": "B.帝莱",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.黄帝",
+      "B.帝莱",
+      "C.帝尧",
+      "D.帝喾"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng liệt kê 黄帝、颛顼、帝喾、帝尧、帝舜 — không có 帝莱.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-012"
+    },
+    {
+     "kind": "qa",
+     "q": "夏朝存在多长时间？",
+     "a": "B.470年",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.370年",
+      "B.470年",
+      "C.570年",
+      "D.670年"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 从禹开始到桀死亡，历时470年.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-013"
+    },
+    {
+     "kind": "qa",
+     "q": "夏朝的传位制度是：",
+     "a": "C.世袭制",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.禅让制",
+      "B.禅让制相结合世袭制",
+      "C.世袭制",
+      "D.A、B、C都错"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 禅让制 -> 世袭制 -> 家天下.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-014"
+    },
+    {
+     "kind": "qa",
+     "q": "夏中兴是谁的阶段？",
+     "a": "D.少康",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.禹",
+      "B.太康",
+      "C.中康",
+      "D.少康"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 少康（中兴）.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-015"
+    },
+    {
+     "kind": "qa",
+     "q": "谁建立商朝：",
+     "a": "A.成汤",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.成汤",
+      "B.盘庚",
+      "C.武丁",
+      "D.纣王"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 成汤：建立商朝.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-016"
+    },
+    {
+     "kind": "qa",
+     "q": "史称“二帝三王”是指：",
+     "a": "A.夏禹、商汤、周文王",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.夏禹、商汤、周文王",
+      "B.夏禹、商汤、周武王",
+      "C.越王、吴王、秦王",
+      "D.秦王、汉王、晋王"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Phả hệ Thượng Thư: nhị đế = Nghiêu Thuấn, tam vương = Hạ Vũ, Thương Thang, Chu Văn Vương. Một số sách tính cả Chu Vũ Vương.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-017"
+    },
+    {
+     "kind": "qa",
+     "q": "商朝的统治时间是：",
+     "a": "B.554年",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.454年",
+      "B.554年",
+      "C.654年",
+      "D.754年"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 经过了554年.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-018"
+    },
+    {
+     "kind": "qa",
+     "q": "商朝的伟大成就是：",
+     "a": "C.甲骨文",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.造纸",
+      "B.造火箭",
+      "C.甲骨文",
+      "D.马车"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-019"
+    },
+    {
+     "kind": "qa",
+     "q": "商朝的文明鼎盛时期是在：",
+     "a": "D.武丁时期",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.成汤时期",
+      "B.纣王时期",
+      "C.盘庚时期",
+      "D.武丁时期"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 在第十三代国王武丁时，商的国力到达极盛.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-020"
+    },
+    {
+     "kind": "qa",
+     "q": "中国原始人能制造并使用简单工具，利用火，具备了人的基本特征。",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-021"
+    },
+    {
+     "kind": "qa",
+     "q": "中国原始人原始人类经历了母系民族社会（以仰韶文化为代表）和父系民族社会（以龙山文化为代表）",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng nguyên văn.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-022"
+    },
+    {
+     "kind": "qa",
+     "q": "中国古代文明 从古代一直延续到今天。",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-023"
+    },
+    {
+     "kind": "qa",
+     "q": "汉字从甲骨文发展到今天的现代汉字，有一段时间被消失过",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng: 汉字…一直在使用 — chữ Hán chưa từng biến mất.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-024"
+    },
+    {
+     "kind": "qa",
+     "q": "中国文化的延续性不太强。",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Tính liên tục của văn hoá Trung Quốc rất mạnh.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-025"
+    },
+    {
+     "kind": "qa",
+     "q": "长江中下游是中华文明的发源地",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Cái nôi là trung hạ du Hoàng Hà, không phải Trường Giang.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-026"
+    },
+    {
+     "kind": "qa",
+     "q": "河南的安阳就是发现甲骨文的地方，也是中国商代的都城",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "An Dương (Ân Khư) là nơi tìm ra giáp cốt văn và là đô thành nhà Thương.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-027"
+    },
+    {
+     "kind": "qa",
+     "q": "周、秦、汉、隋、唐等朝代都定都于今陕西省西安市或其周边",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng: 镐京(西安附近), 咸阳（今西安）, 长安（今西安）.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-028"
+    },
+    {
+     "kind": "qa",
+     "q": "封建社会的阶段大概是在前475至公元1840",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Khớp phương án C của trắc nghiệm câu 5: 前475—公元1840.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-029"
+    },
+    {
+     "kind": "qa",
+     "q": "原始人类发展了农业、畜牧业之后，出现了私有财产、阶级分化和阶级对立，原始社会因而解体，奴隶社会诞生",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng nguyên văn.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-030"
+    },
+    {
+     "kind": "qa",
+     "q": "龙山文化是中国古代父系的代表",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng: 父系…以龙山文化为代表.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-031"
+    },
+    {
+     "kind": "qa",
+     "q": "楚辞与史记对三皇五帝的说法是相同的",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Các thuyết về tam hoàng ngũ đế khác nhau giữa các sách.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-032"
+    },
+    {
+     "kind": "qa",
+     "q": "涿鹿是传说中的黄帝与神农的战争地",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Trận Trác Lộc là Hoàng Đế đánh Xuy Vưu, không phải Thần Nông.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-033"
+    },
+    {
+     "kind": "qa",
+     "q": "蚩尤是中国人的祖先",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng dùng 炎黄子孙: tổ tiên là Viêm Đế và Hoàng Đế.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-034"
+    },
+    {
+     "kind": "qa",
+     "q": "夏朝从禹开始到桀死亡",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng: 从禹开始到桀死亡.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-035"
+    },
+    {
+     "kind": "qa",
+     "q": "夏朝已开始开水道来引水和排水，可是当时农业没有发达，还没有出现日历",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng: 当时适合农业的-日历已经出现，就是…夏历.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-036"
+    },
+    {
+     "kind": "qa",
+     "q": "夏朝从鲧禹开始到桀死亡",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng tính từ Vũ, không phải từ Cổn.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-037"
+    },
+    {
+     "kind": "qa",
+     "q": "鲧只能做水坝，而禹就会挖运河。",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Cổn đắp đê nên thất bại; Vũ khơi dòng dẫn nước nên thành công.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-038"
+    },
+    {
+     "kind": "qa",
+     "q": "桀王经常举办豪华宴会，挥霍无度，迷恋妹喜",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-039"
+    },
+    {
+     "kind": "qa",
+     "q": "纣王本来不姓纣",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-nguyen-thuy-thuong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Trụ Vương họ Tử (子受/帝辛); 纣 là tên gọi xấu đặt sau khi chết.",
+     "prefix": "ts01",
+     "sources": [
+      "01-nguyen-thuy-thuong.json"
+     ],
+     "id": "ts01-040"
+    },
+    {
+     "kind": "qa",
+     "q": "周王朝存在了多少年？",
+     "a": "A.大概800年",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.大概800年",
+      "B.大概900年",
+      "C.大概100年",
+      "D.大概700年"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 周前后持续800多年.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-001"
+    },
+    {
+     "kind": "qa",
+     "q": "西周的京都在哪个地方？",
+     "a": "A.镐京",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.镐京",
+      "B.汴京",
+      "C.燕京",
+      "D.建安"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 最初定都镐京.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-002"
+    },
+    {
+     "kind": "qa",
+     "q": "东周的京都在哪个地方？",
+     "a": "D.洛邑",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.镐京",
+      "B.汴京",
+      "C.燕京",
+      "D.洛邑"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 东迁洛邑.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-003"
+    },
+    {
+     "kind": "qa",
+     "q": "“太公望”是谁的别称？",
+     "a": "C.姜子牙",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.周文王",
+      "B.周武王",
+      "C.姜子牙",
+      "D.周公"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 姜子牙太公望.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-004"
+    },
+    {
+     "kind": "qa",
+     "q": "“愿者上钩”是姜太公与谁的故事？",
+     "a": "B.周文王",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.周公旦",
+      "B.周文王",
+      "C.周武王",
+      "D.周康王"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Điển 姜太公钓鱼，愿者上钩: Khương Tử Nha chờ Chu Văn Vương.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-005"
+    },
+    {
+     "kind": "qa",
+     "q": "“三监之乱”属于中国封建的哪一阶段？",
+     "a": "A.成康之治",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.成康之治",
+      "B.永乐阶段",
+      "C.贞观之治",
+      "D.康乾盛世"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Tam giám chi loạn xảy ra thời Chu Thành Vương, thuộc Thành Khang chi trị.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-006"
+    },
+    {
+     "kind": "qa",
+     "q": "“烽火戏诸侯” 是跟哪位国王有关的事件？·",
+     "a": "C.周幽王",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.周文王",
+      "B.周武王",
+      "C.周幽王",
+      "D.褒姒"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-007"
+    },
+    {
+     "kind": "qa",
+     "q": "西周被灭亡的时间是：",
+     "a": "C.前770年",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.前550年",
+      "B.前660年",
+      "C.前770年",
+      "D.前880年"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 公元前770年，西周灭亡.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-008"
+    },
+    {
+     "kind": "qa",
+     "q": "下边哪一位不是“春秋五霸”",
+     "a": "B.秦始皇",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.宋襄公",
+      "B.秦始皇",
+      "C.楚庄王",
+      "D.晋文公"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-009"
+    },
+    {
+     "kind": "qa",
+     "q": "齐桓公以何言为旗号，九合诸侯？",
+     "a": "A.“尊王攘夷”",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.“尊王攘夷”",
+      "B.“唯我独尊”",
+      "C.“霸占天下”",
+      "D.“三皇五帝”"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 以 尊王攘夷 为旗号，九合诸侯.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-010"
+    },
+    {
+     "kind": "qa",
+     "q": "在城濮之战以少胜多，大败楚军，战后召集齐、宋等国于践土会盟，被周襄王策命为诸侯之伯，成为春秋时代的第二位霸主是：",
+     "a": "D.晋文公",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.齐桓公",
+      "B.楚庄王",
+      "C.秦穆公",
+      "D.晋文公"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 晋文公五年（前632年），在城濮之战以少胜多.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-011"
+    },
+    {
+     "kind": "qa",
+     "q": "所谓“三年不飞，一飞冲天; 三年不鸣，一鸣惊人”是指：",
+     "a": "B.楚庄王",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.晋文公",
+      "B.楚庄王",
+      "C.宋襄公",
+      "D.吴王夫差"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-012"
+    },
+    {
+     "kind": "qa",
+     "q": "夫差继承王位后，励精图治，任用谁来整顿军队，大败越王勾践，一度使吴国达到了鼎盛时期？",
+     "a": "B.伍子胥",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.范蠡",
+      "B.伍子胥",
+      "C.子英",
+      "D.文忠"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 夫差继承王位后…任用伍子胥等人.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-013"
+    },
+    {
+     "kind": "qa",
+     "q": "成语”卧薪尝胆“是指谁的？",
+     "a": "C.越王勾践",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.吴王夫差",
+      "B.秦穆公",
+      "C.越王勾践",
+      "D.楚庄王"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 勾践返国后…卧薪尝胆.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-014"
+    },
+    {
+     "kind": "qa",
+     "q": "战国四公子广招宾客，以扩大自己的势力，因此养“士”之风盛行，其中的宾客包括：",
+     "a": "D.学士、方士、策士或术士以及食客",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.进士、方士、策士或术士以及食客",
+      "B.博士、方士、策士或术士以及食客",
+      "C.硕士、方士、策士或术士以及食客",
+      "D.学士、方士、策士或术士以及食客"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng nguyên văn: 包括学士、方士、策士或术士以及食客.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-015"
+    },
+    {
+     "kind": "qa",
+     "q": "战国齐国的“四公子”之一是：",
+     "a": "A.孟尝君田文",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.孟尝君田文",
+      "B.春申君黄歇",
+      "C.平原君赵胜",
+      "D.信陵君魏无忌"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 齐国的孟尝君田文.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-016"
+    },
+    {
+     "kind": "qa",
+     "q": "“风萧萧兮易水寒，壮士一去兮不复还”这一句是形容战国的哪一位？",
+     "a": "A.荆轲",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.荆轲",
+      "B.豫让",
+      "C.文种",
+      "D.韩飞"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-017"
+    },
+    {
+     "kind": "qa",
+     "q": "传说中，苏秦、张仪、孙膑、庞涓最可能是谁的弟子？",
+     "a": "B.鬼谷子",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.孔子",
+      "B.鬼谷子",
+      "C.荀子",
+      "D.庄子"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 鬼谷子…开创了纵横学.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-018"
+    },
+    {
+     "kind": "qa",
+     "q": "”远交近攻“是谁的策略？",
+     "a": "C.范雎",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.韩飞",
+      "B.范蠡",
+      "C.范雎",
+      "D.项梁"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Phạm Thư dâng kế viễn giao cận công cho Tần Chiêu Vương.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-019"
+    },
+    {
+     "kind": "qa",
+     "q": "“长平之战”最后得胜的统帅是：",
+     "a": "D.白起",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.王翦",
+      "B.李牧",
+      "C.廉颇",
+      "D.白起"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Trận Trường Bình 260 TCN, Tần thắng, tướng là Bạch Khởi.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-020"
+    },
+    {
+     "kind": "qa",
+     "q": "军功爵制、重农抑商、连坐法是哪个政策的核心？",
+     "a": "A.商鞅变法",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.商鞅变法",
+      "B.韩非改革",
+      "C.吴起想法",
+      "D.苏秦、张仪的纵横术"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 军功爵制 và 什五连坐法 đều thuộc 商鞅变法.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-021"
+    },
+    {
+     "kind": "qa",
+     "q": "“兼爱、非攻、尚贤”是谁的主张？",
+     "a": "D.墨子",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.韩非子",
+      "B.孟子",
+      "C.孙斌",
+      "D.墨子"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 墨家…兼爱、非攻、尚贤.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-022"
+    },
+    {
+     "kind": "qa",
+     "q": "西周使用“分封制度”管控自己的王朝。",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-023"
+    },
+    {
+     "kind": "qa",
+     "q": "西周王朝建立了一套严密的宗法、礼乐、刑罚制度，管理社会，让当时国的奴隶社会达到了顶峰。",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng nguyên văn.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-024"
+    },
+    {
+     "kind": "qa",
+     "q": "周武王去世后， 成王继位， 成王年少， 由他的叔叔周公摄政",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng nguyên văn.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-025"
+    },
+    {
+     "kind": "qa",
+     "q": "周公以宗法制的血缘亲疏原则和上下尊卑的等级原则为基本指导思想， 建立了一整套严格的典章制度",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng nguyên văn.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-026"
+    },
+    {
+     "kind": "qa",
+     "q": "公元前 841 年， 终于发生国人暴动， 朝政由诸侯共管，史称“共和行政”",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng nguyên văn: 公元前841年…朝政由诸侯共管，史称 共和行政.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-027"
+    },
+    {
+     "kind": "qa",
+     "q": "东周成立，东迁洛邑，史书把其阶段分为“春秋”和“战国”两个时期。",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-028"
+    },
+    {
+     "kind": "qa",
+     "q": "周王朝时的犬绒是现在内蒙古地区的民族",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Khuyển Nhung ở phía tây (Thiểm Tây – Cam Túc), không phải Nội Mông.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-029"
+    },
+    {
+     "kind": "qa",
+     "q": "东周分为春秋（前770-前400）和战国（前400-前221）",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng: 春秋(前770—前476) — mốc chia là 476, không phải 400.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-030"
+    },
+    {
+     "kind": "qa",
+     "q": "越王勾践没有“春秋五霸”之称",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng: Câu Tiễn 被周天子命为 伯，成为春秋时期最后一位霸主.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-031"
+    },
+    {
+     "kind": "qa",
+     "q": "齐桓公-春秋五霸之首，不是姜太公吕尚的后裔",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng: 齐桓公…姜太公吕尚的第十二代孙.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-032"
+    },
+    {
+     "kind": "qa",
+     "q": "齐桓公文治武功卓著，是春秋时期的第一位霸主",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng: 春秋五霸之首; Tấn Văn Công mới là bá chủ thứ hai.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-033"
+    },
+    {
+     "kind": "qa",
+     "q": "公元前606年，秦伐陆浑之戎，陈兵周疆，问鼎中原，有取周之意",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng: 楚伐陆浑之戎 — là Sở, không phải Tần.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-034"
+    },
+    {
+     "kind": "qa",
+     "q": "越王勾践已经说过：蜚鸟尽，良弓藏；狡兔死，走狗烹",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Câu này là lời Phạm Lãi nói về Câu Tiễn, không phải Câu Tiễn nói ra.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-035"
+    },
+    {
+     "kind": "qa",
+     "q": "越王勾践被周天子命为“伯”，成为春秋时期最后一位霸主",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng nguyên văn.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-036"
+    },
+    {
+     "kind": "qa",
+     "q": "春秋的一百多个国家只剩下十几个，其中重要的有秦、齐、楚、燕、韩、赵、魏七个大诸侯国， 史称“战国七雄”",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-037"
+    },
+    {
+     "kind": "qa",
+     "q": "公元前453年，韩、赵、秦三家瓜分了晋国，史称“三家分晋”",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Tam gia phân Tấn là Hàn, Triệu, Ngụy — không có Tần.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-038"
+    },
+    {
+     "kind": "qa",
+     "q": "以养“士”著称的信陵君魏无忌、平原君赵胜、春申君黄歇、孟尝君田文。因其四人都是礼贤下士、结交宾客之人，后人称之为“战国四公子”，亦称战国四君",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng nguyên văn.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-039"
+    },
+    {
+     "kind": "qa",
+     "q": "范雎，亦作范且，字叔。战国时楚国人",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Phạm Thư là người nước Ngụy, không phải nước Sở.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-040"
+    },
+    {
+     "kind": "qa",
+     "q": "秦国廉颇闻名天下于防守之战",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Liêm Pha là tướng nước Triệu, không phải nước Tần.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-041"
+    },
+    {
+     "kind": "qa",
+     "q": "“宁为鸡口，无为牛后”是苏秦的想法",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Lời Tô Tần thuyết Hàn Vương.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-042"
+    },
+    {
+     "kind": "qa",
+     "q": "商鞅变法把秦国改造成军事强盛大国",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-043"
+    },
+    {
+     "kind": "qa",
+     "q": "战国法家看重法制、礼仪，忽视共同利益与赏罚制度",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Pháp gia coi trọng pháp chế và thưởng phạt, gạt bỏ lễ nghi — mệnh đề nói ngược.",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-044"
+    },
+    {
+     "kind": "qa",
+     "q": "墨子的思想主要的是希望改善每个人的地位的平等要求，自然不符合统治阶级的愿望，因而秦汉之后，墨家便几乎绝迹了",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-xuan-thu-chien-quoc"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts02",
+     "sources": [
+      "02-xuan-thu-chien-quoc.json"
+     ],
+     "id": "ts02-045"
+    },
+    {
+     "kind": "qa",
+     "q": "按照秦律，失期当斩；何人喊出：“王侯将相宁有种乎？”，决定起义？",
+     "a": "A.陈胜、吴广",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.陈胜、吴广",
+      "B.刘邦",
+      "C.项羽",
+      "D.张良"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-001"
+    },
+    {
+     "kind": "qa",
+     "q": "秦始皇统一六国，定都于：",
+     "a": "A.咸阳",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.咸阳",
+      "B.洛阳",
+      "C.汴京",
+      "D.燕京"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 定都咸阳（今西安）.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-002"
+    },
+    {
+     "kind": "qa",
+     "q": "秦朝第二位皇帝是：",
+     "a": "D.胡亥",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.嬴政",
+      "B.扶苏",
+      "C.子英",
+      "D.胡亥"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-003"
+    },
+    {
+     "kind": "qa",
+     "q": "沙丘之变，秦始皇驾崩的年间是：",
+     "a": "C.前210年",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.前221年",
+      "B.前211年",
+      "C.前210年",
+      "D.前201年"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng, dòng thời gian: 210 沙丘之变，秦始皇驾崩.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-004"
+    },
+    {
+     "kind": "qa",
+     "q": "“王侯将相宁有种乎？”是谁的话？",
+     "a": "B.陈胜、吴广",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.秦始皇",
+      "B.陈胜、吴广",
+      "C.张良",
+      "D.苏秦"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-005"
+    },
+    {
+     "kind": "qa",
+     "q": "陈胜吴广起义末期，秦将哪位将军率领由骊山徒隶组成的正规军大举反扑，击溃了缺乏作战经验的农民军？",
+     "a": "A.章邯",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.章邯",
+      "B.白起",
+      "C.廉颇",
+      "D.韩信"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Chương Hàm chỉ huy quân dựng từ tù dịch Ly Sơn.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-006"
+    },
+    {
+     "kind": "qa",
+     "q": "刘邦起用韩信，表面修复栈道，暗中突袭关中，拉开战争序幕是指哪个事件？",
+     "a": "C.暗度陈仓",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.鸿门宴",
+      "B.彭城之战",
+      "C.暗度陈仓",
+      "D.荥阳对峙"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-007"
+    },
+    {
+     "kind": "qa",
+     "q": "刘邦毁约追击，通过“十面埋伏”与“四面楚歌”彻底击溃楚军是那一场战场的事情？",
+     "a": "C.垓下之战",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.彭城之战",
+      "B.赤壁之战",
+      "C.垓下之战",
+      "D.官渡之战"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-008"
+    },
+    {
+     "kind": "qa",
+     "q": "刘邦哪一年登基？",
+     "a": "B.前202年",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.千前221年",
+      "B.前202年",
+      "C.前200年",
+      "D.前212年"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-009"
+    },
+    {
+     "kind": "qa",
+     "q": "汉朝哪位官员被出使西域，开辟了丝绸之路，大规模反击匈奴侵犯，保证了河西走廊的安全",
+     "a": "A.张骞",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.张骞",
+      "B.张角",
+      "C.张飞",
+      "D.张杜"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-010"
+    },
+    {
+     "kind": "qa",
+     "q": "“文景之治”的开创者是哪位皇帝的时期？",
+     "a": "D.汉文帝 (刘恒)",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.汉惠帝 (刘盈)",
+      "B.汉景帝 (刘启)",
+      "C.汉武帝 (刘彻)",
+      "D.汉文帝 (刘恒)"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Người mở ra Văn Cảnh chi trị là Hán Văn Đế.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-011"
+    },
+    {
+     "kind": "qa",
+     "q": "中兴之主，使国家实力达到极盛，文治武功兼备是哪位汉朝皇帝的贡献？",
+     "a": "B.汉宣帝 (刘询)",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.汉元帝 (刘奭)",
+      "B.汉宣帝 (刘询)",
+      "C.汉哀帝 (刘欣)",
+      "D.孺子婴 (刘婴)"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Hán Tuyên Đế — Tuyên Đế trung hưng.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-012"
+    },
+    {
+     "kind": "qa",
+     "q": "西汉末年，社会问题严重，公元 8 年，外戚王莽代汉称帝，国号是：",
+     "a": "B.新",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.蜀汉",
+      "B.新",
+      "C.晋",
+      "D.魏"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-013"
+    },
+    {
+     "kind": "qa",
+     "q": "亲政后铲除外戚窦氏，此时蔡伦改进造纸术，东汉国力达到极盛，这是哪位皇帝的？",
+     "a": "C.汉和帝 (刘肇)",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.汉章帝 (刘炟)",
+      "B.汉明帝 (刘庄)",
+      "C.汉和帝 (刘肇)",
+      "D.汉光武帝 (刘秀)"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Hán Hoà Đế; Thái Luân cải tiến giấy thời này.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-014"
+    },
+    {
+     "kind": "qa",
+     "q": "哪位皇帝被评为东汉末代皇帝，一生作为权臣傀儡，最终禅让于曹丕，汉朝正式灭亡？",
+     "a": "D.汉献帝 (刘协)",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.汉少帝 (刘辩)",
+      "B.汉灵帝 (刘宏)",
+      "C.汉桓帝 (刘志)",
+      "D.汉献帝 (刘协)"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 汉献帝…最终禅让于曹丕.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-015"
+    },
+    {
+     "kind": "qa",
+     "q": "秦朝重要的改变：郡县制、书同文、车同轨、统一货币与度量衡、确立了土地个人私有制度",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng liệt kê đủ năm mục, gồm 确立了土地个人私有制度.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-016"
+    },
+    {
+     "kind": "qa",
+     "q": "从秦王朝建立到东汉结束，约440年，是中国封建社会巩固的时期",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng nguyên văn: 约440年，是中国封建社会巩固的时期.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-017"
+    },
+    {
+     "kind": "qa",
+     "q": "引发出陈胜与吴广的起义是由项梁、项伯等人",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Khởi nghĩa do Trần Thắng và Ngô Quảng phát động, không liên quan Hạng Lương.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-018"
+    },
+    {
+     "kind": "qa",
+     "q": "秦始皇统一国家之后。进行废分封，行郡县，皇权至上",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-019"
+    },
+    {
+     "kind": "qa",
+     "q": "公元前210年秦朝焚书坑儒，思想达到高度专制",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng: 213 焚书坑儒; năm 210 là 沙丘之变.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-020"
+    },
+    {
+     "kind": "qa",
+     "q": "陈胜吴广利用迷信（鱼腹丹书、狐鸣呼喊）制造天命所归的假象，以树立威信",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-021"
+    },
+    {
+     "kind": "qa",
+     "q": "攻占陈县，建立“张楚”政权，迅速引发原六国地区的全面反秦浪潮是项羽军队所为",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Chiếm Trần Huyện, lập chính quyền Trương Sở là quân Trần Thắng.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-022"
+    },
+    {
+     "kind": "qa",
+     "q": "陈胜吴广起义军规模迅速扩大，直逼秦都咸阳，直接威胁秦朝的统治核心",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-023"
+    },
+    {
+     "kind": "qa",
+     "q": "由于内部权力斗争，吴广被部下所杀，陈胜被车夫刺杀，起义在六个月后宣告失败",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-024"
+    },
+    {
+     "kind": "qa",
+     "q": "项羽是名门贵族，战神级统帅，性格自负刚愎，主张分封制",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-025"
+    },
+    {
+     "kind": "qa",
+     "q": "刘邦 出身豪族，知人善任，极具政治忍耐力，主张大一统",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Lưu Bang xuất thân nông dân thường, không phải hào tộc.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-026"
+    },
+    {
+     "kind": "qa",
+     "q": "彭城之战，刘邦趁虚而入占领楚都，项羽以少胜多大败汉军，双方进入拉锯战",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-027"
+    },
+    {
+     "kind": "qa",
+     "q": "楚汉交战时，因楚军精疲力竭，与汉军约定以红沟为界平分天下。",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng tự viết 红沟: 约定以红沟为界平分天下 (sử gọi là 鸿沟).",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-028"
+    },
+    {
+     "kind": "qa",
+     "q": "刘邦，字季，沛丰邑中阳里人（今江苏省徐州市丰县）",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-029"
+    },
+    {
+     "kind": "qa",
+     "q": "汉前期定都长安（今西安），又称西汉、前汉；后期定都洛阳，又称东汉、后汉",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng nguyên văn.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-030"
+    },
+    {
+     "kind": "qa",
+     "q": "“罢黜百家，独尊儒术”是汉武帝的建议",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Đó là đề nghị của Đổng Trọng Thư; Hán Vũ Đế là người chấp nhận.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-031"
+    },
+    {
+     "kind": "qa",
+     "q": "建立18国家藏书库，使文化事业得到很大的发展，杰出的史学家司马迁写下了中国第一部纪传体通史《史记》",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng nguyên văn: 建立18国家藏书库…司马迁写下…史记.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-032"
+    },
+    {
+     "kind": "qa",
+     "q": "于 25年在洛阳称帝(汉光武帝)，恢复了汉朝，开始了东汉时期，直到公元 220 年",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-033"
+    },
+    {
+     "kind": "qa",
+     "q": "推行柔道治国，开启“光武中兴”，成为东汉开国皇帝的是汉明帝-刘庄",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Người mở Quang Vũ trung hưng là Hán Quang Vũ Đế Lưu Tú, không phải Hán Minh Đế Lưu Trang.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-034"
+    },
+    {
+     "kind": "qa",
+     "q": "到西汉时，中原地区在典章制度、语言文字、文化教育、风俗习惯等多方面都逐渐趋于统一，构成了共同的汉文化",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tan-han"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng nguyên văn.",
+     "prefix": "ts03",
+     "sources": [
+      "03-tan-han.json"
+     ],
+     "id": "ts03-035"
+    },
+    {
+     "kind": "qa",
+     "q": "东汉末年政权衰落，爆发了什么起义，使朝廷被迫允许地方招募军队平乱",
+     "a": "A.黄巾起义",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.黄巾起义",
+      "B.鸿锦起义",
+      "C.黑金起义",
+      "D.白巾起义"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-001"
+    },
+    {
+     "kind": "qa",
+     "q": "“苍天已死，黄天当立，岁在甲子，天下大吉”是哪个事件的口号？",
+     "a": "A.黄巾起义",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.黄巾起义",
+      "B.陈胜吴广起义",
+      "C.梁山泊起义",
+      "D.白巾起义"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-002"
+    },
+    {
+     "kind": "qa",
+     "q": "出身于“四世三公”的显赫家族是：",
+     "a": "D.袁氏二兄弟",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.曹操",
+      "B.刘备",
+      "C.孙权",
+      "D.袁氏二兄弟"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-003"
+    },
+    {
+     "kind": "qa",
+     "q": "曾任反董卓同盟盟主，割据河北，但在官渡之战中败给曹操是：",
+     "a": "C.袁绍",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.袁术",
+      "B.关羽",
+      "C.袁绍",
+      "D.刘备"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-004"
+    },
+    {
+     "kind": "qa",
+     "q": "割据淮南，冒天下之大不韪称帝（仲家），最终众叛亲离，吐血而亡是：",
+     "a": "B.袁术",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.袁绍",
+      "B.袁术",
+      "C.张飞",
+      "D.董卓"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-005"
+    },
+    {
+     "kind": "qa",
+     "q": "官渡胜战、赤壁惨败，是关于谁的？",
+     "a": "A.曹操",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.曹操",
+      "B.刘备",
+      "C.司马懿",
+      "D.孙权"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-006"
+    },
+    {
+     "kind": "qa",
+     "q": "孙坚、孙策之继承者是谁？",
+     "a": "C.孙权",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.孙逸仙",
+      "B.孙悟空",
+      "C.孙权",
+      "D.孙俪"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-007"
+    },
+    {
+     "kind": "qa",
+     "q": "谁夺取曹魏实权，奠定家族基础？",
+     "a": "C.司马懿",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.董卓",
+      "B.司马炎、",
+      "C.司马懿",
+      "D.司马光"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Tư Mã Ý nắm thực quyền Tào Ngụy, đặt nền cho dòng họ.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-008"
+    },
+    {
+     "kind": "qa",
+     "q": "西晋灭吴，三国时代结束，全国实现统一是在哪一年？",
+     "a": "B.280年",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.264年",
+      "B.280年",
+      "C.290年",
+      "D.294年"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 280年，西晋灭吴.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-009"
+    },
+    {
+     "kind": "qa",
+     "q": "五胡之乱是指那五个民族？",
+     "a": "A.匈奴、鲜卑、羯、羌、氐",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.匈奴、鲜卑、羯、羌、氐",
+      "B.匈奴、鲜卑、羯、羌、闽",
+      "C.戎、鲜卑、羯、羌、氐",
+      "D.匈奴、女贞、羯、羌、氐"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-010"
+    },
+    {
+     "kind": "qa",
+     "q": "哪一个国家建国一百多年， 是对南北朝历史影响很大的一个王朝？",
+     "a": "D.北魏",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.西魏",
+      "B.北齐",
+      "C.北周",
+      "D.北魏"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng nguyên văn: 北魏建国一百多年，是对南北朝历史影响很大的一个王朝.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-011"
+    },
+    {
+     "kind": "qa",
+     "q": "南北朝时期最崇尚的宗教是：",
+     "a": "B.佛教",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.道教",
+      "B.佛教",
+      "C.印度教",
+      "D.基督教"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-012"
+    },
+    {
+     "kind": "qa",
+     "q": "隋炀帝最大的功劳之一是开凿了：",
+     "a": "B.京杭大运河",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.京苏大运河",
+      "B.京杭大运河",
+      "C.京都大运河",
+      "D.经贸大运河"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 隋炀帝下令开凿了连接南北的大运河.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-013"
+    },
+    {
+     "kind": "qa",
+     "q": "“三省六部制”是哪个朝代的典型制度改革？",
+     "a": "C.隋朝",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.汉朝",
+      "B.宋朝",
+      "C.隋朝",
+      "D.明朝"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 隋朝 建立了 三省六部制.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-014"
+    },
+    {
+     "kind": "qa",
+     "q": "唐朝通知时间为：",
+     "a": "B.289年",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.189年",
+      "B.289年",
+      "C.389年",
+      "D.489年"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "通知 là lỗi gõ của 统治: nhà Đường 618–907, tức 289 năm.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-015"
+    },
+    {
+     "kind": "qa",
+     "q": "“开元盛世”是指哪位皇帝的时期？",
+     "a": "D.唐玄宗",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.唐高祖",
+      "B.唐太宗",
+      "C.唐高宗",
+      "D.唐玄宗"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 唐玄宗前期年号 开元.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-016"
+    },
+    {
+     "kind": "qa",
+     "q": "安禄山、史思明是哪一事件的历史人物？",
+     "a": "D.安史之乱",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.龙争虎斗",
+      "B.乱八王",
+      "C.朝廷内乱",
+      "D.安史之乱"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-017"
+    },
+    {
+     "kind": "qa",
+     "q": "874年到884年，唐朝出现了摧毁了关中经济，杀绝了门阀世族，帝国名存实亡的变故，这是：",
+     "a": "A.黄巢起义事件",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.黄巢起义事件",
+      "B.安史之乱事件",
+      "C.靖康之耻",
+      "D.王莽之乱"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng: 黄巢起义（874-884）：摧毁了关中经济，杀绝了门阀世族.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-018"
+    },
+    {
+     "kind": "qa",
+     "q": "400 年统一富强的汉代结束后，中国开始了近 400 年的分裂，历史上把这一时期称做三国两晋南北朝时期",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-019"
+    },
+    {
+     "kind": "qa",
+     "q": "三国鼎立是指东汉末年的曹魏、蜀汉、东吴各占各方的三个大势力",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-020"
+    },
+    {
+     "kind": "qa",
+     "q": "蜀汉最先灭亡（263年），曹魏政权逐渐被司马懿家族掌控，265年，司马炎篡魏建立西晋。280年，西晋灭吴，正式结束了三国纷争的局面",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-021"
+    },
+    {
+     "kind": "qa",
+     "q": "荀彧、郭嘉、贾诩、荀攸等人都是东吴作重要的人物。",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Tuân Úc, Quách Gia, Giả Hủ, Tuân Du đều là mưu sĩ của Tào Tháo.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-022"
+    },
+    {
+     "kind": "qa",
+     "q": "相传法正是刘备最喜欢的谋士之一",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-023"
+    },
+    {
+     "kind": "qa",
+     "q": "周瑜从关云长手中拿了荆州",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Kinh Châu không phải Chu Du lấy từ tay Quan Vũ.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-024"
+    },
+    {
+     "kind": "qa",
+     "q": "316 年，匈奴兵攻入长安，西晋皇帝被俘，西晋至此灭亡。",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-025"
+    },
+    {
+     "kind": "qa",
+     "q": "晋武帝司马炎把皇族封为藩王，让他们掌握了军队",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-026"
+    },
+    {
+     "kind": "qa",
+     "q": "西晋末年，藩王为了打仗，招募了北方的少数民族当雇佣兵，导致他们趁机起兵，乱事结束后，西晋元气大伤，很快被北方民族消灭",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-027"
+    },
+    {
+     "kind": "qa",
+     "q": "400年，司马睿在建康称帝",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Tư Mã Duệ xưng đế ở Kiến Khang năm 317, không phải năm 400.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-028"
+    },
+    {
+     "kind": "qa",
+     "q": "420-589年阶段是南方宋、齐、梁、陈与北方北魏、东魏、北齐、北周对峙",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng ghi 北魏、东/西魏、北齐、北周 — mệnh đề thiếu Tây Ngụy.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-029"
+    },
+    {
+     "kind": "qa",
+     "q": "北魏孝文帝要求所有鲜卑贵族不可以讲汉语句子、穿汉服、改汉姓，并将迁都至洛阳",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Hiếu Văn Đế BẮT BUỘC nói tiếng Hán, mặc Hán phục, đổi họ Hán — mệnh đề nói ngược.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-030"
+    },
+    {
+     "kind": "qa",
+     "q": "公元 581 年，北周外戚杨坚夺取了帝位， 改国号为唐",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Dương Kiên đổi quốc hiệu thành Tuỳ, không phải Đường.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-031"
+    },
+    {
+     "kind": "qa",
+     "q": "唐朝是继汉朝之后最繁荣强大的朝代， 政治、经济、文化都非常发达， 标志着中国封建社会发展到了最高峰",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng nguyên văn.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-032"
+    },
+    {
+     "kind": "qa",
+     "q": "隋炀帝滥用民力，大兴土木修建宫殿，并多次发动对高句丽的战争",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-033"
+    },
+    {
+     "kind": "qa",
+     "q": "638年，隋朝灭亡",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Nhà Tuỳ mất năm 618, không phải 638.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-034"
+    },
+    {
+     "kind": "qa",
+     "q": "隋文帝废除旧制度的“九品中正制”，开启了以才能取人的先河",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-035"
+    },
+    {
+     "kind": "qa",
+     "q": "公元 618 年，隋朝贵族李世民称帝，建立唐朝，定都长安",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Năm 618 Lý Uyên lập nhà Đường, không phải Lý Thế Dân.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-036"
+    },
+    {
+     "kind": "qa",
+     "q": "626 年，唐高祖李世民即位，年号贞观",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng: 626年，唐太宗李世民即位 — là Đường Thái Tông, không phải Đường Cao Tổ.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-037"
+    },
+    {
+     "kind": "qa",
+     "q": "唐高宗死后，武则天做皇帝， 改国号周",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-038"
+    },
+    {
+     "kind": "qa",
+     "q": "武则天与李世民是妃嫔关系，与李治是夫妻关系，李世民与李治是父子关系",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-039"
+    },
+    {
+     "kind": "qa",
+     "q": "安史之乱的起因主要在于节度使权力过大（兵权、财权集于一身）、朝政腐败、玄宗后期怠政",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-tam-quoc-duong"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Bài giảng nêu đúng ba nguyên nhân này.",
+     "prefix": "ts04",
+     "sources": [
+      "04-tam-quoc-duong.json"
+     ],
+     "id": "ts04-040"
+    },
+    {
+     "kind": "qa",
+     "q": "从五代十国，经过宋、辽、西夏、金时期汉族和其他民族的融合，到实现元朝的统一，大约多少年？",
+     "a": "A.约460年",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.约460年",
+      "B.约560年",
+      "C.约660年",
+      "D.约770年"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Bài giảng nguyên văn: …到实现元朝的统一，约460年.",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-001"
+    },
+    {
+     "kind": "qa",
+     "q": "公元 960 年，后周将领赵匡胤发动兵变， 建立了哪个朝代？",
+     "a": "A.宋朝",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.宋朝",
+      "B.唐朝",
+      "C.晋朝",
+      "D.隋朝"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-002"
+    },
+    {
+     "kind": "qa",
+     "q": "宋太祖以什么措施解除当时武将的兵权？",
+     "a": "D.“杯酒释兵权”",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.“空城计”",
+      "B.“寓兵于农”",
+      "C.“先下手为强”",
+      "D.“杯酒释兵权”"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-003"
+    },
+    {
+     "kind": "qa",
+     "q": "“靖康之变”发生在什么时候？",
+     "a": "C.1127年",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.960年",
+      "B.1010年",
+      "C.1127年",
+      "D.1200年"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-004"
+    },
+    {
+     "kind": "qa",
+     "q": "忽必烈于哪一年称帝，建立元朝，定都大都（今北京）？",
+     "a": "B.1271年",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.1171年",
+      "B.1271年",
+      "C.1371年",
+      "D.1471年"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-005"
+    },
+    {
+     "kind": "qa",
+     "q": "明朝灭亡于哪一年？",
+     "a": "A.1644",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.1644",
+      "B.1744",
+      "C.1844",
+      "D.1944"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-006"
+    },
+    {
+     "kind": "qa",
+     "q": "1402年至1424年是哪位皇帝的统治阶段？",
+     "a": "A.永乐成祖朱棣",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.永乐成祖朱棣",
+      "B.正统英宗朱祁镇",
+      "C.洪武太祖朱元璋",
+      "D.万历神宗朱翊钧"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Vĩnh Lạc (Minh Thành Tổ Chu Đệ) trị vì 1402–1424.",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-007"
+    },
+    {
+     "kind": "qa",
+     "q": "哪位皇帝将“后金”改成“清”？",
+     "a": "C.皇太极",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.努尔哈赤",
+      "B.康熙",
+      "C.皇太极",
+      "D.乾隆"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Hoàng Thái Cực đổi Hậu Kim thành Thanh năm 1636.",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-008"
+    },
+    {
+     "kind": "qa",
+     "q": "清朝的最后一位皇帝是：",
+     "a": "B.宣统黄帝",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.咸丰皇帝",
+      "B.宣统黄帝",
+      "C.同治皇帝",
+      "D.光绪黄帝"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Phổ Nghi, niên hiệu Tuyên Thống.",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-009"
+    },
+    {
+     "kind": "qa",
+     "q": "正黄、镶黄、正白等上三旗是由谁来管理的？",
+     "a": "A.皇帝",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.皇帝",
+      "B.贝勒们",
+      "C.礼亲王",
+      "D.郑亲王"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Thượng tam kỳ do chính hoàng đế thống lĩnh.",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-010"
+    },
+    {
+     "kind": "qa",
+     "q": "所为的五代是指连续更替的五个政权，包括后梁、后唐、后晋、后汉、后周等5各朝代",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-011"
+    },
+    {
+     "kind": "qa",
+     "q": "960年，赵匡胤发动陈桥兵变建立北宋，随后通过统一战争结束了割据局面",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-012"
+    },
+    {
+     "kind": "qa",
+     "q": "960年，西夏建立，李元昊称帝，宋夏在西北边境开启长期的战争",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Tây Hạ do Lý Nguyên Hạo lập năm 1038, không phải 960.",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-013"
+    },
+    {
+     "kind": "qa",
+     "q": "1234年，南宋与蒙古帝国结盟灭金，但随后与蒙古军队直接对抗。",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-014"
+    },
+    {
+     "kind": "qa",
+     "q": "宋朝盛行宋词、理学等艺术文化思想，构建了后世古典文学与道德哲学的框架",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-015"
+    },
+    {
+     "kind": "qa",
+     "q": "成吉思汗的孙子忽必烈消灭了南宋，建立了元朝-大哉乾元",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-016"
+    },
+    {
+     "kind": "qa",
+     "q": "公元1368年建立明朝后，中国恢复了汉人的统治，经历276年",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Đúng/Sai",
+     "note": "1368–1644 đúng 276 năm.",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-017"
+    },
+    {
+     "kind": "qa",
+     "q": "朱棣为了巩固自己的皇位，利用佛教的力量，下令按照自己的形象塑造真武大帝的塑像‌",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Chân Vũ Đại Đế là thần Đạo giáo, không phải Phật giáo.",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-018"
+    },
+    {
+     "kind": "qa",
+     "q": "1626-1644年间，努尔哈赤与清朝建立",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Nỗ Nhĩ Cáp Xích mất năm 1626; nhà Thanh do Hoàng Thái Cực lập năm 1636.",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-019"
+    },
+    {
+     "kind": "qa",
+     "q": "袁崇焕多次诬陷魏忠贤，之后魏忠贤被”凌迟”处死",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Ngược lại: phe Ngụy Trung Hiền vu hãm Viên Sùng Hoán; Ngụy Trung Hiền tự sát rồi bị phanh thây.",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-020"
+    },
+    {
+     "kind": "qa",
+     "q": "康雍乾盛世国家稳定、经济富庶，领土达到最大化",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-ngu-dai-thanh"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts05",
+     "sources": [
+      "05-ngu-dai-thanh.json"
+     ],
+     "id": "ts05-021"
+    },
+    {
+     "kind": "qa",
+     "q": "第一次“鸦片战争”中国签了“那一条约？",
+     "a": "A.《南京条约》",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.《南京条约》",
+      "B.《北京条约》",
+      "C.《天津条约》",
+      "D.《马关条约》"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-001"
+    },
+    {
+     "kind": "qa",
+     "q": "第二次”鸦片战争“（1856 – 1860）由哪些国家与中国发动兵变？",
+     "a": "D.英国与法国",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.英国",
+      "B.法国",
+      "C.日本",
+      "D.英国与法国"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-002"
+    },
+    {
+     "kind": "qa",
+     "q": "被后人称为”六不总督“的是谁？",
+     "a": "B.叶名琛",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.林则徐",
+      "B.叶名琛",
+      "C.张作霖",
+      "D.张学良"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Diệp Danh Sâm bị gọi là Lục bất tổng đốc.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-003"
+    },
+    {
+     "kind": "qa",
+     "q": "1859-1860阶段，为了报复清廷虐待战俘，英法联军劫掠并焚毁了中国的哪个建筑与文化的瑰宝",
+     "a": "B.圆明园",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.颐和园",
+      "B.圆明园",
+      "C.故宫",
+      "D.紫禁城"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Liên quân Anh–Pháp đốt Viên Minh Viên năm 1860.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-004"
+    },
+    {
+     "kind": "qa",
+     "q": "第二次鸦片战争（1856-1860）结束之后，中国清政府要签署的条约有：",
+     "a": "C.《天津条约》与《背景条约》",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.《南京条约》",
+      "B.《北京条约》",
+      "C.《天津条约》与《背景条约》",
+      "D.《天津条约》"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "背景 là lỗi gõ của 北京: Thiên Tân điều ước và Bắc Kinh điều ước.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-005"
+    },
+    {
+     "kind": "qa",
+     "q": "1851年，洪秀全在哪个地方起义，建立太平天国？",
+     "a": "C.金田",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.燕京",
+      "B.广府",
+      "C.金田",
+      "D.巴蜀"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Hồng Tú Toàn khởi nghĩa ở Kim Điền (Quảng Tây) năm 1851.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-006"
+    },
+    {
+     "kind": "qa",
+     "q": "太平天国运动（1851-1864），曾国藩以自己的地方军进攻天京，该军队是：",
+     "a": "D.湘军",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.淮军",
+      "B.楚军",
+      "C.义军",
+      "D.湘军"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Tăng Quốc Phiên chỉ huy Tương quân.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-007"
+    },
+    {
+     "kind": "qa",
+     "q": "甲午战争发生的时间是：",
+     "a": "A.1894",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.1894",
+      "B.1794",
+      "C.1694",
+      "D.1994"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-008"
+    },
+    {
+     "kind": "qa",
+     "q": "1894年朝鲜爆发什么事变，使中日两国都以“协助朝鲜平乱”为由出兵？",
+     "a": "A.东学农民起义",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.东学农民起义",
+      "B.山东再起",
+      "C.脱亚入欧",
+      "D.东游运动"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Khởi nghĩa nông dân Đông Học ở Triều Tiên năm 1894.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-009"
+    },
+    {
+     "kind": "qa",
+     "q": "日本海陆两军围攻威海卫，北洋水师全军覆没，丁汝昌自杀，是：",
+     "a": "A.威海卫之战",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.威海卫之战",
+      "B.黄海海战",
+      "C.平壤之战",
+      "D.高丽之战"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-010"
+    },
+    {
+     "kind": "qa",
+     "q": "中国将台湾、澎湖列岛及辽东半岛割让给日本是哪一条约的主要内容？",
+     "a": "C.《马关条约》",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.《南京条约》",
+      "B.《北京条约》",
+      "C.《马关条约》",
+      "D.《天津条约》"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-011"
+    },
+    {
+     "kind": "qa",
+     "q": "“洋务运动”的核心推动者，致力于推动清朝军队，尤其是海军现代化的人物是：",
+     "a": "C.李鸿章",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.谭嗣同",
+      "B.曾国藩",
+      "C.李鸿章",
+      "D.左宗棠"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-012"
+    },
+    {
+     "kind": "qa",
+     "q": "“门户开放政策”是哪个国家于19世纪末在中国采取的一种经济外交策略？",
+     "a": "B.美国",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.日本",
+      "B.美国",
+      "C.英国",
+      "D.法国"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Chính sách Mở cửa do Mỹ đưa ra năm 1899.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-013"
+    },
+    {
+     "kind": "qa",
+     "q": "“门户开放政策”其中的核心之一是：",
+     "a": "D.让世界各国在中国享有平等的贸易权",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.让军阀割据中国",
+      "B.让日本在中国进行自由贸易",
+      "C.让美国在中国自由发展",
+      "D.让世界各国在中国享有平等的贸易权"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-014"
+    },
+    {
+     "kind": "qa",
+     "q": "1898年的“百日维新”还有另一个名称是：",
+     "a": "D.戊戌变法",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.甲午事变",
+      "B.辛亥变法",
+      "C.辛酉事变",
+      "D.戊戌变法"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-015"
+    },
+    {
+     "kind": "qa",
+     "q": "《明定国是》的宗旨是：",
+     "a": "A.废旧兴新",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.废旧兴新",
+      "B.扶清灭洋",
+      "C.黄天代清",
+      "D.闭关锁国"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Minh định quốc thị chiếu mở đầu Mậu Tuất biến pháp: bỏ cũ dựng mới.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-016"
+    },
+    {
+     "kind": "qa",
+     "q": "“各国变法，无不从流血而成，今日中国未闻有因变法而流血者，此国之所以不昌也……”是谁的话？",
+     "a": "B.谭嗣同",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.梁启超",
+      "B.谭嗣同",
+      "C.康有为",
+      "D.光绪帝"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Câu nói của Đàm Tự Đồng.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-017"
+    },
+    {
+     "kind": "qa",
+     "q": "发起“公车上书”，辅助光绪皇帝进行维新变法，编写《大同书》是谁？",
+     "a": "C.康有为",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.梁启超",
+      "B.谭嗣同",
+      "C.康有为",
+      "D.光绪帝"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Khang Hữu Vi: Công xa thượng thư, Đại đồng thư.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-018"
+    },
+    {
+     "kind": "qa",
+     "q": "名言：“少年强则国强。”是谁的？",
+     "a": "A.梁启超",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.梁启超",
+      "B.谭嗣同",
+      "C.康有为",
+      "D.光绪帝"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Lương Khải Siêu, Thiếu niên Trung Quốc thuyết.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-019"
+    },
+    {
+     "kind": "qa",
+     "q": "义和团分子以什么信念进行事变？",
+     "a": "D.刀枪不入",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.佛法无边",
+      "B.道法自然",
+      "C.无为而治",
+      "D.刀枪不入"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-020"
+    },
+    {
+     "kind": "qa",
+     "q": "中国同盟会的创立者，中华民国第一任临时大总统，被尊称为“国父”的是谁？",
+     "a": "B.孙中山",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.毛泽东",
+      "B.孙中山",
+      "C.蒋介石",
+      "D.袁世凯"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-021"
+    },
+    {
+     "kind": "qa",
+     "q": "孙中山是辛亥革命结束之后的：",
+     "a": "C.临时大总统",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.国家总统",
+      "B.国家主席",
+      "C.临时大总统",
+      "D.没有职位"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-022"
+    },
+    {
+     "kind": "qa",
+     "q": "”鸦片战争“是清朝历史上最具转折意义的事件之一，它标志着中国“百年国耻”的开端，也揭示了清王朝衰落的必然性",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-023"
+    },
+    {
+     "kind": "qa",
+     "q": "”鸦片战争“的一整个演变过程都在于1839年 – 1842年间",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Chiến tranh Nha phiến còn có lần hai (1856–1860), không gói trong 1839–1842.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-024"
+    },
+    {
+     "kind": "qa",
+     "q": "18至19世纪，清朝实行严格的“闭关锁国”政策，限制外商在中国的很多方面",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-025"
+    },
+    {
+     "kind": "qa",
+     "q": "林则徐是清朝大臣，他被派到南方进行”虎门销烟“",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-026"
+    },
+    {
+     "kind": "qa",
+     "q": "开放广州、厦门、福州、宁波、上海五处为通商口岸，允许外国商人自由贸易是《北京条约》的主要内容",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Năm cửa biển Quảng Châu, Hạ Môn, Phúc Châu, Ninh Ba, Thượng Hải là nội dung Nam Kinh điều ước.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-027"
+    },
+    {
+     "kind": "qa",
+     "q": "第二次鸦片战争以《北京条约》（1860年）的签署而告终，清廷的处境比上次更加恶劣",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-028"
+    },
+    {
+     "kind": "qa",
+     "q": "洋务运动（1861–1895）的核心理念是“中体西用”、军事现代化、兴办工业、教育改革",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-029"
+    },
+    {
+     "kind": "qa",
+     "q": "洋务运动是清朝在第二次鸦片战争后为了挽救统治危机而发起的现代化运动",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-030"
+    },
+    {
+     "kind": "qa",
+     "q": "太平天国起义（1850—1864）完全只是一场普通的农民起义，其起义方式没有太多的改进",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Thái Bình Thiên Quốc có cương lĩnh, chính quyền và tôn giáo riêng — không phải khởi nghĩa nông dân thường.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-031"
+    },
+    {
+     "kind": "qa",
+     "q": "太平天国发展全盛（1851–1856），定都北京，分封诸王，推行《天朝田亩制度》",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Thái Bình Thiên Quốc định đô ở Nam Kinh (Thiên Kinh), không phải Bắc Kinh.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-032"
+    },
+    {
+     "kind": "qa",
+     "q": "太平天国带有极为特殊的宗教色彩",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-033"
+    },
+    {
+     "kind": "qa",
+     "q": "1876年，日本迫使朝鲜签订《江华条约》，实现开港通商并在外交上“脱离”中国",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-034"
+    },
+    {
+     "kind": "qa",
+     "q": "1885年，中日签订《天津条约》朝鲜归于日本所控制",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Thiên Tân hội nghị chuyên điều 1885 quy định hai bên cùng rút quân; Triều Tiên không bị giao cho Nhật.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-035"
+    },
+    {
+     "kind": "qa",
+     "q": "平壤之战，清军在陆战中溃败，被迫撤出朝鲜",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-036"
+    },
+    {
+     "kind": "qa",
+     "q": "1894年甲午战争之后，朝鲜正式独立",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Mã Quan điều ước 1895 điều 1: Trung Quốc thừa nhận Triều Tiên hoàn toàn độc lập.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-037"
+    },
+    {
+     "kind": "qa",
+     "q": "甲午战争不仅是一场军事冲突，它更是对“中体西用”思维失败的最终验证",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-038"
+    },
+    {
+     "kind": "qa",
+     "q": "‘戊戌变法”的核心目标是学习日本，通过变法使中国走向君主立宪和富强。",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-039"
+    },
+    {
+     "kind": "qa",
+     "q": "”百日维新“之所以失败是因为光绪帝柔弱无果断",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Thất bại vì phái bảo thủ của Từ Hi và vì không có thực quyền lẫn quân đội, không chỉ vì tính cách Quang Tự.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-040"
+    },
+    {
+     "kind": "qa",
+     "q": "光绪帝因开民智，同意 废除八股，兴办京师大学堂",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-041"
+    },
+    {
+     "kind": "qa",
+     "q": "谭嗣同的代表作品是《仁学》，以批判封建专制",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-042"
+    },
+    {
+     "kind": "qa",
+     "q": "义和团的前身是“义和拳”，最早在19世纪末的‌山东冠县‌一带兴起",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-043"
+    },
+    {
+     "kind": "qa",
+     "q": "义和团分子保护基督教，屠杀洋人",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Nghĩa Hoà Đoàn phù Thanh diệt dương: chống và sát hại giáo dân, không bảo vệ Cơ Đốc giáo.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-044"
+    },
+    {
+     "kind": "qa",
+     "q": "为了营救使馆，八国联军包括英、日、俄、法、德、美、意、奥等国，从天津向北京进发攻击清朝廷",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-045"
+    },
+    {
+     "kind": "qa",
+     "q": "1901年9月7日，清政府被迫签署了极其耻辱的《辛丑条约》",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-046"
+    },
+    {
+     "kind": "qa",
+     "q": "辛亥革命的成就是推翻封建，袁世凯就任大总督",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Viên Thế Khải nhậm chức Đại Tổng thống, không phải đại tổng đốc.",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-047"
+    },
+    {
+     "kind": "qa",
+     "q": "辛亥革命带来的价值之一是促进了民族资本主义的发展和风俗改革",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-can-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts06",
+     "sources": [
+      "06-can-dai.json"
+     ],
+     "id": "ts06-048"
+    },
+    {
+     "kind": "qa",
+     "q": "五四运动基本上有几个阶段？",
+     "a": "B.两个",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.一个",
+      "B.两个",
+      "C.三个",
+      "D.四个"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Hai giai đoạn: sinh viên từ 4/5, công nhân từ đầu tháng 6.",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-001"
+    },
+    {
+     "kind": "qa",
+     "q": "1919年6月初，五四运动的主要力量是：",
+     "a": "B.工人阶级",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.农民阶级",
+      "B.工人阶级",
+      "C.知识分子",
+      "D.资产阶级"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-002"
+    },
+    {
+     "kind": "qa",
+     "q": "五四运动中，被广泛地提倡的“德先生”是：",
+     "a": "A.民主",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.民主",
+      "B.科学",
+      "C.自由",
+      "D.独立"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Đức tiên sinh = Democracy = dân chủ; Tái tiên sinh = Science.",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-003"
+    },
+    {
+     "kind": "qa",
+     "q": "中国现代史的”北伐战争“开始于哪一年？",
+     "a": "A.1926",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.1926",
+      "B.1927",
+      "C.1928",
+      "D.1929"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-004"
+    },
+    {
+     "kind": "qa",
+     "q": "军阀割据时期，控制整个资源丰富、面积辽阔的东北（满洲）地区的势力是：",
+     "a": "C.奉系军阀",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.皖系军阀",
+      "B.直系军阀",
+      "C.奉系军阀",
+      "D.西北势力"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Phụng hệ quân phiệt (Trương Tác Lâm) kiểm soát Đông Bắc.",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-005"
+    },
+    {
+     "kind": "qa",
+     "q": "从绿林土匪起家，后受清廷招安。凭胆识在军中崛起，趁乱割据东北是谁？",
+     "a": "D.张作霖",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.杨虎城",
+      "B.蒋介石",
+      "C.李大超",
+      "D.张作霖"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-006"
+    },
+    {
+     "kind": "qa",
+     "q": "蒋介石正式在广州誓师，发布北伐宣言的时间是：",
+     "a": "B.1926年7月",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.1925年7月",
+      "B.1926年7月",
+      "C.1927年7月",
+      "D.1928年7月"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Tưởng thệ sư ở Quảng Châu tháng 7/1926.",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-007"
+    },
+    {
+     "kind": "qa",
+     "q": "1927年8月1日，共产党领导的部分军队在哪里发动了起义？",
+     "a": "C.南昌",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.武昌",
+      "B.南京",
+      "C.南昌",
+      "D.广州"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Khởi nghĩa Nam Xương 1/8/1927.",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-008"
+    },
+    {
+     "kind": "qa",
+     "q": "遵义会议举行时间是：",
+     "a": "C.1935年",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.1933年",
+      "B.1934年",
+      "C.1935年",
+      "D.1936年"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Hội nghị Tuân Nghĩa tháng 1/1935.",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-009"
+    },
+    {
+     "kind": "qa",
+     "q": "张学良、杨虎城在西安发动“兵谏”，扣押了蒋介石的时间是：",
+     "a": "D.1936年12月12日",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.1933年12月12日",
+      "B.1934年12月12日",
+      "C.1935年12月12日",
+      "D.1936年12月12日"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-010"
+    },
+    {
+     "kind": "qa",
+     "q": "西安事变后，国共实现第几次合作？",
+     "a": "A.第二次",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.第二次",
+      "B.第三次",
+      "C.第一次",
+      "D.第五次"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-011"
+    },
+    {
+     "kind": "qa",
+     "q": "日本制造铁路爆炸事件作为借口，进而占领满洲，并建立了傀儡政权“满洲国”是史上的哪一事件？",
+     "a": "D.九一八事变",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.五四运动",
+      "B.西安事变",
+      "C.南昌起义",
+      "D.九一八事变"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-012"
+    },
+    {
+     "kind": "qa",
+     "q": "南京大屠杀在什么时候发生的？",
+     "a": "A.1937年12月",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.1937年12月",
+      "B.1928年12月",
+      "C.1939年12月",
+      "D.1930年12月"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-013"
+    },
+    {
+     "kind": "qa",
+     "q": "1947年7月—1948年8月是解放战争的低级阶段？",
+     "a": "B.第二阶段",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.第一阶段",
+      "B.第二阶段",
+      "C.第三阶段",
+      "D.第四阶段"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "7/1947–8/1948 là giai đoạn hai: chuyển sang phản công chiến lược.",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-014"
+    },
+    {
+     "kind": "qa",
+     "q": "“虽然工业发展取得一定成就，但“大跃进”运动也带来了严重失误”这一说法是指哪一阶段？",
+     "a": "B.1957—1966年",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.1949—1956年",
+      "B.1957—1966年",
+      "C.1966—1976年",
+      "D.自2010年起"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Đại nhảy vọt 1958–1960.",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-015"
+    },
+    {
+     "kind": "qa",
+     "q": "“文化大革命”发生于什么阶段？",
+     "a": "C.1966—1976年",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.1949—1956年",
+      "B.1957—1966年",
+      "C.1966—1976年",
+      "D.自2010年起"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-016"
+    },
+    {
+     "kind": "qa",
+     "q": "2002—2012年间，谁提出“科学发展观”，强调社会协调发展与公平？",
+     "a": "B.胡锦涛",
+     "qVi": "",
+     "aVi": "",
+     "altA": [],
+     "options": [
+      "A.邓小平",
+      "B.胡锦涛",
+      "C.毛泽东",
+      "D.江泽民"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Trắc nghiệm",
+     "note": "Hồ Cẩm Đào nêu Khoa học phát triển quan.",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-017"
+    },
+    {
+     "kind": "qa",
+     "q": "五四运动的直接诱因之一是巴黎和会外交失败",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-018"
+    },
+    {
+     "kind": "qa",
+     "q": "1921年，陈独秀在广州，首任党总书记，是精神与组织领袖",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Trần Độc Tú đang ở Quảng Châu khi Đại hội I họp, được chọn làm Thư ký Trung ương cục đầu tiên.",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-019"
+    },
+    {
+     "kind": "qa",
+     "q": "1921年，邓小平与陈独秀等人共同创始共产党，成为北方地区思想领袖",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Năm 1921 Đặng Tiểu Bình mới 17 tuổi và đang ở Pháp; lãnh tụ phương Bắc là Lý Đại Chiêu.",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-020"
+    },
+    {
+     "kind": "qa",
+     "q": "1921年，中国共产党成立，这正是这一思想运动发展的直接结果",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-021"
+    },
+    {
+     "kind": "qa",
+     "q": "1926年，中国国民党与中国共产党正处于第一次国共合作时期",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-022"
+    },
+    {
+     "kind": "qa",
+     "q": "北伐战争的最后演变是张作霖宣布归顺接受蒋介石的南京政府，至此，中国在名义上实现统一",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Người tuyên bố quy thuận Nam Kinh là Trương Học Lương (Đông Bắc dịch xí, 12/1928); Trương Tác Lâm đã bị giết tháng 6/1928.",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-023"
+    },
+    {
+     "kind": "qa",
+     "q": "1927年的“清共”使中国共产党被迫转入地下活动，并逐渐向农村转移，从而埋下了后来长达数十年国共内战的种子。",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-024"
+    },
+    {
+     "kind": "qa",
+     "q": "“井冈山会师”不是毛泽东与朱德成功会师，组建了红军第四军的事件",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Hội quân Tỉnh Cương Sơn ĐÚNG là Mao Trạch Đông gặp Chu Đức, lập Hồng quân đệ tứ quân — mệnh đề phủ định nên sai.",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-025"
+    },
+    {
+     "kind": "qa",
+     "q": "五次围剿是共产党发动的战役，以反击国民党的进攻",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Năm lần vây quét do Quốc dân đảng phát động; Đảng Cộng sản chống vây quét.",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-026"
+    },
+    {
+     "kind": "qa",
+     "q": "“西安事变”的起因主要是由张学良、杨虎城要求“停止内战，一致抗日”，但遭到蒋介石拒绝",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-027"
+    },
+    {
+     "kind": "qa",
+     "q": "“西安事变”还没能结束中国的内战，直到抗日时，民族统一战线才形成",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-028"
+    },
+    {
+     "kind": "qa",
+     "q": "1931年“九一八事变”是开端；1937年“七七事变”是全面爆发的标志",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-029"
+    },
+    {
+     "kind": "qa",
+     "q": "1945年8月15日日本无条件投降。中国取得了近代以来反抗外来侵略的第一次完全胜利",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-030"
+    },
+    {
+     "kind": "qa",
+     "q": "1938年发生长沙会战，三次挫败日军对这一战略重镇的进攻",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Các hội chiến Trường Sa diễn ra 1939–1942, không phải 1938.",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-031"
+    },
+    {
+     "kind": "qa",
+     "q": "1949年4月，解放军横渡长江，占领南京",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-032"
+    },
+    {
+     "kind": "qa",
+     "q": "1949年蒋介石率领残余部队撤退到台湾岛，由此形成了延续至今的两岸分治局面。",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-033"
+    },
+    {
+     "kind": "qa",
+     "q": "中国政府于1999年和2000年分别恢复对香港与澳门的主权",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "Thu hồi Hồng Kông năm 1997 và Macao năm 1999.",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-034"
+    },
+    {
+     "kind": "qa",
+     "q": "邓小平时期（1989—2002）开启现代化建设道路，确立“中国特色社会主义”发展方向",
+     "a": "错误",
+     "qVi": "",
+     "aVi": "Sai",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "1989–2002 là thời Giang Trạch Dân; hiện đại hoá của Đặng Tiểu Bình mở ra từ 1978.",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-035"
+    },
+    {
+     "kind": "qa",
+     "q": "中国于2020—2035年的目标是基本实现社会主义现代化",
+     "a": "正确",
+     "qVi": "",
+     "aVi": "Đúng",
+     "altA": [],
+     "options": [
+      "正确",
+      "错误"
+     ],
+     "topics": [
+      "ts-hien-dai"
+     ],
+     "group": "Đúng/Sai",
+     "note": "",
+     "prefix": "ts07",
+     "sources": [
+      "07-hien-dai.json"
+     ],
+     "id": "ts07-036"
     }
    ],
    "kind": "qa"

@@ -81,8 +81,8 @@
   /* Nét khung và dải 回纹 */
   --fret-ink:  #8A7C5E;
   --fret-soft: #C7BB9F;
-  --hui-x: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='22'%3E%3Cpath d='M2 20 L2 2 L30 2 L30 14 L10 14 L10 8 L22 8' fill='none' stroke='%239A8C72' stroke-width='2.3'/%3E%3C/svg%3E");
-  --hui-y: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='40'%3E%3Cpath d='M2 2 L20 2 L20 30 L8 30 L8 10 L14 10 L14 22' fill='none' stroke='%239A8C72' stroke-width='2.3'/%3E%3C/svg%3E");
+  --hui-x: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='22'%3E%3Cpath d='M2 20 L2 2 L30 2 L30 14 L10 14 L10 8 L22 8' fill='none' stroke='%238A7C5E' stroke-width='2.3'/%3E%3C/svg%3E");
+  --hui-y: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='40'%3E%3Cpath d='M2 2 L20 2 L20 30 L8 30 L8 10 L14 10 L14 22' fill='none' stroke='%238A7C5E' stroke-width='2.3'/%3E%3C/svg%3E");
 
   --ok:      #2C6244;
   --ok-wash: rgba(44, 98, 68, .10);
@@ -96,10 +96,11 @@
 
   /* Vân giấy, mịn */
   --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
-  --frame-bg:   #211A14;
-  --mount-line: #5A4D3C;
-  --ground: radial-gradient(135% 92% at 50% -6%,
-              #FBF6EC 0%, #F2ECDE 45%, #E6DCC6 100%);
+  --frame-bg:   #F4EEE1;
+  --mount-line: #A89A7C;
+  /* Dải sáng tối phải rất hẹp: bốn dải mép là màu phẳng, chênh nhiều thì
+     lộ ra một đường cắt ngang đúng chỗ khung. */
+  --ground: linear-gradient(#F7F1E6, #F0E9D9);
 }
 
 /* TỐI — 拓本: bản dập. Đây mới là hiện thân đầy đủ nhất của hướng này. */
@@ -136,9 +137,9 @@
 
   /* Vân đá: thô hơn vân giấy. Đây là thứ làm mặt bia không phẳng như bìa. */
   --d-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='0.1'/%3E%3C/svg%3E");
-  --d-frame-bg:   #100D0A;
-  --d-mount-line: #40382C;
-  --d-ground: radial-gradient(130% 85% at 50% 0%, #272019 0%, #15120E 70%);
+  --d-frame-bg:   #15120E;
+  --d-mount-line: #4A4234;
+  --d-ground: linear-gradient(#1C1813, #121010);
 }
 
 /* Một bảng ánh xạ, hai lối bật: theo hệ thống và do người dùng chọn.

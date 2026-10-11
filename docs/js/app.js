@@ -249,6 +249,7 @@
     // Mỗi chữ một ô 田字格, đúng như trang giấy tập viết.
     // Ấn triện lấy chữ đầu của tên môn, đề bạt ghi theo lối thư mục cũ.
     $('hero-stamp').textContent = subject.zh.charAt(0);
+    $('hero-colophon').textContent = '汉语堂藏 ' + subject.zh + '帖';
 
     $('hero-zh').innerHTML = subject.zh.split('').map(function (ch) {
       return '<span class="tianzige__cell">' +

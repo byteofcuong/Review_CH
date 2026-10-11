@@ -74,6 +74,8 @@
 
   /* Chữ Hán khổ lớn: dương bản, mực trên giấy. */
   --zh-big:       #171209;
+  /* Cả cụm chữ chìm xuống làm nền, không còn một chữ đậm một chữ nhạt.
+     Có chìm thì chữ Việt mới đè lên được mà không ai phải tranh với ai. */
   --zh-ghost:     .14;
 
   /* Nét khung và dải 回纹 */
@@ -94,7 +96,9 @@
 
   /* Vân giấy, mịn */
   --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
-  --ground: radial-gradient(130% 85% at 50% 0%, #F2EAD6 0%, #E4DABC 72%);
+  --frame-bg: #D3C49E;
+  --ground: radial-gradient(135% 92% at 50% -6%,
+              #F8F2E2 0%, #EBE2CA 44%, #D8CBA6 100%);
 }
 
 /* TỐI — 拓本: bản dập. Đây mới là hiện thân đầy đủ nhất của hướng này. */
@@ -117,7 +121,7 @@
   --d-on-accent:    #F6EDE2;
 
   --d-zh-big:   #EFE7D4;
-  --d-zh-ghost: .26;
+  --d-zh-ghost: .15;
 
   --d-fret-ink:  #B5A98C;
   --d-fret-soft: #6E6552;
@@ -131,6 +135,7 @@
 
   /* Vân đá: thô hơn vân giấy. Đây là thứ làm mặt bia không phẳng như bìa. */
   --d-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='0.1'/%3E%3C/svg%3E");
+  --d-frame-bg: #100D0A;
   --d-ground: radial-gradient(130% 85% at 50% 0%, #272019 0%, #15120E 70%);
 }
 
@@ -170,6 +175,7 @@
                     0 22px 50px -20px rgba(0, 0, 0, .7);
     --grain:  var(--d-grain);
     --ground: var(--d-ground);
+    --frame-bg: var(--d-frame-bg);
   }
 }
 
@@ -205,6 +211,7 @@
                   0 22px 50px -20px rgba(0, 0, 0, .7);
   --grain:  var(--d-grain);
   --ground: var(--d-ground);
+  --frame-bg: var(--d-frame-bg);
 }
 
 /* ───────────────────────────────────────────────────────────── nền tảng ── */
@@ -258,10 +265,10 @@ main { overflow-x: clip; }
   pointer-events: none;
   background-repeat: no-repeat;
   background-image:
-    linear-gradient(var(--bg), var(--bg)),
-    linear-gradient(var(--bg), var(--bg)),
-    linear-gradient(var(--bg), var(--bg)),
-    linear-gradient(var(--bg), var(--bg));
+    linear-gradient(var(--frame-bg), var(--frame-bg)),
+    linear-gradient(var(--frame-bg), var(--frame-bg)),
+    linear-gradient(var(--frame-bg), var(--frame-bg)),
+    linear-gradient(var(--frame-bg), var(--frame-bg));
   background-position: top, bottom, left, right;
   background-size:
     100% var(--frame-keep), 100% var(--frame-keep),
@@ -412,25 +419,33 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 .switcher { display: flex; align-items: center; flex: none; }
 
+/* 题签: mảnh nhãn giấy dán trên bìa sách chỉ, ghi tên sách. Khung son
+   mảnh, một nét kẻ chạy song song bên trong, nền giấy sáng hơn mặt bia.
+   Hai vòng kẻ trong dựng bằng box-shadow inset chồng lên nhau: vòng vẽ
+   trước nằm trên, nên chỉ lộ ra đúng một nét mảnh ở độ sâu 3px. */
 .switcher__select {
   appearance: none;
   -webkit-appearance: none;
-  padding: 0 32px 0 14px;
+  padding: 0 30px 0 12px;
   min-height: 44px;
-  max-width: 12rem;
-  background-color: transparent;
-  background-image: linear-gradient(45deg, transparent 50%, var(--accent-edge) 50%),
-                    linear-gradient(135deg, var(--accent-edge) 50%, transparent 50%);
-  background-position: right 15px center, right 10px center;
+  max-width: 13rem;
+  background-color: var(--surface);
+  background-image: linear-gradient(45deg, transparent 50%, var(--accent) 50%),
+                    linear-gradient(135deg, var(--accent) 50%, transparent 50%);
+  background-position: right 14px center, right 9px center;
   background-size: 5px 5px, 5px 5px;
   background-repeat: no-repeat;
-  border: 1px solid var(--line);
+  border: 1px solid var(--accent-edge);
+  box-shadow: inset 0 0 0 3px var(--surface),
+              inset 0 0 0 4px var(--line-soft);
   color: var(--text);
+  font-family: var(--font-zh);
   font-size: var(--t-sm);
   cursor: pointer;
   text-overflow: ellipsis;
 }
-.switcher__select:hover { border-color: var(--accent-edge); }
+.switcher__select:hover { box-shadow: inset 0 0 0 3px var(--surface),
+                                      inset 0 0 0 4px var(--accent-wash); }
 
 .nav { display: flex; gap: var(--s-3); }
 
@@ -481,7 +496,7 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   position: relative;
   display: flex;
   align-items: center;
-  min-height: clamp(200px, 24vw, 430px);
+  min-height: clamp(215px, 26vw, 460px);
   margin-inline: calc(50% - min(50vw - var(--frame-keep), 600px));
   margin-bottom: var(--s-5);
 }
@@ -515,16 +530,16 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   z-index: 0;
   display: flex;
   gap: 0;
-  font-size: clamp(140px, 23vw, 400px);
+  /* Chìm rồi thì cho to hẳn: nó là mặt chữ khắc trên bia, nền của cả
+     khối chứ không phải một món trang trí đặt cạnh tiêu đề. */
+  font-size: clamp(165px, 29vw, 500px);
   line-height: 1;
   white-space: nowrap;
+  opacity: var(--zh-ghost);
   pointer-events: none;
   color: var(--zh-big);
 }
-/* Chữ đầu lùi hẳn về sau làm nền cho chữ Việt đè lên, chữ sau ăn trọn
-   độ đậm ở chỗ nó tràn ra khỏi khung. Cùng một cụm chữ, hai vai. */
 .tianzige__cell { display: block; }
-.tianzige__cell:first-child { opacity: var(--zh-ghost); }
 .tianzige__char {
   font-family: var(--font-zh);
   font-weight: 700;
@@ -553,13 +568,16 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 }
 
 /* 印章: đóng vào chỗ trống dưới khối chữ, hơi lệch, như đóng tay. */
+/* Cụm ấn triện đóng đè lên thân chữ, đúng chỗ người sưu tầm đóng dấu lên
+   mặt thác bản. Giờ chữ nền đã chìm nên son nổi lên được mà không chói. */
 .stamps {
   position: absolute;
-  left: 56%;
-  bottom: -76px;
+  left: 36%;
+  top: 54%;
   z-index: 2;
   display: flex;
-  gap: var(--s-3);
+  align-items: flex-start;
+  gap: var(--s-2);
 }
 .stamp {
   display: grid;
@@ -571,7 +589,14 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   line-height: 1;
   box-shadow: inset 0 0 0 2px rgba(246, 237, 226, .55);
 }
-.stamp--a { width: 46px; height: 46px; font-size: 23px; transform: rotate(-3deg); }
+.stamp--a { width: 50px; height: 50px; font-size: 25px; transform: rotate(-3deg); }
+/* 引首章: con dấu dẫn đầu, dáng dọc hẹp, theo lệ đóng cao hơn dấu vuông. */
+.stamp--b {
+  width: 32px; height: 62px; font-size: 17px;
+  writing-mode: vertical-rl;
+  letter-spacing: .1em;
+  transform: rotate(2deg) translateY(-10px);
+}
 .stamp--b {
   width: 36px; height: 66px; font-size: 19px;
   writing-mode: vertical-rl; letter-spacing: .08em;
@@ -670,7 +695,7 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 .block__title {
   position: relative;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: var(--s-3);
   margin: 0 0 var(--s-3);
   padding-bottom: var(--s-2);
@@ -678,14 +703,20 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   font-weight: 600;
   letter-spacing: -.008em;
 }
-/* Nhãn chữ Hán đứng trước tên khối. Đây là app học tiếng Trung nên nó là
-   nội dung thật chứ không phải chữ trang trí lấy từ bảng mẫu. */
+/* 书签: nhãn chữ Hán dựng dọc trong khung son mảnh, như mảnh thẻ tre buộc
+   ở đầu cuộn sách để biết bên trong là gì. Đây là app học tiếng Trung nên
+   nhãn là nội dung thật, không phải chữ trang trí lấy từ bảng mẫu. */
 .block__zh {
+  flex: none;
+  writing-mode: vertical-rl;
   font-family: var(--font-zh);
-  font-size: var(--t-sm);
+  font-size: var(--t-xs);
   font-weight: 500;
-  letter-spacing: .2em;
-  color: var(--text-3);
+  letter-spacing: .16em;
+  line-height: 1;
+  color: var(--accent);
+  border: 1px solid var(--accent-edge);
+  padding: 7px 3px 6px;
 }
 .block__title::after {
   content: "";
@@ -719,7 +750,7 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 }
 .topic:hover { background: var(--accent-wash); }
 
-.topic__zh { font-family: var(--font-zh); font-size: var(--t-md); color: var(--text-3); line-height: 1.1; }
+.topic__zh { font-family: var(--font-zh); font-size: var(--t-md); color: var(--accent); line-height: 1.1; }
 .topic__name { font-size: var(--t-base); }
 .topic__meta { font-size: var(--t-sm); color: var(--text-3); font-variant-numeric: tabular-nums; }
 
@@ -1252,9 +1283,11 @@ body.is-studying .seal { width: 30px; height: 30px; font-size: 17px; }
   .hero { min-height: clamp(190px, 46vw, 260px); }
   .hero__text { max-width: none; }
   .tianzige { font-size: clamp(132px, 38vw, 210px); }
-  /* Màn hẹp không còn chỗ trống trên thân chữ để đóng dấu: trả con triện
-     về dòng chảy, nằm dưới khối chữ như cũ. */
-  .stamps { position: static; margin-top: var(--s-3); }
+  /* Màn hẹp: chữ nền phủ cả khung nên đóng dấu ở đâu cũng trúng thân chữ,
+     dời xuống dưới khối chữ Việt cho khỏi che tiêu đề. */
+  .stamps { left: 52%; top: 70%; }
+  .stamp--a { width: 42px; height: 42px; font-size: 21px; }
+  .stamp--b { display: none; }
   /* Màn hẹp thì chữ Việt phủ gần kín cụm chữ Hán, nên cả hai chữ cùng lui
      về làm nền thay vì một đậm một nhạt. */
   .tianzige__cell { opacity: var(--zh-ghost); }

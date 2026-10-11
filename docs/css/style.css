@@ -58,8 +58,8 @@
      bản tối: ở đó khung #15120E nằm dưới mặt nền một bậc 30%, nhờ thế mới
      thấy được đâu là mép đá đâu là mặt bia. Bản sáng trước đây để hai thứ
      bằng đúng nhau nên nhìn phẳng lì. */
-  --bg:         #EDE4D1;
-  --bg-2:       #E6DCC6;
+  --bg:         #E2D4B5;
+  --bg-2:       #D9C9A5;
   --surface:    #FBF7EE;
   --surface-2:  #F0E9DA;
   --line:       #C7BB9F;
@@ -67,7 +67,9 @@
 
   --text:       #17120C;
   --text-2:     #4A4133;
-  --text-3:     #6D6250;
+  /* Nền sáng nay thẫm hơn (dải khung #E2D4B5), nên chữ phụ phải xuống
+     theo: #6D6250 chỉ còn 4.08:1 trên nền đó. */
+  --text-3:     #645A49;
 
   /* 朱砂: màu nhấn duy nhất. --accent đọc được ở cỡ chữ thường (5.6:1). */
   --accent:       #A82611;
@@ -102,7 +104,7 @@
      nên nổi được vân mà không kéo tụt màu giấy. Một lớp nhiễu xám
      thường chỉ làm nền kem xỉn đi chứ không thành hạt. */
   --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='d'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.62' numOctaves='4' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.1 0 0 0 0 0.085 0 0 0 0 0.06 0.85 0 0 0 -0.425'/%3E%3C/filter%3E%3Cfilter id='l'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.62' numOctaves='4' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 0.961 0 0 0 0 0.882 -0.85 0 0 0 0.425'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23d)'/%3E%3Crect width='200' height='200' filter='url(%23l)'/%3E%3C/svg%3E");
-  --frame-bg:   #EDE4D1;
+  --frame-bg:   #E2D4B5;
   --mount-line: #A89A7C;
   /* Dải sáng tối phải rất hẹp: bốn dải mép là màu phẳng, chênh nhiều thì
      lộ ra một đường cắt ngang đúng chỗ khung. */

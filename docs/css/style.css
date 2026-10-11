@@ -24,8 +24,8 @@
   --s-6: 60px;
 
   --t-xs:   13px;
-  --t-sm:   14.5px;
-  --t-base: 16.5px;
+  --t-sm:   13.8px;
+  --t-base: 15.5px;
   --t-md:   20px;
   --t-lg:   26px;
   --t-xl:   33px;
@@ -35,7 +35,7 @@
      Noto Serif lo phần còn lại vì nó cùng siêu họ với Noto Serif SC, mà chữ
      Việt với chữ Hán đứng cạnh nhau khắp app này. */
   --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-text: "Noto Serif", Georgia, "Times New Roman", serif;
+  --font-text: "Be Vietnam Pro", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
   --font-zh: "Noto Serif SC", "Songti SC", "SimSun", "Noto Serif", serif;
   --font-pinyin: "Noto Serif", Georgia, serif;
 
@@ -201,7 +201,7 @@ body {
   color: var(--text);
   font-family: var(--font-text);
   font-size: var(--t-base);
-  line-height: 1.72;
+  line-height: 1.62;
   padding-top: env(safe-area-inset-top, 0px);
   padding-bottom: env(safe-area-inset-bottom, 0px);
   -webkit-font-smoothing: antialiased;
@@ -223,10 +223,15 @@ img { max-width: 100%; }
 [hidden] { display: none !important; }
 
 h1, h2, h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-text);
   font-weight: 600;
-  line-height: 1.12;
-  letter-spacing: -.005em;
+  letter-spacing: -.01em;
+}
+
+.hero__title, .page-title, .seal, .seal-big {
+  font-family: var(--font-display);
+  line-height: 1.1;
+  letter-spacing: -.012em;
   text-wrap: balance;
 }
 
@@ -260,12 +265,12 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 .wrap {
   width: 100%;
-  max-width: 1060px;
+  max-width: 920px;
   margin-inline: auto;
   padding-inline: var(--gutter);
   padding-block: var(--s-5) var(--s-6);
 }
-.wrap--narrow { max-width: 640px; }
+.wrap--narrow { max-width: 620px; }
 
 /* ──────────────────────────────────────────────────────────────── topbar ── */
 
@@ -286,7 +291,7 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 }
 
 .topbar__inner {
-  max-width: 1060px;
+  max-width: 920px;
   margin-inline: auto;
   padding-inline: var(--gutter);
   padding-block: var(--s-2);
@@ -307,14 +312,15 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   width: 34px; height: 34px;
   display: grid; place-items: center;
   background-color: var(--gold-solid);
-  background-image: var(--gold-grad);
+  background-image: linear-gradient(to bottom,
+    rgba(255, 255, 255, .14), rgba(0, 0, 0, .12));
   color: var(--on-gold);
   font-family: var(--font-zh);
   font-weight: 600;
   font-size: 19px;
   line-height: 1;
   flex: none;
-  box-shadow: var(--inner-top), var(--glow);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .34);
 }
 
 .brand__text { display: flex; flex-direction: column; line-height: 1.22; }
@@ -328,7 +334,7 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   font-family: var(--font-zh);
   font-size: var(--t-xs);
   color: var(--gold-text);
-  letter-spacing: .3em;
+  letter-spacing: .16em;
 }
 
 .switcher { display: flex; align-items: center; flex: none; }
@@ -392,10 +398,9 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, max-content) auto;
-  justify-content: start;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  gap: var(--s-6);
+  gap: var(--s-5);
   margin-bottom: var(--s-5);
 }
 
@@ -409,18 +414,18 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   display: flex;
   gap: .12em;
   padding: .2em .26em;
-  font-size: clamp(82px, 11.5vw, 124px);
+  font-size: clamp(76px, 10.5vw, 112px);
   flex: none;
-  border: 1px solid var(--gold-edge);
-  box-shadow: var(--glow);
 }
-.tianzige::before {
+/* Khung kép quanh chữ đọc ra thành tấm bằng khen. Giờ chỉ còn một nét kim
+   loại dưới chân chữ, như gáy sách dập nhũ. */
+.tianzige::after {
   content: "";
   position: absolute;
-  inset: 5px;
-  border: 1px solid var(--gold-edge);
-  opacity: .45;
-  pointer-events: none;
+  left: .26em; right: .26em; bottom: .08em;
+  height: 1px;
+  background: var(--gold-grad);
+  opacity: .7;
 }
 .tianzige__cell { display: grid; place-items: center; width: 1em; height: 1em; }
 .tianzige__char {
@@ -493,7 +498,6 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   align-items: center;
   gap: var(--s-3) var(--s-5);
   padding: var(--s-4) var(--s-4) var(--s-4) var(--s-5);
-  max-width: var(--measure);
   background: var(--surface);
   border: 1px solid var(--line);
   box-shadow: var(--inner-top), var(--panel-shadow);
@@ -528,8 +532,9 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   position: relative;
   margin: 0 0 var(--s-3);
   padding-bottom: var(--s-2);
-  font-size: var(--t-lg);
+  font-size: var(--t-md);
   font-weight: 600;
+  letter-spacing: -.008em;
 }
 .block__title::after {
   content: "";
@@ -540,17 +545,21 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 /* ──────────────────────────────────────────────────── chủ đề ── */
 
-.topic-grid { display: flex; flex-direction: column; }
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  column-gap: var(--s-5);
+}
 
 .topic {
   position: relative;
   display: grid;
-  grid-template-columns: 3.4em minmax(0, 1fr) auto;
+  grid-template-columns: 3.2em minmax(0, 1fr) auto;
   align-items: baseline;
   gap: var(--s-3);
   width: 100%;
-  min-height: 56px;
-  padding: 13px var(--s-3) 13px 0;
+  min-height: 54px;
+  padding: 12px 0;
   text-align: left;
   background: transparent;
   border: 0;
@@ -568,7 +577,11 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 /* ──────────────────────────────────────────────────────── ôn nhanh ── */
 
-.quick-row { display: flex; flex-direction: column; }
+.quick-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  column-gap: var(--s-5);
+}
 
 .quick {
   display: flex;
@@ -609,12 +622,14 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 /* Nút chính là một thỏi vàng: chuyển sắc kim loại, gờ sáng mép trên. */
 .btn--primary {
   background-color: var(--gold-solid);
-  background-image: var(--gold-grad);
+  background-image: linear-gradient(to bottom,
+    rgba(255, 255, 255, .14), rgba(0, 0, 0, .12));
   color: var(--on-gold);
   font-weight: 600;
-  box-shadow: var(--inner-top), var(--glow);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .34),
+              inset 0 -1px 0 rgba(0, 0, 0, .22);
 }
-.btn--primary:hover { filter: brightness(1.07); }
+.btn--primary:hover { filter: brightness(1.06); }
 .btn--primary:disabled { opacity: .45; cursor: not-allowed; }
 
 .btn--ghost {
@@ -797,8 +812,8 @@ body.is-studying .seal { width: 30px; height: 30px; font-size: 17px; }
 
 .card__prompt {
   font-family: var(--font-display);
-  font-size: clamp(var(--t-lg), 6vw, 42px);
-  line-height: 1.22;
+  font-size: clamp(var(--t-lg), 6vw, 44px);
+  line-height: 1.2;
   font-weight: 600;
   text-wrap: balance;
 }
@@ -963,14 +978,15 @@ body.is-studying .seal { width: 30px; height: 30px; font-size: 17px; }
   width: 62px; height: 62px;
   display: grid; place-items: center;
   background-color: var(--gold-solid);
-  background-image: var(--gold-grad);
+  background-image: linear-gradient(to bottom,
+    rgba(255, 255, 255, .14), rgba(0, 0, 0, .12));
   color: var(--on-gold);
   font-family: var(--font-zh);
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 600;
   line-height: 1;
   margin-bottom: var(--s-3);
-  box-shadow: var(--inner-top), var(--glow);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .34);
 }
 
 .result__line { margin: 0 0 var(--s-4); color: var(--text-2); }
@@ -1031,7 +1047,7 @@ body.is-studying .seal { width: 30px; height: 30px; font-size: 17px; }
 .bars { display: flex; flex-direction: column; }
 
 .subj + .subj { margin-top: var(--s-4); padding-top: var(--s-4); border-top: 1px solid var(--line); }
-.bars__subject { margin: 0; font-size: var(--t-md); font-weight: 600; }
+.bars__subject { margin: 0; font-size: var(--t-base); font-weight: 600; }
 .subj__sum { margin: 2px 0 var(--s-2); font-size: var(--t-sm); color: var(--text-3); font-variant-numeric: tabular-nums; }
 
 .bar__track { height: 4px; background: var(--surface-2); display: flex; }

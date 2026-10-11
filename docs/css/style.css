@@ -1,18 +1,19 @@
 /* ═══════════════════════════════════════════════════════════════════════════
    Hán Ngữ Đường 汉语堂
 
-   Hướng: 朱 · 墨 · 宣 — chu sa, mực, giấy tuyên.
+   Hướng: 碑帖 — thác bản.
 
-   Tờ giấy tuyên nổi trên nền sơn mài đỏ thẫm. Chữ Hán của môn đổ chu sa ở
-   khổ khổng lồ, tràn khỏi mép giấy; chữ Việt đè chồng lên phần nhạt của nó.
+   Cả trang là mặt bia dập mực. Chữ Hán của môn hiện ra âm bản, trắng trên
+   nền mực. Viền 回纹 bao bốn phía. Ấn triện son đóng rải như người sưu tầm
+   đóng lên bản dập của mình. Đề bạt viết dọc bên lề.
 
-   Ba chất liệu, mỗi chất một việc, không lẫn sang nhau:
-     漆 sơn mài  -> dải bao ngoài, chỉ là nền, không bao giờ chứa chữ nhỏ
-     朱 chu sa   -> màu nhấn duy nhất: ấn triện, nút chính, tiến độ, đang chọn
-     金 nhũ vàng -> chỉ còn là nét kẻ mảnh. Không nút vàng, không chữ vàng.
+   Hai chế độ là hai hiện thân của cùng một thứ, không phải hai bản sắc:
+     tối  = 拓本, bản dập: nền mực, chữ trắng âm bản
+     sáng = 刻本, bản khắc in ra giấy: nền giấy, chữ mực dương bản
+   Cùng khung 回纹, cùng ấn triện son, chỉ đảo âm dương.
 
-   Vì sao chia như vậy: bản trước phủ vàng lên mọi thứ nên vàng mất giá trị.
-   Một chất liệu chỉ sang khi nó hiếm.
+   Ba màu, không hơn: mực, giấy, son. Không có nhũ vàng ở bản này — bốn
+   vòng trước chứng minh rằng thêm một chất liệu nữa là loãng.
    ═══════════════════════════════════════════════════════════════════════════ */
 
 /* ─────────────────────────────────────────── tầng 1: token nguyên thuỷ ── */
@@ -25,8 +26,6 @@
   --s-5: 40px;
   --s-6: 60px;
 
-  /* Hai cực, không có cỡ lửng ở giữa. Chữ Hán khổng lồ của hero cách
-     --t-xl một quãng rất xa; đó mới là chỗ tạo ấn tượng. */
   --t-xs:   13px;
   --t-sm:   13.8px;
   --t-base: 15.5px;
@@ -43,193 +42,169 @@
   --measure: 62ch;
   --radius: 0;
 
-  /* Bề rộng dải sơn mài bao quanh tờ giấy. Về 0 ở điện thoại vì ở đó
-     từng pixel ngang đều phải dành cho chữ. */
-  --frame-w: clamp(0px, calc(4vw - 24px), 34px);
+  /* Khung bia: lề ngoài, bề dày dải 回纹, và tổng chỗ phải chừa cho nó. */
+  --frame-pad:  clamp(6px, 1.3vw, 18px);
+  --frame-band: 22px;
+  --frame-keep: calc(var(--frame-pad) + 34px);
 }
 
 /* ─────────────────────────────────────────── tầng 2: token ngữ nghĩa ── */
 
-/* Sáng là bản sắc chính: giấy tuyên thật, ấm và ngà, không trắng. */
+/* SÁNG — 刻本: bản khắc in ra giấy. Chữ mực trên giấy ngà. */
 :root {
   color-scheme: light;
 
-  --frame:      #3B100D;
-  --frame-deep: #240807;
+  --bg:         #EAE1C9;
+  --bg-2:       #E0D5B7;
+  --surface:    #F3ECDA;
+  --surface-2:  #E5DBC0;
+  --line:       #B5A789;
+  --line-soft:  #D2C7AC;
 
-  --bg:         #F6F1E5;
-  --bg-2:       #EFE8D7;
-  --surface:    #FCF9F1;
-  --surface-2:  #F2EBDA;
-  --line:       #D8CDB4;
-  --line-soft:  #E8E0CC;
-  --rule-strong: #191310;
+  --text:       #171209;
+  --text-2:     #4A4132;
+  --text-3:     #6B6049;
 
-  --text:       #191310;
-  --text-2:     #4B4036;
-  --text-3:     #6C6052;
+  /* 朱砂: màu nhấn duy nhất. --accent đọc được ở cỡ chữ thường (5.6:1). */
+  --accent:       #A32610;
+  --accent-edge:  #B32C16;
+  --accent-solid: #B32C16;
+  --accent-wash:  rgba(163, 38, 16, .09);
+  --on-accent:    #F6EDE2;
 
-  /* 朱砂. --accent đọc được ở cỡ chữ thường (6.2:1 trên giấy).
-     --accent-display chỉ dùng cho chữ cực lớn, nơi ngưỡng là 3:1. */
-  --accent:         #B32C16;
-  --accent-edge:    #C5351C;
-  --accent-solid:   #BE2F18;
-  --accent-display: #DC3A14;
-  --accent-ghost:   rgba(179, 44, 22, .15);
-  --accent-wash:    rgba(179, 44, 22, .08);
-  --on-accent:      #FDF7EE;
+  /* Chữ Hán khổ lớn: dương bản, mực trên giấy. */
+  --zh-big:       #171209;
+  --zh-ghost:     .14;
 
-  /* 描金: nét kẻ, và chỉ nét kẻ. */
-  --rule-metal: linear-gradient(90deg,
-                  #8A6A20 0%, #C0A04A 22%, #E3CE94 46%,
-                  #A9842C 70%, #C9A74E 100%);
-  --gold-ink:   #8A6A20;
+  /* Nét khung và dải 回纹 */
+  --fret-ink:  #8A7C5E;
+  --fret-soft: #B5A789;
+  --hui-x: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='22'%3E%3Cpath d='M2 20 L2 2 L30 2 L30 14 L10 14 L10 8 L22 8' fill='none' stroke='%238A7C5E' stroke-width='2.3'/%3E%3C/svg%3E");
+  --hui-y: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='40'%3E%3Cpath d='M2 2 L20 2 L20 30 L8 30 L8 10 L14 10 L14 22' fill='none' stroke='%238A7C5E' stroke-width='2.3'/%3E%3C/svg%3E");
 
-  --ok:         #2F6B4F;
-  --ok-wash:    rgba(47, 107, 79, .10);
-  --no:         #A32718;
-  --no-wash:    rgba(163, 39, 24, .09);
+  --ok:      #2C6244;
+  --ok-wash: rgba(44, 98, 68, .10);
+  --no:      #A32610;
+  --no-wash: rgba(163, 38, 16, .09);
 
-  --inner-top:  inset 0 1px 0 rgba(255, 255, 255, .7);
-  --panel-shadow: 0 1px 1px rgba(21, 18, 12, .05),
-                  0 2px 8px rgba(21, 18, 12, .05),
-                  0 20px 44px -18px rgba(21, 18, 12, .18);
-  /* Tờ giấy đặt trên mặt sơn: bóng tiếp giáp sắc, bóng xa tản rộng. */
-  --sheet-shadow: 0 0 0 1px rgba(59, 16, 13, .22),
-                  0 2px 6px rgba(37, 8, 7, .26),
-                  0 26px 60px -22px rgba(37, 8, 7, .55);
+  --inner-top: inset 0 1px 0 rgba(255, 255, 255, .55);
+  --panel-shadow: 0 1px 1px rgba(23, 18, 9, .06),
+                  0 2px 8px rgba(23, 18, 9, .05),
+                  0 18px 40px -18px rgba(23, 18, 9, .22);
 
-  --light: radial-gradient(110% 70% at 50% -8%,
-             rgba(255, 252, 240, .8) 0%, rgba(255, 252, 240, 0) 62%);
-  --frame-light: radial-gradient(120% 90% at 50% 0%,
-                   rgba(190, 47, 24, .40) 0%, rgba(190, 47, 24, 0) 65%);
-
-  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='170' height='170' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+  /* Vân giấy, mịn */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+  --ground: radial-gradient(130% 85% at 50% 0%, #F2EAD6 0%, #E4DABC 72%);
 }
 
-/* Tối: vẫn đúng tờ giấy đó, chỉ là bản in trên nền mực. Không đổi sang một
-   bản sắc khác, chỉ hạ sáng xuống. */
+/* TỐI — 拓本: bản dập. Đây mới là hiện thân đầy đủ nhất của hướng này. */
 :root[data-theme="dark"],
 :root:not([data-theme="light"]) {
-  --d-frame:      #120706;
-  --d-frame-deep: #080403;
+  --d-bg:         #15120E;
+  --d-bg-2:       #1D1A14;
+  --d-surface:    #221D16;
+  --d-surface-2:  #2B251C;
+  --d-line:       #4A4234;
+  --d-line-soft:  #322C22;
 
-  --d-bg:         #1A1310;
-  --d-bg-2:       #221813;
-  --d-surface:    #241A15;
-  --d-surface-2:  #2E2119;
-  --d-line:       #453327;
-  --d-line-soft:  #30241C;
-  --d-rule-strong: #6A5848;
+  --d-text:       #EFE7D4;
+  --d-text-2:     #C2B79C;
+  --d-text-3:     #948A74;
 
-  --d-text:       #F4ECDF;
-  --d-text-2:     #C8BAA6;
-  --d-text-3:     #9E9180;
+  --d-accent:       #E8785F;
+  --d-accent-solid: #B32C16;
+  --d-accent-wash:  rgba(232, 120, 95, .13);
+  --d-on-accent:    #F6EDE2;
 
-  --d-accent:         #FF8569;
-  --d-accent-edge:    #E2664B;
-  --d-accent-solid:   #C9321A;
-  --d-accent-display: #FF5A33;
-  --d-accent-ghost:   rgba(255, 90, 51, .17);
-  --d-accent-wash:    rgba(255, 133, 105, .12);
-  --d-on-accent:      #FFF2E8;
+  --d-zh-big:   #EFE7D4;
+  --d-zh-ghost: .26;
 
-  --d-rule-metal: linear-gradient(90deg,
-                    #6B5218 0%, #B8973F 22%, #E8D49B 46%,
-                    #9A7520 70%, #D4AF5E 100%);
-  --d-gold-ink:   #D4AF5E;
+  --d-fret-ink:  #B5A98C;
+  --d-fret-soft: #6E6552;
+  --d-hui-x: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='22'%3E%3Cpath d='M2 20 L2 2 L30 2 L30 14 L10 14 L10 8 L22 8' fill='none' stroke='%23B5A98C' stroke-width='2.3'/%3E%3C/svg%3E");
+  --d-hui-y: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='40'%3E%3Cpath d='M2 2 L20 2 L20 30 L8 30 L8 10 L14 10 L14 22' fill='none' stroke='%23B5A98C' stroke-width='2.3'/%3E%3C/svg%3E");
 
-  --d-ok:        #7CB596;
-  --d-ok-wash:   rgba(124, 181, 150, .13);
-  --d-no:        #E8836E;
-  --d-no-wash:   rgba(232, 131, 110, .13);
+  --d-ok:      #74B493;
+  --d-ok-wash: rgba(116, 180, 147, .13);
+  --d-no:      #E8785F;
+  --d-no-wash: rgba(232, 120, 95, .13);
+
+  /* Vân đá: thô hơn vân giấy. Đây là thứ làm mặt bia không phẳng như bìa. */
+  --d-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='0.2'/%3E%3C/svg%3E");
+  --d-ground: radial-gradient(130% 85% at 50% 0%, #272019 0%, #15120E 70%);
 }
 
-/* Cùng một bảng ánh xạ cho hai lối bật chế độ tối: theo hệ thống, và do
-   người dùng tự chọn. CSS không cho gọi lại một khối khai báo, nên đành
-   lặp; sửa khối này thì phải sửa khối kia. */
+/* Một bảng ánh xạ, hai lối bật: theo hệ thống và do người dùng chọn.
+   CSS không cho gọi lại một khối khai báo nên phải lặp; sửa khối này thì
+   phải sửa khối kia. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --frame:      var(--d-frame);
-    --frame-deep: var(--d-frame-deep);
     --bg:         var(--d-bg);
     --bg-2:       var(--d-bg-2);
     --surface:    var(--d-surface);
     --surface-2:  var(--d-surface-2);
     --line:       var(--d-line);
     --line-soft:  var(--d-line-soft);
-    --rule-strong: var(--d-rule-strong);
     --text:       var(--d-text);
     --text-2:     var(--d-text-2);
     --text-3:     var(--d-text-3);
-    --accent:         var(--d-accent);
-    --accent-edge:    var(--d-accent-edge);
-    --accent-solid:   var(--d-accent-solid);
-    --accent-display: var(--d-accent-display);
-    --accent-ghost:   var(--d-accent-ghost);
-    --accent-wash:    var(--d-accent-wash);
-    --on-accent:      var(--d-on-accent);
-    --rule-metal: var(--d-rule-metal);
-    --gold-ink:   var(--d-gold-ink);
-    --ok:         var(--d-ok);
-    --ok-wash:    var(--d-ok-wash);
-    --no:         var(--d-no);
-    --no-wash:    var(--d-no-wash);
-    --inner-top:  inset 0 1px 0 rgba(246, 233, 190, .06);
+    --accent:       var(--d-accent);
+    --accent-edge:  var(--d-accent);
+    --accent-solid: var(--d-accent-solid);
+    --accent-wash:  var(--d-accent-wash);
+    --on-accent:    var(--d-on-accent);
+    --zh-big:    var(--d-zh-big);
+    --zh-ghost:  var(--d-zh-ghost);
+    --fret-ink:  var(--d-fret-ink);
+    --fret-soft: var(--d-fret-soft);
+    --hui-x:     var(--d-hui-x);
+    --hui-y:     var(--d-hui-y);
+    --ok:      var(--d-ok);
+    --ok-wash: var(--d-ok-wash);
+    --no:      var(--d-no);
+    --no-wash: var(--d-no-wash);
+    --inner-top: inset 0 1px 0 rgba(239, 231, 212, .06);
     --panel-shadow: 0 1px 1px rgba(0, 0, 0, .5),
                     0 2px 10px rgba(0, 0, 0, .4),
-                    0 24px 56px -20px rgba(0, 0, 0, .7);
-    --sheet-shadow: 0 0 0 1px rgba(255, 220, 190, .07),
-                    0 2px 6px rgba(0, 0, 0, .5),
-                    0 26px 60px -22px rgba(0, 0, 0, .8);
-    --light: radial-gradient(110% 70% at 50% -8%,
-               rgba(255, 150, 110, .07) 0%, rgba(255, 150, 110, 0) 60%);
-    --frame-light: radial-gradient(120% 90% at 50% 0%,
-                     rgba(201, 50, 26, .28) 0%, rgba(201, 50, 26, 0) 65%);
-    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.68' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+                    0 22px 50px -20px rgba(0, 0, 0, .7);
+    --grain:  var(--d-grain);
+    --ground: var(--d-ground);
   }
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --frame:      var(--d-frame);
-  --frame-deep: var(--d-frame-deep);
   --bg:         var(--d-bg);
   --bg-2:       var(--d-bg-2);
   --surface:    var(--d-surface);
   --surface-2:  var(--d-surface-2);
   --line:       var(--d-line);
   --line-soft:  var(--d-line-soft);
-  --rule-strong: var(--d-rule-strong);
   --text:       var(--d-text);
   --text-2:     var(--d-text-2);
   --text-3:     var(--d-text-3);
-  --accent:         var(--d-accent);
-  --accent-edge:    var(--d-accent-edge);
-  --accent-solid:   var(--d-accent-solid);
-  --accent-display: var(--d-accent-display);
-  --accent-ghost:   var(--d-accent-ghost);
-  --accent-wash:    var(--d-accent-wash);
-  --on-accent:      var(--d-on-accent);
-  --rule-metal: var(--d-rule-metal);
-  --gold-ink:   var(--d-gold-ink);
-  --ok:         var(--d-ok);
-  --ok-wash:    var(--d-ok-wash);
-  --no:         var(--d-no);
-  --no-wash:    var(--d-no-wash);
-  --inner-top:  inset 0 1px 0 rgba(246, 233, 190, .06);
+  --accent:       var(--d-accent);
+  --accent-edge:  var(--d-accent);
+  --accent-solid: var(--d-accent-solid);
+  --accent-wash:  var(--d-accent-wash);
+  --on-accent:    var(--d-on-accent);
+  --zh-big:    var(--d-zh-big);
+  --zh-ghost:  var(--d-zh-ghost);
+  --fret-ink:  var(--d-fret-ink);
+  --fret-soft: var(--d-fret-soft);
+  --hui-x:     var(--d-hui-x);
+  --hui-y:     var(--d-hui-y);
+  --ok:      var(--d-ok);
+  --ok-wash: var(--d-ok-wash);
+  --no:      var(--d-no);
+  --no-wash: var(--d-no-wash);
+  --inner-top: inset 0 1px 0 rgba(239, 231, 212, .06);
   --panel-shadow: 0 1px 1px rgba(0, 0, 0, .5),
                   0 2px 10px rgba(0, 0, 0, .4),
-                  0 24px 56px -20px rgba(0, 0, 0, .7);
-  --sheet-shadow: 0 0 0 1px rgba(255, 220, 190, .07),
-                  0 2px 6px rgba(0, 0, 0, .5),
-                  0 26px 60px -22px rgba(0, 0, 0, .8);
-  --light: radial-gradient(110% 70% at 50% -8%,
-             rgba(255, 150, 110, .07) 0%, rgba(255, 150, 110, 0) 60%);
-  --frame-light: radial-gradient(120% 90% at 50% 0%,
-                   rgba(201, 50, 26, .28) 0%, rgba(201, 50, 26, 0) 65%);
-  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.68' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+                  0 22px 50px -20px rgba(0, 0, 0, .7);
+  --grain:  var(--d-grain);
+  --ground: var(--d-ground);
 }
 
 /* ───────────────────────────────────────────────────────────── nền tảng ── */
@@ -242,9 +217,7 @@ html {
   height: 100%;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
-  background-color: var(--frame);
-  background-image: var(--frame-light);
-  background-attachment: fixed;
+  background-color: var(--bg);
 }
 
 body {
@@ -252,28 +225,75 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  /* Tờ giấy tuyên: nền của body bị cắt về đúng content box, nên phần
-     padding hai bên để lộ mặt sơn mài bên dưới. Đó là cả cái khung.
-     Hai vệt tối mảnh ở mép trong là chỗ giấy cong xuống bắt bóng. */
+  /* Mặt bia: vân đá phủ đều, ánh sáng rọi từ trên xuống. Nền gắn cố định
+     để lúc cuộn mặt đá đứng yên còn chữ trôi qua, đúng cảm giác đang rà
+     mắt dọc một tấm bia chứ không phải lật trang. */
   background-color: var(--bg);
-  background-image:
-    linear-gradient(to right, rgba(37, 8, 7, .13), rgba(37, 8, 7, 0) 16px),
-    linear-gradient(to left,  rgba(37, 8, 7, .13), rgba(37, 8, 7, 0) 16px),
-    var(--grain);
-  background-origin: content-box;
-  background-clip: content-box;
-  padding-inline: var(--frame-w);
+  background-image: var(--grain), var(--ground);
+  background-attachment: scroll, fixed;
+  padding-inline: var(--frame-keep);
   isolation: isolate;
   color: var(--text);
   font-family: var(--font-text);
   font-size: var(--t-base);
   line-height: 1.62;
-  padding-top: env(safe-area-inset-top, 0px);
-  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + var(--frame-w));
+  padding-top: calc(env(safe-area-inset-top, 0px) + var(--frame-keep));
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + var(--frame-keep));
   -webkit-font-smoothing: antialiased;
 }
 
 main { overflow-x: clip; }
+
+/* ─────────────────────────────────────────────────────── khung bia ── */
+
+/* Khung đứng yên trên khung nhìn chứ không cuộn theo: người xem đứng
+   trước tấm bia, cái khung là mép đá, nó không chạy đi đâu cả.
+
+   Bốn dải nền đục ở mép phải có thật, không chỉ là hoa văn trên nền
+   trong suốt: thiếu chúng thì chữ cuộn qua sẽ lòi ra giữa các nét 回纹. */
+.stele {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-image:
+    linear-gradient(var(--bg), var(--bg)),
+    linear-gradient(var(--bg), var(--bg)),
+    linear-gradient(var(--bg), var(--bg)),
+    linear-gradient(var(--bg), var(--bg));
+  background-position: top, bottom, left, right;
+  background-size:
+    100% var(--frame-keep), 100% var(--frame-keep),
+    var(--frame-keep) 100%, var(--frame-keep) 100%;
+}
+.stele::before {
+  content: "";
+  position: absolute;
+  inset: var(--frame-pad);
+  border: 2px solid var(--fret-ink);
+}
+.stele__b { position: absolute; opacity: .8; }
+
+.stele__b--t, .stele__b--b {
+  left: calc(var(--frame-pad) + 28px);
+  right: calc(var(--frame-pad) + 28px);
+  height: var(--frame-band);
+  background-image: var(--hui-x);
+  background-repeat: repeat-x;
+}
+.stele__b--t { top: calc(var(--frame-pad) + 6px); }
+.stele__b--b { bottom: calc(var(--frame-pad) + 6px); transform: scaleY(-1); }
+
+.stele__b--l, .stele__b--r {
+  top: calc(var(--frame-pad) + 28px);
+  bottom: calc(var(--frame-pad) + 28px);
+  width: var(--frame-band);
+  background-image: var(--hui-y);
+  background-repeat: repeat-y;
+}
+.stele__b--l { left: calc(var(--frame-pad) + 6px); }
+.stele__b--r { right: calc(var(--frame-pad) + 6px); transform: scaleX(-1); }
 
 img { max-width: 100%; }
 [hidden] { display: none !important; }
@@ -332,20 +352,18 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 .topbar {
   position: sticky;
-  top: env(safe-area-inset-top, 0px);
+  top: calc(env(safe-area-inset-top, 0px) + var(--frame-keep));
   z-index: 20;
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(14px);
-  /* 文武边: một nét mực dày, một nét nhũ mảnh. Lối đóng khung của trang
-     sách khắc, và là chỗ duy nhất trên trang có nét mực dày. */
-  border-bottom: 2px solid var(--rule-strong);
+  /* 文武边: một nét dày, một nét mảnh, lối đóng khung của trang sách khắc. */
+  border-bottom: 2px solid var(--fret-ink);
 }
 .topbar::after {
   content: "";
   display: block;
   height: 1px;
-  background: var(--rule-metal);
-  opacity: .62;
+  background: var(--fret-soft);
 }
 
 .topbar__inner {
@@ -464,7 +482,7 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   display: flex;
   align-items: center;
   min-height: clamp(220px, 28vw, 560px);
-  margin-inline: calc(50% - min(50vw - var(--frame-w), 600px));
+  margin-inline: calc(50% - min(50vw - var(--frame-keep), 600px));
   margin-bottom: var(--s-5);
 }
 
@@ -492,7 +510,7 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   /* Hero bị chặn ở 1200px để chữ Hán còn chạm được tiêu đề, nhưng tờ giấy
      thì rộng hơn thế. Kéo cụm chữ ra đúng phần chênh lệch để nó tràn khỏi
      mép giấy thật; chỗ cắt do main lo. */
-  right: min(-6px, calc((1200px - 100vw + 2 * var(--frame-w)) / 2));
+  right: min(-6px, calc((1200px - 100vw + 2 * var(--frame-keep)) / 2));
   transform: translateY(-50%);
   z-index: 0;
   display: flex;
@@ -501,25 +519,56 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   line-height: 1;
   white-space: nowrap;
   pointer-events: none;
-  background-image: linear-gradient(100deg,
-    var(--accent-ghost) 0%, var(--accent-ghost) 30%,
-    var(--accent-display) 74%, var(--accent-display) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--zh-big);
 }
+/* Chữ đầu lùi hẳn về sau làm nền cho chữ Việt đè lên, chữ sau ăn trọn
+   độ đậm ở chỗ nó tràn ra khỏi khung. Cùng một cụm chữ, hai vai. */
 .tianzige__cell { display: block; }
+.tianzige__cell:first-child { opacity: var(--zh-ghost); }
 .tianzige__char {
   font-family: var(--font-zh);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
   color: inherit;
 }
 
-/* Trình duyệt không cắt được nền theo hình chữ thì chữ sẽ tàng hình.
-   Trả về một màu đặc, mất chuyển sắc nhưng không mất chữ. */
-@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
-  .tianzige { background-image: none; color: var(--accent-ghost); }
+/* 题跋: đề bạt viết dọc bên lề, lối người xưa ghi chú lên bản dập mình
+   sưu tầm được. */
+.colophon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 2;
+  writing-mode: vertical-rl;
+  font-family: var(--font-zh);
+  font-size: var(--t-sm);
+  letter-spacing: .24em;
+  color: var(--text-3);
+  padding-left: var(--s-3);
+  border-left: 1px solid var(--line);
+  max-height: 72%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 印章: đóng vào chỗ trống dưới khối chữ, hơi lệch, như đóng tay. */
+.stamps { display: flex; align-items: flex-start; gap: var(--s-3); margin-top: var(--s-4); }
+.stamp {
+  display: grid;
+  place-items: center;
+  background: var(--accent-solid);
+  color: var(--on-accent);
+  font-family: var(--font-zh);
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: inset 0 0 0 2px rgba(246, 237, 226, .55);
+}
+.stamp--a { width: 52px; height: 52px; font-size: 26px; transform: rotate(-5deg); }
+.stamp--b {
+  width: 36px; height: 66px; font-size: 19px;
+  writing-mode: vertical-rl; letter-spacing: .08em;
+  transform: rotate(3deg);
 }
 
 .page-title { margin: 0 0 var(--s-4); font-size: clamp(var(--t-lg), 4.4vw, 40px); }
@@ -587,7 +636,7 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   padding: var(--s-4) 0;
   background: transparent;
   border: 0;
-  border-top: 2px solid var(--rule-strong);
+  border-top: 2px solid var(--fret-ink);
   border-bottom: 1px solid var(--line);
 }
 /* Để nhóm chữ và nhóm nút đứng cạnh nhau. Cho phần chữ giãn hết chỗ thì
@@ -613,24 +662,36 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 .block__title {
   position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-3);
   margin: 0 0 var(--s-3);
   padding-bottom: var(--s-2);
   font-size: var(--t-md);
   font-weight: 600;
   letter-spacing: -.008em;
 }
+/* Nhãn chữ Hán đứng trước tên khối. Đây là app học tiếng Trung nên nó là
+   nội dung thật chứ không phải chữ trang trí lấy từ bảng mẫu. */
+.block__zh {
+  font-family: var(--font-zh);
+  font-size: var(--t-sm);
+  font-weight: 500;
+  letter-spacing: .2em;
+  color: var(--accent);
+}
 .block__title::after {
   content: "";
   position: absolute; left: 0; bottom: 0;
   width: 3.5em; height: 1px;
-  background: var(--rule-metal);
+  background: var(--fret-ink);
 }
 
 /* ──────────────────────────────────────────────────── chủ đề ── */
 
 .topic-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(330px, 100%), 1fr));
   column-gap: var(--s-5);
 }
 
@@ -662,7 +723,7 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
 
 .quick-row {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(330px, 100%), 1fr));
   column-gap: var(--s-5);
 }
 
@@ -1183,11 +1244,24 @@ body.is-studying .seal { width: 30px; height: 30px; font-size: 17px; }
 @media (max-width: 760px) {
   .hero { min-height: clamp(190px, 46vw, 260px); }
   .hero__text { max-width: none; }
-  .tianzige {
-    font-size: clamp(132px, 38vw, 210px);
-    background-image: linear-gradient(100deg,
-      var(--accent-ghost) 0%, var(--accent-ghost) 58%,
-      var(--accent-display) 100%);
+  .tianzige { font-size: clamp(132px, 38vw, 210px); }
+  /* Màn hẹp thì chữ Việt phủ gần kín cụm chữ Hán, nên cả hai chữ cùng lui
+     về làm nền thay vì một đậm một nhạt. */
+  .tianzige__cell { opacity: var(--zh-ghost); }
+  .colophon { display: none; }
+  .stamp--b { display: none; }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --frame-pad: 5px;
+    --frame-band: 13px;
+    --frame-keep: calc(var(--frame-pad) + 19px);
+  }
+  .stele__b--l, .stele__b--r { display: none; }
+  .stele__b--t, .stele__b--b {
+    left: calc(var(--frame-pad) + 10px);
+    right: calc(var(--frame-pad) + 10px);
   }
 }
 
@@ -1195,11 +1269,16 @@ body.is-studying .seal { width: 30px; height: 30px; font-size: 17px; }
   .topbar__inner { flex-wrap: wrap; row-gap: 4px; gap: var(--s-2); }
   .brand { min-width: 0; flex: 1 1 auto; margin-right: 0; }
   .brand__text { min-width: 0; }
-  .brand__text strong { font-size: var(--t-base); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .brand__text strong { font-size: var(--t-sm); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .brand__sub { display: none; }
 
   .switcher { flex: 0 1 auto; min-width: 0; }
-  .switcher__select { max-width: 7rem; font-size: var(--t-xs); padding-right: 24px; }
+  /* Ô chọn môn quan trọng hơn tên app: tên app cắt được, môn thì không. */
+  .switcher__select { max-width: 6.2rem; font-size: var(--t-xs); padding: 0 20px 0 7px; }
+  .seal { width: 28px; height: 28px; font-size: 16px; }
+  .brand { gap: 8px; }
+  /* Giữ 44px: đây là ngưỡng vùng bấm, không phải chỗ để tiết kiệm. Chỗ
+     thiếu lấy từ ô chọn môn vì nó có thể cắt chữ bằng ellipsis. */
 
   .nav { order: 3; width: 100%; gap: var(--s-4); overflow-x: auto; }
   body.is-studying .nav { display: none; }

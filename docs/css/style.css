@@ -242,7 +242,6 @@ body {
      mắt dọc một tấm bia chứ không phải lật trang. */
   background-color: var(--bg);
   background-image: var(--grain), var(--ground);
-  background-attachment: scroll, fixed;
   padding-inline: var(--frame-keep);
   isolation: isolate;
   color: var(--text);
@@ -366,8 +365,7 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   position: sticky;
   top: calc(env(safe-area-inset-top, 0px) + var(--frame-keep));
   z-index: 20;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(14px);
+  background: var(--bg);
   /* 文武边: một nét dày, một nét mảnh, lối đóng khung của trang sách khắc. */
   border-bottom: 2px solid var(--fret-ink);
 }
@@ -1279,16 +1277,11 @@ body.is-studying .seal { width: 30px; height: 30px; font-size: 17px; }
 }
 
 @media (max-width: 760px) {
-  :root {
-    --frame-pad: 5px;
-    --frame-band: 13px;
-    --frame-keep: calc(var(--frame-pad) + 19px);
-  }
-  .stele__b--l, .stele__b--r { display: none; }
-  .stele__b--t, .stele__b--b {
-    left: calc(var(--frame-pad) + 10px);
-    right: calc(var(--frame-pad) + 10px);
-  }
+  :root { --frame-keep: 12px; }
+  .stele { display: none; }
+  /* Không còn dải khung che phía trên nên thanh điều hướng phải dính sát
+     mép khung nhìn, nếu không chữ sẽ chạy lọt qua khe bên trên nó. */
+  .topbar { top: env(safe-area-inset-top, 0px); }
 }
 
 @media (max-width: 560px) {
@@ -1300,7 +1293,7 @@ body.is-studying .seal { width: 30px; height: 30px; font-size: 17px; }
 
   .switcher { flex: 0 1 auto; min-width: 0; }
   /* Ô chọn môn quan trọng hơn tên app: tên app cắt được, môn thì không. */
-  .switcher__select { max-width: 6.2rem; font-size: var(--t-xs); padding: 0 20px 0 7px; }
+  .switcher__select { max-width: 8.4rem; font-size: var(--t-xs); padding: 0 20px 0 7px; }
   .seal { width: 28px; height: 28px; font-size: 16px; }
   .brand { gap: 8px; }
   /* Giữ 44px: đây là ngưỡng vùng bấm, không phải chỗ để tiết kiệm. Chỗ

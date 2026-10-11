@@ -547,37 +547,16 @@ button, a, select, input, [role="button"], [role="tab"], [role="radio"] {
   color: inherit;
 }
 
-/* 题跋: đề bạt viết dọc bên lề, lối người xưa ghi chú lên bản dập mình
-   sưu tầm được. */
-.colophon {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  z-index: 2;
-  writing-mode: vertical-rl;
-  font-family: var(--font-zh);
-  font-size: var(--t-sm);
-  letter-spacing: .24em;
-  color: var(--text-3);
-  padding-left: var(--s-3);
-  border-left: 1px solid var(--line);
-  max-height: 72%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
 /* 印章: đóng vào chỗ trống dưới khối chữ, hơi lệch, như đóng tay. */
-/* Cụm ấn triện đóng đè lên thân chữ, đúng chỗ người sưu tầm đóng dấu lên
-   mặt thác bản. Giờ chữ nền đã chìm nên son nổi lên được mà không chói. */
+/* Cụm ấn triện nằm trong dòng chảy, dưới hai dòng chữ, nên không có cách
+   nào đè lên chữ được nữa. Thụt vào một quãng để nó vẫn rơi trên thân chữ
+   Hán. Định vị tuyệt đối bằng phần trăm đã hai lần đâm vào chữ: một lần
+   vào dòng trạng thái, một lần vào dấu nặng của "lịch". */
 .stamps {
-  position: absolute;
-  left: 36%;
-  top: 54%;
-  z-index: 2;
   display: flex;
   align-items: flex-start;
   gap: var(--s-2);
+  margin: var(--s-4) 0 0 36%;
 }
 .stamp {
   display: grid;
@@ -1285,13 +1264,12 @@ body.is-studying .seal { width: 30px; height: 30px; font-size: 17px; }
   .tianzige { font-size: clamp(132px, 38vw, 210px); }
   /* Màn hẹp: chữ nền phủ cả khung nên đóng dấu ở đâu cũng trúng thân chữ,
      dời xuống dưới khối chữ Việt cho khỏi che tiêu đề. */
-  .stamps { left: 52%; top: 70%; }
+  .stamps { margin: var(--s-3) 0 0 30%; }
   .stamp--a { width: 42px; height: 42px; font-size: 21px; }
   .stamp--b { display: none; }
   /* Màn hẹp thì chữ Việt phủ gần kín cụm chữ Hán, nên cả hai chữ cùng lui
      về làm nền thay vì một đậm một nhạt. */
   .tianzige__cell { opacity: var(--zh-ghost); }
-  .colophon { display: none; }
   .stamp--b { display: none; }
 }
 
